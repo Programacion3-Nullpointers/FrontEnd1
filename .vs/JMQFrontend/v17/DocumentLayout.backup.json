@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\TA P3\\Frontend\\JMQFrontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\frontend\\jmqfrontend\\jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Principal.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Frontend\\JMQFrontend\\JMQPresentacion\\Principal\\Principal.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Frontend\\JMQFrontend\\JMQPresentacion\\Principal\\Principal.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-11T04:21:39.295Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

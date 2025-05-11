@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainLayout.master.cs" Inherits="JMQPresentacion.MainLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/Public/images/icon.png">
+    <link href="/Public/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Public/fonts/css/all.min.css" rel="stylesheet" />
+    <link href="/Public/css/site.css?v2.1" rel="stylesheet" />
+
+    <title>JMQ Inversiones</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container-fluid p-0 d-flex h-100">
+        <div id="bdSidebar"
+            class="d-flex flex-column  
+                flex-shrink-0  
+                p-3 bg-primary 
+                text-white offcanvas-md offcanvas-start">
+            <a href="/Principal/Principal.aspx" class="navbar-brand text-center">
+                <img src="/Public/images/jmq.jpg" width="150" />
+            </a>
+            <hr>
+            <ul class="mynav nav nav-pills flex-column mb-auto">
+                <li class="nav-item mb-1">
+                    <a href="/Areas/ListaAreas.aspx"><i class="fas fa-building"></i>
+                        Areas 
+                    </a>
+                </li>
+
+                <li class="nav-item mb-1">
+                    <a href="/Clientes/ListaClientes.aspx"><i class="fas fa-people-group"></i>
+                        Clientes 
+                    <span class="notification-badge">5</span>
+                    </a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="/Empleado/ListaEmpleados.aspx"><i class="fas fa-newspaper"></i>
+                        Empleados 
+                    </a>
+                </li>
+
+                <li class="sidebar-item  nav-item mb-1">
+                    <a href="#"
+                        class="sidebar-link collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#settings"
+                        aria-expanded="false"
+                        aria-controls="settings">
+                        <i class="fas fa-cog pe-2"></i>
+                        <span class="topic">Usuarios </span>
+                    </a>
+                    <ul id="settings"
+                        class="sidebar-dropdown list-unstyled collapse"
+                        data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <i class="fas fa-user-plus pe-2"></i>
+                                <span class="topic">Registro</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <i class="fas fa-sign-in-alt pe-2"></i>
+                                <span class="topic">Login</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">
+                                <i class="fas fa-sign-out-alt pe-2"></i>
+                                <span class="topic">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr>
+            <div class="d-flex">
+                <i class="fa-solid fa-book  me-2"></i>
+                <h6 class="mt-1 mb-0">PUCP - Programación 3     </h6>
+            </div>
+        </div>
+
+
+        <div class="bg-light flex-fill">
+            <div class="p-2 d-md-none d-flex text-white bg-primary">
+                <a href="#" class="text-white"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#bdSidebar">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <span class="ms-3">LOGO JMQ</span>
+            </div>
+
+
+            <nav class="navbar navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-sm-none d-md-block d-none d-sm-block">JMQ-Online</a>
+
+                    <form class="d-flex">
+                        <div class="dropdown me-3">
+                            <select name="categoria" id="categoria">
+                                <option value="" disabled selected>Seleccione una categoría</option>
+                                <option value="Herramientas">Herramientas</option>
+                                <option value="Construcción">Construcción</option>
+                                <option value="Pinturas">Pinturas</option>
+                                <option value="Plomería">Plomería</option>
+                            </select>
+                        </div>
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                        <a href="/Usuarios/IniciarSesion.aspx" class="btn btn-outline-light">Iniciar sesión</a>
+                        <a href="/Pedidos/Carrito.aspx" class="btn btn-outline-light">Pedidos</a>
+                        <a href="/Pedidos/Carrito.aspx" class="btn btn-outline-light"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <!--
+                        <div class="dropdown ps-3">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i>Juan Perez
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                        -->
+                    </form>
+                </div>
+            </nav>
+
+            <div class="p-4">
+                <form runat="server">
+                    <asp:ContentPlaceHolder ID="Contenido" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <asp:ContentPlaceHolder ID="Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="/Public/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Public/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+<footer>
+    NullPointers &#0169. Todos los derechos reservados.
+</footer>
+</html>
