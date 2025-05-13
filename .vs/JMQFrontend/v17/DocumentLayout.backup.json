@@ -1,10 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\TA P3\\Frontend\\JMQFrontend\\",
+  "WorkspaceRootPath": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\frontend\\jmqfrontend\\jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqpresentacion\\pedidos\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A8F1CA2-955E-4182-8231-EDB2E87DCC23}|JMQFrontend\\JMQFrontend.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqfrontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A8F1CA2-955E-4182-8231-EDB2E87DCC23}|JMQFrontend\\JMQFrontend.csproj|solutionrelative:jmqfrontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\tipousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\tipousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\productocotizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\productocotizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\ordenventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\ordenventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\metododepago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\metododepago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\estadocompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\estadocompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\detalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\detalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\descuento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\descuento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\cotizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\cotizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\comprobantepago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\comprobantepago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|c:\\users\\omen\\onedrive\\documentos\\progra3-frontend\\frontend1\\jmqdominio\\boleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{653C9C5B-1416-437B-B9E6-4A6056A56A05}|JMQDominio\\JMQDominio.csproj|solutionrelative:jmqdominio\\boleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +74,214 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQFrontend\\Program.cs",
+              "RelativeDocumentMoniker": "JMQFrontend\\Program.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQFrontend\\Program.cs",
+              "RelativeToolTip": "JMQFrontend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:59:56.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Usuario.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\Usuario.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Usuario.cs",
+              "RelativeToolTip": "JMQDominio\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:59:51.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TipoUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\TipoUsuario.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\TipoUsuario.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\TipoUsuario.cs",
+              "RelativeToolTip": "JMQDominio\\TipoUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:59:47.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Principal.aspx",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Frontend\\JMQFrontend\\JMQPresentacion\\Principal\\Principal.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Frontend\\JMQFrontend\\JMQPresentacion\\Principal\\Principal.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx",
+              "Title": "Carrito.aspx",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\Carrito.aspx",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Pedidos\\Carrito.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-11T04:21:39.295Z",
+              "WhenOpened": "2025-05-13T22:56:39.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductoCotizacion.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\ProductoCotizacion.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\ProductoCotizacion.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\ProductoCotizacion.cs",
+              "RelativeToolTip": "JMQDominio\\ProductoCotizacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:59:41.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrdenVenta.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\OrdenVenta.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\OrdenVenta.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\OrdenVenta.cs",
+              "RelativeToolTip": "JMQDominio\\OrdenVenta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:59:31.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MetodoDePago.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\MetodoDePago.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\MetodoDePago.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\MetodoDePago.cs",
+              "RelativeToolTip": "JMQDominio\\MetodoDePago.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:59:27.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Factura.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Factura.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\Factura.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Factura.cs",
+              "RelativeToolTip": "JMQDominio\\Factura.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:59:22.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Producto.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\Producto.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Producto.cs",
+              "RelativeToolTip": "JMQDominio\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:55:05.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EstadoCompra.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\EstadoCompra.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\EstadoCompra.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\EstadoCompra.cs",
+              "RelativeToolTip": "JMQDominio\\EstadoCompra.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:58:53.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Cotizacion.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Cotizacion.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\Cotizacion.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Cotizacion.cs",
+              "RelativeToolTip": "JMQDominio\\Cotizacion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:58:41.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ComprobantePago.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\ComprobantePago.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\ComprobantePago.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\ComprobantePago.cs",
+              "RelativeToolTip": "JMQDominio\\ComprobantePago.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:55:37.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Descuento.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Descuento.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\Descuento.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Descuento.cs",
+              "RelativeToolTip": "JMQDominio\\Descuento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:55:19.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Detalle.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Detalle.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\Detalle.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Detalle.cs",
+              "RelativeToolTip": "JMQDominio\\Detalle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:54:44.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Boleta.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Boleta.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\Boleta.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Boleta.cs",
+              "RelativeToolTip": "JMQDominio\\Boleta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:58:21.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Categoria.cs",
+              "RelativeDocumentMoniker": "JMQDominio\\Categoria.cs",
+              "ToolTip": "C:\\Users\\omen\\OneDrive\\Documentos\\PROGRA3-FRONTEND\\FrontEnd1\\JMQDominio\\Categoria.cs",
+              "RelativeToolTip": "JMQDominio\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T22:55:16.794Z",
               "EditorCaption": ""
             }
           ]

@@ -4,3 +4,9 @@ C:\Users\User\Desktop\TA P3\Frontend\JMQFrontend\JMQDominio\obj\Debug\JMQDominio
 C:\Users\User\Desktop\TA P3\Frontend\JMQFrontend\JMQDominio\obj\Debug\JMQDominio.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\TA P3\Frontend\JMQFrontend\JMQDominio\obj\Debug\JMQDominio.dll
 C:\Users\User\Desktop\TA P3\Frontend\JMQFrontend\JMQDominio\obj\Debug\JMQDominio.pdb
+C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQDominio\bin\Debug\JMQDominio.dll
+C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQDominio\bin\Debug\JMQDominio.pdb
+C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.csproj.AssemblyReference.cache
+C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.csproj.CoreCompileInputs.cache
+C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.dll
+C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.pdb
