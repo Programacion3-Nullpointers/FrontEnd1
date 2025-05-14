@@ -1,7 +1,0 @@
-C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQFrontend\bin\Debug\JMQFrontend.exe.config
-C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQFrontend\bin\Debug\JMQFrontend.exe
-C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQFrontend\bin\Debug\JMQFrontend.pdb
-C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQFrontend\obj\Debug\JMQFrontend.csproj.AssemblyReference.cache
-C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQFrontend\obj\Debug\JMQFrontend.csproj.CoreCompileInputs.cache
-C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQFrontend\obj\Debug\JMQFrontend.exe
-C:\Users\omen\OneDrive\Documentos\PROGRA3-FRONTEND\FrontEnd1\JMQFrontend\obj\Debug\JMQFrontend.pdb
