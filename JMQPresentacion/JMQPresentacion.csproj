@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pedidos\Carrito.aspx" />
+    <Content Include="Pedidos\Cotiza.aspx" />
+    <Content Include="Pedidos\VerProducto.aspx" />
     <Content Include="Principal\Principal.aspx" />
     <Content Include="Public\css\bootstrap-grid.css" />
     <Content Include="Public\css\bootstrap-grid.min.css" />
@@ -135,6 +137,20 @@
     </Compile>
     <Compile Include="Pedidos\Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\Cotiza.aspx.cs">
+      <DependentUpon>Cotiza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\Cotiza.aspx.designer.cs">
+      <DependentUpon>Cotiza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\VerProducto.aspx.cs">
+      <DependentUpon>VerProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\VerProducto.aspx.designer.cs">
+      <DependentUpon>VerProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>

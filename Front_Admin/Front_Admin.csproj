@@ -126,6 +126,10 @@
       <Project>{10276701-29bd-4c69-a711-5857fa0e716a}</Project>
       <Name>FrontDominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\JMQDominio\JMQDominio.csproj">
+      <Project>{653c9c5b-1416-437b-b9e6-4a6056a56a05}</Project>
+      <Name>JMQDominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

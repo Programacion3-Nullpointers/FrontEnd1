@@ -8,7 +8,7 @@ namespace JMQDominio
 {
     public class ProductoCotizacion
     {
-        public ProductoCotizacion(int id, string descripcion, int cantidad, double precioCotizado, Cotizacion cotizacion)
+        public ProductoCotizacion(int id, string descripcion, int cantidad, double precioCotizado)
         {
             this.id = id;
             this.descripcion = descripcion;

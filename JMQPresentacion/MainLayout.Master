@@ -17,76 +17,6 @@
 </head>
 <body>
     <div class="container-fluid p-0 d-flex h-100">
-        <div id="bdSidebar"
-            class="d-flex flex-column  
-                flex-shrink-0  
-                p-3 bg-primary 
-                text-white offcanvas-md offcanvas-start">
-            <a href="/Principal/Principal.aspx" class="navbar-brand text-center">
-                <img src="/Public/images/jmq.jpg" width="150" />
-            </a>
-            <hr>
-            <ul class="mynav nav nav-pills flex-column mb-auto">
-                <li class="nav-item mb-1">
-                    <a href="/Areas/ListaAreas.aspx"><i class="fas fa-building"></i>
-                        Areas 
-                    </a>
-                </li>
-
-                <li class="nav-item mb-1">
-                    <a href="/Clientes/ListaClientes.aspx"><i class="fas fa-people-group"></i>
-                        Clientes 
-                    <span class="notification-badge">5</span>
-                    </a>
-                </li>
-                <li class="nav-item mb-1">
-                    <a href="/Empleado/ListaEmpleados.aspx"><i class="fas fa-newspaper"></i>
-                        Empleados 
-                    </a>
-                </li>
-
-                <li class="sidebar-item  nav-item mb-1">
-                    <a href="#"
-                        class="sidebar-link collapsed"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#settings"
-                        aria-expanded="false"
-                        aria-controls="settings">
-                        <i class="fas fa-cog pe-2"></i>
-                        <span class="topic">Usuarios </span>
-                    </a>
-                    <ul id="settings"
-                        class="sidebar-dropdown list-unstyled collapse"
-                        data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
-                                <i class="fas fa-user-plus pe-2"></i>
-                                <span class="topic">Registro</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
-                                <i class="fas fa-sign-in-alt pe-2"></i>
-                                <span class="topic">Login</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
-                                <i class="fas fa-sign-out-alt pe-2"></i>
-                                <span class="topic">Log Out</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <hr>
-            <div class="d-flex">
-                <i class="fa-solid fa-book  me-2"></i>
-                <h6 class="mt-1 mb-0">PUCP - Programación 3     </h6>
-            </div>
-        </div>
-
-
         <div class="bg-light flex-fill">
             <div class="p-2 d-md-none d-flex text-white bg-primary">
                 <a href="#" class="text-white"
@@ -115,9 +45,10 @@
                         <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
                         <button class="btn btn-outline-light" type="submit">Buscar</button>
                         <a href="/Usuarios/IniciarSesion.aspx" class="btn btn-outline-light">Iniciar sesión</a>
-                        <a href="/Pedidos/Carrito.aspx" class="btn btn-outline-light">Pedidos</a>
+                        <a href="/Pedidos/Cotiza.aspx" class="btn btn-outline-light">Cotizar</a>
+                        <a href="#" class="btn btn-outline-light">Pedidos</a>
                         <a href="/Pedidos/Carrito.aspx" class="btn btn-outline-light"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <!--
+                        <!-- agregar luego
                         <div class="dropdown ps-3">
                             <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user"></i>Juan Perez

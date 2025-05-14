@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace JMQPresentacion.Usuarios
+namespace JMQPresentacion.Pedidos
 {
 
 
-    public partial class Registro
+    public partial class VerProducto
     {
     }
 }
