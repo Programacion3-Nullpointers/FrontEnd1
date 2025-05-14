@@ -1,4 +1,4 @@
-﻿using JMQDominio;
+﻿using FrontDominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,42 +46,45 @@ namespace Front_Admin.Cotizaciones
             gvCotizaciones.DataBind();
         }
 
-        protected void btnGuardarCotizacion_Click(object sender, EventArgs e)
+           protected void btnGuardarCotizacion_Click(object sender, EventArgs e)
         {
             List<Cotizacion> lista = Session["Cotizaciones"] as List<Cotizacion>;
             if (lista == null) lista = new List<Cotizacion>();
 
-            int nuevoId = Enumerable.Range(1, lista.Count + 1)
-                                    .Except(lista.Select(c => c.id))
-                                    .First();
+            int? idEditando = ViewState["EditarId"] as int?;
 
-            Usuario nuevoUsuario = new Usuario(
-                0, // id ficticio
-                txtNombreUsuario.Text,
-                "", // contraseña vacía
-                true,
-                txtCorreo.Text,
-                new TipoUsuario(),
-                txtRazonSocial.Text,
-                txtDireccion.Text,
-                txtRUC.Text
-            );
+            if (idEditando != null)
+            {
+                // Modo edición: solo se cambia el estado
+                var cotExistente = lista.FirstOrDefault(c => c.id == idEditando.Value);
+                if (cotExistente != null)
+                {
+                    cotExistente.estadoCotizacion = txtEstado.Text;
+                }
+                ViewState["EditarId"] = null;
+            }
+            else
+            {
+                // Modo nuevo: requiere crear usuario completo
+                int nuevoId = Enumerable.Range(1, lista.Count + 1)
+                                        .Except(lista.Select(c => c.id))
+                                        .First();
 
-            Cotizacion nueva = new Cotizacion(nuevoId, nuevoUsuario, txtEstado.Text);
-            lista.Add(nueva);
+                Usuario nuevoUsuario = new Usuario(
+                    0, txtNombreUsuario.Text, "", true, txtCorreo.Text,
+                    new TipoUsuario(), txtRazonSocial.Text, txtDireccion.Text, txtRUC.Text
+                );
+
+                Cotizacion nueva = new Cotizacion(nuevoId, nuevoUsuario, txtEstado.Text);
+                lista.Add(nueva);
+            }
 
             Session["Cotizaciones"] = lista;
             CargarGrid();
 
-            // Limpiar campos
-            txtNombreUsuario.Text = "";
-            txtCorreo.Text = "";
-            txtRazonSocial.Text = "";
-            txtDireccion.Text = "";
-            txtRUC.Text = "";
+            // Limpiar solo el campo de estado
             txtEstado.Text = "";
 
-            // Cerrar modal
             ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModal", "cerrarModal();", true);
         }
 
@@ -100,6 +103,20 @@ namespace Front_Admin.Cotizaciones
                     CargarGrid();
                 }
             }
+            else if (e.CommandName == "Editar")
+            {
+                var cot = lista.FirstOrDefault(x => x.id == id);
+                if (cot != null)
+                {
+                    ViewState["EditarId"] = cot.id;
+
+                    // Solo llenar el estado
+                    txtEstado.Text = cot.estadoCotizacion;
+
+                    ScriptManager.RegisterStartupScript(this, GetType(), "MostrarModalEditar", "mostrarModal();", true);
+                }
+            }
+
         }
     }
 }

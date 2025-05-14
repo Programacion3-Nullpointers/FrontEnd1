@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMQPresentacion", "JMQPrese
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMQDominio", "JMQDominio\JMQDominio.csproj", "{653C9C5B-1416-437B-B9E6-4A6056A56A05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front_Admin", "Front_Admin\Front_Admin.csproj", "{C36A8FB5-BE2A-4676-A16A-0524519C2F8F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{653C9C5B-1416-437B-B9E6-4A6056A56A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{653C9C5B-1416-437B-B9E6-4A6056A56A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{653C9C5B-1416-437B-B9E6-4A6056A56A05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C36A8FB5-BE2A-4676-A16A-0524519C2F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C36A8FB5-BE2A-4676-A16A-0524519C2F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C36A8FB5-BE2A-4676-A16A-0524519C2F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C36A8FB5-BE2A-4676-A16A-0524519C2F8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

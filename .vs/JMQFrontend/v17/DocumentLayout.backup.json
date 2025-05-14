@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\pedidos\\verproducto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\verproducto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\principal\\principaladmin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principaladmin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\public\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\public\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\cotizaciones\\cotizaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\cotizaciones\\cotizaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\usuarios\\iniciarsesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\usuarios\\iniciarsesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\principal\\principaladmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principaladmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\pedidos\\cotiza.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\cotiza.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\pagos\\pagos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pagos\\pagos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\usuarios\\modificarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\usuarios\\modificarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\usuarios\\modificarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\usuarios\\modificarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\usuarios\\logout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\usuarios\\logout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\pagos\\pagos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pagos\\pagos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\cotizaciones\\cotizaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\cotizaciones\\cotizaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\mainlayout2.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\mainlayout2.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\mainlayout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\mainlayout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +58,162 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IniciarSesion.aspx",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Usuarios\\IniciarSesion.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Usuarios\\IniciarSesion.aspx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Usuarios\\IniciarSesion.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Usuarios\\IniciarSesion.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-14T07:02:11.608Z",
+              "DocumentIndex": 4,
+              "Title": "ModificarUsuarios.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Usuarios\\ModificarUsuarios.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Usuarios\\ModificarUsuarios.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Usuarios\\ModificarUsuarios.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Usuarios\\ModificarUsuarios.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:35:41.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Cotiza.aspx",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pedidos\\Cotiza.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\Cotiza.aspx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pedidos\\Cotiza.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Pedidos\\Cotiza.aspx",
+              "DocumentIndex": 5,
+              "Title": "ModificarUsuarios.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Usuarios\\ModificarUsuarios.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Usuarios\\ModificarUsuarios.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Usuarios\\ModificarUsuarios.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Usuarios\\ModificarUsuarios.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-14T07:01:38.615Z",
+              "WhenOpened": "2025-05-14T08:35:38.237Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Public\\css\\site.css",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Public\\css\\site.css",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Public\\css\\site.css",
-              "RelativeToolTip": "JMQPresentacion\\Public\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-14T06:48:39.81Z",
+              "Title": "Cotizaciones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotizaciones.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Cotizaciones\\Cotizaciones.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotizaciones.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Cotizaciones\\Cotizaciones.aspx.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAADgv3cAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:34:31.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pagos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pagos\\Pagos.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Pagos\\Pagos.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pagos\\Pagos.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Pagos\\Pagos.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:32:19.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Pagos.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pagos\\Pagos.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Pagos\\Pagos.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pagos\\Pagos.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Pagos\\Pagos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-14T08:32:16.595Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VerProducto.aspx",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pedidos\\VerProducto.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\VerProducto.aspx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pedidos\\VerProducto.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Pedidos\\VerProducto.aspx",
+              "Title": "PrincipalAdmin.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\PrincipalAdmin.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\PrincipalAdmin.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\PrincipalAdmin.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Principal\\PrincipalAdmin.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:28:20.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PrincipalAdmin.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\PrincipalAdmin.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\PrincipalAdmin.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\PrincipalAdmin.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Principal\\PrincipalAdmin.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-14T06:47:11.421Z",
+              "WhenOpened": "2025-05-14T08:20:48.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Cotizaciones.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotizaciones.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Cotizaciones\\Cotizaciones.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotizaciones.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Cotizaciones\\Cotizaciones.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-14T08:19:01.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainLayout.Master",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\MainLayout.Master",
+              "RelativeDocumentMoniker": "JMQPresentacion\\MainLayout.Master",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\MainLayout.Master",
+              "RelativeToolTip": "JMQPresentacion\\MainLayout.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-14T08:15:21.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Principal.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-14T08:14:13.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainLayout2.Master",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\MainLayout2.Master",
+              "RelativeDocumentMoniker": "JMQPresentacion\\MainLayout2.Master",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\MainLayout2.Master",
+              "RelativeToolTip": "JMQPresentacion\\MainLayout2.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-14T08:10:09.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LogOut.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Usuarios\\LogOut.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Usuarios\\LogOut.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Usuarios\\LogOut.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Usuarios\\LogOut.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-14T08:08:48.46Z",
               "EditorCaption": ""
             }
           ]

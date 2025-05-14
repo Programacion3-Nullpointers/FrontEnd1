@@ -30,7 +30,7 @@
 
             <nav class="navbar navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand d-sm-none d-md-block d-none d-sm-block">JMQ-Online</a>
+                    <a href="/Principal/Principal.aspx" class="navbar-brand d-sm-none d-md-block d-none d-sm-block">JMQ-Online</a>
 
                     <form class="d-flex">
                         <div class="dropdown me-3">

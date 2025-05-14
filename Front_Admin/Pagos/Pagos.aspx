@@ -10,61 +10,9 @@
             font-family: Arial, sans-serif;
         }
 
-        .sidebar {
-            width: 200px;
-            height: 100vh;
-            background-color: #2c3e50;
-            color: white;
-            float: left;
-            padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .menu-links {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .menu-title {
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .menu-item {
-            background-color: #34495e;
-            padding: 10px;
-            border-radius: 6px;
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            margin-bottom: 10px;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu-item:hover {
-            background-color: #1abc9c;
-        }
-
-        .logout {
-            margin-top: auto;
-            background-color: #e74c3c;
-        }
-
-        .logout:hover {
-            background-color: #c0392b;
-        }
-
         .content {
-            margin-left: 220px;
-            padding: 40px;
+            margin-left: 20px;
+            padding: 20px;
             box-sizing: border-box;
         }
 
@@ -73,6 +21,8 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .table-header h2 {
@@ -92,6 +42,21 @@
 
         .btn-add:hover {
             background-color: #1e8449;
+        }
+
+        .select-modal {
+            width: 150px;
+            padding: 6px 10px;
+            font-size: 14px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            appearance: none;
+            background-color: #fff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5'%3E%3Cpath fill='%23000' d='M0 0l5 5 5-5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 10px 5px;
         }
 
         table {
@@ -187,57 +152,17 @@
             border-radius: 4px;
             font-size: 14px;
         }
-
-        .btn-add {
-            background-color: #27ae60;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            align-self: flex-start;
-        }
-
-        .btn-add:hover {
-            background-color: #1e8449;
-        }
-        .select-modal {
-           width: 150px;
-            padding: 6px 10px;
-            font-size: 14px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            appearance: none;
-            background-color: #fff;
-            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5'%3E%3Cpath fill='%23000' d='M0 0l5 5 5-5z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 10px 5px;
-        }
-
-
     </style>
 </asp:Content>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
-    <div class="sidebar">
-        <div class="menu-links">
-            <a class="menu-title" href="../Principal/Principal.aspx">Menú</a>
-            <a class="menu-item" href="../Usuarios/Usuarios.aspx">Usuarios</a>
-            <a class="menu-item" href="../Cotizaciones/Cotizaciones.aspx">Cotizaciones</a>
-            <a class="menu-item" href="Pagos.aspx">Pagos</a>
-        </div>
-        <a class="menu-item logout" href="../Login/Login.aspx">Logout</a>
-    </div>
-
     <div class="content">
         <div class="table-header">
             <h2>Gestión de Pagos</h2>
-            <asp:DropDownList ID="ddlFiltroTipo" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlFiltroTipo_SelectedIndexChanged" CssClass="input-modal select-modal">
+            <asp:DropDownList ID="ddlFiltroTipo" runat="server" AutoPostBack="true"
+                OnSelectedIndexChanged="ddlFiltroTipo_SelectedIndexChanged" CssClass="input-modal select-modal">
                 <asp:ListItem Text="Todos" Value="Todos" />
                 <asp:ListItem Text="Boleta" Value="Boleta" />
                 <asp:ListItem Text="Factura" Value="Factura" />

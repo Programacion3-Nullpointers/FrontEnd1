@@ -10,61 +10,9 @@
             font-family: Arial, sans-serif;
         }
 
-        .sidebar {
-            width: 200px;
-            height: 100vh;
-            background-color: #2c3e50;
-            color: white;
-            float: left;
-            padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .menu-links {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .menu-title {
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .menu-item {
-            background-color: #34495e;
-            padding: 10px;
-            border-radius: 6px;
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            margin-bottom: 10px;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu-item:hover {
-            background-color: #1abc9c;
-        }
-
-        .logout {
-            margin-top: auto;
-            background-color: #e74c3c;
-        }
-
-        .logout:hover {
-            background-color: #c0392b;
-        }
-
         .content {
-            margin-left: 220px;
-            padding: 40px;
+            margin-left: 20px;
+            padding: 20px;
             box-sizing: border-box;
         }
 
@@ -73,6 +21,8 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .table-header h2 {
@@ -188,42 +138,31 @@
             font-size: 14px;
         }
 
-        .btn-add {
-            background-color: #27ae60;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            align-self: flex-start;
-        }
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+            }
 
-        .btn-add:hover {
-            background-color: #1e8449;
-        }
+            .table-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
+            .modal-content {
+                width: 95%;
+                margin: 40px auto;
+            }
+        }
     </style>
 </asp:Content>
-
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
-    <div class="sidebar">
-        <div class="menu-links">
-            <a class="menu-title" href="../Principal/Principal.aspx">Menú</a>
-            <a class="menu-item" href="../Usuarios/Usuarios.aspx">Usuarios</a>
-            <a class="menu-item" href="Cotizaciones.aspx">Cotizaciones</a>
-            <a class="menu-item" href="../Pagos/Pagos.aspx">Pagos</a>
-        </div>
-        <a class="menu-item logout" href="../Login/Login.aspx">Logout</a>
-    </div>
-
     <div class="content">
         <div class="table-header">
             <h2>Gestión de Cotizaciones</h2>
-            <button type="button" class="btn-add" onclick="mostrarModal()">➕ Agregar Cotización</button>
+            <button type="button" class="btn-add" onclick="mostrarModal(false)">➕ Agregar Cotización</button>
         </div>
 
         <asp:GridView ID="gvCotizaciones" runat="server" AutoGenerateColumns="False" OnRowCommand="gvCotizaciones_RowCommand">
@@ -231,7 +170,6 @@
                 <asp:BoundField DataField="id" HeaderText="ID" />
                 <asp:BoundField DataField="nombreUsuario" HeaderText="Usuario" />
                 <asp:BoundField DataField="estado" HeaderText="Estado" />
-
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
                         <asp:Button ID="btnEditar" runat="server" CommandName="Editar" CommandArgument='<%# Eval("id") %>' CssClass="btn-edit" Text="✏️" />
@@ -246,27 +184,36 @@
     <asp:Panel ID="pnlModalAgregar" runat="server" CssClass="modal" Style="display: none;">
         <div class="modal-content">
             <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <h3>Agregar Cotización</h3>
+            <h3 id="modalTitle">Agregar Cotización</h3>
 
-            <!-- DATOS DEL USUARIO -->
-            <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="input-modal" placeholder="Nombre de Usuario" />
-            <asp:TextBox ID="txtCorreo" runat="server" CssClass="input-modal" placeholder="Correo Electrónico" />
-            <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="input-modal" placeholder="Razón Social" />
-            <asp:TextBox ID="txtDireccion" runat="server" CssClass="input-modal" placeholder="Dirección" />
-            <asp:TextBox ID="txtRUC" runat="server" CssClass="input-modal" placeholder="RUC" />
+            <!-- Solo se mostrará en modo Agregar -->
+            <div class="grupo-datos">
+                <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="input-modal" placeholder="Nombre de Usuario" />
+                <asp:TextBox ID="txtCorreo" runat="server" CssClass="input-modal" placeholder="Correo Electrónico" />
+                <asp:TextBox ID="txtRazonSocial" runat="server" CssClass="input-modal" placeholder="Razón Social" />
+                <asp:TextBox ID="txtDireccion" runat="server" CssClass="input-modal" placeholder="Dirección" />
+                <asp:TextBox ID="txtRUC" runat="server" CssClass="input-modal" placeholder="RUC" />
+            </div>
 
-            <!-- ESTADO DE COTIZACIÓN -->
+            <!-- Siempre editable -->
             <asp:TextBox ID="txtEstado" runat="server" CssClass="input-modal" placeholder="Estado (Ej: Pendiente, Aprobada)" />
 
-            <!-- BOTÓN -->
             <asp:Button ID="btnGuardarCotizacion" runat="server" Text="Guardar" CssClass="btn-add" OnClick="btnGuardarCotizacion_Click" />
         </div>
     </asp:Panel>
 
-
     <script type="text/javascript">
-        function mostrarModal() {
+        function mostrarModal(esEdicion) {
             document.getElementById('<%= pnlModalAgregar.ClientID %>').style.display = 'block';
+
+            document.getElementById('modalTitle').innerText = esEdicion
+                ? "Editar Estado de Cotización"
+                : "Agregar Cotización";
+
+            var datosUsuario = document.querySelector('.grupo-datos');
+            if (datosUsuario) {
+                datosUsuario.style.display = esEdicion ? 'none' : 'block';
+            }
         }
 
         function cerrarModal() {

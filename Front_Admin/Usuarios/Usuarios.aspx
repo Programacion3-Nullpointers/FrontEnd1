@@ -10,61 +10,9 @@
             font-family: Arial, sans-serif;
         }
 
-        .sidebar {
-            width: 200px;
-            height: 100vh;
-            background-color: #2c3e50;
-            color: white;
-            float: left;
-            padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .menu-links {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .menu-title {
-            font-weight: bold;
-            font-size: 18px;
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .menu-item {
-            background-color: #34495e;
-            padding: 10px;
-            border-radius: 6px;
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            margin-bottom: 10px;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu-item:hover {
-            background-color: #1abc9c;
-        }
-
-        .logout {
-            margin-top: auto;
-            background-color: #e74c3c;
-        }
-
-        .logout:hover {
-            background-color: #c0392b;
-        }
-
         .content {
-            margin-left: 220px;
-            padding: 40px;
+            margin-left: 20px;
+            padding: 20px;
             box-sizing: border-box;
         }
 
@@ -187,37 +135,11 @@
             border-radius: 4px;
             font-size: 14px;
         }
-
-        .btn-add {
-            background-color: #27ae60;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            align-self: flex-start;
-        }
-
-        .btn-add:hover {
-            background-color: #1e8449;
-        }
-
     </style>
 </asp:Content>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
-
-    <div class="sidebar">
-        <div class="menu-links">
-            <a class="menu-title" href="../Principal/Principal.aspx">Menú</a>
-            <a class="menu-item" href="Usuarios.aspx">Usuarios</a>
-            <a class="menu-item" href="../Cotizaciones/Cotizaciones.aspx">Cotizaciones</a>
-            <a class="menu-item" href="../Pagos/Pagos.aspx">Pagos</a>
-        </div>
-        <a class="menu-item logout" href="../Login/Login.aspx">Logout</a>
-    </div>
 
     <div class="content">
         <div class="table-header">
@@ -234,7 +156,7 @@
                 <asp:BoundField DataField="direccion" HeaderText="Dirección" />
                 <asp:BoundField DataField="RUC" HeaderText="RUC" />
 
-                 <asp:TemplateField HeaderText="Acciones">
+                <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
                         <asp:Button ID="btnEditar" runat="server" CommandName="Editar" CommandArgument='<%# Eval("id") %>' CssClass="btn-edit" Text="✏️" />
                         <asp:Button ID="btnEliminar" runat="server" CommandName="Eliminar" CommandArgument='<%# Eval("id") %>' CssClass="btn-delete" Text="🗑️" OnClientClick="return confirm('¿Estás seguro que deseas eliminar este usuario?');" />
