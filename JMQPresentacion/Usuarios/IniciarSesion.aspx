@@ -2,18 +2,32 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-    <div class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <form>
-            <input type="text" placeholder="Usuario" required>
-            <input type="password" placeholder="Contraseña" required>
-            <button type="button" style="margin-top: 10px;" onclick="window.location.href='/Principal/Principal.aspx'">Iniciar sesión</button>
-            <button type="button" onclick="window.location.href='/Principal/Principal.aspx'" style="background-color: red;">Cancelar</button>
-        </form>
-    </div>
-    <br />
-    <div class="login-container">
-        O <a href="/Usuarios/Registro.aspx">regístrate</a>.
+    <div class="container mt-4" style="max-width: 600px;">
+        <h2>Iniciar sesión</h2>
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-3 gap-1">
+                    <label>Correo electrónico:</label>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Ingresa tu correo electrónico..." TextMode="Email"></asp:TextBox>
+                    </div>
+                    <label>Contraseña:</label>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtContr" runat="server" CssClass="form-control" placeholder="Ingresa tu contraseña..." TextMode="Password"></asp:TextBox>
+                    </div>
+                </div>
+                ¿No tienes cuenta? <a href="/Usuarios/Registro.aspx">Regístrate</a>.
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <asp:Button ID="btnGuardar" runat="server" Text="Iniciar Sesión" CssClass="btn btn-jmq"/>
+                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" />
+                    </div>
+                    <div class="col-md-12 mt-4 alert alert-danger" id="divError" runat="server" style="display:none;">
+                        <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">

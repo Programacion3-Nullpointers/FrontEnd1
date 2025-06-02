@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,21 +11,28 @@ namespace JMQDominio
     {
         public Producto(int idProducto, string nombre, string descripcion, int stock, double precio, Categoria categoria, string imagen)
         {
-            IdProducto = idProducto;
-            Nombre = nombre;
-            Descripcion = descripcion;
-            Stock = stock;
-            Precio = precio;
-            Categoria = categoria;
-            Imagen = imagen;
+            this.idProducto = idProducto;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.stock = stock;
+            this.precio = precio;
+            this.categoria = categoria;
+            this.imagen = imagen;
+            activo = true;
         }
-        public int IdProducto { get; set; }
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
-        public int Stock { get; set; }
-        public double Precio { get; set; }
-        public Categoria Categoria { get; set; }
-        public string Imagen { get; set; }
+
+        public Producto()
+        {
+
+        }
+        public int idProducto { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
+        public int stock { get; set; }
+        public double precio { get; set; }
+        public Categoria categoria { get; set; }
+        public string imagen { get; set; }
+        public bool activo { get; set; }
 
     }
 }

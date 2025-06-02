@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jmqws.inversiones.jmq.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="UsuarioWS" targetNamespace="http://jmqws.inversiones.jmq.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/JMQWS/UsuarioWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
+    </xsd:schema>
+  </types>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <portType name="UsuarioWS">
+    <operation name="hello">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/helloResponse" message="tns:helloResponse" />
+    </operation>
+  </portType>
+  <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UsuarioWS">
+    <port name="UsuarioWSPort" binding="tns:UsuarioWSPortBinding">
+      <soap:address location="http://localhost:8080/JMQWS/UsuarioWS" />
+    </port>
+  </service>
+</definitions>

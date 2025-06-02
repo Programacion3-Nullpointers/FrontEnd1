@@ -2,17 +2,43 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-    <div class="login-container">
+    <div class="container mt-4" style="max-width: 600px;">
         <h2>Regístrate</h2>
-        <form>
-            <input type="text" placeholder="Nombre" required>
-            <input type="text" placeholder="Apellido" required>
-            <input type="email" placeholder="Correo Electrónico" required>
-            <input type="password" placeholder="Contraseña" required>
-            <input type="password" placeholder="Confirmar Contraseña" required>
-            <button type="button" style="margin-top: 10px;" onclick="window.location.href='/Principal/Principal.aspx'">Registrarse</button>
-            <button type="button" onclick="window.location.href='/Principal/Principal.aspx'" style="background-color: red;">Cancelar</button>
-        </form>
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-3 gap-1">
+                    <label>Nombre:</label>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Ingresa nombre..."></asp:TextBox>
+                    </div>
+                    <label>Apellido:</label>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Ingresa apellidos..."></asp:TextBox>
+                    </div>
+                    <label>Correo electrónico:</label>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="usuario@example.com" TextMode="Email"></asp:TextBox>
+                    </div>
+                    <label>Contraseña:</label>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtContr" runat="server" CssClass="form-control" placeholder="Ingresa una contraseña..." TextMode="Password"></asp:TextBox>
+                    </div>
+                    <label>Confirmar contraseña:</label>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtContrConf" runat="server" CssClass="form-control" placeholder="Confirmar contraseña..." TextMode="Password"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <asp:Button ID="btnGuardar" runat="server" Text="Iniciar Sesión" CssClass="btn btn-jmq"/>
+                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" />
+                    </div>
+                    <div class="col-md-12 mt-4 alert alert-danger" id="divError" runat="server" style="display:none;">
+                        <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </asp:Content>

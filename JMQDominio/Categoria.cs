@@ -8,8 +8,8 @@ namespace JMQDominio
 {
     public class Categoria
     {
-        public int IdCategoria { get; set; }
-        public string Descripcion { get; set; }
-        public string Nombre { get; set; }
+        public int idCategoria { get; set; }
+        public string descripcion { get; set; }
+        public string nombre { get; set; }
     }
 }

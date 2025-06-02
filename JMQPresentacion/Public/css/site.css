@@ -173,3 +173,20 @@
     .add-to-cart button:hover {
         background-color: #FF8C00;
     }
+
+.btn-jmq {
+    background-color: #6d8bc7;
+    color: white;
+    border: none;
+}
+
+.btn-jmq:hover {
+    background-color: #5a72a3;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

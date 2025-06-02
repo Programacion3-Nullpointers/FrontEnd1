@@ -48,6 +48,7 @@
     <Compile Include="Cotizacion.cs" />
     <Compile Include="Descuento.cs" />
     <Compile Include="Detalle.cs" />
+    <Compile Include="Entrega.cs" />
     <Compile Include="EstadoCompra.cs" />
     <Compile Include="Factura.cs" />
     <Compile Include="MetodoDePago.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Producto.cs" />
     <Compile Include="ProductoCotizacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoEntrega.cs" />
     <Compile Include="TipoUsuario.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

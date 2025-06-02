@@ -17,6 +17,11 @@ namespace JMQDominio
             this.precio_unitario = precio_unitario;
         }
 
+        public Detalle()
+        {
+
+        }
+
         public int id {  get; set; }
         public Producto producto { get; set; }
         public int cantidad { get; set; }

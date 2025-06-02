@@ -14,16 +14,16 @@ namespace JMQDominio
 
         public OrdenVenta(int id, EstadoCompra estado_compra, DateTime fecha_orden, Usuario usuario)
         {
-            this.id = id;
-            this.estado_compra = estado_compra;
-            this.fecha_orden = fecha_orden;
-            this.usuario = usuario;
+            this.Id = id;
+            this.Estado_compra = estado_compra;
+            this.Fecha_orden = fecha_orden;
+            this.Usuario = usuario;
         }
-        public int id { get; set; }
-        public EstadoCompra estado_compra { get; set; }
-        public DateTime fecha_orden { get; set; }
-        public bool activo {  get; set; }
-        public Usuario usuario { get; set; }
-        public List<Detalle> detalles { get; set; }
+        public int Id { get; set; }
+        public EstadoCompra Estado_compra { get; set; }
+        public DateTime Fecha_orden { get; set; }
+        public bool Activo {  get; set; }
+        public Usuario Usuario { get; set; }
+        public List<Detalle> Detalles { get; set; }
     }
 }

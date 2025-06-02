@@ -46,6 +46,8 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,13 +69,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Cotizaciones\Cotizaciones.aspx" />
-    <Content Include="Pagos\Pagos.aspx" />
+    <Content Include="Admin\CotizacionesAdmin.aspx" />
+    <Content Include="Admin\Descuentos.aspx" />
+    <Content Include="Admin\ModificarProductos.aspx" />
+    <None Include="Connected Services\UsuarioWS\archivo.disco" />
+    <None Include="Connected Services\UsuarioWS\configuration91.svcinfo" />
+    <None Include="Connected Services\UsuarioWS\configuration.svcinfo" />
+    <Content Include="Connected Services\UsuarioWS\JMQPresentacion.UsuarioWS.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\UsuarioWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Login\Login.aspx" />
+    <Content Include="Login\OlvidarContraseña.aspx" />
+    <Content Include="Login\Registrarse.aspx" />
+    <Content Include="Admin\Pagos.aspx" />
     <Content Include="Pedidos\Carrito.aspx" />
-    <Content Include="Pedidos\Cotiza.aspx" />
+    <Content Include="Cotizaciones\Cotiza.aspx" />
+    <Content Include="Pedidos\DatosEntrega.aspx" />
+    <Content Include="Pedidos\MetodoPago.aspx" />
     <Content Include="Pedidos\VerProducto.aspx" />
     <Content Include="Principal\Principal.aspx" />
-    <Content Include="Principal\PrincipalAdmin.aspx" />
+    <Content Include="Admin\PrincipalAdmin.aspx" />
     <Content Include="Public\css\bootstrap-grid.css" />
     <Content Include="Public\css\bootstrap-grid.min.css" />
     <Content Include="Public\css\bootstrap-grid.rtl.css" />
@@ -91,6 +110,7 @@
     <Content Include="Public\css\bootstrap.rtl.css" />
     <Content Include="Public\css\bootstrap.rtl.min.css" />
     <Content Include="Public\css\site.css" />
+    <Content Include="Public\css\site2.css" />
     <Content Include="Public\fonts\css\all.css" />
     <Content Include="Public\fonts\css\all.min.css" />
     <Content Include="Public\fonts\css\brands.css" />
@@ -109,33 +129,87 @@
     <Content Include="Public\fonts\css\v4-shims.min.css" />
     <Content Include="Public\fonts\css\v5-font-face.css" />
     <Content Include="Public\fonts\css\v5-font-face.min.css" />
+    <Content Include="Public\images\detergente.jpeg" />
     <Content Include="Public\images\jmq.jpg" />
+    <Content Include="Public\images\kit_herramientas.jpeg" />
+    <Content Include="Public\images\pinturaLatex.jpeg" />
+    <Content Include="Public\images\podadora.jpeg" />
     <Content Include="Public\images\pucp.png" />
+    <Content Include="Public\images\taladro.jpg" />
     <Content Include="Public\js\bootstrap.bundle.js" />
     <Content Include="Public\js\bootstrap.bundle.min.js" />
     <Content Include="Public\js\bootstrap.esm.js" />
     <Content Include="Public\js\bootstrap.esm.min.js" />
     <Content Include="Public\js\bootstrap.js" />
     <Content Include="Public\js\bootstrap.min.js" />
-    <Content Include="MainLayout2.Master" />
+    <Content Include="Admin\MainLayout2.Master" />
+    <Content Include="Login\Login.Master" />
+    <None Include="Connected Services\UsuarioWS\UsuarioWS.wsdl" />
+    <None Include="Connected Services\UsuarioWS\UsuarioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Public\js\jquery-3.7.1.intellisense.js" />
     <Content Include="Public\js\jquery-3.7.1.js" />
     <Content Include="Public\js\jquery-3.7.1.min.js" />
     <Content Include="Public\js\jquery-3.7.1.slim.js" />
     <Content Include="Public\js\jquery-3.7.1.slim.min.js" />
-    <Content Include="Usuarios\IniciarSesion.aspx" />
-    <Content Include="Usuarios\LogOut.aspx" />
-    <Content Include="Usuarios\ModificarUsuarios.aspx" />
-    <Content Include="Usuarios\Registro.aspx" />
+    <Content Include="Admin\ModificarUsuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cotizaciones\Cotizaciones.aspx.cs">
-      <DependentUpon>Cotizaciones.aspx</DependentUpon>
+    <Compile Include="Admin\CotizacionesAdmin.aspx.cs">
+      <DependentUpon>CotizacionesAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cotizaciones\Cotizaciones.aspx.designer.cs">
-      <DependentUpon>Cotizaciones.aspx</DependentUpon>
+    <Compile Include="Admin\CotizacionesAdmin.aspx.designer.cs">
+      <DependentUpon>CotizacionesAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Descuentos.aspx.cs">
+      <DependentUpon>Descuentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Descuentos.aspx.designer.cs">
+      <DependentUpon>Descuentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ModificarProductos.aspx.cs">
+      <DependentUpon>ModificarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModificarProductos.aspx.designer.cs">
+      <DependentUpon>ModificarProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UsuarioWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login\OlvidarContraseña.aspx.cs">
+      <DependentUpon>OlvidarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\OlvidarContraseña.aspx.designer.cs">
+      <DependentUpon>OlvidarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Registrarse.aspx.cs">
+      <DependentUpon>Registrarse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Registrarse.aspx.designer.cs">
+      <DependentUpon>Registrarse.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainLayout.Master.cs">
       <DependentUpon>MainLayout.Master</DependentUpon>
@@ -144,18 +218,18 @@
     <Compile Include="MainLayout.Master.designer.cs">
       <DependentUpon>MainLayout.Master</DependentUpon>
     </Compile>
-    <Compile Include="MainLayout2.Master.cs">
+    <Compile Include="Admin\MainLayout2.Master.cs">
       <DependentUpon>MainLayout2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MainLayout2.Master.designer.cs">
+    <Compile Include="Admin\MainLayout2.Master.designer.cs">
       <DependentUpon>MainLayout2.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pagos\Pagos.aspx.cs">
+    <Compile Include="Admin\Pagos.aspx.cs">
       <DependentUpon>Pagos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pagos\Pagos.aspx.designer.cs">
+    <Compile Include="Admin\Pagos.aspx.designer.cs">
       <DependentUpon>Pagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pedidos\Carrito.aspx.cs">
@@ -165,12 +239,26 @@
     <Compile Include="Pedidos\Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos\Cotiza.aspx.cs">
+    <Compile Include="Cotizaciones\Cotiza.aspx.cs">
       <DependentUpon>Cotiza.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pedidos\Cotiza.aspx.designer.cs">
+    <Compile Include="Cotizaciones\Cotiza.aspx.designer.cs">
       <DependentUpon>Cotiza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\DatosEntrega.aspx.cs">
+      <DependentUpon>DatosEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\DatosEntrega.aspx.designer.cs">
+      <DependentUpon>DatosEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\MetodoPago.aspx.cs">
+      <DependentUpon>MetodoPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\MetodoPago.aspx.designer.cs">
+      <DependentUpon>MetodoPago.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pedidos\VerProducto.aspx.cs">
       <DependentUpon>VerProducto.aspx</DependentUpon>
@@ -186,41 +274,20 @@
     <Compile Include="Principal\Principal.aspx.designer.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Principal\PrincipalAdmin.aspx.cs">
+    <Compile Include="Admin\PrincipalAdmin.aspx.cs">
       <DependentUpon>PrincipalAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Principal\PrincipalAdmin.aspx.designer.cs">
+    <Compile Include="Admin\PrincipalAdmin.aspx.designer.cs">
       <DependentUpon>PrincipalAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuarios\IniciarSesion.aspx.cs">
-      <DependentUpon>IniciarSesion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usuarios\IniciarSesion.aspx.designer.cs">
-      <DependentUpon>IniciarSesion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\LogOut.aspx.cs">
-      <DependentUpon>LogOut.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usuarios\LogOut.aspx.designer.cs">
-      <DependentUpon>LogOut.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\ModificarUsuarios.aspx.cs">
+    <Compile Include="Admin\ModificarUsuarios.aspx.cs">
       <DependentUpon>ModificarUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Usuarios\ModificarUsuarios.aspx.designer.cs">
+    <Compile Include="Admin\ModificarUsuarios.aspx.designer.cs">
       <DependentUpon>ModificarUsuarios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\Registro.aspx.cs">
-      <DependentUpon>Registro.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Registro.aspx.designer.cs">
-      <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -270,6 +337,12 @@
       <Project>{653C9C5B-1416-437B-B9E6-4A6056A56A05}</Project>
       <Name>JMQDominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\UsuarioWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
