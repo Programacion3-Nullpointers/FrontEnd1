@@ -114,7 +114,17 @@
                 </FooterTemplate>
             </asp:Repeater>
         </div>
-
+        <div class="container mt-5 mb-5 text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-8 p-4 border rounded" style="background-color: #f8f9fa;">
+                    <h3 class="mb-3" style="color: #026670;">¿No encuentras lo que buscas?</h3>
+                    <p class="lead mb-4">¡Nosotros lo conseguimos para ti! Solicita una cotización personalizada y te ayudaremos a encontrar el producto ideal.</p>
+                    <asp:Button ID="btnCotizar" runat="server" Text="Cotizar Ahora" 
+                        CssClass="btn btn-success btn-lg px-4" 
+                        PostBackUrl="Cotizaciones/ListaCotizaciones.aspx" />
+                </div>
+            </div>
+        </div>
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">

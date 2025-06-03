@@ -82,6 +82,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Cotizaciones\ListaCotizaciones.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\OlvidarContraseña.aspx" />
     <Content Include="Login\Registrarse.aspx" />
@@ -182,6 +183,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Cotizaciones\ListaCotizaciones.aspx.cs">
+      <DependentUpon>ListaCotizaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cotizaciones\ListaCotizaciones.aspx.designer.cs">
+      <DependentUpon>ListaCotizaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
