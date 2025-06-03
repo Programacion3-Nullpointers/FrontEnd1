@@ -55,4 +55,22 @@
             document.getElementById('<%= pnlModalAgregar.ClientID %>').style.display = 'none';
         }
     </script>
+    <!-- Modal Modificar Usuario -->
+    <asp:Panel ID="pnlModalModificar" runat="server" CssClass="modal" Style="display: none;">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModalModificar()">&times;</span>
+            <h3>Modificar Usuario</h3>
+
+            <asp:HiddenField ID="hfIdUsuario" runat="server" />
+
+            <asp:TextBox ID="txtNombreUsuarioMod" runat="server" CssClass="input-modal" placeholder="Nombre de Usuario" />
+            <asp:TextBox ID="txtCorreoMod" runat="server" CssClass="input-modal" placeholder="Correo" />
+            <asp:TextBox ID="txtRazonSocialMod" runat="server" CssClass="input-modal" placeholder="Razón Social" />
+            <asp:TextBox ID="txtDireccionMod" runat="server" CssClass="input-modal" placeholder="Dirección" />
+            <asp:TextBox ID="txtRUCMod" runat="server" CssClass="input-modal" placeholder="RUC" />
+
+            <asp:Button ID="btnActualizarUsuario" runat="server" Text="Actualizar" CssClass="btn-edit" OnClick="btnActualizarUsuario_Click" />
+        </div>
+    </asp:Panel>
+
 </asp:Content>

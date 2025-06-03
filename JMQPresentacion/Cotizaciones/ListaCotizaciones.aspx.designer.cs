@@ -7,29 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace JMQPresentacion.Principal
+namespace JMQPresentacion.Cotizaciones
 {
 
 
-    public partial class Principal
+    public partial class ListaCotizaciones
     {
 
         /// <summary>
-        /// Control rptProductos.
+        /// Control pnlSinCotizaciones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProductos;
+        protected global::System.Web.UI.WebControls.Panel pnlSinCotizaciones;
 
         /// <summary>
-        /// Control btnCotizar.
+        /// Control rptCotizaciones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCotizar;
+        protected global::System.Web.UI.WebControls.Repeater rptCotizaciones;
     }
 }

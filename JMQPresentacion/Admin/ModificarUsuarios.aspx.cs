@@ -117,25 +117,28 @@ namespace JMQPresentacion.Usuarios
                     }
                 }
 
-                if (e.CommandName == "Editar")
-                {
+                if(e.CommandName == "Editar")
+    {
                     int id = Convert.ToInt32(e.CommandArgument);
-                    Usuario usuarioAEditar = lista.FirstOrDefault(u => u.id == id);
 
-                    if (usuarioAEditar != null)
+                    // Obtener los datos del usuario desde la base de datos
+                    var usuario = ObtenerUsuarioPorId(id); // Este método lo defines tú
+
+                    if (usuario != null)
                     {
-                        txtNombreUsuario.Text = usuarioAEditar.nombreUsuario;
-                        txtCorreo.Text = usuarioAEditar.correo;
-                        txtRazonSocial.Text = usuarioAEditar.razonsocial;
-                        txtDireccion.Text = usuarioAEditar.direccion;
-                        txtRUC.Text = usuarioAEditar.RUC;
+                        hfIdUsuario.Value = usuario.id.ToString();
+                        txtNombreUsuarioMod.Text = usuario.nombreUsuario;
+                        txtCorreoMod.Text = usuario.correo;
+                        txtRazonSocialMod.Text = usuario.razonsocial;
+                        txtDireccionMod.Text = usuario.direccion;
+                        txtRUCMod.Text = usuario.RUC;
 
-                        ViewState["EditarId"] = id;
-
-                        ScriptManager.RegisterStartupScript(this, GetType(), "MostrarModal", "mostrarModal();", true);
+                        // Mostrar modal de modificación
+                        ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalModificar", "mostrarModalModificar();", true);
                     }
                 }
             }
         }
+
     }
 }
