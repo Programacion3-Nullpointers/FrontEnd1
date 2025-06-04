@@ -56,7 +56,7 @@ namespace JMQPresentacion.Principal
 
         protected void btnCotizar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Cotizaciones/ListaCotizaciones.aspx"); Add commentMore actions
+            Response.Redirect("~/Cotizaciones/ListaCotizaciones.aspx");
         }
 
     }

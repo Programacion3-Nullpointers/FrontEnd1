@@ -7,7 +7,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using JMQPresentacion.JMQWS;
-using JMQPresentacion.JMQWSPC;
 
 namespace JMQPresentacion.Pedidos
 {
@@ -19,7 +18,7 @@ namespace JMQPresentacion.Pedidos
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            productoCotizacionWSClient = new JMQWSPC.ProductoCotizacionWSClient();
+            productoCotizacionWSClient = new JMQWS.ProductoCotizacionWSClient();
             cotizacionWSClient = new JMQWS.CotizacionWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -69,11 +68,11 @@ namespace JMQPresentacion.Pedidos
             decimal total = dt.AsEnumerable().Sum(r => r.Field<decimal>("Subtotal"));
             lblTotal.Text = "Total: S/. " + total.ToString("0.00");
 
-            JMQWSPC.productoCotizacion prod = new JMQWSPC.productoCotizacion();
+            JMQWS.productoCotizacion prod = new JMQWS.productoCotizacion();
             prod.descripcion = txtProducto.Text;
             prod.cantidad = int.Parse(txtCantidad.Text);
 
-            productoCotizacionWSClient.RegistrarPrecioProdCoti(prod, prod.cantidad);
+            //productoCotizacionWSClient.RegistrarPrecioProdCoti(prod, prod.cantidad);
 
         }
 
@@ -103,7 +102,7 @@ namespace JMQPresentacion.Pedidos
         protected void btnEnviarCotizacion_Click(object sender, EventArgs e)
         {
             cotizacion cot = new cotizacion();
-            cotizacionWSClient.registrarCotizacion(cot);
+            //cotizacionWSClient.registrarCotizacion(cot);
 
         }
 
