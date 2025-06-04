@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace JMQDominio
 {
     public class Usuario
+
     {
+        public Usuario() { }
         public Usuario(int id, string nombreUsuario, string contrasena, bool activo, string correo, TipoUsuario tipoUsuario, string razonsocial, string direccion, string RUC)
         {
             this.id = id;

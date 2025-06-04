@@ -28,3 +28,9 @@ C:\Users\User\Desktop\FrontEnd1\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.csproj
 C:\Users\User\Desktop\FrontEnd1\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\FrontEnd1\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.dll
 C:\Users\User\Desktop\FrontEnd1\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.pdb
+E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQDominio\bin\Debug\JMQDominio.dll
+E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQDominio\bin\Debug\JMQDominio.pdb
+E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.csproj.AssemblyReference.cache
+E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.csproj.CoreCompileInputs.cache
+E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.dll
+E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQDominio\obj\Debug\JMQDominio.pdb

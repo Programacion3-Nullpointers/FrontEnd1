@@ -22,7 +22,7 @@
 
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
-                        <asp:Button ID="btnEditar" runat="server" CommandName="Editar" CommandArgument='<%# Eval("id") %>' CssClass="btn-edit" Text="✏️" />
+                        <asp:Button ID="btnEditar" runat="server" CommandName="Editar" CommandArgument='<%# Eval("id") %>' CssClass="btn-edit" Text="✏️"/>
                         <asp:Button ID="btnEliminar" runat="server" CommandName="Eliminar" CommandArgument='<%# Eval("id") %>' CssClass="btn-delete" Text="🗑️" OnClientClick="return confirm('¿Estás seguro que deseas eliminar este usuario?');" />
                     </ItemTemplate>
                 </asp:TemplateField>
@@ -46,13 +46,31 @@
         </div>
     </asp:Panel>
 
-    <script type="text/javascript">
-        function mostrarModal() {
-            document.getElementById('<%= pnlModalAgregar.ClientID %>').style.display = 'block';
-        }
+    <!-- Modal Modificar Usuario -->
+    <asp:Panel ID="pnlModalModificar" runat="server" CssClass="modal" Style="display: none;">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModalModificar()">&times;</span>
+            <h3>Modificar Usuario</h3>
 
-        function cerrarModal() {
-            document.getElementById('<%= pnlModalAgregar.ClientID %>').style.display = 'none';
-        }
-    </script>
+            <asp:HiddenField ID="hfIdUsuario" runat="server" />
+
+            <asp:TextBox ID="txtNombreUsuarioMod" runat="server" CssClass="input-modal" placeholder="Nombre de Usuario" />
+            <asp:TextBox ID="txtCorreoMod" runat="server" CssClass="input-modal" placeholder="Correo" />
+            <asp:TextBox ID="txtRazonSocialMod" runat="server" CssClass="input-modal" placeholder="Razón Social" />
+            <asp:TextBox ID="txtDireccionMod" runat="server" CssClass="input-modal" placeholder="Dirección" />
+            <asp:TextBox ID="txtRUCMod" runat="server" CssClass="input-modal" placeholder="RUC" />
+
+            <asp:Button ID="btnActualizarUsuario" runat="server" Text="Actualizar" CssClass="btn-edit" OnClick="btnActualizarUsuario_Click" />
+        </div>
+    </asp:Panel>
+        <script type="text/javascript">
+            function mostrarModalModificar() {
+                document.getElementById('<%= pnlModalModificar.ClientID %>').style.display = 'block';
+            }
+
+            function cerrarModalModificar() {
+                document.getElementById('<%= pnlModalModificar.ClientID %>').style.display = 'none';
+            }
+        </script>
+
 </asp:Content>

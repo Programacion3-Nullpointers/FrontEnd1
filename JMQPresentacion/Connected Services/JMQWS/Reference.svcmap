@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ee058069-b906-4fd8-a5c2-8ad8c0b6d4fe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="4f75d741-f8ce-4dbe-9a1b-2cd7ece05f4e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,12 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/JMQWS/archivo.disco" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/JMQWS/UsuarioWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="39978678-4023-4b67-bb89-4aa139024208" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/UsuarioWS?xsd=1" />
-    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="24313230-1ace-43c5-9868-268093295be7" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/archivo.disco" />
-    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="75cbe959-fc19-453b-b9f1-b8949c9e4317" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/UsuarioWS?WSDL" />
+    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="c8d48086-eec0-44d0-ac5c-0257a07a5d1b" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/UsuarioWS?xsd=1" />
+    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="a0bf6b08-0d58-4dc7-8135-3eb417c86d37" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/UsuarioWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

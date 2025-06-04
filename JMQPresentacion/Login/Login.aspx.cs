@@ -4,11 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using JMQDominio;
+using JMQPresentacion.JMQWS;
 namespace JMQPresentacion.Login
 {
     public partial class Login : System.Web.UI.Page
     {
+        private UsuarioWSClient usuarioWSCLClient;
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            usuarioWSCLClient = new JMQWS.UsuarioWSClient();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,14 +33,14 @@ namespace JMQPresentacion.Login
                 divError.Style["display"] = "block";
                 return;
             }
-            Usuario user = null; // = buscarUsuario(txtEmail.Text);
+            usuario user = usuarioWSCLClient.BuscarUsuarioPorCorreo(txtEmail.Text); 
             if (user != null)
             {
                 Session["Usuario"] = user;
                 // descrifrar primero user.contrasena
                 if (user.contrasena == txtContr.Text)
                 {
-                    Response.Redirect("/Pedidos/DatosEntrega.aspx");
+                    Response.Redirect("/Principal/Principal.aspx");
                 }
                 else
                 {
