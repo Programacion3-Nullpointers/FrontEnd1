@@ -54,5 +54,10 @@ namespace JMQPresentacion.Principal
             return "data:image/jpeg;base64," + Convert.ToBase64String(datosImagen);
         }
 
+        protected void btnCotizar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Cotizaciones/ListaCotizaciones.aspx"); Add commentMore actions
+        }
+
     }
 }

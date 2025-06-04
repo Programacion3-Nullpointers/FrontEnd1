@@ -121,7 +121,7 @@
                     <p class="lead mb-4">¡Nosotros lo conseguimos para ti! Solicita una cotización personalizada y te ayudaremos a encontrar el producto ideal.</p>
                     <asp:Button ID="btnCotizar" runat="server" Text="Cotizar Ahora" 
                         CssClass="btn btn-success btn-lg px-4" 
-                        PostBackUrl="Cotizaciones/ListaCotizaciones.aspx" />
+                        OnClick="btnCotizar_Click" />
                 </div>
             </div>
         </div>
