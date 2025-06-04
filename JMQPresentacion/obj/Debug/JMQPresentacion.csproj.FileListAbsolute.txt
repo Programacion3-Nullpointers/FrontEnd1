@@ -172,9 +172,7 @@ C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\bin\roslyn\vbc.exe.c
 C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\bin\roslyn\vbc.rsp
 C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\bin\roslyn\VBCSCompiler.exe
 C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\bin\JMQDominio.dll
 C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\bin\JMQDominio.pdb
 C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\obj\Debug\JMQPresentacion.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\TA P3\Front\FrontEnd1\JMQPresentacion\obj\Debug\JMQPresentacion.csproj.CoreCompileInputs.cache

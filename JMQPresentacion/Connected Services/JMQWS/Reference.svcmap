@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="4f75d741-f8ce-4dbe-9a1b-2cd7ece05f4e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="43f1a577-7745-4afa-9919-3e68c20b5f2b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,30 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/JMQWS/UsuarioWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/JMQWS/archivo.disco" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="c8d48086-eec0-44d0-ac5c-0257a07a5d1b" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/UsuarioWS?xsd=1" />
-    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="a0bf6b08-0d58-4dc7-8135-3eb417c86d37" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/UsuarioWS?wsdl" />
+    <MetadataFile FileName="OrdenVentaWS.xsd" MetadataType="Schema" ID="e7296ddf-4511-4076-b1b3-c03d14386915" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/OrdenVentaWS?xsd=1" />
+    <MetadataFile FileName="BoletaWS.wsdl" MetadataType="Wsdl" ID="315f2142-dd11-4d84-b2c0-811a3796ac12" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/BoletaWS?WSDL" />
+    <MetadataFile FileName="DescuentoWS.xsd" MetadataType="Schema" ID="a117479c-334e-4854-aa4c-569ea79e9a92" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/DescuentoWS?xsd=1" />
+    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="4e18d2d3-efca-48fc-a5e0-08758f27a729" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/UsuarioWS?WSDL" />
+    <MetadataFile FileName="DescuentoWS.wsdl" MetadataType="Wsdl" ID="1aadaa27-ff2b-4114-8c2e-f8b8e2438478" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/DescuentoWS?WSDL" />
+    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="b9ed19a6-149e-4b4e-9a81-7eb63ea6bd2b" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/archivo.disco" />
+    <MetadataFile FileName="CategoriaWS.wsdl" MetadataType="Wsdl" ID="ddadec3d-97eb-45c7-adb1-0587d321c259" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/CategoriaWS?WSDL" />
+    <MetadataFile FileName="OrdenVentaWS.wsdl" MetadataType="Wsdl" ID="0baf11bc-d2c6-4ea7-bcec-2f7eb66e48f9" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/OrdenVentaWS?WSDL" />
+    <MetadataFile FileName="CotizacionWS.xsd" MetadataType="Schema" ID="d4b4a64c-39ac-4534-9ca7-aad1f9e55cb5" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/CotizacionWS?xsd=1" />
+    <MetadataFile FileName="NotificacionWS.wsdl" MetadataType="Wsdl" ID="f790c03c-30b8-4508-a2af-825ca34cdb2e" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/NotificacionWS?WSDL" />
+    <MetadataFile FileName="CotizacionWS.wsdl" MetadataType="Wsdl" ID="0074e59a-bda0-4ca2-b244-0295dea59318" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/CotizacionWS?WSDL" />
+    <MetadataFile FileName="NotificacionWS.xsd" MetadataType="Schema" ID="04f9fd05-6d99-4f57-aab3-11aa0eb9964a" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/NotificacionWS?xsd=1" />
+    <MetadataFile FileName="ProductoWS.xsd" MetadataType="Schema" ID="4b0197fd-8158-4196-9b2d-c1186f72c7a2" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/ProductoWS?xsd=1" />
+    <MetadataFile FileName="FacturaWS.xsd" MetadataType="Schema" ID="d4bf798e-b425-422d-99da-c309bb6b9b44" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/FacturaWS?xsd=1" />
+    <MetadataFile FileName="BoletaWS.xsd" MetadataType="Schema" ID="f8d9ac03-d2b6-4bad-8f0f-a72697cc5a4c" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/BoletaWS?xsd=1" />
+    <MetadataFile FileName="ComprobantePagoWS.xsd" MetadataType="Schema" ID="42437d58-65ca-4723-9c3c-84c9e09646d1" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/ComprobantePagoWS?xsd=1" />
+    <MetadataFile FileName="ComprobantePagoWS.wsdl" MetadataType="Wsdl" ID="a285d69a-2c02-4b58-ab54-b4db69205b93" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/ComprobantePagoWS?WSDL" />
+    <MetadataFile FileName="FacturaWS.wsdl" MetadataType="Wsdl" ID="f1a13e5c-c553-435c-8e68-87cd3735e965" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/FacturaWS?WSDL" />
+    <MetadataFile FileName="ProductoWS.wsdl" MetadataType="Wsdl" ID="d414a170-c500-42fd-94fe-1d4550bee26b" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/ProductoWS?WSDL" />
+    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="eaaf4015-0de6-47ce-af1d-fc26470f0e48" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/UsuarioWS?xsd=1" />
+    <MetadataFile FileName="CategoriaWS.xsd" MetadataType="Schema" ID="c4911eea-7543-4563-805c-8b3d5b0def8f" SourceId="1" SourceUrl="http://localhost:8080/JMQWS/CategoriaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -1,97 +1,97 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|e:\\noelia\\documents\\pucp\\3er a\u00F1o\\6to ciclo\\progra3\\ta\\github\\frontend1\\jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\admin\\modificarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\modificarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\admin\\modificarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\admin\\modificarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\modificarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|e:\\noelia\\documents\\pucp\\3er a\u00F1o\\6to ciclo\\progra3\\ta\\github\\frontend1\\jmqpresentacion\\login\\registrarse.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\login\\registrarse.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|e:\\noelia\\documents\\pucp\\3er a\u00F1o\\6to ciclo\\progra3\\ta\\github\\frontend1\\jmqpresentacion\\login\\registrarse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\login\\registrarse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\login\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\login\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|e:\\noelia\\documents\\pucp\\3er a\u00F1o\\6to ciclo\\progra3\\ta\\github\\frontend1\\jmqpresentacion\\admin\\cotizacionesadmin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\cotizacionesadmin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|e:\\noelia\\documents\\pucp\\3er a\u00F1o\\6to ciclo\\progra3\\ta\\github\\frontend1\\jmqpresentacion\\admin\\pagos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\pagos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|e:\\noelia\\documents\\pucp\\3er a\u00F1o\\6to ciclo\\progra3\\ta\\github\\frontend1\\jmqpresentacion\\pedidos\\metodopago.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\metodopago.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\pedidos\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|e:\\noelia\\documents\\pucp\\3er a\u00F1o\\6to ciclo\\progra3\\ta\\github\\frontend1\\jmqpresentacion\\pedidos\\datosentrega.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\datosentrega.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|e:\\noelia\\documents\\pucp\\3er a\u00F1o\\6to ciclo\\progra3\\ta\\github\\frontend1\\jmqpresentacion\\principal\\principal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\pedidos\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\admin\\cotizacionesadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\cotizacionesadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\admin\\principaladmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\principaladmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\cotizaciones\\listacotizaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\cotizaciones\\listacotizaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\cotizaciones\\listacotizaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\cotizaciones\\listacotizaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\login\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\login\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\cotizaciones\\cotiza.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\cotizaciones\\cotiza.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\cotizaciones\\cotiza.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\cotizaciones\\cotiza.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\cotizaciones\\cotiza.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\admin\\modificarproductos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\admin\\modificarproductos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\modificarproductos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\admin\\mainlayout2.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\mainlayout2.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\principal\\principal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principal.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\pedidos\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\pedidos\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\mainlayout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\mainlayout.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\admin\\mainlayout2.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\mainlayout2.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\user\\desktop\\ta p3\\front\\frontend1\\jmqpresentacion\\login\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\login\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\login\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\login\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\admin\\modificarproductos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\modificarproductos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\public\\css\\site2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\admin\\modificarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\modificarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\login\\registrarse.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\login\\registrarse.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\login\\registrarse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\login\\registrarse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\admin\\cotizacionesadmin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\cotizacionesadmin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\admin\\cotizacionesadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\cotizacionesadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\admin\\principaladmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\admin\\principaladmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\cotizaciones\\listacotizaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\cotizaciones\\listacotizaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\cotizaciones\\listacotizaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\cotizaciones\\listacotizaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\public\\css\\site2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\public\\css\\site2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\jmqpresentacion\\public\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\jmqpresentacion\\public\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\public\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -102,215 +102,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Registrarse.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Login\\Registrarse.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Registrarse.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Login\\Registrarse.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Login\\Registrarse.aspx.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T03:21:34.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Carrito.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAawEYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T10:31:02.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Registrarse.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Login\\Registrarse.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Registrarse.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Login\\Registrarse.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Login\\Registrarse.aspx",
+              "Title": "MainLayout2.Master",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\MainLayout2.Master",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\MainLayout2.Master",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\MainLayout2.Master",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\MainLayout2.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T04:46:47.61Z",
+              "WhenOpened": "2025-06-04T10:00:11.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Login.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Login.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Login\\Login.aspx.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwDsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T21:24:49.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ModificarUsuarios.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarUsuarios.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarUsuarios.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarUsuarios.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Admin\\ModificarUsuarios.aspx",
+              "Title": "Principal.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T10:11:33.222Z",
+              "WhenOpened": "2025-06-04T08:09:39.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ModificarUsuarios.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarUsuarios.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarUsuarios.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarUsuarios.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Admin\\ModificarUsuarios.aspx.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAAwHkAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Principal.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:48:46.246Z",
+              "WhenOpened": "2025-06-04T08:09:33.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Principal.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T10:33:15.377Z",
+              "Title": "ModificarUsuarios.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarUsuarios.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarUsuarios.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarUsuarios.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\ModificarUsuarios.aspx.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAJcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T07:45:34.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MetodoPago.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Pedidos\\MetodoPago.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\MetodoPago.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Pedidos\\MetodoPago.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Pedidos\\MetodoPago.aspx.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAIA3wBwAAABAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ModificarProductos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarProductos.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarProductos.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarProductos.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\ModificarProductos.aspx.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAKQAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T04:59:35.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DatosEntrega.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Pedidos\\DatosEntrega.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\DatosEntrega.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Pedidos\\DatosEntrega.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Pedidos\\DatosEntrega.aspx.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T04:59:43.315Z",
+              "WhenOpened": "2025-06-04T07:45:20.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Pagos.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\Pagos.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\Pagos.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\Pagos.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Admin\\Pagos.aspx.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAlwGoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T05:01:01.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CotizacionesAdmin.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\CotizacionesAdmin.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\CotizacionesAdmin.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\CotizacionesAdmin.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Admin\\CotizacionesAdmin.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T05:04:08.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Principal.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T04:58:38.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ListaCotizaciones.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T20:09:24.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PrincipalAdmin.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\PrincipalAdmin.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\PrincipalAdmin.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\PrincipalAdmin.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Admin\\PrincipalAdmin.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T10:19:07.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CotizacionesAdmin.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\CotizacionesAdmin.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\CotizacionesAdmin.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\CotizacionesAdmin.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Admin\\CotizacionesAdmin.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T10:11:35.678Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Carrito.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx",
               "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\Carrito.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx",
               "RelativeToolTip": "JMQPresentacion\\Pedidos\\Carrito.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -319,11 +184,187 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Carrito.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAFUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:31:02.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainLayout.Master",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\MainLayout.Master",
+              "RelativeDocumentMoniker": "JMQPresentacion\\MainLayout.Master",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\MainLayout.Master",
+              "RelativeToolTip": "JMQPresentacion\\MainLayout.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-04T10:15:51.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cotiza.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotiza.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Cotizaciones\\Cotiza.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotiza.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Cotizaciones\\Cotiza.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T10:40:16.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainLayout2.Master.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\MainLayout2.Master.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\MainLayout2.Master.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\MainLayout2.Master.cs",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\MainLayout2.Master.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T10:02:39.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ModificarUsuarios.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarUsuarios.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarUsuarios.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarUsuarios.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\ModificarUsuarios.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T10:11:33.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Login.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Login\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T21:24:43.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Login\\Login.aspx.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAB0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T07:56:27.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ModificarProductos.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarProductos.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarProductos.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarProductos.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\ModificarProductos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T10:13:10.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Registrarse.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Login\\Registrarse.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Registrarse.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Login\\Registrarse.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Login\\Registrarse.aspx.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T03:21:34.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Registrarse.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Login\\Registrarse.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Registrarse.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Login\\Registrarse.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Login\\Registrarse.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-04T04:46:47.61Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "CotizacionesAdmin.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\CotizacionesAdmin.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\CotizacionesAdmin.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\CotizacionesAdmin.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\CotizacionesAdmin.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T05:04:08.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ListaCotizaciones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:09:24.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PrincipalAdmin.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\PrincipalAdmin.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\PrincipalAdmin.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\PrincipalAdmin.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\PrincipalAdmin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T10:19:07.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CotizacionesAdmin.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\CotizacionesAdmin.aspx",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\CotizacionesAdmin.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Admin\\CotizacionesAdmin.aspx",
+              "RelativeToolTip": "JMQPresentacion\\Admin\\CotizacionesAdmin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T10:11:35.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "ListaCotizaciones.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx",
               "RelativeDocumentMoniker": "JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx",
               "RelativeToolTip": "JMQPresentacion\\Cotizaciones\\ListaCotizaciones.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -331,59 +372,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Login.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Login\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T21:24:43.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Cotiza.aspx.cs",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotiza.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Cotizaciones\\Cotiza.aspx.cs",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotiza.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Cotizaciones\\Cotiza.aspx.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T14:06:42.014Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Cotiza.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotiza.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Cotizaciones\\Cotiza.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Cotizaciones\\Cotiza.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Cotizaciones\\Cotiza.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T10:40:16.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ModificarProductos.aspx",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarProductos.aspx",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarProductos.aspx",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarProductos.aspx",
-              "RelativeToolTip": "JMQPresentacion\\Admin\\ModificarProductos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-02T10:13:10.982Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 21,
               "Title": "site2.css",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Public\\css\\site2.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Public\\css\\site2.css",
               "RelativeDocumentMoniker": "JMQPresentacion\\Public\\css\\site2.css",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Public\\css\\site2.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Public\\css\\site2.css",
               "RelativeToolTip": "JMQPresentacion\\Public\\css\\site2.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -393,9 +386,9 @@
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "site.css",
-              "DocumentMoniker": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Public\\css\\site.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Public\\css\\site.css",
               "RelativeDocumentMoniker": "JMQPresentacion\\Public\\css\\site.css",
-              "ToolTip": "E:\\Noelia\\Documents\\PUCP\\3er a\u00F1o\\6to ciclo\\Progra3\\TA\\Github\\FrontEnd1\\JMQPresentacion\\Public\\css\\site.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\TA P3\\Front\\FrontEnd1\\JMQPresentacion\\Public\\css\\site.css",
               "RelativeToolTip": "JMQPresentacion\\Public\\css\\site.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",

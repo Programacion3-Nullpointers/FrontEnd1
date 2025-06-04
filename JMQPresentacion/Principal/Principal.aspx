@@ -95,14 +95,14 @@
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card h-100">
                             <div class="image-container">
-                                <img src='<%# Eval("imagen") %>' alt='<%# Eval("nombre") %>' />
+                                <asp:Image ID="imgProducto" runat="server" ImageUrl='<%# ConvertirByteAImagenBase64((byte[])Eval("imagen")) %>' />
                             </div>
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><%# Eval("nombre") %></h5>
                                 <p class="card-text text-muted"><%# Eval("categoria.nombre") %></p>
                                 <p class="fw-bold text-success">S/ <%# Eval("precio") %></p>
                                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar al Carrito" CssClass="btn btn-primary mt-auto"
-                                    CommandArgument='<%# Eval("idProducto") %>' OnClick="btnAgregarProductos_Click" />
+                                    CommandArgument='<%# Eval("id") %>' OnClick="btnAgregarProductos_Click" />
                             </div>
                         </div>
                     </div>

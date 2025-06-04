@@ -78,7 +78,7 @@ namespace JMQPresentacion.Usuarios
                 nuevo.razonsocial = txtRazonSocial.Text;
                 nuevo.direccion = txtDireccion.Text;
                 nuevo.RUC = txtRUC.Text;
-
+                usuarioWSCLClient.registrarUsuario(nuevo);
                 lista.Add(nuevo);
             }
 

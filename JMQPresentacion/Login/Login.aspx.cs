@@ -40,7 +40,12 @@ namespace JMQPresentacion.Login
                 // descrifrar primero user.contrasena
                 if (user.contrasena == txtContr.Text)
                 {
-                    Response.Redirect("/Principal/Principal.aspx");
+                    if (user.tipoUsuario == tipoUsuario.ADMIN)
+                    {
+                        Response.Redirect("/Admin/PrincipalAdmin.aspx");
+                    }
+                    else
+                        Response.Redirect("/Principal/Principal.aspx");
                 }
                 else
                 {
