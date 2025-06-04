@@ -72,13 +72,30 @@
     <Content Include="Admin\CotizacionesAdmin.aspx" />
     <Content Include="Admin\Descuentos.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
-    <None Include="Connected Services\UsuarioWS\archivo.disco" />
-    <None Include="Connected Services\UsuarioWS\configuration91.svcinfo" />
-    <None Include="Connected Services\UsuarioWS\configuration.svcinfo" />
-    <Content Include="Connected Services\UsuarioWS\JMQPresentacion.UsuarioWS.helloResponse.datasource">
+    <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
+    <None Include="Connected Services\JMQWS\configuration.svcinfo" />
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\UsuarioWS\Reference.svcmap">
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarUsuariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -145,8 +162,8 @@
     <Content Include="Public\js\bootstrap.min.js" />
     <Content Include="Admin\MainLayout2.Master" />
     <Content Include="Login\Login.Master" />
-    <None Include="Connected Services\UsuarioWS\UsuarioWS.wsdl" />
-    <None Include="Connected Services\UsuarioWS\UsuarioWS.xsd">
+    <None Include="Connected Services\JMQWS\UsuarioWS.wsdl" />
+    <None Include="Connected Services\JMQWS\UsuarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Public\js\jquery-3.7.1.intellisense.js" />
@@ -179,7 +196,7 @@
     <Compile Include="Admin\ModificarProductos.aspx.designer.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\UsuarioWS\Reference.cs">
+    <Compile Include="Connected Services\JMQWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -341,16 +358,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JMQDominio\JMQDominio.csproj">
-      <Project>{653C9C5B-1416-437B-B9E6-4A6056A56A05}</Project>
-      <Name>JMQDominio</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\UsuarioWS\" />
+    <WCFMetadataStorage Include="Connected Services\JMQWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

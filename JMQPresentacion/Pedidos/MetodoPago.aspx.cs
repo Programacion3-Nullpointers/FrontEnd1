@@ -1,5 +1,4 @@
-﻿using JMQDominio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,9 +22,9 @@ namespace JMQPresentacion.Pedidos
 
         private void CargarResumen()
         {
-            List<Detalle> detalles = (List<Detalle>)Session["Cart"];
-            lblTotal.Text = "S/ " + detalles.Sum(item => item.cantidad * item.precio_unitario).ToString("F2");
-            lblTotal2.Text = lblTotal.Text;
+            //List<Detalle> detalles = (List<Detalle>)Session["Cart"];
+            //lblTotal.Text = "S/ " + detalles.Sum(item => item.cantidad * item.precio_unitario).ToString("F2");
+            //lblTotal2.Text = lblTotal.Text;
         }
         protected void MetodoPago_Changed(object sender, EventArgs e)
         {
@@ -43,7 +42,7 @@ namespace JMQPresentacion.Pedidos
             else
             {
             */
-                MetodoPago metodo;
+                //MetodoPago metodo;
                 // insertar Entrega a la BD
                 // insertar(metodo);
                 Response.Redirect("~/Pedidos/MetodoPago.aspx");

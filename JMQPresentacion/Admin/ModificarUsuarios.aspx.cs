@@ -1,15 +1,23 @@
-﻿using JMQDominio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using JMQPresentacion.JMQWS;
+using System.Linq;
+
 
 namespace JMQPresentacion.Usuarios
 {
     public partial class ModificarUsuarios : System.Web.UI.Page
     {
+        private UsuarioWSClient usuarioWSCLClient;
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            usuarioWSCLClient = new JMQWS.UsuarioWSClient();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -17,17 +25,15 @@ namespace JMQPresentacion.Usuarios
                 // Si no hay lista guardada en sesión, inicialízala con algunos datos de ejemplo
                 if (Session["Usuarios"] == null)
                 {
-                    List<Usuario> listaInicial = new List<Usuario>
-                {
-                    new Usuario(1, "admin01", "123456", true, "admin@jmq.com", new TipoUsuario(), "JMQ SAC", "Av. Principal 123", "20604010123"),
-                    new Usuario(2, "user02", "abc123", true, "user@jmq.com", new TipoUsuario(), "JMQ Ferretería", "Jr. Comercio 456", "20101020304")
-                };
+                    List<usuario> listaInicial = new List<usuario>();
+                    listaInicial = usuarioWSCLClient.listarUsuarios().ToList();
+
 
                     Session["Usuarios"] = listaInicial;
                 }
 
                 // Mostrar la tabla
-                List<Usuario> lista = Session["Usuarios"] as List<Usuario>;
+                List<usuario> lista = Session["Usuarios"] as List<usuario>;
                 gvUsuarios.DataSource = lista.OrderBy(u => u.id).ToList();
                 gvUsuarios.DataBind();
             }
@@ -36,22 +42,22 @@ namespace JMQPresentacion.Usuarios
 
         protected void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
-            List<Usuario> lista = Session["Usuarios"] as List<Usuario>;
-            if (lista == null) lista = new List<Usuario>();
+            List<usuario> lista = Session["Usuarios"] as List<usuario>;
+            if (lista == null) lista = new List<usuario>();
 
             int idEditar = ViewState["EditarId"] != null ? Convert.ToInt32(ViewState["EditarId"]) : 0;
 
             if (idEditar > 0)
             {
                 // Editar usuario existente
-                Usuario usuario = lista.FirstOrDefault(x => x.id == idEditar);
-                if (usuario != null)
+                usuario user = lista.FirstOrDefault(x => x.id == idEditar);
+                if (user != null)
                 {
-                    usuario.nombreUsuario = txtNombreUsuario.Text;
-                    usuario.correo = txtCorreo.Text;
-                    usuario.razonsocial = txtRazonSocial.Text;
-                    usuario.direccion = txtDireccion.Text;
-                    usuario.RUC = txtRUC.Text;
+                    user.nombreUsuario = txtNombreUsuario.Text;
+                    user.correo = txtCorreo.Text;
+                    user.razonsocial = txtRazonSocial.Text;
+                    user.direccion = txtDireccion.Text;
+                    user.RUC = txtRUC.Text;
                 }
 
                 ViewState["EditarId"] = null;
@@ -60,20 +66,18 @@ namespace JMQPresentacion.Usuarios
             {
                 // ➕ Buscar el menor ID disponible
                 int nuevoId = Enumerable.Range(1, lista.Count + 1)
-                                        .Except(lista.Select(u => u.id))
-                                        .First();
+                        .Except(lista.Select(u => u.id))
+                        .First();
 
-                Usuario nuevo = new Usuario(
-                    nuevoId,
-                    txtNombreUsuario.Text,
-                    "", // contraseña vacía
-                    true,
-                    txtCorreo.Text,
-                    new TipoUsuario(),
-                    txtRazonSocial.Text,
-                    txtDireccion.Text,
-                    txtRUC.Text
-                );
+                usuario nuevo = new usuario();
+                nuevo.id = nuevoId;
+                nuevo.nombreUsuario = txtNombreUsuario.Text;
+                nuevo.contrasena = ""; // contraseña vacía, según lo que indicaste
+                nuevo.correo = txtCorreo.Text;
+                nuevo.tipoUsuario = new tipoUsuario(); // o asigná un valor real si lo tenés
+                nuevo.razonsocial = txtRazonSocial.Text;
+                nuevo.direccion = txtDireccion.Text;
+                nuevo.RUC = txtRUC.Text;
 
                 lista.Add(nuevo);
             }
@@ -99,17 +103,18 @@ namespace JMQPresentacion.Usuarios
         {
             if (Session["Usuarios"] != null)
             {
-                List<Usuario> lista = (List<Usuario>)Session["Usuarios"];
+                List<usuario> lista = (List<usuario>)Session["Usuarios"];
 
                 if (e.CommandName == "Eliminar")
                 {
                     int id = Convert.ToInt32(e.CommandArgument);
-                    Usuario usuarioAEliminar = lista.FirstOrDefault(u => u.id == id);
+                    usuario usuarioAEliminar = lista.FirstOrDefault(u => u.id == id);
 
                     if (usuarioAEliminar != null)
                     {
                         lista.Remove(usuarioAEliminar); // Eliminar de la lista
                         Session["Usuarios"] = lista;     // Guardar la lista actualizada en la sesión
+                        usuarioWSCLClient.eliminarUsuario(id);
 
                         gvUsuarios.DataSource = lista.OrderBy(u => u.id).ToList();
                         gvUsuarios.DataBind();
@@ -117,12 +122,12 @@ namespace JMQPresentacion.Usuarios
                     }
                 }
 
-                if(e.CommandName == "Editar")
-    {
+                if (e.CommandName == "Editar")
+                {
                     int id = Convert.ToInt32(e.CommandArgument);
 
                     // Obtener los datos del usuario desde la base de datos
-                    var usuario = ObtenerUsuarioPorId(id); // Este método lo defines tú
+                    var usuario = usuarioWSCLClient.buscarUsuario(id); // Este método lo defines tú
 
                     if (usuario != null)
                     {
@@ -135,10 +140,37 @@ namespace JMQPresentacion.Usuarios
 
                         // Mostrar modal de modificación
                         ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalModificar", "mostrarModalModificar();", true);
+
                     }
                 }
             }
         }
 
+        protected void btnActualizarUsuario_Click(object sender, EventArgs e)
+        {
+            List<usuario> lista = Session["Usuarios"] as List<usuario>;
+            if (lista == null) return;
+
+            int id = int.Parse(hfIdUsuario.Value);
+            usuario user = lista.FirstOrDefault(u => u.id == id);
+
+            if (user != null)
+            {
+                user.nombreUsuario = txtNombreUsuarioMod.Text;
+                user.correo = txtCorreoMod.Text;
+                user.razonsocial = txtRazonSocialMod.Text;
+                user.direccion = txtDireccionMod.Text;
+                user.RUC = txtRUCMod.Text;
+
+                 usuarioWSCLClient.actualizarUsuario(user);
+            }
+
+            Session["Usuarios"] = lista;
+            gvUsuarios.DataSource = lista.OrderBy(u => u.id).ToList();
+            gvUsuarios.DataBind();
+
+            // Cerrar modal
+            ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModalModificar", "cerrarModalModificar();", true);
+        }
     }
 }

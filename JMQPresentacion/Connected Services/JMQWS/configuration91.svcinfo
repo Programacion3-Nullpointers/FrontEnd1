@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="ITg6dtDjGJKdJRCsPBukx8G6M/RveOt3/hfs6+YLNTM=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="ltbVUDUKzUEyABYcQMmYvw0n74Vqf9dUKQc1lcUIFgg=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="UsuarioWSPortBinding">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="UsuarioWSPort" contract="UsuarioWS.UsuarioWS" bindingType="basicHttpBinding" address="http://localhost:8080/JMQWS/UsuarioWS" bindingConfiguration="UsuarioWSPortBinding">
+    <endpoint name="UsuarioWSPort" contract="JMQWS.UsuarioWS" bindingType="basicHttpBinding" address="http://localhost:8080/JMQWS/UsuarioWS" bindingConfiguration="UsuarioWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8080/JMQWS/UsuarioWS</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>UsuarioWSPortBinding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>UsuarioWS.UsuarioWS</serializedValue>
+          <serializedValue>JMQWS.UsuarioWS</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

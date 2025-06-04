@@ -477,9 +477,7 @@ E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPrese
 E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\bin\roslyn\vbc.rsp
 E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\bin\roslyn\VBCSCompiler.exe
 E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\bin\roslyn\VBCSCompiler.exe.config
-E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\bin\JMQDominio.dll
 E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\bin\JMQDominio.pdb
 E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\obj\Debug\JMQPresentacion.csproj.AssemblyReference.cache
 E:\Noelia\Documents\PUCP\3er año\6to ciclo\Progra3\TA\Github\FrontEnd1\JMQPresentacion\obj\Debug\JMQPresentacion.csproj.CoreCompileInputs.cache
