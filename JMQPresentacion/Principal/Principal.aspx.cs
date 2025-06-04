@@ -66,5 +66,10 @@ namespace JMQPresentacion.Principal
             //Session["Cart"] = cart;
             //Response.Redirect("~/Pedidos/Carrito.aspx");
         }
+
+        protected void btnCotizar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Cotizaciones/ListaCotizaciones.aspx");
+        }
     }
 }

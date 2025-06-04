@@ -1,20 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using JMQPresentacion.JMQWS;
+using JMQPresentacion.JMQWSPC;
 
 namespace JMQPresentacion.Pedidos
 {
     public partial class Cotiza : System.Web.UI.Page
     {
+        private ProductoCotizacionWSClient productoCotizacionWSClient;
+        private CotizacionWSClient cotizacionWSClient;
+        private UsuarioWSClient usuarioWSClient;
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            productoCotizacionWSClient = new JMQWSPC.ProductoCotizacionWSClient();
+            cotizacionWSClient = new JMQWS.CotizacionWSClient();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                Response.Clear();
+                if (Request.QueryString["id"] != null)
+                {
+                    int idCotizacion = Convert.ToInt32(Request.QueryString["id"]);
+                    CargarCotizacion(idCotizacion);
+                }
             }
         }
         protected void btnAgregar_Click(object sender, EventArgs e)
@@ -52,9 +68,44 @@ namespace JMQPresentacion.Pedidos
             // Calcular total
             decimal total = dt.AsEnumerable().Sum(r => r.Field<decimal>("Subtotal"));
             lblTotal.Text = "Total: S/. " + total.ToString("0.00");
+
+            JMQWSPC.productoCotizacion prod = new JMQWSPC.productoCotizacion();
+            prod.descripcion = txtProducto.Text;
+            prod.cantidad = int.Parse(txtCantidad.Text);
+
+            productoCotizacionWSClient.RegistrarPrecioProdCoti(prod, prod.cantidad);
+
         }
 
+        private void CargarCotizacion(int id)
+        {
+            try
+            {
+                // Llama a tu servicio web CotizacionWS
+                var cotiza = cotizacionWSClient.obtenerCotizacionesPorUsuario(id); // O el método correcto según tu WS
 
+                // Muestra los datos generales (por ejemplo, en labels)
+                lblEstado.Text = cotiza.Length.ToString();
+                
+
+                // Carga productos asociados
+                var productos = productoCotizacionWSClient.listarProductosPorCotizacion(id);
+
+                gvProductos.DataSource = productos;
+                gvProductos.DataBind();
+            }
+            catch (System.Exception ex)
+            {
+                lblError.Text = "Error al cargar la cotización: " + ex.Message;
+            }
+        }
+
+        protected void btnEnviarCotizacion_Click(object sender, EventArgs e)
+        {
+            cotizacion cot = new cotizacion();
+            cotizacionWSClient.registrarCotizacion(cot);
+
+        }
 
     }
 }
