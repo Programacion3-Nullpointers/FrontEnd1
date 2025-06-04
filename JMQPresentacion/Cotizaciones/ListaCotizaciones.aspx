@@ -9,7 +9,7 @@
         <asp:Panel ID="pnlSinCotizaciones" runat="server" Visible="false" CssClass="text-center py-5 border rounded">
             <i class="fas fa-file-alt fa-3x mb-3" style="color: #7f8c8d;"></i>
             <h4 style="color: #2c3e50;">No hay cotizaciones registradas</h4>
-            <p class="text-muted">¿Necesitas un producto especial? <asp:HyperLink runat="server" NavigateUrl="~/Cotizar.aspx" CssClass="text-primary">Solicita una cotización aquí</asp:HyperLink></p>
+            <p class="text-muted">¿Necesitas un producto especial? <asp:HyperLink runat="server" NavigateUrl="Cotiza.aspx" CssClass="text-primary">Solicita una cotización aquí</asp:HyperLink></p>
         </asp:Panel>
 
         <!-- 🔹 Lista de cotizaciones (se muestra si hay datos) -->
@@ -29,17 +29,34 @@
                         <tbody>
             </HeaderTemplate>
             <ItemTemplate>
-                            <tr>
-                                <td><%# Eval("IdCotizacion") %></td>
-                                <td><%# Eval("Fecha", "{0:dd/MM/yyyy}") %></td>
-                                <td><%# Eval("NombreProducto") %></td>
-                                <td><span class='badge <%# GetEstadoCssClass(Eval("Estado")) %>'><%# Eval("Estado") %></span></td>
-                                <td>
-                                    <asp:LinkButton runat="server" CssClass="btn btn-sm btn-outline-primary" CommandArgument='<%# Eval("IdCotizacion") %>' OnClick="VerDetalle_Click">
-                                        <i class="fas fa-eye"></i> Ver
-                                    </asp:LinkButton>
-                                </td>
-                            </tr>
+                <tr>
+                    <td><%# Eval("id") %></td>
+                    <td><%# Eval("Fecha", "{0:dd/MM/yyyy}") %></td>
+                    <td>
+                        <asp:Repeater ID="rptProductos" runat="server" DataSource='<%# Eval("Productos") %>'>
+                            <HeaderTemplate>
+                                <ul class="mb-0 ps-3">
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <li><%# Eval("NombreProducto") %> (x<%# Eval("Cantidad") %>)</li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </ul>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </td>
+                    <td>
+                        <span class='badge <%# GetEstadoCssClass(Eval("Estado")) %>'>
+                            <%# Eval("Estado") %>
+                        </span>
+                    </td>
+                    <td>
+                        <asp:LinkButton runat="server" CssClass="btn btn-sm btn-outline-primary"
+                                        CommandArgument='<%# Eval("id") %>' OnClick="VerDetalle_Click">
+                            <i class="fas fa-eye"></i> Ver
+                        </asp:LinkButton>
+                    </td>
+                </tr>
             </ItemTemplate>
             <FooterTemplate>
                         </tbody>
