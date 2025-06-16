@@ -72,7 +72,7 @@
         <div class="sidebar">
             <a class="menu-title" href="/Admin/PrincipalAdmin.aspx">Menú</a>
             <a class="menu-item" href="/Admin/ModificarUsuarios.aspx">Usuarios</a>
-            <a class="menu-item" href="/Admin/ModificarProductos.aspx">Productos</a>
+            <a class="menu-item" href="/Admin/ModificarProductoAdmin.aspx">Productos</a>
             <a class="menu-item" href="/Admin/CotizacionesAdmin.aspx">Cotizaciones</a>
             <a class="menu-item" href="/Admin/Descuentos.aspx">Descuentos</a>
     

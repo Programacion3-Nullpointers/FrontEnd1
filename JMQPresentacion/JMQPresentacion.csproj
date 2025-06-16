@@ -71,6 +71,7 @@
   <ItemGroup>
     <Content Include="Admin\CotizacionesAdmin.aspx" />
     <Content Include="Admin\Descuentos.aspx" />
+    <Content Include="Admin\ModificarProductoAdmin.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
     <None Include="Connected Services\JMQWS\archivo.disco" />
     <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
@@ -291,7 +292,7 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarPrecioProdCotiResponse.datasource">
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarProductoResponse.datasource">
@@ -436,6 +437,13 @@
     </Compile>
     <Compile Include="Admin\Descuentos.aspx.designer.cs">
       <DependentUpon>Descuentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ModificarProductoAdmin.aspx.cs">
+      <DependentUpon>ModificarProductoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModificarProductoAdmin.aspx.designer.cs">
+      <DependentUpon>ModificarProductoAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ModificarProductos.aspx.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>

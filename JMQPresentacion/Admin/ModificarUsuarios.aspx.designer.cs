@@ -24,6 +24,15 @@ namespace JMQPresentacion.Usuarios
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
+        /// Control IdUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField IdUsuario;
+
+        /// <summary>
         /// Control gvUsuarios.
         /// </summary>
         /// <remarks>
@@ -103,15 +112,6 @@ namespace JMQPresentacion.Usuarios
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlModalModificar;
-
-        /// <summary>
-        /// Control hfIdUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfIdUsuario;
 
         /// <summary>
         /// Control txtNombreUsuarioMod.
