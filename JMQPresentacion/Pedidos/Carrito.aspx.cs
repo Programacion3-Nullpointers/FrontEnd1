@@ -10,6 +10,11 @@ namespace JMQPresentacion.Pedidos
 {
     public partial class Carrito : System.Web.UI.Page
     {
+        private OrdenVentaWSClient ordenVentaService;
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            ordenVentaService = new JMQWS.OrdenVentaWSClient();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -31,7 +36,21 @@ namespace JMQPresentacion.Pedidos
             {
                 // Verificar si el carrito tiene productos
                 if (Session["Cart"] != null && ((List<detalle>)Session["Cart"]).Count > 0)
+                {
+                    ordenVenta orden = new ordenVenta
+                    {
+                        estado_compra = estadoCompra.pendiente,
+                        fecha_orden = DateTime.Now,
+                        activo = true,
+                        usuario = (usuario)Session["Usuario"],
+                    };
+                    detalle[] arrDetalles = ((List<detalle>)Session["Cart"]).ToArray();
+                    orden.detalle = arrDetalles;
+                    // Guardar la orden en la base de datos
+                    ordenVentaService.registrarOrdenVentaService(orden);
+                    Session["Orden"] = orden; // Guardar la orden en la sesión para usarla en DatosEntrega.aspx
                     Response.Redirect("~/Pedidos/DatosEntrega.aspx");
+                }
                 else
                 {
                     // Mostrar mensaje de error o redirigir a una página de error
@@ -53,7 +72,7 @@ namespace JMQPresentacion.Pedidos
         {
             Button btn = (Button)sender;
             int index = Convert.ToInt32(btn.CommandArgument);
-
+            RepeaterItem item = (RepeaterItem)btn.NamingContainer;
             //Obtener la lista desde ViewState
             List<detalle> detalles = (List<detalle>)Session["Cart"];
 
@@ -68,7 +87,6 @@ namespace JMQPresentacion.Pedidos
                 if (detalles[index].cantidad < detalles[index].producto.stock)
                     detalles[index].cantidad++;
             }
-
             Session["Cart"] = detalles;
             CargarCarrito();
         }
@@ -87,6 +105,9 @@ namespace JMQPresentacion.Pedidos
             }
         }
 
-
+        public string ConvertirByteAImagenBase64(byte[] datosImagen)
+        {
+            return "data:image/jpeg;base64," + Convert.ToBase64String(datosImagen);
+        }
     }
 }
