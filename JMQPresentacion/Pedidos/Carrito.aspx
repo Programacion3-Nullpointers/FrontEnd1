@@ -13,32 +13,48 @@
             <!-- productos -->
             <div class="card-body">
               <asp:Repeater ID="rptCarrito" runat="server">
-                  <ItemTemplate>
+                <ItemTemplate>
                     <div class="row mb-3">
-                      <div class="col-md-2">
-                        <img src='<%# Eval("producto.imagen") %>' class="img-fluid rounded" alt="Producto">
-                      </div>
-                      <div class="col-md-7">
-                        <h6><strong><%# Eval("producto.nombre") %></strong></h6>
-                      </div>
-                      <div class="col-md-3 text-end">
-                        <div>
-                          <strong>S/ <%# Eval("precio_unitario") %></strong><br />
+                        <!-- Imagen del producto dentro de una columna -->
+                        <div class="col-md-2 d-flex align-items-center">
+                            <div class="image-container">
+                                <asp:Image ID="imgProducto" runat="server" ImageUrl='<%# ConvertirByteAImagenBase64((byte[])Eval("producto.imagen")) %>' 
+                                    Width="100%" CssClass="img-fluid" />
+                            </div>
                         </div>
-                        <div class="input-group mt-2" style="width: 110px; margin-left: auto;">
-                          <asp:Button ID="btnMenos" runat="server" CssClass="btn btn-outline-secondary btn-sm"
-                            Text="-" CommandArgument='<%# Container.ItemIndex %>' OnClick="CambiarCantidad" />
-                          <asp:TextBox ID="txtCantidad" runat="server" CssClass="form-control form-control-sm text-center"
-                            Text='<%# Eval("cantidad") %>' ReadOnly="true"></asp:TextBox>
-                          <asp:Button ID="btnMas" runat="server" CssClass="btn btn-outline-secondary btn-sm"
-                            Text="+" CommandArgument='<%# Container.ItemIndex %>' OnClick="CambiarCantidad" />
+                        <!-- Nombre del producto -->
+                        <div class="col-md-4 d-flex align-items-center">
+                            <h6><strong><%# Eval("producto.nombre") %></strong></h6>
                         </div>
-                        <asp:Button ID="btnEliminar" runat="server" CssClass="btn btn-link text-danger small mt-1"
-                          Text="✖" CommandArgument='<%# Container.ItemIndex %>' OnClick="btnEliminarProducto_Click" />
-                      </div>
+                        <!-- Precio unitario / Cantidad -->
+                        <div class="col-md-4 d-flex align-items-center justify-content-center">
+                            <div>
+                                <strong>Precio unitario</strong><br />
+                                <span>S/ <%# Eval("precio_unitario") %></span>
+                            </div>
+                            <div class="input-group mt-2" style="width: 110px; margin-left: auto;">
+                                <asp:Button ID="btnMenos" runat="server" CssClass='<%# ((int)Eval("cantidad") == 1) ? "btn btn-outline-secondary btn-sm btn-deshabilitado" : "btn btn-outline-secondary btn-sm" %>'
+                                    Text="-" CommandArgument='<%# Container.ItemIndex %>' OnClick="CambiarCantidad" />
+                                <asp:TextBox ID="txtCantidad" runat="server" CssClass="form-control form-control-sm text-center"
+                                    Text='<%# Eval("cantidad") %>' ReadOnly="true"></asp:TextBox>
+                                <asp:Button ID="btnMas" runat="server" CssClass='<%# ((int)Eval("cantidad") == (int)Eval("producto.stock")) ? "btn btn-outline-secondary btn-sm btn-deshabilitado" : "btn btn-outline-secondary btn-sm" %>'
+                                    Text="+" CommandArgument='<%# Container.ItemIndex %>' OnClick="CambiarCantidad" />
+                            </div>
+                            <asp:Button ID="btnEliminar" runat="server" CssClass="btn btn-link text-danger small mt-1"
+                                Text="✖" CommandArgument='<%# Container.ItemIndex %>' OnClick="btnEliminarProducto_Click" />
+                        </div>
+
+                        <!-- Subtotal -->
+                        <div class="col-md-2 text-end d-flex flex-column justify-content-center">
+                            <div>
+                                <strong>Subtotal</strong><br />
+                                <span>S/ <%# Convert.ToDecimal(Eval("cantidad")) * Convert.ToDecimal(Eval("precio_unitario")) %></span>
+                            </div>
+                        </div>
                     </div>
-                  </ItemTemplate>
-                </asp:Repeater>
+                </ItemTemplate>
+            </asp:Repeater>
+
             </div>
             <div class="card-footer text-end small text-muted">
               Productos vendidos y despachados por: JMQOnline
