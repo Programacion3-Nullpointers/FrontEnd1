@@ -47,7 +47,7 @@ namespace JMQPresentacion.Principal
             //};
 
             //rptProductos.DataSource = productos;
-                rptProductos.DataBind();
+                //rptProductos.DataBind();
             }
 
         protected void btnAgregarProductos_Click(object sender, EventArgs e)

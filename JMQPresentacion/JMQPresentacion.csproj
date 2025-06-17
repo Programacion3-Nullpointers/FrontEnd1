@@ -281,6 +281,7 @@
     <Content Include="Pedidos\VerProducto.aspx" />
     <Content Include="Principal\Principal.aspx" />
     <Content Include="Admin\PrincipalAdmin.aspx" />
+    <Content Include="Public\assets\favicon.ico" />
     <Content Include="Public\css\bootstrap-grid.css" />
     <Content Include="Public\css\bootstrap-grid.min.css" />
     <Content Include="Public\css\bootstrap-grid.rtl.css" />
@@ -299,6 +300,7 @@
     <Content Include="Public\css\bootstrap.rtl.min.css" />
     <Content Include="Public\css\site.css" />
     <Content Include="Public\css\site2.css" />
+    <Content Include="Public\css\styles.css" />
     <Content Include="Public\fonts\css\all.css" />
     <Content Include="Public\fonts\css\all.min.css" />
     <Content Include="Public\fonts\css\brands.css" />
@@ -370,6 +372,7 @@
     <Content Include="Public\js\jquery-3.7.1.slim.js" />
     <Content Include="Public\js\jquery-3.7.1.slim.min.js" />
     <Content Include="Admin\ModificarUsuarios.aspx" />
+    <Content Include="Public\js\scripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

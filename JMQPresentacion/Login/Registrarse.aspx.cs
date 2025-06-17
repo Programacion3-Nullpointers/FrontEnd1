@@ -77,7 +77,8 @@ namespace JMQPresentacion.Login
             user.correo = txtEmail.Text.Trim();
             user.contrasena = txtContr.Text.Trim();
             user.tipoUsuario = pnlEmpresa.Visible ? tipoUsuario.EMPRESA : tipoUsuario.CLIENTE; ;
-
+            user.activo = true;
+            user.tipoUsuarioSpecified = true;
             if (user.tipoUsuario == tipoUsuario.EMPRESA)
             {
                 user.razonsocial = txtRazonSocial.Text.Trim();

@@ -2,130 +2,217 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        overflow-x: hidden;
-    }
-
-    .content {
-        padding: 40px;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .welcome-text {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .welcome-text h1 {
-        color: #2c3e50;
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-
-    .welcome-text h2 {
-        color: #34495e;
-        font-size: 24px;
-        margin-bottom: 5px;
-    }
-
-    .welcome-text h3 {
-        color: #7f8c8d;
-        font-size: 20px;
-    }
-
-    .image-container {
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .image-container img {
-        width: 100%;
-        max-width: 100%;
-        max-height: 400px;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        display: block;
-        margin: 0 auto;
-        object-fit: cover;
-    }
-</style>
-     <!-- 🔹 Sección de bienvenida -->
-        <div class="container mt-4">
-            <h1 class="text-center">¡Bienvenido a JMQ Online!</h1>
-            <p class="text-center">Descubre nuestros mejores productos y ofertas exclusivas.</p>
-        </div>
-        <div class="container-fluid bg-light py-4">
-            <div class="container">
-                <div class="row text-center">
-                <!-- Envío Gratis -->
-                <div class="col-md-4 mb-3 mb-md-0 border-end border-secondary">
-                    <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">DELIVERY GRATIS</h5>
-                    <p class="mb-0 small">Para todo Lima, Perú<br> para compras a partir de S/. 200</p>
-                </div>
-            
-                <!-- Pago Seguro -->
-                <div class="col-md-4 mb-3 mb-md-0 border-end border-secondary">
-                    <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">PAGO SEGURO</h5>
-                    <p class="mb-0 small">Aceptamos Visa, American Express<br> y Mastercard</p>
-                </div>
-            
-                <!-- Soporte 24/7 -->
-                <div class="col-md-4">
-                    <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">ASISTENCIA 24/7</h5>
-                    <p class="mb-0 small">Si tiene algún problema, no dude en contactarnos<br>Llámanos: 203-4077</p>
-                </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 🔹 Sección de productos -->
-        <div class="container mt-4">
-            <h2 class="text-center mb-4">Productos Destacados</h2>
-            <asp:Repeater ID="rptProductos" runat="server">
-                <HeaderTemplate>
-                    <div class="row"> <!-- Inicio de la primera fila -->
-                </HeaderTemplate>
-
-                <ItemTemplate>
-                    <div class="col-lg-3 col-md-6 mb-4">
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
                         <div class="card h-100">
-                            <div class="image-container">
-                                <img src='<%# Eval("imagen") %>' alt='<%# Eval("nombre") %>' />
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Fancy Product</h5>
+                                    <!-- Product price-->
+                                    $40.00 - $80.00
+                                </div>
                             </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><%# Eval("nombre") %></h5>
-                                <p class="card-text text-muted"><%# Eval("categoria.nombre") %></p>
-                                <p class="fw-bold text-success">S/ <%# Eval("precio") %></p>
-                                <asp:Button ID="btnAgregar" runat="server" Text="Agregar al Carrito" CssClass="btn btn-primary mt-auto"
-                                    CommandArgument='<%# Eval("idProducto") %>' OnClick="btnAgregarProductos_Click" />
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                             </div>
                         </div>
                     </div>
-                    <%# (Container.ItemIndex + 1) % 4 == 0 ? "</div><div class='row'>" : "" %> <!-- Cierra y abre fila cada 4 productos -->
-                </ItemTemplate>
-
-                <FooterTemplate>
-                    </div> <!-- Cierre final de la fila -->
-                </FooterTemplate>
-            </asp:Repeater>
-        </div>
-        <div class="container mt-5 mb-5 text-center">
-            <div class="row justify-content-center">
-                <div class="col-md-8 p-4 border rounded" style="background-color: #f8f9fa;">
-                    <h3 class="mb-3" style="color: #026670;">¿No encuentras lo que buscas?</h3>
-                    <p class="lead mb-4">¡Nosotros lo conseguimos para ti! Solicita una cotización personalizada y te ayudaremos a encontrar el producto ideal.</p>
-                    <asp:Button ID="btnCotizar" runat="server" Text="Cotizar Ahora" 
-                        CssClass="btn btn-success btn-lg px-4" 
-                        OnClick="btnCotizar_Click" /> />
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Special Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Fancy Product</h5>
+                                    <!-- Product price-->
+                                    $120.00 - $280.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Special Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        </section>
+        <!-- Footer-->
+        <footer class="py-3 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; JMQ Online 2025</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
 </asp:Content>

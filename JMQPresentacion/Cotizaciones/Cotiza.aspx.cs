@@ -19,6 +19,7 @@ namespace JMQPresentacion.Pedidos
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            
             productoCotizacionWSClient = new JMQWSPC.ProductoCotizacionWSClient();
             cotizacionWSClient = new JMQWS.CotizacionWSClient();
         }
