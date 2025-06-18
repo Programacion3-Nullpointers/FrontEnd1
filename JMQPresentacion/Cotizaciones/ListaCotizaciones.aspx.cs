@@ -18,7 +18,7 @@ namespace JMQPresentacion.Cotizaciones
         {
             if (Session["usuario"] == null)
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Login/Login.aspx");
             }
             cotizacionWSCLClient = new JMQWS.CotizacionWSClient();
             rptCotizaciones.ItemDataBound += rptCotizaciones_ItemDataBound;
