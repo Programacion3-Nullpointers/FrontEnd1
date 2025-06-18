@@ -1,134 +1,34 @@
-# Visual Studio / .NET related files
-# ==================================
-
-# Solution and Project files
+# Archivos generados por Visual Studio
+.vs/
 *.suo
 *.user
+*.userosscache
 *.sln.docstates
-*.vc.opendb
-*.opensdf
-*.sdf
-*.db
-*.log
-*.tlog
-*.suo
-*.userprefs
-*.vsidx
-*.ipr
-*.iws
-*.bak
-*.suo.bak
-*.user.bak
 
-# Build results, compiled output, and intermediate files
-[Dd]ebug/
-[Rr]elease/
-[Bb]in/
-[Oo]bj/
-[Dd]ebugPublic/
-[Rr]eleasePublic/
+# Archivos de build
+bin/
+obj/
 *.dll
-*.exe
-*.lib
 *.pdb
-*.ilk
-*.opt
-*.idb
-*.obj
-*.sbr
-*.res
-*.pch
-*.exp
-*.map
-*.ncb
-*.aps
-*.bsc
-*.vsp
-*.vspx
-*.sqlce
-
-# Visual Studio specific folders
-.vs/
-/.vs/Solution.VC.db # Specific database file for VS solution
-
-# NuGet
-# =======
-# NuGet packages
-packages/
-# NuGet cache files
-*.nupkg
-# NuGet generated project files
-*.nuget.props
-*.targets
-# User-specific NuGet configuration files (if not shared)
-.nuget/NuGetScratch
-
-# ReSharper / JetBrains files
-# ===========================
-_ReSharper.*/
-*.resharper
-*.dotSettings
-*.resharper.user
-*.resharper.solution
-.idea/
-
-# Other IDE files (e.g., VS Code)
-# ==============================
-.vscode/
-
-# Web service and service reference generated files
-# =================================================
-# These are often regenerated and can cause frequent conflicts.
-# Keep them out of source control unless you have a specific reason to include them.
-Connected Services/*/
-Service References/*/
-*.wsdl
-*.xsd
-*.svcinfo
-*.map
-*.disco
-# Reference.cs # Uncomment this line if Reference.cs is auto-generated and never hand-edited.
-               # If you DO hand-edit it, leave this line commented out.
-
-# Test Results
-# ============
-TestResults/
-*.trx
-*.vsmdi
-*.coverage
-*.coveragexml
-*.runsettings
-
-# Log files
-# =========
+*.exe
+*.cache
 *.log
-*.txt
-*.err
-*.sql
 
-# ASP.NET temporary files
-# =======================
-App_Data/
-App_Licenses.licx
-App_Themes/
-App_GlobalResources/
-App_LocalResources/
-*.dbmdl
-*.publish.xml
+# Paquetes
+packages/
 
-# Source control ignore files (e.g., if you generated this on Windows for a Linux repo)
-# ===================================================================================
+# Node/npm si usas cosas del frontend
+node_modules/
+
+# Configuraciones de IDE
+.idea/
+.vscode/
+*.iml
+
+# Archivos temporales y de conflictos
 *.orig
 *.rej
-*~
-*.bak
-*.old
-*.scc
+*.tmp
 
-# macOS specific files
-# ====================
-.DS_Store
-
-# Windows specific files
-# ======================
-Thumbs.db
+# Otros
+.env
