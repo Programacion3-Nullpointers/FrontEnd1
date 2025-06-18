@@ -15,8 +15,15 @@ namespace JMQPresentacion.Admin
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+            Response.Redirect("~/Login.aspx");
+            }
+
             productoService = new JMQWS.ProductoWSClient();
         }
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

@@ -76,7 +76,9 @@ namespace JMQPresentacion.Login
             user.direccion = txtDireccion.Text.Trim();
             user.correo = txtEmail.Text.Trim();
             user.contrasena = txtContr.Text.Trim();
-            user.tipoUsuario = pnlEmpresa.Visible ? tipoUsuario.EMPRESA : tipoUsuario.CLIENTE; ;
+            user.tipoUsuario = pnlEmpresa.Visible ? tipoUsuario.EMPRESA : tipoUsuario.CLIENTE;
+            user.tipoUsuarioSpecified = true;
+            user.activo = true;
 
             if (user.tipoUsuario == tipoUsuario.EMPRESA)
             {
@@ -102,9 +104,9 @@ namespace JMQPresentacion.Login
 
             // Guardar en sesión y redirigir
             Session["Usuario"] = user;
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "mostrarModal", "mostrarModalRegistro();", true);
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "mostrarModal", "mostrarModalRegistro();", true);
 
-            //Response.Redirect("/Pedidos/DatosEntrega.aspx");
+            Response.Redirect("/Principal/Principal.aspx");
 
         }
     }
