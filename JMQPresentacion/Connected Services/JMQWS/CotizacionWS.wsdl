@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/CotizacionWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
   <message name="buscarCotizacion">
     <part name="parameters" element="tns:buscarCotizacion" />
   </message>
@@ -14,12 +15,26 @@
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
   </message>
+=======
+>>>>>>> origin/main
   <message name="eliminarCotizacion">
     <part name="parameters" element="tns:eliminarCotizacion" />
   </message>
   <message name="eliminarCotizacionResponse">
     <part name="parameters" element="tns:eliminarCotizacionResponse" />
   </message>
+<<<<<<< HEAD
+=======
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="buscarCotizacion">
+    <part name="parameters" element="tns:buscarCotizacion" />
+  </message>
+  <message name="buscarCotizacionResponse">
+    <part name="parameters" element="tns:buscarCotizacionResponse" />
+  </message>
+>>>>>>> origin/main
   <message name="listarCotizaciones">
     <part name="parameters" element="tns:listarCotizaciones" />
   </message>
@@ -32,12 +47,15 @@
   <message name="obtenerCotizacionesPorUsuarioResponse">
     <part name="parameters" element="tns:obtenerCotizacionesPorUsuarioResponse" />
   </message>
+<<<<<<< HEAD
   <message name="actualizarEstadoCotizacion">
     <part name="parameters" element="tns:actualizarEstadoCotizacion" />
   </message>
   <message name="actualizarEstadoCotizacionResponse">
     <part name="parameters" element="tns:actualizarEstadoCotizacionResponse" />
   </message>
+=======
+>>>>>>> origin/main
   <message name="registrarCotizacion">
     <part name="parameters" element="tns:registrarCotizacion" />
   </message>
@@ -50,17 +68,35 @@
   <message name="actualizarCotizacionResponse">
     <part name="parameters" element="tns:actualizarCotizacionResponse" />
   </message>
+<<<<<<< HEAD
   <portType name="CotizacionWS">
     <operation name="buscarCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionRequest" message="tns:buscarCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionResponse" message="tns:buscarCotizacionResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+=======
+  <message name="actualizarEstadoCotizacion">
+    <part name="parameters" element="tns:actualizarEstadoCotizacion" />
+  </message>
+  <message name="actualizarEstadoCotizacionResponse">
+    <part name="parameters" element="tns:actualizarEstadoCotizacionResponse" />
+  </message>
+  <portType name="CotizacionWS">
+>>>>>>> origin/main
     <operation name="eliminarCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacionRequest" message="tns:eliminarCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacionResponse" message="tns:eliminarCotizacionResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
+=======
+    <operation name="buscarCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionRequest" message="tns:buscarCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionResponse" message="tns:buscarCotizacionResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+>>>>>>> origin/main
     <operation name="listarCotizaciones">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesRequest" message="tns:listarCotizaciones" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesResponse" message="tns:listarCotizacionesResponse" />
@@ -69,10 +105,13 @@
     <operation name="obtenerCotizacionesPorUsuario">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioRequest" message="tns:obtenerCotizacionesPorUsuario" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioResponse" message="tns:obtenerCotizacionesPorUsuarioResponse" />
+<<<<<<< HEAD
     </operation>
     <operation name="actualizarEstadoCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarEstadoCotizacionRequest" message="tns:actualizarEstadoCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarEstadoCotizacionResponse" message="tns:actualizarEstadoCotizacionResponse" />
+=======
+>>>>>>> origin/main
     </operation>
     <operation name="registrarCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/registrarCotizacionRequest" message="tns:registrarCotizacion" />
@@ -84,10 +123,21 @@
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarCotizacionResponse" message="tns:actualizarCotizacionResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarCotizacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
   </portType>
   <binding name="CotizacionWSPortBinding" type="tns:CotizacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="buscarCotizacion">
+=======
+    <operation name="actualizarEstadoCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarEstadoCotizacionRequest" message="tns:actualizarEstadoCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarEstadoCotizacionResponse" message="tns:actualizarEstadoCotizacionResponse" />
+    </operation>
+  </portType>
+  <binding name="CotizacionWSPortBinding" type="tns:CotizacionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarCotizacion">
+>>>>>>> origin/main
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -99,7 +149,11 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
     <operation name="eliminarCotizacion">
+=======
+    <operation name="buscarCotizacion">
+>>>>>>> origin/main
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -124,6 +178,7 @@
       </fault>
     </operation>
     <operation name="obtenerCotizacionesPorUsuario">
+<<<<<<< HEAD
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -133,6 +188,8 @@
       </output>
     </operation>
     <operation name="actualizarEstadoCotizacion">
+=======
+>>>>>>> origin/main
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -165,6 +222,18 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
+=======
+    <operation name="actualizarEstadoCotizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+>>>>>>> origin/main
   </binding>
   <service name="CotizacionWS">
     <port name="CotizacionWSPort" binding="tns:CotizacionWSPortBinding">

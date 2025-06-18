@@ -22,6 +22,14 @@ namespace JMQPresentacion.Cotizaciones
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            // Validar si el usuario ha iniciado sesión
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("~/Acceso/NoAutorizado.aspx");
+                return;
+            }
+
             if (!IsPostBack)
             {
                 if (Session["Cotizaciones"] == null)
@@ -37,6 +45,7 @@ namespace JMQPresentacion.Cotizaciones
                         direccion = "Av. Principal 123", 
                         RUC = "20604010123"
                     };
+
 
                     //List<cotizacion> listaInicial = new List<cotizacion>
                     //{

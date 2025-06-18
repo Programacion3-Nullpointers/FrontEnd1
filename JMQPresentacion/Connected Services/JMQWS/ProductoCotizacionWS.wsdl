@@ -5,11 +5,19 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/ProductoCotizacionWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
   <message name="obtenerProdCotiza">
     <part name="parameters" element="tns:obtenerProdCotiza" />
   </message>
   <message name="obtenerProdCotizaResponse">
     <part name="parameters" element="tns:obtenerProdCotizaResponse" />
+=======
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+>>>>>>> origin/main
   </message>
   <message name="listarProductoCotizacion">
     <part name="parameters" element="tns:listarProductoCotizacion" />
@@ -19,9 +27,24 @@
   </message>
   <message name="EliminarProductoCotizacion">
     <part name="parameters" element="tns:EliminarProductoCotizacion" />
+<<<<<<< HEAD
+=======
   </message>
   <message name="EliminarProductoCotizacionResponse">
     <part name="parameters" element="tns:EliminarProductoCotizacionResponse" />
+  </message>
+  <message name="RegistrarProdCotizacion">
+    <part name="parameters" element="tns:RegistrarProdCotizacion" />
+>>>>>>> origin/main
+  </message>
+  <message name="EliminarProductoCotizacionResponse">
+    <part name="parameters" element="tns:EliminarProductoCotizacionResponse" />
+  </message>
+  <message name="ActualizarProductoCotizacion">
+    <part name="parameters" element="tns:ActualizarProductoCotizacion" />
+  </message>
+  <message name="ActualizarProductoCotizacionResponse">
+    <part name="parameters" element="tns:ActualizarProductoCotizacionResponse" />
   </message>
   <message name="ActualizarProductoCotizacion">
     <part name="parameters" element="tns:ActualizarProductoCotizacion" />
@@ -47,6 +70,7 @@
   <message name="ActualizarPrecioProdCotiResponse">
     <part name="parameters" element="tns:ActualizarPrecioProdCotiResponse" />
   </message>
+<<<<<<< HEAD
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
@@ -57,6 +81,12 @@
     <operation name="obtenerProdCotiza">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaRequest" message="tns:obtenerProdCotiza" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaResponse" message="tns:obtenerProdCotizaResponse" />
+=======
+  <portType name="ProductoCotizacionWS">
+    <operation name="hello">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloResponse" message="tns:helloResponse" />
+>>>>>>> origin/main
     </operation>
     <operation name="listarProductoCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionRequest" message="tns:listarProductoCotizacion" />
@@ -65,6 +95,16 @@
     <operation name="EliminarProductoCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionRequest" message="tns:EliminarProductoCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionResponse" message="tns:EliminarProductoCotizacionResponse" />
+    </operation>
+<<<<<<< HEAD
+    <operation name="ActualizarProductoCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarProductoCotizacionRequest" message="tns:ActualizarProductoCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarProductoCotizacionResponse" message="tns:ActualizarProductoCotizacionResponse" />
+=======
+    <operation name="RegistrarProdCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionRequest" message="tns:RegistrarProdCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionResponse" message="tns:RegistrarProdCotizacionResponse" />
+>>>>>>> origin/main
     </operation>
     <operation name="ActualizarProductoCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarProductoCotizacionRequest" message="tns:ActualizarProductoCotizacion" />
@@ -82,6 +122,7 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarPrecioProdCotiRequest" message="tns:ActualizarPrecioProdCoti" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarPrecioProdCotiResponse" message="tns:ActualizarPrecioProdCotiResponse" />
     </operation>
+<<<<<<< HEAD
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest" message="tns:hello" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloResponse" message="tns:helloResponse" />
@@ -90,6 +131,12 @@
   <binding name="ProductoCotizacionWSPortBinding" type="tns:ProductoCotizacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="obtenerProdCotiza">
+=======
+  </portType>
+  <binding name="ProductoCotizacionWSPortBinding" type="tns:ProductoCotizacionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="hello">
+>>>>>>> origin/main
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -108,6 +155,19 @@
       </output>
     </operation>
     <operation name="EliminarProductoCotizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+<<<<<<< HEAD
+    <operation name="ActualizarProductoCotizacion">
+=======
+    <operation name="RegistrarProdCotizacion">
+>>>>>>> origin/main
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -143,6 +203,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
     <operation name="ActualizarPrecioProdCoti">
       <soap:operation soapAction="" />
       <input>
@@ -161,6 +222,8 @@
         <soap:body use="literal" />
       </output>
     </operation>
+=======
+>>>>>>> origin/main
   </binding>
   <service name="ProductoCotizacionWS">
     <port name="ProductoCotizacionWSPort" binding="tns:ProductoCotizacionWSPortBinding">
