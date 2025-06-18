@@ -21,6 +21,10 @@
                 <div class="row mt-3 text-center">
                     <a href="Login.aspx" class="ms-1" Style="color: gray; text-decoration: none;">Volver al inicio </a>
                 </div>
+                <!-- Botón para registrarse si el correo no existe -->
+                <div class="d-flex justify-content-center mt-2">
+                    <asp:Button ID="btnRegistrarse" runat="server" Text="Registrarse" CssClass="btn btn-outline-primary w-100" OnClick="btnRegistrarse_Click" Visible="false" />
+                </div>
 
 
                 <!-- Mensaje de error (si el correo no está registrado) -->
