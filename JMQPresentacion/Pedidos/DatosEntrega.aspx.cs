@@ -10,6 +10,11 @@ namespace JMQPresentacion.Pedidos
 {
     public partial class DatosEntrega : System.Web.UI.Page
     {
+        private EntregaWSClient entregaService;
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            entregaService= new JMQWS.EntregaWSClient();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -37,21 +42,44 @@ namespace JMQPresentacion.Pedidos
             }
             else
             {
-
-                //entrega entrega1 = new entrega
-                //{
-                //    orden = (ordenVenta)Session["OrdenVenta"],
-                //    fechaEntrega = DateTime.Now, //?
-                //    tipoEntrega = pnlDespacho.Visible ? tipoEntrega.DELIVERY : tipoEntrega.RECOJO
-                //};
-                //if (pnlDespacho.Visible)
-                //    entrega1.direccion = $"{txtDireccion.Text} {txtNumero.Text} {txtPisoDpto.Text} {txtReferencia.Text}";
-                //else
-                //    entrega1.dniRecibo = txtDni.Text;
-                // insertar Entrega a la BD
-                // insertar(entrega);
+                divError.Style["display"] = "none";
+                lblError.Text = "";
+                //comprobaciones
+                if ((pnlDespacho.Visible && (string.IsNullOrWhiteSpace(txtDireccion.Text) || string.IsNullOrWhiteSpace(txtNumero.Text))) ||
+                    (pnlRetiro.Visible && string.IsNullOrWhiteSpace(txtDni.Text)))
+                {
+                    lblError.Text = "Complete todos los campos obligatorios.";
+                    divError.Style["display"] = "block";
+                    return;
+                }
+                if (pnlRetiro.Visible && txtDni.Text.Length != 8)
+                {
+                    lblError.Text = "DNI inválido.";
+                    divError.Style["display"] = "block";
+                    return;
+                }
+                if (pnlDespacho.Visible && (!txtNumero.Text.All(char.IsDigit) || int.Parse(txtNumero.Text) < 0))
+                {
+                    lblError.Text = "Ingrese un número de dirección válido.";
+                    divError.Style["display"] = "block";
+                    return;
+                }
+                entrega entrega1 = new entrega
+                    {
+                        orden = (ordenVenta)Session["OrdenVenta"],
+                        fecha_entrega = DateTime.Now.AddDays(7),
+                        tipoEntrega = pnlDespacho.Visible ? tipoEntrega.DELIVERY : tipoEntrega.RECOJO
+                    };
+                if (pnlDespacho.Visible) {
+                    string direccion = string.Join(" ", new[] { txtDireccion.Text, txtNumero.Text, txtPisoDpto.Text, txtReferencia.Text }
+                        .Where(s => !string.IsNullOrWhiteSpace(s)));
+                    entrega1.direccion = direccion;
+                }
+                else
+                    entrega1.dniRecibo = txtDni.Text;
+                //insertar Entrega a la BD
+                entregaService.RegistrarEntrega(entrega1);
                 Response.Redirect("~/Pedidos/MetodoPago.aspx");
-                //}
             }
         }
 

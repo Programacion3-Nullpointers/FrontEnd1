@@ -191,6 +191,7 @@ footer {
     width: 100%;
 }
 
+/* para desactivar los botones de cambiar cantidad del carrito */
 .btn-deshabilitado {
     background-color: #3b3a3a !important;
     border-color: #b0b0b0 !important;
@@ -198,4 +199,15 @@ footer {
     opacity: 0.6 !important;
     pointer-events: none !important; /* Evita clics */
     display: inline-block !important; /* Mantiene el espacio */
+}
+
+/* para textos de números que no necesiten flechas */
+.sin-flechas::-webkit-inner-spin-button,
+.sin-flechas::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sin-flechas {
+    -moz-appearance: textfield;
 }
