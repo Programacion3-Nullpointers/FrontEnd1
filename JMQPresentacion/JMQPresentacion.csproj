@@ -366,9 +366,9 @@
     <Content Include="Cotizaciones\ListaCotizaciones.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\OlvidarContraseña.aspx" />
-    <Content Include="Login\Reestablecer.aspx" />
     <Content Include="Login\Registrarse.aspx" />
     <Content Include="Admin\Pagos.aspx" />
+    <Content Include="Login\Restablecer.aspx" />
     <Content Include="Pedidos\Carrito.aspx" />
     <Content Include="Cotizaciones\Cotiza.aspx" />
     <Content Include="Pedidos\DatosEntrega.aspx" />
@@ -535,19 +535,19 @@
     <Compile Include="Login\OlvidarContraseña.aspx.designer.cs">
       <DependentUpon>OlvidarContraseña.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login\Reestablecer.aspx.cs">
-      <DependentUpon>Reestablecer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login\Reestablecer.aspx.designer.cs">
-      <DependentUpon>Reestablecer.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login\Registrarse.aspx.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login\Registrarse.aspx.designer.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Restablecer.aspx.cs">
+      <DependentUpon>Restablecer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Restablecer.aspx.designer.cs">
+      <DependentUpon>Restablecer.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainLayout.Master.cs">
       <DependentUpon>MainLayout.Master</DependentUpon>

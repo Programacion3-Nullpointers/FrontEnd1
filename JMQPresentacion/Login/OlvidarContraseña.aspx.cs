@@ -28,6 +28,7 @@ namespace JMQPresentacion.Login
                 MostrarMensaje("Por favor, ingresa tu correo.", false);
                 return;
             }
+            //Validacion básica de formato de correo
 
             try
             {
@@ -36,11 +37,12 @@ namespace JMQPresentacion.Login
                 client.iniciarRecuperacionPassword(email);
 
                 MostrarMensaje("Hemos enviado un enlace de recuperación a tu correo.", true);
+
             }
             catch (System.Exception ex)
             {
                 // Posible error: usuario no encontrado en backend
-                MostrarMensaje("Error: " + ex.Message, false);
+                MostrarMensaje(ex.Message , false);
             }
         }
 
