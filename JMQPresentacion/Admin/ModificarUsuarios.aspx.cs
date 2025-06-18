@@ -16,6 +16,12 @@ namespace JMQPresentacion.Usuarios
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null || ((usuario)Session["Usuario"]).tipoUsuario != tipoUsuario.ADMIN)
+            {
+                // Redirigir al login u otra acción
+                Response.Redirect("~/Login/Login.aspx");
+                return;
+            }
             usuarioWSCLClient = new JMQWS.UsuarioWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)

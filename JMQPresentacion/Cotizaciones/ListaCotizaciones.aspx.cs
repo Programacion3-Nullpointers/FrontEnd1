@@ -16,6 +16,15 @@ namespace JMQPresentacion.Cotizaciones
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            usuario user = (usuario)Session["Usuario"];
+            if (user == null)
+            {
+                // Redirigir al login u otra acción
+                Response.Redirect("~/Login/Login.aspx");
+
+                return;
+            }
+
             cotizacionWSCLClient = new JMQWS.CotizacionWSClient();
             rptCotizaciones.ItemDataBound += rptCotizaciones_ItemDataBound;
 
@@ -31,15 +40,7 @@ namespace JMQPresentacion.Cotizaciones
         private void CargarCotizaciones()
         {
             // Ejemplo: Obtener datos de la base de datos o servicio
-            usuario user = Session["Usuario"] as usuario;
-            if (user == null)
-            {
-                // Redirigir al login u otra acción
-                Response.Redirect("~/Login/Login.aspx");
-
-                return;
-            }
-
+            usuario user = (usuario)Session["Usuario"];
             var cotizaciones = cotizacionWSCLClient.obtenerCotizacionesPorUsuario(user.id); 
 
             if (cotizaciones != null && cotizaciones.Length > 0) 
