@@ -1,0 +1,201 @@
+﻿html, body {
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    margin: auto;
+}
+
+.centered-container {
+    width: 70%; 
+    margin: auto; 
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 8px; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gfg {
+    height: 50px;
+    width: 50px;
+}
+
+.mynav {
+    color: #fff;
+}
+
+    .mynav li a {
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        padding: 8px 5px;
+    }
+
+        .mynav li a.active {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .mynav li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .mynav li a i {
+            width: 25px;
+            text-align: center;
+        }
+
+.notification-badge {
+    background-color: rgba(255, 255, 255, 0.7);
+    float: right;
+    color: #222;
+    font-size: 14px;
+    padding: 0px 8px;
+    border-radius: 2px;
+}
+
+/*gridview*/
+.table table tbody tr td a,
+.table table tbody tr td span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.table table > tbody > tr > td > span {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+.table table > tbody > tr > td:first-child > a,
+.table table > tbody > tr > td:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.table table > tbody > tr > td:last-child > a,
+.table table > tbody > tr > td:last-child > span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.table table > tbody > tr > td > a:hover,
+.table table > tbody > tr > td > span:hover,
+.table table > tbody > tr > td > a:focus,
+.table table > tbody > tr > td > span:focus {
+    z-index: 2;
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+/*end gridview */
+
+.RadioButtonList label {
+    margin-left: 4px;
+}
+
+¨/* página producto */
+.fuenteArial {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.category {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product-image {
+    width: 40%;
+}
+
+.product-details {
+    width: 55%;
+}
+
+    .product-details h1 {
+        font-size: 24px;
+    }
+
+.price {
+    font-size: 24px;
+    color: #000;
+}
+
+.add-to-cart {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-to-cart button {
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+    .add-to-cart button:hover {
+        background-color: #FF8C00;
+    }
+
+.btn-jmq {
+    background-color: #6d8bc7;
+    color: white;
+    border: none;
+}
+
+.btn-jmq:hover {
+    background-color: #5a72a3;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.btn-deshabilitado {
+    background-color: #3b3a3a !important;
+    border-color: #b0b0b0 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+    pointer-events: none !important; /* Evita clics */
+    display: inline-block !important; /* Mantiene el espacio */
+}

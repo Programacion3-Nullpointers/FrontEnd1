@@ -1,0 +1,660 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A681D1DC-2BF6-4039-BD21-A21249837B58}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JMQPresentacion</RootNamespace>
+    <AssemblyName>JMQPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44356</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Acceso\NoAutorizado.aspx" />
+    <Content Include="Admin\CotizacionesAdmin.aspx" />
+    <Content Include="Admin\Descuentos.aspx" />
+    <Content Include="Admin\ModificarProductos.aspx" />
+    <None Include="Connected Services\JMQWS\archivo.disco" />
+    <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
+    <None Include="Connected Services\JMQWS\configuration.svcinfo" />
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarBoletaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarComprobanteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarDescuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarEstadoCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarEstadoOrdenVentaServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarNotificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarOrdenVentaServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.boleta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarBoletaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarComprobanteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.BuscarDescuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarNotificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarOrdenVentaServicesByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.categoria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.comprobantePago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.cotizacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.descontarStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.descuento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarBoletaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarComprobanteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarDescuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarNotificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.enviarNotificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.factura.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.helloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listaProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarBoletasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarCategoriasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarComprobantesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarCotizacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarFacturasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarNotificacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarUsuariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.notificacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ObtenerCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ordenVenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarBoletaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarComprobanteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarDescuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarNotificacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarPrecioProdCotiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarProductoCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarProductoCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarProductoCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.productoCotizacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\JMQWS\ProductoCotizacionWS.wsdl" />
+    <None Include="Connected Services\JMQWS\ProductoCotizacionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Cotizaciones\ListaCotizaciones.aspx" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="Login\OlvidarContraseña.aspx" />
+    <Content Include="Login\Registrarse.aspx" />
+    <Content Include="Admin\Pagos.aspx" />
+    <Content Include="Pedidos\Carrito.aspx" />
+    <Content Include="Cotizaciones\Cotiza.aspx" />
+    <Content Include="Pedidos\DatosEntrega.aspx" />
+    <Content Include="Pedidos\MetodoPago.aspx" />
+    <Content Include="Pedidos\VerProducto.aspx" />
+    <Content Include="Principal\Principal.aspx" />
+    <Content Include="Admin\PrincipalAdmin.aspx" />
+    <Content Include="Public\css\bootstrap-grid.css" />
+    <Content Include="Public\css\bootstrap-grid.min.css" />
+    <Content Include="Public\css\bootstrap-grid.rtl.css" />
+    <Content Include="Public\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Public\css\bootstrap-reboot.css" />
+    <Content Include="Public\css\bootstrap-reboot.min.css" />
+    <Content Include="Public\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Public\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Public\css\bootstrap-utilities.css" />
+    <Content Include="Public\css\bootstrap-utilities.min.css" />
+    <Content Include="Public\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Public\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Public\css\bootstrap.css" />
+    <Content Include="Public\css\bootstrap.min.css" />
+    <Content Include="Public\css\bootstrap.rtl.css" />
+    <Content Include="Public\css\bootstrap.rtl.min.css" />
+    <Content Include="Public\css\site.css" />
+    <Content Include="Public\css\site2.css" />
+    <Content Include="Public\fonts\css\all.css" />
+    <Content Include="Public\fonts\css\all.min.css" />
+    <Content Include="Public\fonts\css\brands.css" />
+    <Content Include="Public\fonts\css\brands.min.css" />
+    <Content Include="Public\fonts\css\fontawesome.css" />
+    <Content Include="Public\fonts\css\fontawesome.min.css" />
+    <Content Include="Public\fonts\css\regular.css" />
+    <Content Include="Public\fonts\css\regular.min.css" />
+    <Content Include="Public\fonts\css\solid.css" />
+    <Content Include="Public\fonts\css\solid.min.css" />
+    <Content Include="Public\fonts\css\svg-with-js.css" />
+    <Content Include="Public\fonts\css\svg-with-js.min.css" />
+    <Content Include="Public\fonts\css\v4-font-face.css" />
+    <Content Include="Public\fonts\css\v4-font-face.min.css" />
+    <Content Include="Public\fonts\css\v4-shims.css" />
+    <Content Include="Public\fonts\css\v4-shims.min.css" />
+    <Content Include="Public\fonts\css\v5-font-face.css" />
+    <Content Include="Public\fonts\css\v5-font-face.min.css" />
+    <Content Include="Public\images\detergente.jpeg" />
+    <Content Include="Public\images\jmq.jpg" />
+    <Content Include="Public\images\kit_herramientas.jpeg" />
+    <Content Include="Public\images\pinturaLatex.jpeg" />
+    <Content Include="Public\images\podadora.jpeg" />
+    <Content Include="Public\images\pucp.png" />
+    <Content Include="Public\images\taladro.jpg" />
+    <Content Include="Public\js\bootstrap.bundle.js" />
+    <Content Include="Public\js\bootstrap.bundle.min.js" />
+    <Content Include="Public\js\bootstrap.esm.js" />
+    <Content Include="Public\js\bootstrap.esm.min.js" />
+    <Content Include="Public\js\bootstrap.js" />
+    <Content Include="Public\js\bootstrap.min.js" />
+    <Content Include="Admin\MainLayout2.Master" />
+    <Content Include="Login\Login.Master" />
+    <None Include="Connected Services\JMQWS\BoletaWS.wsdl" />
+    <None Include="Connected Services\JMQWS\BoletaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\CategoriaWS.wsdl" />
+    <None Include="Connected Services\JMQWS\CategoriaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\ComprobantePagoWS.wsdl" />
+    <None Include="Connected Services\JMQWS\ComprobantePagoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\CotizacionWS.wsdl" />
+    <None Include="Connected Services\JMQWS\CotizacionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\DescuentoWS.wsdl" />
+    <None Include="Connected Services\JMQWS\DescuentoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\FacturaWS.wsdl" />
+    <None Include="Connected Services\JMQWS\FacturaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\NotificacionWS.wsdl" />
+    <None Include="Connected Services\JMQWS\NotificacionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\OrdenVentaWS.wsdl" />
+    <None Include="Connected Services\JMQWS\OrdenVentaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\ProductoWS.wsdl" />
+    <None Include="Connected Services\JMQWS\ProductoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\UsuarioWS.wsdl" />
+    <None Include="Connected Services\JMQWS\UsuarioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Public\js\jquery-3.7.1.intellisense.js" />
+    <Content Include="Public\js\jquery-3.7.1.js" />
+    <Content Include="Public\js\jquery-3.7.1.min.js" />
+    <Content Include="Public\js\jquery-3.7.1.slim.js" />
+    <Content Include="Public\js\jquery-3.7.1.slim.min.js" />
+    <Content Include="Admin\ModificarUsuarios.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceso\NoAutorizado.aspx.cs">
+      <DependentUpon>NoAutorizado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acceso\NoAutorizado.aspx.designer.cs">
+      <DependentUpon>NoAutorizado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CotizacionesAdmin.aspx.cs">
+      <DependentUpon>CotizacionesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CotizacionesAdmin.aspx.designer.cs">
+      <DependentUpon>CotizacionesAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Descuentos.aspx.cs">
+      <DependentUpon>Descuentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Descuentos.aspx.designer.cs">
+      <DependentUpon>Descuentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ModificarProductos.aspx.cs">
+      <DependentUpon>ModificarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModificarProductos.aspx.designer.cs">
+      <DependentUpon>ModificarProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\JMQWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Cotizaciones\ListaCotizaciones.aspx.cs">
+      <DependentUpon>ListaCotizaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cotizaciones\ListaCotizaciones.aspx.designer.cs">
+      <DependentUpon>ListaCotizaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login\OlvidarContraseña.aspx.cs">
+      <DependentUpon>OlvidarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\OlvidarContraseña.aspx.designer.cs">
+      <DependentUpon>OlvidarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Registrarse.aspx.cs">
+      <DependentUpon>Registrarse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Registrarse.aspx.designer.cs">
+      <DependentUpon>Registrarse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainLayout.Master.cs">
+      <DependentUpon>MainLayout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainLayout.Master.designer.cs">
+      <DependentUpon>MainLayout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MainLayout2.Master.cs">
+      <DependentUpon>MainLayout2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MainLayout2.Master.designer.cs">
+      <DependentUpon>MainLayout2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pagos.aspx.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pagos.aspx.designer.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cotizaciones\Cotiza.aspx.cs">
+      <DependentUpon>Cotiza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cotizaciones\Cotiza.aspx.designer.cs">
+      <DependentUpon>Cotiza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\DatosEntrega.aspx.cs">
+      <DependentUpon>DatosEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\DatosEntrega.aspx.designer.cs">
+      <DependentUpon>DatosEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\MetodoPago.aspx.cs">
+      <DependentUpon>MetodoPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\MetodoPago.aspx.designer.cs">
+      <DependentUpon>MetodoPago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedidos\VerProducto.aspx.cs">
+      <DependentUpon>VerProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedidos\VerProducto.aspx.designer.cs">
+      <DependentUpon>VerProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PrincipalAdmin.aspx.cs">
+      <DependentUpon>PrincipalAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PrincipalAdmin.aspx.designer.cs">
+      <DependentUpon>PrincipalAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin\ModificarUsuarios.aspx.cs">
+      <DependentUpon>ModificarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModificarUsuarios.aspx.designer.cs">
+      <DependentUpon>ModificarUsuarios.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainLayout.Master" />
+    <None Include="packages.config" />
+    <Content Include="Public\css\bootstrap-grid.css.map" />
+    <Content Include="Public\css\bootstrap-grid.min.css.map" />
+    <Content Include="Public\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Public\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Public\css\bootstrap-reboot.css.map" />
+    <Content Include="Public\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Public\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Public\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Public\css\bootstrap-utilities.css.map" />
+    <Content Include="Public\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Public\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Public\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Public\css\bootstrap.css.map" />
+    <Content Include="Public\css\bootstrap.min.css.map" />
+    <Content Include="Public\css\bootstrap.rtl.css.map" />
+    <Content Include="Public\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Public\fonts\webfonts\fa-brands-400.ttf" />
+    <Content Include="Public\fonts\webfonts\fa-brands-400.woff2" />
+    <Content Include="Public\fonts\webfonts\fa-regular-400.ttf" />
+    <Content Include="Public\fonts\webfonts\fa-regular-400.woff2" />
+    <Content Include="Public\fonts\webfonts\fa-solid-900.ttf" />
+    <Content Include="Public\fonts\webfonts\fa-solid-900.woff2" />
+    <Content Include="Public\fonts\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="Public\fonts\webfonts\fa-v4compatibility.woff2" />
+    <Content Include="Public\js\bootstrap.bundle.js.map" />
+    <Content Include="Public\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Public\js\bootstrap.esm.js.map" />
+    <Content Include="Public\js\bootstrap.esm.min.js.map" />
+    <Content Include="Public\js\bootstrap.js.map" />
+    <Content Include="Public\js\bootstrap.min.js.map" />
+    <Content Include="Public\js\jquery-3.7.1.min.map" />
+    <Content Include="Public\js\jquery-3.7.1.slim.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\JMQWS\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62345</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44356/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
