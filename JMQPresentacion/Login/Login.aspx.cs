@@ -18,7 +18,10 @@ namespace JMQPresentacion.Login
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Usuario"] != null) 
+            { 
+                Response.Redirect("/Principal/Principal.aspx"); 
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

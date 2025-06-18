@@ -347,6 +347,18 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerProdCotizaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerPorTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
