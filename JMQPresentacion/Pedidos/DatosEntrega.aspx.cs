@@ -13,9 +13,9 @@ namespace JMQPresentacion.Pedidos
         private EntregaWSClient entregaService;
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (Session["usuario"] == null)
+            if (Session["Usuario"] == null)
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("/Principal/Principal.aspx");
             }
             entregaService = new JMQWS.EntregaWSClient();
         }
@@ -40,7 +40,7 @@ namespace JMQPresentacion.Pedidos
         protected void btnPagar_Click(object sender, EventArgs e)
         {
 
-            if (Session["usuario"] == null)
+            if (Session["Usuario"] == null)
             {
                 Response.Redirect("~/Login/Login.aspx");
             }
@@ -83,7 +83,7 @@ namespace JMQPresentacion.Pedidos
                 else
                     entrega1.dniRecibo = txtDni.Text;
                 //insertar Entrega a la BD
-                //entregaService.RegistrarEntrega(entrega1);
+                entregaService.RegistrarEntrega(entrega1);
                 Response.Redirect("~/Pedidos/MetodoPago.aspx");
             }
         }

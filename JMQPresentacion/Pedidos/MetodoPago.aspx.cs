@@ -11,9 +11,16 @@ namespace JMQPresentacion.Pedidos
     public partial class MetodoPago : System.Web.UI.Page
     {
         private ComprobantePagoWSClient comprobanteService;
+        private BoletaWSClient boletaService;
+        private FacturaWSClient facturaService;
         protected void Page_Init(object sender, EventArgs e)
         {
-            comprobanteService = new ComprobantePagoWSClient();
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("/Principal/Principal.aspx");
+            }
+            boletaService = new BoletaWSClient();
+            facturaService = new FacturaWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -52,7 +59,7 @@ namespace JMQPresentacion.Pedidos
                 {
                     try
                     {
-                        factura comprobante = new factura
+                        factura factura1 = new factura
                         {
                             RUC = ((usuario)Session["Usuario"]).RUC,
                             razon_social = ((usuario)Session["Usuario"]).razonsocial,
@@ -63,12 +70,13 @@ namespace JMQPresentacion.Pedidos
                             fecha_pago = DateTime.Now,
                             monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
                         };
-                        comprobanteService.registrarComprobante(comprobante);
+                        facturaService.RegistrarFactura(factura1);
                     }
-                    catch
+                    catch (ArgumentException ex)
                     {
                         divError.Style["display"] = "block";
                         lblError.Text = "Error al realizar el pago.";
+                        Console.WriteLine($"Error: {ex.Message}");
                         return;
                     }
 
@@ -77,7 +85,7 @@ namespace JMQPresentacion.Pedidos
                 {
                     try
                     {
-                        boleta comprobante = new boleta
+                        boleta boleta1 = new boleta
                         {
                             dni = ((usuario)Session["Usuario"]).dni,
                             nombre = ((usuario)Session["Usuario"]).nombreUsuario,
@@ -87,12 +95,13 @@ namespace JMQPresentacion.Pedidos
                             fecha_pago = DateTime.Now,
                             monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
                         };
-                        //comprobanteService.registrarComprobante(comprobante);
+                        boletaService.registrarBoleta(boleta1);
                     }
-                    catch
+                    catch (ArgumentException ex)
                     {
                         divError.Style["display"] = "block";
                         lblError.Text = "Error al realizar el pago.";
+                        Console.WriteLine($"Error: {ex.Message}");
                         return;
                     }
                 }
