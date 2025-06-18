@@ -91,7 +91,7 @@ namespace JMQPresentacion.Login
             }
 
             // Verificar si el correo ya existe
-            usuario uss = usuarioWSCLClient.BuscarUsuarioPorCorreo(user.correo.ToString()); // Asume que este método existe en el WebService
+            usuario uss = usuarioWSCLClient.BuscarUsuarioPorCorreo(user.correo.ToString());
             if (uss != null)
             {
                 lblError.Text = "El correo ingresado ya se encuentra registrado.";
@@ -100,7 +100,7 @@ namespace JMQPresentacion.Login
             }
 
             // Insertar usuario
-            usuarioWSCLClient.registrarUsuario(user); // Asume que este método inserta y devuelve el usuario creado
+            user = usuarioWSCLClient.registrarUsuario(user);
 
             // Guardar en sesión y redirigir
             Session["Usuario"] = user;

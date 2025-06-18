@@ -32,8 +32,8 @@ namespace JMQPresentacion.Login
             try
             {
                 // Llamar al servicio SOAP real
-                UsuarioWSClient client = new UsuarioWSClient();
-                client.iniciarRecuperacionPassword(email);
+                //UsuarioWSClient client = new UsuarioWSClient();
+                //client.iniciarRecuperacionPassword(email);
 
                 MostrarMensaje("Hemos enviado un enlace de recuperación a tu correo.", true);
             }
