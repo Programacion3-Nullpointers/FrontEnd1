@@ -106,11 +106,7 @@ namespace JMQPresentacion.Login
             Session["Usuario"] = user;
             //ScriptManager.RegisterStartupScript(this, this.GetType(), "mostrarModal", "mostrarModalRegistro();", true);
 
-<<<<<<< Updated upstream
             Response.Redirect("/Principal/Principal.aspx");
-=======
-            Response.Redirect("/Pedidos/DatosEntrega.aspx");
->>>>>>> Stashed changes
 
         }
     }
