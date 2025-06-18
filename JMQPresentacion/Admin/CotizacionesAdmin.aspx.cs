@@ -55,6 +55,7 @@ namespace JMQPresentacion.Cotizaciones
 
         private void CargarGrid()
         {
+            Session["Cotizaciones"] = cotizacionWSClient.listarCotizaciones().ToList();
             List<cotizacion> lista = Session["Cotizaciones"] as List<cotizacion>;
 
             var gridData = lista.OrderBy(c => c.id)
@@ -84,6 +85,8 @@ namespace JMQPresentacion.Cotizaciones
                 if (cotExistente != null)
                 {
                     cotExistente.estadoCotizacion = txtEstado.Text;
+                    
+                    cotizacionWSClient.actualizarEstadoCotizacion(cotExistente.id,cotExistente.estadoCotizacion);
                 }
                 ViewState["EditarId"] = null;
             }
@@ -125,8 +128,10 @@ namespace JMQPresentacion.Cotizaciones
                 var cot = lista.FirstOrDefault(x => x.id == id);
                 if (cot != null)
                 {
-                    lista.Remove(cot);
+                    //lista.Remove(cot);
+                    
                     Session["Cotizaciones"] = lista;
+                    cotizacionWSClient.eliminarCotizacion(cot.id);
                     CargarGrid();
                 }
             }
@@ -138,8 +143,9 @@ namespace JMQPresentacion.Cotizaciones
                     ViewState["EditarId"] = cot.id;
 
                     // Solo llenar el estado
-                    txtEstado.Text = cot.estadoCotizacion;
-
+                    //txtEstado.Text = cot.estadoCotizacion;
+                    //string estadoCoti = txtEstado.Text;
+                    //cotizacionWSClient.actualizarEstadoCotizacion(cot.id, estadoCoti);
                     ScriptManager.RegisterStartupScript(this, GetType(), "MostrarModalEditar", "mostrarModal();", true);
                 }
             }

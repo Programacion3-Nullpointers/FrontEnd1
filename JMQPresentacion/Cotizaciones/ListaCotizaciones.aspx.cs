@@ -45,7 +45,7 @@ namespace JMQPresentacion.Cotizaciones
             }
 
             var cotizaciones = cotizacionWSCLClient.obtenerCotizacionesPorUsuario(user.id);
-
+            
             if (cotizaciones != null && cotizaciones.Length > 0)
             {
                 rptCotizaciones.DataSource = cotizaciones;
