@@ -18,6 +18,11 @@ namespace JMQPresentacion.Pedidos
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
+
             productoCotizacionWSClient = new JMQWS.ProductoCotizacionWSClient();
             cotizacionWSClient = new JMQWS.CotizacionWSClient();
         }

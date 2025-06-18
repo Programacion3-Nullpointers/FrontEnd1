@@ -464,6 +464,7 @@
     <Content Include="Public\js\jquery-3.7.1.slim.js" />
     <Content Include="Public\js\jquery-3.7.1.slim.min.js" />
     <Content Include="Admin\ModificarUsuarios.aspx" />
+    <Content Include="Public\scripts\registroExitoso.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
