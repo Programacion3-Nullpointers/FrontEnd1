@@ -71,7 +71,7 @@ namespace JMQPresentacion.Login
             }
 
             // Crear usuario
-            usuario user = new usuario();
+            usuario user = new usuario ();
             user.nombreUsuario = txtNombre.Text.Trim() + " " + txtApellido.Text.Trim();
             user.direccion = txtDireccion.Text.Trim();
             user.correo = txtEmail.Text.Trim();
@@ -106,7 +106,11 @@ namespace JMQPresentacion.Login
             Session["Usuario"] = user;
             //ScriptManager.RegisterStartupScript(this, this.GetType(), "mostrarModal", "mostrarModalRegistro();", true);
 
+<<<<<<< Updated upstream
             Response.Redirect("/Principal/Principal.aspx");
+=======
+            Response.Redirect("/Pedidos/DatosEntrega.aspx");
+>>>>>>> Stashed changes
 
         }
     }
