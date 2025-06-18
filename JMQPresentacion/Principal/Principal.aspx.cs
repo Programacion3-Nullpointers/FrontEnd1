@@ -51,6 +51,7 @@ namespace JMQPresentacion.Principal
 
         public string ConvertirByteAImagenBase64(byte[] datosImagen)
         {
+            if (datosImagen == null) return null;
             return "data:image/jpeg;base64," + Convert.ToBase64String(datosImagen);
         }
 
