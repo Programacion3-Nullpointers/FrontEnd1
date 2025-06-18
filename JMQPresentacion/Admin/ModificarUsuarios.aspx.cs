@@ -166,6 +166,7 @@ namespace JMQPresentacion.Usuarios
                 user.razonsocial = txtRazonSocialMod.Text;
                 user.direccion = txtDireccionMod.Text;
                 user.RUC = txtRUCMod.Text;
+                
 
                  usuarioWSCLClient.actualizarUsuario(user);
             }
