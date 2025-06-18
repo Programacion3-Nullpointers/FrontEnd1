@@ -47,7 +47,7 @@ namespace JMQPresentacion.Pedidos
                     detalle[] arrDetalles = ((List<detalle>)Session["Cart"]).ToArray();
                     orden.detalle = arrDetalles;
                     // Guardar la orden en la base de datos
-                    ordenVentaService.registrarOrdenVentaService(orden);
+                    orden = ordenVentaService.registrarOrdenVentaService(orden);
                     Session["Orden"] = orden; // Guardar la orden en la sesión para usarla en DatosEntrega.aspx
                     Response.Redirect("~/Pedidos/DatosEntrega.aspx");
                 }
