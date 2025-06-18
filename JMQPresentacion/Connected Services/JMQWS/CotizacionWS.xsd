@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://jmqws.inversiones.jmq.com/" targetNamespace="http://jmqws.inversiones.jmq.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="actualizarCotizacion" type="tns:actualizarCotizacion" />
+  <xs:element name="actualizarCotizacionResponse" type="tns:actualizarCotizacionResponse" />
+  <xs:element name="actualizarEstadoCotizacion" type="tns:actualizarEstadoCotizacion" />
+  <xs:element name="actualizarEstadoCotizacionResponse" type="tns:actualizarEstadoCotizacionResponse" />
+  <xs:element name="buscarCotizacion" type="tns:buscarCotizacion" />
+  <xs:element name="buscarCotizacionResponse" type="tns:buscarCotizacionResponse" />
+  <xs:element name="eliminarCotizacion" type="tns:eliminarCotizacion" />
+  <xs:element name="eliminarCotizacionResponse" type="tns:eliminarCotizacionResponse" />
+  <xs:element name="listarCotizaciones" type="tns:listarCotizaciones" />
+  <xs:element name="listarCotizacionesResponse" type="tns:listarCotizacionesResponse" />
+  <xs:element name="obtenerCotizacionesPorUsuario" type="tns:obtenerCotizacionesPorUsuario" />
+  <xs:element name="obtenerCotizacionesPorUsuarioResponse" type="tns:obtenerCotizacionesPorUsuarioResponse" />
+  <xs:element name="registrarCotizacion" type="tns:registrarCotizacion" />
+  <xs:element name="registrarCotizacionResponse" type="tns:registrarCotizacionResponse" />
+  <xs:complexType name="actualizarCotizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cotizacion" type="tns:cotizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cotizacion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="estadoCotizacion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="productos" nillable="true" type="tns:productoCotizacion" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productoCotizacion">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="fid_cotizacion" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="precioCotizado" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_expiracion_token" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" type="xs:string" />
+      <xs:element minOccurs="0" name="razonsocial" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoUsuario" type="tns:tipoUsuario" />
+      <xs:element minOccurs="0" name="token_reset" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCotizacionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarCotizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cotizacion" type="tns:cotizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarCotizacionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="buscarCotizacion">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarCotizacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cotizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCotizacion">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCotizacionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarEstadoCotizacion">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarEstadoCotizacionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCotizaciones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCotizacionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cotizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCotizacionesPorUsuario">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCotizacionesPorUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cotizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoUsuario">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EMPRESA" />
+      <xs:enumeration value="CLIENTE" />
+      <xs:enumeration value="ADMIN" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
