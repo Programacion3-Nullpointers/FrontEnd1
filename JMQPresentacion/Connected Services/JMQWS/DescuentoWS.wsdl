@@ -38,8 +38,20 @@
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
-  <message name="helloResponse">
-    <part name="parameters" element="tns:helloResponse" />
+  <message name="EliminarDescuentoResponse">
+    <part name="parameters" element="tns:EliminarDescuentoResponse" />
+  </message>
+  <message name="BuscarDescuento">
+    <part name="parameters" element="tns:BuscarDescuento" />
+  </message>
+  <message name="BuscarDescuentoResponse">
+    <part name="parameters" element="tns:BuscarDescuentoResponse" />
+  </message>
+  <message name="RegistrarDescuento">
+    <part name="parameters" element="tns:RegistrarDescuento" />
+  </message>
+  <message name="RegistrarDescuentoResponse">
+    <part name="parameters" element="tns:RegistrarDescuentoResponse" />
   </message>
   <portType name="DescuentoWS">
     <operation name="EliminarDescuento">
@@ -114,7 +126,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="hello">
+    <operation name="EliminarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarDescuento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

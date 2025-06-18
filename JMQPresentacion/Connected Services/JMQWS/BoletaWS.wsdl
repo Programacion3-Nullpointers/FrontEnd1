@@ -26,8 +26,8 @@
   <message name="actualizarBoleta">
     <part name="parameters" element="tns:actualizarBoleta" />
   </message>
-  <message name="actualizarBoletaResponse">
-    <part name="parameters" element="tns:actualizarBoletaResponse" />
+  <message name="registrarBoletaResponse">
+    <part name="parameters" element="tns:registrarBoletaResponse" />
   </message>
   <message name="buscarBoleta">
     <part name="parameters" element="tns:buscarBoleta" />

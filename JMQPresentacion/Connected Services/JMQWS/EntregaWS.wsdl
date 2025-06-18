@@ -32,8 +32,14 @@
   <message name="BuscarEntrega">
     <part name="parameters" element="tns:BuscarEntrega" />
   </message>
-  <message name="BuscarEntregaResponse">
-    <part name="parameters" element="tns:BuscarEntregaResponse" />
+  <message name="EliminarEntregaResponse">
+    <part name="parameters" element="tns:EliminarEntregaResponse" />
+  </message>
+  <message name="ActualizarEntrega">
+    <part name="parameters" element="tns:ActualizarEntrega" />
+  </message>
+  <message name="ActualizarEntregaResponse">
+    <part name="parameters" element="tns:ActualizarEntregaResponse" />
   </message>
   <portType name="EntregaWS">
     <operation name="ActualizarEntrega">

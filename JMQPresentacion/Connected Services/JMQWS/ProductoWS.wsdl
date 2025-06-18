@@ -90,7 +90,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="eliminarProducto">
+    <operation name="listaProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -139,6 +139,18 @@
       </fault>
     </operation>
     <operation name="buscarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

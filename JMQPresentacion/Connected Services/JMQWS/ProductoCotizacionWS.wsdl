@@ -47,11 +47,29 @@
   <message name="obtenerProdCotizaResponse">
     <part name="parameters" element="tns:obtenerProdCotizaResponse" />
   </message>
-  <message name="hello">
-    <part name="parameters" element="tns:hello" />
+  <message name="RegistrarProdCotizacion">
+    <part name="parameters" element="tns:RegistrarProdCotizacion" />
   </message>
-  <message name="helloResponse">
-    <part name="parameters" element="tns:helloResponse" />
+  <message name="RegistrarProdCotizacionResponse">
+    <part name="parameters" element="tns:RegistrarProdCotizacionResponse" />
+  </message>
+  <message name="EliminarProductoCotizacion">
+    <part name="parameters" element="tns:EliminarProductoCotizacion" />
+  </message>
+  <message name="EliminarProductoCotizacionResponse">
+    <part name="parameters" element="tns:EliminarProductoCotizacionResponse" />
+  </message>
+  <message name="obtenerProdCotiza">
+    <part name="parameters" element="tns:obtenerProdCotiza" />
+  </message>
+  <message name="obtenerProdCotizaResponse">
+    <part name="parameters" element="tns:obtenerProdCotizaResponse" />
+  </message>
+  <message name="listarProductoCotizacion">
+    <part name="parameters" element="tns:listarProductoCotizacion" />
+  </message>
+  <message name="listarProductoCotizacionResponse">
+    <part name="parameters" element="tns:listarProductoCotizacionResponse" />
   </message>
   <portType name="ProductoCotizacionWS">
     <operation name="ActualizarProductoCotizacion">
@@ -82,9 +100,21 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaRequest" message="tns:obtenerProdCotiza" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaResponse" message="tns:obtenerProdCotizaResponse" />
     </operation>
-    <operation name="hello">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest" message="tns:hello" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloResponse" message="tns:helloResponse" />
+    <operation name="RegistrarProdCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionRequest" message="tns:RegistrarProdCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionResponse" message="tns:RegistrarProdCotizacionResponse" />
+    </operation>
+    <operation name="EliminarProductoCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionRequest" message="tns:EliminarProductoCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionResponse" message="tns:EliminarProductoCotizacionResponse" />
+    </operation>
+    <operation name="obtenerProdCotiza">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaRequest" message="tns:obtenerProdCotiza" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaResponse" message="tns:obtenerProdCotizaResponse" />
+    </operation>
+    <operation name="listarProductoCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionRequest" message="tns:listarProductoCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionResponse" message="tns:listarProductoCotizacionResponse" />
     </operation>
   </portType>
   <binding name="ProductoCotizacionWSPortBinding" type="tns:ProductoCotizacionWS">
@@ -152,7 +182,34 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="hello">
+    <operation name="RegistrarProdCotizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarProductoCotizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerProdCotiza">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductoCotizacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
