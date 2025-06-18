@@ -29,6 +29,12 @@ namespace JMQPresentacion.Pedidos
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Validar si el usuario ha iniciado sesión
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("~/Acceso/NoAutorizado.aspx");
+                return;
+            }
             if (!IsPostBack)
             {
                 if (Request.QueryString["id"] != null)
