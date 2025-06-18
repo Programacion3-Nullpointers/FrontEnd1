@@ -66,7 +66,7 @@ namespace JMQPresentacion.Pedidos
                 }
                 entrega entrega1 = new entrega
                     {
-                        orden = (ordenVenta)Session["OrdenVenta"],
+                        orden = (ordenVenta)Session["Orden"],
                         fecha_entrega = DateTime.Now.AddDays(7),
                         tipoEntrega = pnlDespacho.Visible ? tipoEntrega.DELIVERY : tipoEntrega.RECOJO
                     };

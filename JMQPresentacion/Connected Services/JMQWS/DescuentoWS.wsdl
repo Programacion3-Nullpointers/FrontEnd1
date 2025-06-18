@@ -11,6 +11,12 @@
   <message name="ActualizarDescuentoResponse">
     <part name="parameters" element="tns:ActualizarDescuentoResponse" />
   </message>
+  <message name="ListarCategorias">
+    <part name="parameters" element="tns:ListarCategorias" />
+  </message>
+  <message name="ListarCategoriasResponse">
+    <part name="parameters" element="tns:ListarCategoriasResponse" />
+  </message>
   <message name="RegistrarDescuento">
     <part name="parameters" element="tns:RegistrarDescuento" />
   </message>
@@ -29,12 +35,6 @@
   <message name="EliminarDescuentoResponse">
     <part name="parameters" element="tns:EliminarDescuentoResponse" />
   </message>
-  <message name="ListarCategorias">
-    <part name="parameters" element="tns:ListarCategorias" />
-  </message>
-  <message name="ListarCategoriasResponse">
-    <part name="parameters" element="tns:ListarCategoriasResponse" />
-  </message>
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
@@ -45,6 +45,10 @@
     <operation name="ActualizarDescuento">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoRequest" message="tns:ActualizarDescuento" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoResponse" message="tns:ActualizarDescuentoResponse" />
+    </operation>
+    <operation name="ListarCategorias">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarCategoriasRequest" message="tns:ListarCategorias" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarCategoriasResponse" message="tns:ListarCategoriasResponse" />
     </operation>
     <operation name="RegistrarDescuento">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoRequest" message="tns:RegistrarDescuento" />
@@ -57,10 +61,6 @@
     <operation name="EliminarDescuento">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoRequest" message="tns:EliminarDescuento" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoResponse" message="tns:EliminarDescuentoResponse" />
-    </operation>
-    <operation name="ListarCategorias">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarCategoriasRequest" message="tns:ListarCategorias" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarCategoriasResponse" message="tns:ListarCategoriasResponse" />
     </operation>
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloRequest" message="tns:hello" />
@@ -78,6 +78,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="ListarCategorias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="RegistrarDescuento">
       <soap:operation soapAction="" />
       <input>
@@ -97,15 +106,6 @@
       </output>
     </operation>
     <operation name="EliminarDescuento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarCategorias">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -76,7 +76,7 @@
   </xs:complexType>
   <xs:complexType name="ListarCategoriasResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:descuento" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:categoria" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

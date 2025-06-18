@@ -77,7 +77,14 @@
             </div>
         </div>
     </div>
-
+    <!-- div error -->
+    <div class="row">
+       <div class="col-md-8 mb-4">
+           <div class="col-12 mt-2 alert alert-danger py-1 px-2 small" id="divError" runat="server" style="display:none;">
+               <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+           </div>
+       </div>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
 </asp:Content>

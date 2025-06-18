@@ -17,7 +17,15 @@
   </xs:complexType>
   <xs:complexType name="ListarCategoriasResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:descuento" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:categoria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="descuento" type="tns:descuento" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="descuento">
