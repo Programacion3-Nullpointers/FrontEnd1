@@ -24,7 +24,7 @@
                         </div>
                         <div class="col-md-2">
                             <label>Nro. <span style="color: red;">*</span></label>
-                            <asp:TextBox ID="txtNumero" runat="server" CssClass="form-control" Placeholder="123"></asp:TextBox>
+                            <asp:TextBox ID="txtNumero" runat="server" CssClass="sin-flechas form-control" Placeholder="123"></asp:TextBox>
                         </div>
                         <div class="col-md-4">
                             <label>Piso/Dpto. (Ej. 3er piso / 302)</label>
@@ -32,7 +32,7 @@
                         </div>
                         <!-- Referencia -->
                         <div class="mb-3">
-                            <label>Referencia de dirección <span style="color: red;">*</span></label>
+                            <label>Referencia</label>
                             <asp:TextBox ID="txtReferencia" runat="server" CssClass="form-control" Placeholder="Frente a parque, puerta verde, etc."></asp:TextBox>
                         </div>
                     </div>
@@ -75,6 +75,14 @@
                     </div>
                 </div>
             </div>
+          </div>
+          <!-- div error -->
+          <div class="row">
+             <div class="col-md-8 mb-4">
+                 <div class="col-12 mt-2 alert alert-danger py-1 px-2 small" id="divError" runat="server" style="display:none;">
+                     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                 </div>
+             </div>
           </div>
         </div>
 </asp:Content>

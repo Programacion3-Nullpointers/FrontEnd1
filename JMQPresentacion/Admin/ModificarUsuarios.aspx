@@ -8,13 +8,13 @@
     <div class="content">
         <div class="table-header">
             <h2>Gestión de Usuarios</h2>
-            <button type="button" class="btn-add" onclick="mostrarModal()">➕ Agregar Usuario</button>
         </div>
 
         <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" OnRowCommand="gvUsuarios_RowCommand">
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="ID" />
                 <asp:BoundField DataField="nombreUsuario" HeaderText="Nombre de Usuario" />
+                <asp:BoundField DataField="tipoUsuario" HeaderText="Tipo de Usuario" />
                 <asp:BoundField DataField="correo" HeaderText="Correo" />
                 <asp:BoundField DataField="razonsocial" HeaderText="Razón Social" />
                 <asp:BoundField DataField="direccion" HeaderText="Dirección" />

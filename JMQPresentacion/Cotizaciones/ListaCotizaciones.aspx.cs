@@ -18,7 +18,7 @@ namespace JMQPresentacion.Cotizaciones
         {
             if (Session["usuario"] == null)
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Login/Login.aspx");
             }
             cotizacionWSCLClient = new JMQWS.CotizacionWSClient();
             rptCotizaciones.ItemDataBound += rptCotizaciones_ItemDataBound;
@@ -35,7 +35,7 @@ namespace JMQPresentacion.Cotizaciones
         private void CargarCotizaciones()
         {
             // Ejemplo: Obtener datos de la base de datos o servicio
-            usuario user = Session["Usuario"] as usuario;
+            usuario user = Session["usuario"] as usuario;
             if (user == null)
             {
                 // Redirigir al login u otra acción

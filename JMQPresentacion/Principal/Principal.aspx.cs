@@ -58,7 +58,6 @@ namespace JMQPresentacion.Principal
                 byte[] bytesImagenDefecto = System.IO.File.ReadAllBytes(rutaImagenDefecto);
                 return "data:image/jpeg;base64," + Convert.ToBase64String(bytesImagenDefecto);
             }
-
             return "data:image/jpeg;base64," + Convert.ToBase64String(datosImagen);
         }
 

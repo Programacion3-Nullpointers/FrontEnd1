@@ -16,8 +16,13 @@ namespace JMQPresentacion.Usuarios
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("~/Login/Login.aspx");
+            }
             usuarioWSCLClient = new JMQWS.UsuarioWSClient();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             // Validar si el usuario ha iniciado sesión
@@ -167,6 +172,7 @@ namespace JMQPresentacion.Usuarios
                 user.razonsocial = txtRazonSocialMod.Text;
                 user.direccion = txtDireccionMod.Text;
                 user.RUC = txtRUCMod.Text;
+                
 
                  usuarioWSCLClient.actualizarUsuario(user);
             }
