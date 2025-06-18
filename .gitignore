@@ -1,0 +1,36 @@
+# Archivos generados por Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos de build
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+*.cache
+*.log
+
+# Paquetes
+packages/
+
+# Node/npm si usas cosas del frontend
+node_modules/
+
+# Configuraciones de IDE
+.idea/
+.vscode/
+*.iml
+
+# Archivos temporales y de conflictos
+*.orig
+*.rej
+*.tmp
+
+# Otros
+.env
+JMQPresentacion/Connected Services
+JMQPresentacion/.vs
