@@ -37,7 +37,7 @@ namespace JMQPresentacion.Login
 
                 MostrarMensaje("Hemos enviado un enlace de recuperación a tu correo.", true);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 // Posible error: usuario no encontrado en backend
                 MostrarMensaje("Error: " + ex.Message, false);
