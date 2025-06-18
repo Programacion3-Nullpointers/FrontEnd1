@@ -5,11 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/NotificacionWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-  <message name="listarNotificaciones">
-    <part name="parameters" element="tns:listarNotificaciones" />
+  <message name="buscarNotificacion">
+    <part name="parameters" element="tns:buscarNotificacion" />
   </message>
-  <message name="listarNotificacionesResponse">
-    <part name="parameters" element="tns:listarNotificacionesResponse" />
+  <message name="buscarNotificacionResponse">
+    <part name="parameters" element="tns:buscarNotificacionResponse" />
+  </message>
+  <message name="enviarNotificacion">
+    <part name="parameters" element="tns:enviarNotificacion" />
+  </message>
+  <message name="enviarNotificacionResponse">
+    <part name="parameters" element="tns:enviarNotificacionResponse" />
   </message>
   <message name="registrarNotificacion">
     <part name="parameters" element="tns:registrarNotificacion" />
@@ -29,22 +35,20 @@
   <message name="eliminarNotificacionResponse">
     <part name="parameters" element="tns:eliminarNotificacionResponse" />
   </message>
-  <message name="enviarNotificacion">
-    <part name="parameters" element="tns:enviarNotificacion" />
+  <message name="listarNotificaciones">
+    <part name="parameters" element="tns:listarNotificaciones" />
   </message>
-  <message name="enviarNotificacionResponse">
-    <part name="parameters" element="tns:enviarNotificacionResponse" />
-  </message>
-  <message name="buscarNotificacion">
-    <part name="parameters" element="tns:buscarNotificacion" />
-  </message>
-  <message name="buscarNotificacionResponse">
-    <part name="parameters" element="tns:buscarNotificacionResponse" />
+  <message name="listarNotificacionesResponse">
+    <part name="parameters" element="tns:listarNotificacionesResponse" />
   </message>
   <portType name="NotificacionWS">
-    <operation name="listarNotificaciones">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
+    <operation name="buscarNotificacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/buscarNotificacionRequest" message="tns:buscarNotificacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/buscarNotificacionResponse" message="tns:buscarNotificacionResponse" />
+    </operation>
+    <operation name="enviarNotificacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionRequest" message="tns:enviarNotificacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionResponse" message="tns:enviarNotificacionResponse" />
     </operation>
     <operation name="registrarNotificacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionRequest" message="tns:registrarNotificacion" />
@@ -58,18 +62,23 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionRequest" message="tns:eliminarNotificacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionResponse" message="tns:eliminarNotificacionResponse" />
     </operation>
-    <operation name="enviarNotificacion">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionRequest" message="tns:enviarNotificacion" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionResponse" message="tns:enviarNotificacionResponse" />
-    </operation>
-    <operation name="buscarNotificacion">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/buscarNotificacionRequest" message="tns:buscarNotificacion" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/buscarNotificacionResponse" message="tns:buscarNotificacionResponse" />
+    <operation name="listarNotificaciones">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
     </operation>
   </portType>
   <binding name="NotificacionWSPortBinding" type="tns:NotificacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarNotificaciones">
+    <operation name="buscarNotificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="enviarNotificacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,16 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="enviarNotificacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="buscarNotificacion">
+    <operation name="listarNotificaciones">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -5,24 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/FacturaWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-  <message name="buscarFactura">
-    <part name="parameters" element="tns:buscarFactura" />
-  </message>
-  <message name="buscarFacturaResponse">
-    <part name="parameters" element="tns:buscarFacturaResponse" />
-  </message>
-  <message name="EliminarFactura">
-    <part name="parameters" element="tns:EliminarFactura" />
-  </message>
-  <message name="EliminarFacturaResponse">
-    <part name="parameters" element="tns:EliminarFacturaResponse" />
-  </message>
-  <message name="ActualizarFactura">
-    <part name="parameters" element="tns:ActualizarFactura" />
-  </message>
-  <message name="ActualizarFacturaResponse">
-    <part name="parameters" element="tns:ActualizarFacturaResponse" />
-  </message>
   <message name="ListarFacturas">
     <part name="parameters" element="tns:ListarFacturas" />
   </message>
@@ -38,6 +20,24 @@
   <message name="RegistrarFacturaResponse">
     <part name="parameters" element="tns:RegistrarFacturaResponse" />
   </message>
+  <message name="ActualizarFactura">
+    <part name="parameters" element="tns:ActualizarFactura" />
+  </message>
+  <message name="ActualizarFacturaResponse">
+    <part name="parameters" element="tns:ActualizarFacturaResponse" />
+  </message>
+  <message name="buscarFactura">
+    <part name="parameters" element="tns:buscarFactura" />
+  </message>
+  <message name="buscarFacturaResponse">
+    <part name="parameters" element="tns:buscarFacturaResponse" />
+  </message>
+  <message name="EliminarFactura">
+    <part name="parameters" element="tns:EliminarFactura" />
+  </message>
+  <message name="EliminarFacturaResponse">
+    <part name="parameters" element="tns:EliminarFacturaResponse" />
+  </message>
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
@@ -45,18 +45,6 @@
     <part name="parameters" element="tns:helloResponse" />
   </message>
   <portType name="FacturaWS">
-    <operation name="buscarFactura">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaRequest" message="tns:buscarFactura" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaResponse" message="tns:buscarFacturaResponse" />
-    </operation>
-    <operation name="EliminarFactura">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/EliminarFacturaRequest" message="tns:EliminarFactura" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/EliminarFacturaResponse" message="tns:EliminarFacturaResponse" />
-    </operation>
-    <operation name="ActualizarFactura">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaRequest" message="tns:ActualizarFactura" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaResponse" message="tns:ActualizarFacturaResponse" />
-    </operation>
     <operation name="ListarFacturas">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/ListarFacturasRequest" message="tns:ListarFacturas" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/ListarFacturasResponse" message="tns:ListarFacturasResponse" />
@@ -66,6 +54,18 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/RegistrarFacturaRequest" message="tns:RegistrarFactura" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/RegistrarFacturaResponse" message="tns:RegistrarFacturaResponse" />
     </operation>
+    <operation name="ActualizarFactura">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaRequest" message="tns:ActualizarFactura" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaResponse" message="tns:ActualizarFacturaResponse" />
+    </operation>
+    <operation name="buscarFactura">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaRequest" message="tns:buscarFactura" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaResponse" message="tns:buscarFacturaResponse" />
+    </operation>
+    <operation name="EliminarFactura">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/EliminarFacturaRequest" message="tns:EliminarFactura" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/EliminarFacturaResponse" message="tns:EliminarFacturaResponse" />
+    </operation>
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/helloRequest" message="tns:hello" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/helloResponse" message="tns:helloResponse" />
@@ -73,33 +73,6 @@
   </portType>
   <binding name="FacturaWSPortBinding" type="tns:FacturaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="buscarFactura">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliminarFactura">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ActualizarFactura">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="ListarFacturas">
       <soap:operation soapAction="" />
       <input>
@@ -113,6 +86,33 @@
       </fault>
     </operation>
     <operation name="RegistrarFactura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ActualizarFactura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarFactura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarFactura">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

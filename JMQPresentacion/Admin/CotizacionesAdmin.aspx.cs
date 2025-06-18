@@ -11,16 +11,7 @@ namespace JMQPresentacion.Cotizaciones
     
     public partial class Cotizaciones : System.Web.UI.Page
     {
-<<<<<<< Updated upstream
-        protected void Page_Init(object sender, EventArgs e)
-        {
-            if (Session["usuario"] == null)
-            {
-                Response.Redirect("~/Login.aspx");
-            }
 
-        }
-=======
         private CotizacionWSClient cotizacionWSClient;
         private UsuarioWSClient usuarioWSClient;
         protected void Page_Init(object sender, EventArgs e)
@@ -29,7 +20,6 @@ namespace JMQPresentacion.Cotizaciones
             usuarioWSClient = new UsuarioWSClient();
         }
 
->>>>>>> Stashed changes
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
