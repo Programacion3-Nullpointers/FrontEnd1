@@ -37,20 +37,20 @@
       <xs:element minOccurs="0" name="return" type="tns:descuento" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ActualizarDescuento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:descuento" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ActualizarDescuentoResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="EliminarDescuento">
     <xs:sequence>
       <xs:element name="arg0" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="EliminarDescuentoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ActualizarDescuento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:descuento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarDescuentoResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="hello">

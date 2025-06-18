@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/ComprobantePagoWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-  <message name="actualizarComprobante">
-    <part name="parameters" element="tns:actualizarComprobante" />
-  </message>
-  <message name="actualizarComprobanteResponse">
-    <part name="parameters" element="tns:actualizarComprobanteResponse" />
-  </message>
   <message name="registrarComprobante">
     <part name="parameters" element="tns:registrarComprobante" />
   </message>
@@ -22,6 +16,12 @@
   </message>
   <message name="eliminarComprobanteResponse">
     <part name="parameters" element="tns:eliminarComprobanteResponse" />
+  </message>
+  <message name="actualizarComprobante">
+    <part name="parameters" element="tns:actualizarComprobante" />
+  </message>
+  <message name="actualizarComprobanteResponse">
+    <part name="parameters" element="tns:actualizarComprobanteResponse" />
   </message>
   <message name="buscarComprobante">
     <part name="parameters" element="tns:buscarComprobante" />
@@ -36,10 +36,6 @@
     <part name="parameters" element="tns:listarComprobantesResponse" />
   </message>
   <portType name="ComprobantePagoWS">
-    <operation name="actualizarComprobante">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/actualizarComprobanteRequest" message="tns:actualizarComprobante" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/actualizarComprobanteResponse" message="tns:actualizarComprobanteResponse" />
-    </operation>
     <operation name="registrarComprobante">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteRequest" message="tns:registrarComprobante" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteResponse" message="tns:registrarComprobanteResponse" />
@@ -47,6 +43,10 @@
     <operation name="eliminarComprobante">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/eliminarComprobanteRequest" message="tns:eliminarComprobante" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/eliminarComprobanteResponse" message="tns:eliminarComprobanteResponse" />
+    </operation>
+    <operation name="actualizarComprobante">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/actualizarComprobanteRequest" message="tns:actualizarComprobante" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/actualizarComprobanteResponse" message="tns:actualizarComprobanteResponse" />
     </operation>
     <operation name="buscarComprobante">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/buscarComprobanteRequest" message="tns:buscarComprobante" />
@@ -59,15 +59,6 @@
   </portType>
   <binding name="ComprobantePagoWSPortBinding" type="tns:ComprobantePagoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarComprobante">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="registrarComprobante">
       <soap:operation soapAction="" />
       <input>
@@ -78,6 +69,15 @@
       </output>
     </operation>
     <operation name="eliminarComprobante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarComprobante">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

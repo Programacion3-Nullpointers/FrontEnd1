@@ -1,6 +1,7 @@
 ﻿using JMQPresentacion.JMQWS;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,6 +27,12 @@ namespace JMQPresentacion.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Validar si el usuario ha iniciado sesión
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("~/Acceso/NoAutorizado.aspx");
+                return;
+            }
             if (!IsPostBack)
             {
                 // Si no hay lista guardada en sesión, inicialízala con algunos datos de ejemplo
@@ -87,7 +94,15 @@ namespace JMQPresentacion.Admin
                     nombre = txtCategoriaNombre.Text
                 };
                 nuevo.descripcion = txtDescripcion.Text;
-                nuevo.imagen = new byte[0];
+                if (fuImagen.HasFile)
+                {
+                    nuevo.imagen = fuImagen.FileBytes;
+                }
+                else
+                {
+                    string rutaImagen = Server.MapPath("~/Public/images/imagen_default.jpg");
+                    nuevo.imagen = System.IO.File.ReadAllBytes(rutaImagen);
+                }
                 nuevo.precio = Convert.ToDouble(txtPrecio.Text);
                 nuevo.stock = Convert.ToInt32(txtStock.Text);
                 productoService.registrarProducto(nuevo);
@@ -110,6 +125,33 @@ namespace JMQPresentacion.Admin
             ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModal", "cerrarModal();", true);
         }
 
+        protected void btnCargarFoto_Click(object sender, EventArgs e)
+        {
+            if (fileUploadFotoProducto.HasFile)
+            {
+                string extension = Path.GetExtension(fileUploadFotoProducto.FileName).ToLower();
+                if (extension == ".jpg" || extension == ".jpeg" || extension == ".png" || extension == ".gif")
+                {
+                    string filename = Guid.NewGuid().ToString() + extension;
+                    string ruta = Server.MapPath("~/Public/images/") + filename;
+
+                    fileUploadFotoProducto.SaveAs(ruta);
+
+                    imgPreviewMod.ImageUrl = "~/Public/images/" + filename;
+
+                    using (FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
+                    {
+                        BinaryReader br = new BinaryReader(fs);
+                        Session["foto"] = br.ReadBytes((int)fs.Length);
+                    }
+                    ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalModificar", "mostrarModalModificar();", true);
+                }
+                else
+                {
+                    // Puede usarse un mensaje de alerta si lo deseas
+                }
+            }
+        }
 
         protected void gvProductos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -138,30 +180,43 @@ namespace JMQPresentacion.Admin
                 {
                     int id = Convert.ToInt32(e.CommandArgument);
 
-                    // Obtener los datos del usuario desde la base de datos
+                    // Obtener el producto desde el servicio
                     var prod = productoService.buscarProducto(id);
 
                     if (prod != null)
                     {
                         hfIdProd.Value = prod.id.ToString();
-                        TextBox1.Text = prod.nombre;
-                        TextBox2.Text = prod.categoria.nombre;
-                        TextBox3.Text = prod.descripcion;
-                        TextBox4.Text = "";
-                        TextBox5.Text = prod.precio.ToString();
-                        TextBox6.Text = prod.stock.ToString();
+                        txtNombreMod.Text = prod.nombre;
+                        txtCategoriaMod.Text = prod.categoria.nombre;
+                        txtDescripcionMod.Text = prod.descripcion;
+                        txtPrecioMod.Text = prod.precio.ToString();
+                        txtStockMod.Text = prod.stock.ToString();
 
-                        // Mostrar modal de modificación
+                        // ✅ Checkbox "Activo"
+                        chkActivoMod.Checked = prod.activo;
+
+                        // ✅ Cargar imagen previa
+                        if (prod.imagen != null && prod.imagen.Length > 0)
+                        {
+                            string base64 = Convert.ToBase64String(prod.imagen);
+                            imgPreviewMod.ImageUrl = "data:image/png;base64," + base64;
+                        }
+                        else
+                        {
+                            //string relativePath = "~/Public/images/imagen_default.jpg";
+                            imgPreviewMod.ImageUrl = Page.ResolveUrl("~/Public/images/imagen_default.jpg");
+                        }
+
                         ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalModificar", "mostrarModalModificar();", true);
-
                     }
                 }
+
             }
         }
 
         protected void btnActualizarProducto_Click(object sender, EventArgs e)
         {
-            List<producto> lista = Session["Producto"] as List<producto>;
+            List<producto> lista = Session["Productos"] as List<producto>;
             if (lista == null) return;
 
             int id = int.Parse(hfIdProd.Value);
@@ -169,16 +224,30 @@ namespace JMQPresentacion.Admin
 
             if (prod != null)
             {
-                prod.nombre = TextBox1.Text;
-                //cambiar a búsqueda de categoría...
+                prod.nombre = txtNombreMod.Text;
+
                 prod.categoria = new categoria
                 {
-                    nombre = TextBox2.Text
+                    id = 1,
+                    nombre = txtCategoriaMod.Text
                 };
-                prod.descripcion = TextBox3.Text;
-                //prod.imagen = txtImagen.Text;
-                prod.precio = Convert.ToDouble(TextBox5.Text);
-                prod.stock = Convert.ToInt32(TextBox6.Text);
+                prod.descripcion = txtDescripcionMod.Text;
+
+                // ✅ Asignar nueva imagen si se subió
+                if (fuImagen.HasFile)
+                {
+                    prod.imagen = fuImagen.FileBytes;
+                }
+
+                prod.precio = Convert.ToDouble(txtPrecioMod.Text);
+                prod.stock = Convert.ToInt32(txtStockMod.Text);
+                prod.activo = chkActivoMod.Checked;
+
+                if (Session["foto"] != null)
+                {
+                    prod.imagen = (byte[])Session["foto"];
+                }
+
 
                 productoService.actualizarProducto(prod);
             }
@@ -187,8 +256,9 @@ namespace JMQPresentacion.Admin
             gvProductos.DataSource = lista.OrderBy(u => u.id).ToList();
             gvProductos.DataBind();
 
-            // Cerrar modal
             ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModalModificar", "cerrarModalModificar();", true);
         }
+
+
     }
 }

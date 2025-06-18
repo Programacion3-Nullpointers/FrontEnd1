@@ -10,15 +10,18 @@ namespace JMQPresentacion.Pedidos
 {
     public partial class MetodoPago : System.Web.UI.Page
     {
+        private ComprobantePagoWSClient comprobanteService;
+        private BoletaWSClient boletaService;
+        private FacturaWSClient facturaService;
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (Session["usuario"] == null)
+            if (Session["Usuario"] == null)
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("/Principal/Principal.aspx");
             }
-
+            boletaService = new BoletaWSClient();
+            facturaService = new FacturaWSClient();
         }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -32,9 +35,9 @@ namespace JMQPresentacion.Pedidos
 
         private void CargarResumen()
         {
-            //List<Detalle> detalles = (List<Detalle>)Session["Cart"];
-            //lblTotal.Text = "S/ " + detalles.Sum(item => item.cantidad * item.precio_unitario).ToString("F2");
-            //lblTotal2.Text = lblTotal.Text;
+            List<detalle> detalles = (List<detalle>)Session["Cart"];
+            lblTotal.Text = "S/ " + detalles.Sum(item => item.cantidad * item.precio_unitario).ToString("F2");
+            lblTotal2.Text = lblTotal.Text;
         }
         protected void MetodoPago_Changed(object sender, EventArgs e)
         {
@@ -44,19 +47,72 @@ namespace JMQPresentacion.Pedidos
 
         protected void btnPagar_Click(object sender, EventArgs e)
         {
-            /*
+
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("~/Login/Login.aspx");
             }
             else
             {
-            */
-                //MetodoPago metodo;
-                // insertar Entrega a la BD
-                // insertar(metodo);
-                Response.Redirect("~/Pedidos/MetodoPago.aspx");
-            //}
+                string textoSeleccionado = rblComprobante.SelectedItem.Text;
+                if (textoSeleccionado == "Factura")
+                {
+                    try
+                    {
+                        factura factura1 = new factura
+                        {
+                            RUC = ((usuario)Session["Usuario"]).RUC,
+                            razon_social = ((usuario)Session["Usuario"]).razonsocial,
+                            direccion = ((usuario)Session["Usuario"]).direccion,
+                            fecha_emision = DateTime.Now,
+                            orden = (ordenVenta)Session["Orden"],
+                            metodoPago = metodoPago.tarjeta, //rbVisa.Checked ? metodoPago.tarjeta : metodoPago.efectivo,
+                            fecha_pago = DateTime.Now,
+                            monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
+                        };
+                        facturaService.RegistrarFactura(factura1);
+                    }
+                    catch (ArgumentException ex)
+                    {
+                        divError.Style["display"] = "block";
+                        lblError.Text = "Error al realizar el pago.";
+                        Console.WriteLine($"Error: {ex.Message}");
+                        return;
+                    }
+
+                }
+                else if (textoSeleccionado == "Boleta")
+                {
+                    try
+                    {
+                        boleta boleta1 = new boleta
+                        {
+                            dni = ((usuario)Session["Usuario"]).dni,
+                            nombre = ((usuario)Session["Usuario"]).nombreUsuario,
+                            fecha_emision = DateTime.Now,
+                            orden = (ordenVenta)Session["Orden"],
+                            metodoPago = metodoPago.tarjeta, //rbVisa.Checked ? metodoPago.tarjeta : metodoPago.efectivo,
+                            fecha_pago = DateTime.Now,
+                            monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
+                        };
+                        boletaService.registrarBoleta(boleta1);
+                    }
+                    catch (ArgumentException ex)
+                    {
+                        divError.Style["display"] = "block";
+                        lblError.Text = "Error al realizar el pago.";
+                        Console.WriteLine($"Error: {ex.Message}");
+                        return;
+                    }
+                }
+                else
+                {
+                    divError.Style["display"] = "block";
+                    lblError.Text = "Seleccione un tipo de comprobante válido.";
+                    return;
+                }
+                Response.Redirect("/Principal/Principal.aspx");
+            }
         }
     }
 }

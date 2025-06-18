@@ -19,6 +19,7 @@ namespace JMQPresentacion.Principal
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
                 CargarProductos();
@@ -41,7 +42,7 @@ namespace JMQPresentacion.Principal
             List<detalle> cart = (List<detalle>)Session["Cart"];
             Button btn = (Button)sender;
             int idProducto = int.Parse(btn.CommandArgument);
-            // Aquí buscaría el producto en la BD
+            // Aquí busca el producto en la BD
             producto producto1 = productoService.buscarProducto(idProducto);
             detalle detalle1 = new detalle { producto = producto1, cantidad = 1, precio_unitario = producto1.precio };
             cart.Add(detalle1);
@@ -51,6 +52,12 @@ namespace JMQPresentacion.Principal
 
         public string ConvertirByteAImagenBase64(byte[] datosImagen)
         {
+            if (datosImagen == null || datosImagen.Length == 0)
+            {
+                string rutaImagenDefecto = Server.MapPath("~/Public/images/imagen_default.jpg");
+                byte[] bytesImagenDefecto = System.IO.File.ReadAllBytes(rutaImagenDefecto);
+                return "data:image/jpeg;base64," + Convert.ToBase64String(bytesImagenDefecto);
+            }
             return "data:image/jpeg;base64," + Convert.ToBase64String(datosImagen);
         }
 

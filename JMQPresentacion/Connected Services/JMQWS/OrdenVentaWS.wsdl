@@ -5,12 +5,31 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/OrdenVentaWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
+=======
+  <message name="listarOrdenVenta">
+    <part name="parameters" element="tns:listarOrdenVenta" />
+  </message>
+  <message name="listarOrdenVentaResponse">
+    <part name="parameters" element="tns:listarOrdenVentaResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="actualizarEstadoOrdenVentaService">
+    <part name="parameters" element="tns:actualizarEstadoOrdenVentaService" />
+  </message>
+  <message name="actualizarEstadoOrdenVentaServiceResponse">
+    <part name="parameters" element="tns:actualizarEstadoOrdenVentaServiceResponse" />
+  </message>
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   <message name="actualizarOrdenVentaService">
     <part name="parameters" element="tns:actualizarOrdenVentaService" />
   </message>
   <message name="actualizarOrdenVentaServiceResponse">
     <part name="parameters" element="tns:actualizarOrdenVentaServiceResponse" />
   </message>
+<<<<<<< HEAD
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
   </message>
@@ -20,6 +39,8 @@
   <message name="obtenerOrdenesVentasPorUsuarioResponse">
     <part name="parameters" element="tns:obtenerOrdenesVentasPorUsuarioResponse" />
   </message>
+=======
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   <message name="buscarOrdenVentaServicesById">
     <part name="parameters" element="tns:buscarOrdenVentaServicesById" />
   </message>
@@ -32,6 +53,7 @@
   <message name="agregarDetalleAOrdenVentaResponse">
     <part name="parameters" element="tns:agregarDetalleAOrdenVentaResponse" />
   </message>
+<<<<<<< HEAD
   <message name="actualizarEstadoOrdenVentaService">
     <part name="parameters" element="tns:actualizarEstadoOrdenVentaService" />
   </message>
@@ -58,21 +80,59 @@
   </message>
   <message name="listarOrdenVenta">
     <part name="parameters" element="tns:listarOrdenVenta" />
+=======
+  <message name="eliminarDetalleDeOrdenVenta">
+    <part name="parameters" element="tns:eliminarDetalleDeOrdenVenta" />
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </message>
-  <message name="listarOrdenVentaResponse">
-    <part name="parameters" element="tns:listarOrdenVentaResponse" />
+  <message name="eliminarDetalleDeOrdenVentaResponse">
+    <part name="parameters" element="tns:eliminarDetalleDeOrdenVentaResponse" />
+  </message>
+  <message name="obtenerOrdenesVentasPorUsuario">
+    <part name="parameters" element="tns:obtenerOrdenesVentasPorUsuario" />
+  </message>
+  <message name="obtenerOrdenesVentasPorUsuarioResponse">
+    <part name="parameters" element="tns:obtenerOrdenesVentasPorUsuarioResponse" />
+  </message>
+  <message name="eliminarOrdenVentaService">
+    <part name="parameters" element="tns:eliminarOrdenVentaService" />
+  </message>
+  <message name="eliminarOrdenVentaServiceResponse">
+    <part name="parameters" element="tns:eliminarOrdenVentaServiceResponse" />
+  </message>
+  <message name="registrarOrdenVentaService">
+    <part name="parameters" element="tns:registrarOrdenVentaService" />
+  </message>
+  <message name="registrarOrdenVentaServiceResponse">
+    <part name="parameters" element="tns:registrarOrdenVentaServiceResponse" />
   </message>
   <portType name="OrdenVentaWS">
+<<<<<<< HEAD
+=======
+    <operation name="listarOrdenVenta">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaRequest" message="tns:listarOrdenVenta" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaResponse" message="tns:listarOrdenVentaResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVenta/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarEstadoOrdenVentaService">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarEstadoOrdenVentaServiceRequest" message="tns:actualizarEstadoOrdenVentaService" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarEstadoOrdenVentaServiceResponse" message="tns:actualizarEstadoOrdenVentaServiceResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarEstadoOrdenVentaService/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     <operation name="actualizarOrdenVentaService">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarOrdenVentaServiceRequest" message="tns:actualizarOrdenVentaService" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarOrdenVentaServiceResponse" message="tns:actualizarOrdenVentaServiceResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarOrdenVentaService/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
     <operation name="obtenerOrdenesVentasPorUsuario">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuarioRequest" message="tns:obtenerOrdenesVentasPorUsuario" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuarioResponse" message="tns:obtenerOrdenesVentasPorUsuarioResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+=======
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     <operation name="buscarOrdenVentaServicesById">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/buscarOrdenVentaServicesByIdRequest" message="tns:buscarOrdenVentaServicesById" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/buscarOrdenVentaServicesByIdResponse" message="tns:buscarOrdenVentaServicesByIdResponse" />
@@ -83,16 +143,27 @@
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/agregarDetalleAOrdenVentaResponse" message="tns:agregarDetalleAOrdenVentaResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/agregarDetalleAOrdenVenta/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
     <operation name="actualizarEstadoOrdenVentaService">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarEstadoOrdenVentaServiceRequest" message="tns:actualizarEstadoOrdenVentaService" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarEstadoOrdenVentaServiceResponse" message="tns:actualizarEstadoOrdenVentaServiceResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarEstadoOrdenVentaService/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+=======
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     <operation name="eliminarDetalleDeOrdenVenta">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarDetalleDeOrdenVentaRequest" message="tns:eliminarDetalleDeOrdenVenta" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarDetalleDeOrdenVentaResponse" message="tns:eliminarDetalleDeOrdenVentaResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarDetalleDeOrdenVenta/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
+=======
+    <operation name="obtenerOrdenesVentasPorUsuario">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuarioRequest" message="tns:obtenerOrdenesVentasPorUsuario" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuarioResponse" message="tns:obtenerOrdenesVentasPorUsuarioResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     <operation name="eliminarOrdenVentaService">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceRequest" message="tns:eliminarOrdenVentaService" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceResponse" message="tns:eliminarOrdenVentaServiceResponse" />
@@ -102,15 +173,45 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceRequest" message="tns:registrarOrdenVentaService" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceResponse" message="tns:registrarOrdenVentaServiceResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaService/Fault/Exception" name="Exception" message="tns:Exception" />
+<<<<<<< HEAD
     </operation>
     <operation name="listarOrdenVenta">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaRequest" message="tns:listarOrdenVenta" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaResponse" message="tns:listarOrdenVentaResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVenta/Fault/Exception" name="Exception" message="tns:Exception" />
+=======
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     </operation>
   </portType>
   <binding name="OrdenVentaWSPortBinding" type="tns:OrdenVentaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+<<<<<<< HEAD
+=======
+    <operation name="listarOrdenVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="actualizarEstadoOrdenVentaService">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     <operation name="actualizarOrdenVentaService">
       <soap:operation soapAction="" />
       <input>
@@ -123,6 +224,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
     <operation name="obtenerOrdenesVentasPorUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -135,6 +237,8 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+=======
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     <operation name="buscarOrdenVentaServicesById">
       <soap:operation soapAction="" />
       <input>
@@ -159,7 +263,11 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
     <operation name="actualizarEstadoOrdenVentaService">
+=======
+    <operation name="eliminarDetalleDeOrdenVenta">
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -171,7 +279,11 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
     <operation name="eliminarDetalleDeOrdenVenta">
+=======
+    <operation name="obtenerOrdenesVentasPorUsuario">
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -196,6 +308,7 @@
       </fault>
     </operation>
     <operation name="registrarOrdenVentaService">
+<<<<<<< HEAD
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -208,6 +321,8 @@
       </fault>
     </operation>
     <operation name="listarOrdenVenta">
+=======
+>>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

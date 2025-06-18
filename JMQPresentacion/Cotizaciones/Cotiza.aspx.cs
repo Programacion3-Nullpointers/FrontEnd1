@@ -1,12 +1,13 @@
-﻿using System;
+﻿using JMQPresentacion.JMQWS;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using JMQPresentacion.JMQWS;
 
 namespace JMQPresentacion.Pedidos
 {
@@ -28,6 +29,12 @@ namespace JMQPresentacion.Pedidos
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Validar si el usuario ha iniciado sesión
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("~/Acceso/NoAutorizado.aspx");
+                return;
+            }
             if (!IsPostBack)
             {
                 if (Request.QueryString["id"] != null)
@@ -59,8 +66,8 @@ namespace JMQPresentacion.Pedidos
             DataRow row = dt.NewRow();
             row["Producto"] = txtProducto.Text;
             row["Cantidad"] = int.Parse(txtCantidad.Text);
-            row["Precio"] = decimal.Parse(txtPrecio.Text);
-            row["Subtotal"] = (int.Parse(txtCantidad.Text) * decimal.Parse(txtPrecio.Text));
+            //row["Precio"] = decimal.Parse(txtPrecio.Text);
+            //row["Subtotal"] = (int.Parse(txtCantidad.Text) * decimal.Parse(txtPrecio.Text));
 
             dt.Rows.Add(row);
             Session["Cotizacion"] = dt;
@@ -77,8 +84,8 @@ namespace JMQPresentacion.Pedidos
             prod.descripcion = txtProducto.Text;
             prod.cantidad = int.Parse(txtCantidad.Text);
 
-            //productoCotizacionWSClient.RegistrarPrecioProdCoti(prod, prod.cantidad);
-
+            productoCotizacionWSClient.ActualizarPrecioProdCoti(prod, prod.cantidad);
+            
         }
 
         private void CargarCotizacion(int id)
@@ -107,7 +114,7 @@ namespace JMQPresentacion.Pedidos
         protected void btnEnviarCotizacion_Click(object sender, EventArgs e)
         {
             cotizacion cot = new cotizacion();
-            //cotizacionWSClient.registrarCotizacion(cot);
+            cotizacionWSClient.registrarCotizacion(cot);
 
         }
 

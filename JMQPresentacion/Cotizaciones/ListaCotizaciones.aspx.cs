@@ -35,7 +35,7 @@ namespace JMQPresentacion.Cotizaciones
         private void CargarCotizaciones()
         {
             // Ejemplo: Obtener datos de la base de datos o servicio
-            usuario user = Session["Usuario"] as usuario;
+            usuario user = Session["usuario"] as usuario;
             if (user == null)
             {
                 // Redirigir al login u otra acción
@@ -44,9 +44,9 @@ namespace JMQPresentacion.Cotizaciones
                 return;
             }
 
-            var cotizaciones = cotizacionWSCLClient.obtenerCotizacionesPorUsuario(user.id); 
-
-            if (cotizaciones != null && cotizaciones.Length > 0) 
+            var cotizaciones = cotizacionWSCLClient.obtenerCotizacionesPorUsuario(user.id);
+            
+            if (cotizaciones != null && cotizaciones.Length > 0)
             {
                 rptCotizaciones.DataSource = cotizaciones;
                 rptCotizaciones.DataBind();
@@ -59,6 +59,7 @@ namespace JMQPresentacion.Cotizaciones
                 pnlSinCotizaciones.Visible = true;
             }
         }
+
 
         // Método auxiliar para estilizar el estado (opcional)
         public string GetEstadoCssClass(object estado)
@@ -93,7 +94,7 @@ namespace JMQPresentacion.Cotizaciones
             // redirigir a otra página con el detalle, pasando el id como parámetro:
             Response.Redirect($"Cotiza.aspx?id={idCotizacion}");
 
-            // O cargar datos en un modal o panel en la misma página, según tu lógica
+            // O cargar datos en un modal o panel en la misma página, según tu lógica
         }
     }
 }
