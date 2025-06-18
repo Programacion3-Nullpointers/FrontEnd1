@@ -38,7 +38,7 @@
     <div class="content">
         <div class="table-header">
             <h2>Gestión de Cotizaciones</h2>
-            <button type="button" class="btn-add" onclick="mostrarModal(false)">➕ Agregar Cotización</button>
+            <%--<button type="button" class="btn-add" onclick="mostrarModal(false)">➕ Agregar Cotización</button>--%>
         </div>
 
         <asp:GridView ID="gvCotizaciones" runat="server" AutoGenerateColumns="False" OnRowCommand="gvCotizaciones_RowCommand">
@@ -60,7 +60,7 @@
     <asp:Panel ID="pnlModalAgregar" runat="server" CssClass="modal" Style="display: none;">
         <div class="modal-content">
             <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <h3 id="modalTitle">Agregar Cotización</h3>
+            <h3 id="modalTitle">Modificar Cotización</h3>
 
             <!-- Solo se mostrará en modo Agregar -->
             <div class="grupo-datos">

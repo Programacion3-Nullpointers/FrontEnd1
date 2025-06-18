@@ -16,6 +16,7 @@ namespace JMQPresentacion.Cotizaciones
 
         protected void Page_Init(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             usuario user = (usuario)Session["Usuario"];
             if (user == null)
             {
@@ -25,6 +26,12 @@ namespace JMQPresentacion.Cotizaciones
                 return;
             }
 
+=======
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+            }
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
             cotizacionWSCLClient = new JMQWS.CotizacionWSClient();
             rptCotizaciones.ItemDataBound += rptCotizaciones_ItemDataBound;
 
@@ -40,10 +47,25 @@ namespace JMQPresentacion.Cotizaciones
         private void CargarCotizaciones()
         {
             // Ejemplo: Obtener datos de la base de datos o servicio
+<<<<<<< HEAD
             usuario user = (usuario)Session["Usuario"];
             var cotizaciones = cotizacionWSCLClient.obtenerCotizacionesPorUsuario(user.id); 
 
             if (cotizaciones != null && cotizaciones.Length > 0) 
+=======
+            usuario user = Session["Usuario"] as usuario;
+            if (user == null)
+            {
+                // Redirigir al login u otra acción
+                Response.Redirect("~/Login/Login.aspx");
+
+                return;
+            }
+
+            var cotizaciones = cotizacionWSCLClient.obtenerCotizacionesPorUsuario(user.id);
+            
+            if (cotizaciones != null && cotizaciones.Length > 0)
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
             {
                 rptCotizaciones.DataSource = cotizaciones;
                 rptCotizaciones.DataBind();
@@ -56,6 +78,7 @@ namespace JMQPresentacion.Cotizaciones
                 pnlSinCotizaciones.Visible = true;
             }
         }
+
 
         // Método auxiliar para estilizar el estado (opcional)
         public string GetEstadoCssClass(object estado)
@@ -90,7 +113,7 @@ namespace JMQPresentacion.Cotizaciones
             // redirigir a otra página con el detalle, pasando el id como parámetro:
             Response.Redirect($"Cotiza.aspx?id={idCotizacion}");
 
-            // O cargar datos en un modal o panel en la misma página, según tu lógica
+            // O cargar datos en un modal o panel en la misma página, según tu lógica
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using JMQPresentacion.JMQWS;
 
 namespace JMQPresentacion.Login
 {
@@ -11,24 +12,35 @@ namespace JMQPresentacion.Login
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // Ocultar mensaje en primera carga
+            if (!IsPostBack)
+            {
+                divError.Style["display"] = "none";
+            }
         }
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text.Trim();
 
-            if (IsEmailRegistered(email)) // Verifica si el correo está registrado
+            if (string.IsNullOrEmpty(email))
             {
-                string resetLink = GenerateResetLink(email); // Genera el enlace de recuperación
-                SendResetEmail(email, resetLink); // Envía el correo
-                lblError.Text = "Hemos enviado un enlace de recuperación a tu correo.";
-                divError.Attributes["class"] = "alert alert-success"; // Muestra mensaje de éxito
+                MostrarMensaje("Por favor, ingresa tu correo.", false);
+                return;
             }
-            else
+
+            try
             {
-                lblError.Text = "Este correo no está registrado.";
-                divError.Style["display"] = "block"; // Muestra error si el correo no existe
+                // Llamar al servicio SOAP real
+                UsuarioWSClient client = new UsuarioWSClient();
+                client.iniciarRecuperacionPassword(email);
+
+                MostrarMensaje("Hemos enviado un enlace de recuperación a tu correo.", true);
+            }
+            catch (Exception ex)
+            {
+                // Posible error: usuario no encontrado en backend
+                MostrarMensaje("Error: " + ex.Message, false);
             }
         }
 
@@ -39,16 +51,15 @@ namespace JMQPresentacion.Login
             return email == "usuario@example.com"; // Simulación de un correo registrado
         }
 
-        // Generación del enlace de recuperación
-        private string GenerateResetLink(string email)
+        private void MostrarMensaje(string mensaje, bool exito)
         {
-            return null; // Simulación de enlace único
-        }
+            lblError.Text = mensaje;
+            divError.Style["display"] = "block";
 
-        // Simulación de envío de correo
-        private void SendResetEmail(string email, string resetLink)
-        {
-            // Aquí enviarías el correo con SMTP, SendGrid, etc.
+            if (exito)
+                divError.Attributes["class"] = "alert alert-success";
+            else
+                divError.Attributes["class"] = "alert alert-danger";
         }
 
 

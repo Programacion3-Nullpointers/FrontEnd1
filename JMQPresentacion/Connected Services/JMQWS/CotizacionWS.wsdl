@@ -5,6 +5,30 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/CotizacionWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
+=======
+  <message name="buscarCotizacion">
+    <part name="parameters" element="tns:buscarCotizacion" />
+  </message>
+  <message name="buscarCotizacionResponse">
+    <part name="parameters" element="tns:buscarCotizacionResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="eliminarCotizacion">
+    <part name="parameters" element="tns:eliminarCotizacion" />
+  </message>
+  <message name="eliminarCotizacionResponse">
+    <part name="parameters" element="tns:eliminarCotizacionResponse" />
+  </message>
+  <message name="listarCotizaciones">
+    <part name="parameters" element="tns:listarCotizaciones" />
+  </message>
+  <message name="listarCotizacionesResponse">
+    <part name="parameters" element="tns:listarCotizacionesResponse" />
+  </message>
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
   <message name="obtenerCotizacionesPorUsuario">
     <part name="parameters" element="tns:obtenerCotizacionesPorUsuario" />
   </message>
@@ -23,15 +47,13 @@
   <message name="registrarCotizacionResponse">
     <part name="parameters" element="tns:registrarCotizacionResponse" />
   </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
   <message name="actualizarCotizacion">
     <part name="parameters" element="tns:actualizarCotizacion" />
   </message>
   <message name="actualizarCotizacionResponse">
     <part name="parameters" element="tns:actualizarCotizacionResponse" />
   </message>
+<<<<<<< HEAD
   <message name="listarCotizaciones">
     <part name="parameters" element="tns:listarCotizaciones" />
   </message>
@@ -51,6 +73,24 @@
     <part name="parameters" element="tns:eliminarCotizacionResponse" />
   </message>
   <portType name="CotizacionWS">
+=======
+  <portType name="CotizacionWS">
+    <operation name="buscarCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionRequest" message="tns:buscarCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionResponse" message="tns:buscarCotizacionResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacionRequest" message="tns:eliminarCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacionResponse" message="tns:eliminarCotizacionResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarCotizaciones">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesRequest" message="tns:listarCotizaciones" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesResponse" message="tns:listarCotizacionesResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizaciones/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
     <operation name="obtenerCotizacionesPorUsuario">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioRequest" message="tns:obtenerCotizacionesPorUsuario" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioResponse" message="tns:obtenerCotizacionesPorUsuarioResponse" />
@@ -69,6 +109,7 @@
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarCotizacionResponse" message="tns:actualizarCotizacionResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarCotizacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
     <operation name="listarCotizaciones">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesRequest" message="tns:listarCotizaciones" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesResponse" message="tns:listarCotizacionesResponse" />
@@ -87,6 +128,47 @@
   </portType>
   <binding name="CotizacionWSPortBinding" type="tns:CotizacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+=======
+  </portType>
+  <binding name="CotizacionWSPortBinding" type="tns:CotizacionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="buscarCotizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarCotizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarCotizaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
     <operation name="obtenerCotizacionesPorUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -129,6 +211,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
     <operation name="listarCotizaciones">
       <soap:operation soapAction="" />
       <input>
@@ -165,6 +248,8 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+=======
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
   </binding>
   <service name="CotizacionWS">
     <port name="CotizacionWSPort" binding="tns:CotizacionWSPortBinding">
