@@ -5,19 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/EntregaWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-<<<<<<< HEAD
-  <message name="BuscarEntrega">
-    <part name="parameters" element="tns:BuscarEntrega" />
-  </message>
-  <message name="BuscarEntregaResponse">
-    <part name="parameters" element="tns:BuscarEntregaResponse" />
-  </message>
-  <message name="RegistrarEntrega">
-    <part name="parameters" element="tns:RegistrarEntrega" />
-  </message>
-  <message name="RegistrarEntregaResponse">
-    <part name="parameters" element="tns:RegistrarEntregaResponse" />
-=======
   <message name="ActualizarEntrega">
     <part name="parameters" element="tns:ActualizarEntrega" />
   </message>
@@ -29,7 +16,6 @@
   </message>
   <message name="EliminarEntregaResponse">
     <part name="parameters" element="tns:EliminarEntregaResponse" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </message>
   <message name="ListarEntregas">
     <part name="parameters" element="tns:ListarEntregas" />
@@ -37,10 +23,6 @@
   <message name="ListarEntregasResponse">
     <part name="parameters" element="tns:ListarEntregasResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="EliminarEntrega">
-    <part name="parameters" element="tns:EliminarEntrega" />
-=======
   <message name="RegistrarEntrega">
     <part name="parameters" element="tns:RegistrarEntrega" />
   </message>
@@ -49,7 +31,6 @@
   </message>
   <message name="BuscarEntrega">
     <part name="parameters" element="tns:BuscarEntrega" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </message>
   <message name="EliminarEntregaResponse">
     <part name="parameters" element="tns:EliminarEntregaResponse" />
@@ -61,15 +42,6 @@
     <part name="parameters" element="tns:ActualizarEntregaResponse" />
   </message>
   <portType name="EntregaWS">
-<<<<<<< HEAD
-    <operation name="BuscarEntrega">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaRequest" message="tns:BuscarEntrega" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaResponse" message="tns:BuscarEntregaResponse" />
-    </operation>
-    <operation name="RegistrarEntrega">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest" message="tns:RegistrarEntrega" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaResponse" message="tns:RegistrarEntregaResponse" />
-=======
     <operation name="ActualizarEntrega">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaRequest" message="tns:ActualizarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaResponse" message="tns:ActualizarEntregaResponse" />
@@ -77,21 +49,11 @@
     <operation name="EliminarEntrega">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaRequest" message="tns:EliminarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaResponse" message="tns:EliminarEntregaResponse" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     </operation>
     <operation name="ListarEntregas">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest" message="tns:ListarEntregas" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse" message="tns:ListarEntregasResponse" />
     </operation>
-<<<<<<< HEAD
-    <operation name="EliminarEntrega">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaRequest" message="tns:EliminarEntrega" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaResponse" message="tns:EliminarEntregaResponse" />
-    </operation>
-    <operation name="ActualizarEntrega">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaRequest" message="tns:ActualizarEntrega" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaResponse" message="tns:ActualizarEntregaResponse" />
-=======
     <operation name="RegistrarEntrega">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest" message="tns:RegistrarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaResponse" message="tns:RegistrarEntregaResponse" />
@@ -99,16 +61,11 @@
     <operation name="BuscarEntrega">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaRequest" message="tns:BuscarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaResponse" message="tns:BuscarEntregaResponse" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     </operation>
   </portType>
   <binding name="EntregaWSPortBinding" type="tns:EntregaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< HEAD
-    <operation name="BuscarEntrega">
-=======
     <operation name="ActualizarEntrega">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -117,11 +74,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-<<<<<<< HEAD
-    <operation name="RegistrarEntrega">
-=======
     <operation name="EliminarEntrega">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -139,11 +92,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-<<<<<<< HEAD
-    <operation name="EliminarEntrega">
-=======
     <operation name="RegistrarEntrega">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -152,11 +101,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-<<<<<<< HEAD
-    <operation name="ActualizarEntrega">
-=======
     <operation name="BuscarEntrega">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -5,19 +5,8 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/CategoriaWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-<<<<<<< HEAD
-  <message name="hello">
-    <part name="parameters" element="tns:hello" />
-  </message>
-  <message name="helloResponse">
-    <part name="parameters" element="tns:helloResponse" />
-  </message>
-  <message name="ActualizarCategoria">
-    <part name="parameters" element="tns:ActualizarCategoria" />
-=======
   <message name="EliminarCategoria">
     <part name="parameters" element="tns:EliminarCategoria" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </message>
   <message name="EliminarCategoriaResponse">
     <part name="parameters" element="tns:EliminarCategoriaResponse" />
@@ -28,10 +17,6 @@
   <message name="RegistrarCategoriaResponse">
     <part name="parameters" element="tns:RegistrarCategoriaResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="RegistrarCategoria">
-    <part name="parameters" element="tns:RegistrarCategoria" />
-=======
   <message name="ObtenerCategoria">
     <part name="parameters" element="tns:ObtenerCategoria" />
   </message>
@@ -46,7 +31,6 @@
   </message>
   <message name="ActualizarCategoria">
     <part name="parameters" element="tns:ActualizarCategoria" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </message>
   <message name="ActualizarCategoriaResponse">
     <part name="parameters" element="tns:ActualizarCategoriaResponse" />
@@ -70,19 +54,6 @@
     <part name="parameters" element="tns:EliminarCategoriaResponse" />
   </message>
   <portType name="CategoriaWS">
-<<<<<<< HEAD
-    <operation name="hello">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/helloRequest" message="tns:hello" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/helloResponse" message="tns:helloResponse" />
-    </operation>
-    <operation name="ActualizarCategoria">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaRequest" message="tns:ActualizarCategoria" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaResponse" message="tns:ActualizarCategoriaResponse" />
-    </operation>
-    <operation name="RegistrarCategoria">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/RegistrarCategoriaRequest" message="tns:RegistrarCategoria" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/RegistrarCategoriaResponse" message="tns:RegistrarCategoriaResponse" />
-=======
     <operation name="EliminarCategoria">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaRequest" message="tns:EliminarCategoria" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaResponse" message="tns:EliminarCategoriaResponse" />
@@ -102,7 +73,6 @@
     <operation name="ActualizarCategoria">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaRequest" message="tns:ActualizarCategoria" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaResponse" message="tns:ActualizarCategoriaResponse" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     </operation>
     <operation name="ObtenerCategoria">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ObtenerCategoriaRequest" message="tns:ObtenerCategoria" />
@@ -119,11 +89,7 @@
   </portType>
   <binding name="CategoriaWSPortBinding" type="tns:CategoriaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< HEAD
-    <operation name="hello">
-=======
     <operation name="EliminarCategoria">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -132,11 +98,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-<<<<<<< HEAD
-    <operation name="ActualizarCategoria">
-=======
     <operation name="RegistrarCategoria">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -145,9 +107,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-<<<<<<< HEAD
-    <operation name="RegistrarCategoria">
-=======
     <operation name="ObtenerCategoria">
       <soap:operation soapAction="" />
       <input>
@@ -167,7 +126,6 @@
       </output>
     </operation>
     <operation name="ActualizarCategoria">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

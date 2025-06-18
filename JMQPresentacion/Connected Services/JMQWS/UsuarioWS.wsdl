@@ -23,13 +23,6 @@
   <message name="cambiarPasswordConToken">
     <part name="parameters" element="tns:cambiarPasswordConToken" />
   </message>
-<<<<<<< HEAD
-  <message name="eliminarUsuario">
-    <part name="parameters" element="tns:eliminarUsuario" />
-  </message>
-  <message name="eliminarUsuarioResponse">
-    <part name="parameters" element="tns:eliminarUsuarioResponse" />
-=======
   <message name="cambiarPasswordConTokenResponse">
     <part name="parameters" element="tns:cambiarPasswordConTokenResponse" />
   </message>
@@ -44,7 +37,6 @@
   </message>
   <message name="actualizarUsuarioResponse">
     <part name="parameters" element="tns:actualizarUsuarioResponse" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </message>
   <message name="registrarUsuario">
     <part name="parameters" element="tns:registrarUsuario" />
@@ -87,12 +79,6 @@
       <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoResponse" message="tns:BuscarUsuarioPorCorreoResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
-    <operation name="eliminarUsuario">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-=======
     <operation name="cambiarPasswordConToken">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenRequest" message="tns:cambiarPasswordConToken" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenResponse" message="tns:cambiarPasswordConTokenResponse" />
@@ -107,7 +93,6 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     </operation>
     <operation name="registrarUsuario">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioRequest" message="tns:registrarUsuario" />
@@ -161,9 +146,6 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< HEAD
-    <operation name="eliminarUsuario">
-=======
     <operation name="cambiarPasswordConToken">
       <soap:operation soapAction="" />
       <input>
@@ -189,7 +171,6 @@
       </fault>
     </operation>
     <operation name="actualizarUsuario">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

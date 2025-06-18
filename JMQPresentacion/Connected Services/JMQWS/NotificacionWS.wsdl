@@ -8,31 +8,8 @@
   <message name="buscarNotificacion">
     <part name="parameters" element="tns:buscarNotificacion" />
   </message>
-<<<<<<< HEAD
-  <message name="eliminarNotificacionResponse">
-    <part name="parameters" element="tns:eliminarNotificacionResponse" />
-  </message>
-  <message name="listarNotificaciones">
-    <part name="parameters" element="tns:listarNotificaciones" />
-  </message>
-  <message name="listarNotificacionesResponse">
-    <part name="parameters" element="tns:listarNotificacionesResponse" />
-  </message>
-  <message name="registrarNotificacion">
-    <part name="parameters" element="tns:registrarNotificacion" />
-  </message>
-  <message name="registrarNotificacionResponse">
-    <part name="parameters" element="tns:registrarNotificacionResponse" />
-  </message>
-  <message name="actualizarNotificacion">
-    <part name="parameters" element="tns:actualizarNotificacion" />
-  </message>
-  <message name="actualizarNotificacionResponse">
-    <part name="parameters" element="tns:actualizarNotificacionResponse" />
-=======
   <message name="buscarNotificacionResponse">
     <part name="parameters" element="tns:buscarNotificacionResponse" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </message>
   <message name="enviarNotificacion">
     <part name="parameters" element="tns:enviarNotificacion" />
@@ -65,27 +42,9 @@
     <part name="parameters" element="tns:listarNotificacionesResponse" />
   </message>
   <portType name="NotificacionWS">
-<<<<<<< HEAD
-    <operation name="eliminarNotificacion">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionRequest" message="tns:eliminarNotificacion" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionResponse" message="tns:eliminarNotificacionResponse" />
-    </operation>
-    <operation name="listarNotificaciones">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
-    </operation>
-    <operation name="registrarNotificacion">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionRequest" message="tns:registrarNotificacion" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionResponse" message="tns:registrarNotificacionResponse" />
-    </operation>
-    <operation name="actualizarNotificacion">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionRequest" message="tns:actualizarNotificacion" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionResponse" message="tns:actualizarNotificacionResponse" />
-=======
     <operation name="buscarNotificacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/buscarNotificacionRequest" message="tns:buscarNotificacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/buscarNotificacionResponse" message="tns:buscarNotificacionResponse" />
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
     </operation>
     <operation name="enviarNotificacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionRequest" message="tns:enviarNotificacion" />
@@ -110,38 +69,7 @@
   </portType>
   <binding name="NotificacionWSPortBinding" type="tns:NotificacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< HEAD
-    <operation name="eliminarNotificacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarNotificaciones">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="registrarNotificacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarNotificacion">
-=======
     <operation name="buscarNotificacion">
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -35,15 +35,12 @@
   <message name="ActualizarDetalleResponse">
     <part name="parameters" element="tns:ActualizarDetalleResponse" />
   </message>
-<<<<<<< HEAD
-=======
   <message name="EliminarDetalle">
     <part name="parameters" element="tns:EliminarDetalle" />
   </message>
   <message name="EliminarDetalleResponse">
     <part name="parameters" element="tns:EliminarDetalleResponse" />
   </message>
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   <portType name="DetalleWS">
     <operation name="EliminarDetalle">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleRequest" message="tns:EliminarDetalle" />
@@ -65,13 +62,10 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleRequest" message="tns:ActualizarDetalle" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleResponse" message="tns:ActualizarDetalleResponse" />
     </operation>
-<<<<<<< HEAD
-=======
     <operation name="EliminarDetalle">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleRequest" message="tns:EliminarDetalle" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleResponse" message="tns:EliminarDetalleResponse" />
     </operation>
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </portType>
   <binding name="DetalleWSPortBinding" type="tns:DetalleWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -120,8 +114,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-<<<<<<< HEAD
-=======
     <operation name="EliminarDetalle">
       <soap:operation soapAction="" />
       <input>
@@ -131,7 +123,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
->>>>>>> b0d3705f4b1a27e470a05fe4e6ed96e72595844c
   </binding>
   <service name="DetalleWS">
     <port name="DetalleWSPort" binding="tns:DetalleWSPortBinding">
