@@ -347,6 +347,9 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerProdCotizaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -464,6 +467,7 @@
     <Content Include="Public\js\jquery-3.7.1.slim.js" />
     <Content Include="Public\js\jquery-3.7.1.slim.min.js" />
     <Content Include="Admin\ModificarUsuarios.aspx" />
+    <Content Include="Public\scripts\registroExitoso.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

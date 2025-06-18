@@ -17,11 +17,11 @@
   <message name="listarProductoCotizacionResponse">
     <part name="parameters" element="tns:listarProductoCotizacionResponse" />
   </message>
-  <message name="RegistrarProdCotizacion">
-    <part name="parameters" element="tns:RegistrarProdCotizacion" />
+  <message name="obtenerProdCotiza">
+    <part name="parameters" element="tns:obtenerProdCotiza" />
   </message>
-  <message name="RegistrarProdCotizacionResponse">
-    <part name="parameters" element="tns:RegistrarProdCotizacionResponse" />
+  <message name="obtenerProdCotizaResponse">
+    <part name="parameters" element="tns:obtenerProdCotizaResponse" />
   </message>
   <message name="listarProductosPorCotizacion">
     <part name="parameters" element="tns:listarProductosPorCotizacion" />
@@ -41,6 +41,12 @@
   <message name="ActualizarProductoCotizacionResponse">
     <part name="parameters" element="tns:ActualizarProductoCotizacionResponse" />
   </message>
+  <message name="RegistrarProdCotizacion">
+    <part name="parameters" element="tns:RegistrarProdCotizacion" />
+  </message>
+  <message name="RegistrarProdCotizacionResponse">
+    <part name="parameters" element="tns:RegistrarProdCotizacionResponse" />
+  </message>
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
@@ -56,9 +62,9 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionRequest" message="tns:listarProductoCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionResponse" message="tns:listarProductoCotizacionResponse" />
     </operation>
-    <operation name="RegistrarProdCotizacion">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionRequest" message="tns:RegistrarProdCotizacion" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionResponse" message="tns:RegistrarProdCotizacionResponse" />
+    <operation name="obtenerProdCotiza">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaRequest" message="tns:obtenerProdCotiza" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaResponse" message="tns:obtenerProdCotizaResponse" />
     </operation>
     <operation name="listarProductosPorCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacionRequest" message="tns:listarProductosPorCotizacion" />
@@ -71,6 +77,10 @@
     <operation name="ActualizarProductoCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarProductoCotizacionRequest" message="tns:ActualizarProductoCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarProductoCotizacionResponse" message="tns:ActualizarProductoCotizacionResponse" />
+    </operation>
+    <operation name="RegistrarProdCotizacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionRequest" message="tns:RegistrarProdCotizacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionResponse" message="tns:RegistrarProdCotizacionResponse" />
     </operation>
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest" message="tns:hello" />
@@ -97,7 +107,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="RegistrarProdCotizacion">
+    <operation name="obtenerProdCotiza">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -125,6 +135,15 @@
       </output>
     </operation>
     <operation name="ActualizarProductoCotizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarProdCotizacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
