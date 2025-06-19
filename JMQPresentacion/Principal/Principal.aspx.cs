@@ -37,7 +37,7 @@ namespace JMQPresentacion.Principal
             if (Session["Cart"] == null)
             {
                 Session["Cart"] = new List<detalle>();
-                Session["Orden"] = new ordenVenta { estado_compra = estadoCompra.pendiente }; // Los demás datos se llenarán después
+                //Session["Orden"] = new ordenVenta { estado_compra = estadoCompra.pendiente }; // Los demás datos se llenarán después
             }
             List<detalle> cart = (List<detalle>)Session["Cart"];
             Button btn = (Button)sender;
