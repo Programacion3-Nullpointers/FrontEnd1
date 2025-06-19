@@ -21,7 +21,7 @@ namespace JMQPresentacion.Pedidos
         {
             if (Session["usuario"] == null)
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Login/Login.aspx");
             }
 
             productoCotizacionWSClient = new JMQWS.ProductoCotizacionWSClient();
@@ -40,6 +40,8 @@ namespace JMQPresentacion.Pedidos
                 if (Request.QueryString["id"] != null)
                 {
                     int idCotizacion = Convert.ToInt32(Request.QueryString["id"]);
+                    //usuario usu = Session["usuario"] as usuario;
+                    //cotizacion coti = cotizacionWSClient.buscarCotizacion(usu.id);
                     CargarCotizacion(idCotizacion);
                 }
             }
@@ -60,8 +62,9 @@ namespace JMQPresentacion.Pedidos
             else
             {
                 dt = (DataTable)Session["Cotizacion"];
+                
             }
-
+            
             // Agregar producto a la tabla
             DataRow row = dt.NewRow();
             row["Producto"] = txtProducto.Text;
@@ -92,11 +95,12 @@ namespace JMQPresentacion.Pedidos
         {
             try
             {
+                
                 // Llama a tu servicio web CotizacionWS
-                var cotiza = cotizacionWSClient.obtenerCotizacionesPorUsuario(id); // O el método correcto según tu WS
+                cotizacion cotiza = cotizacionWSClient.buscarCotizacion(id); // O el método correcto según tu WS
 
                 // Muestra los datos generales (por ejemplo, en labels)
-                lblEstado.Text = cotiza.Length.ToString();
+                lblEstado.Text = cotiza.estadoCotizacion.ToString();
                 
 
                 // Carga productos asociados
