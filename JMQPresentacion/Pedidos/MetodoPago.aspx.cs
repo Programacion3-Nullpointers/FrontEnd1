@@ -71,6 +71,8 @@ namespace JMQPresentacion.Pedidos
                             monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
                         };
                         facturaService.RegistrarFactura(factura1);
+                        Session["Cart"] = null;
+                        Session["Orden"] = null;
                     }
                     catch (ArgumentException ex)
                     {
@@ -96,6 +98,8 @@ namespace JMQPresentacion.Pedidos
                             monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
                         };
                         boletaService.registrarBoleta(boleta1);
+                        Session["Cart"] = null;
+                        Session["Orden"] = null;
                     }
                     catch (ArgumentException ex)
                     {

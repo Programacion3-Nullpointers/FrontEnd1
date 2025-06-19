@@ -23,12 +23,6 @@
   <message name="registrarNotificacionResponse">
     <part name="parameters" element="tns:registrarNotificacionResponse" />
   </message>
-  <message name="actualizarNotificacion">
-    <part name="parameters" element="tns:actualizarNotificacion" />
-  </message>
-  <message name="actualizarNotificacionResponse">
-    <part name="parameters" element="tns:actualizarNotificacionResponse" />
-  </message>
   <message name="eliminarNotificacion">
     <part name="parameters" element="tns:eliminarNotificacion" />
   </message>
@@ -40,6 +34,12 @@
   </message>
   <message name="listarNotificacionesResponse">
     <part name="parameters" element="tns:listarNotificacionesResponse" />
+  </message>
+  <message name="actualizarNotificacion">
+    <part name="parameters" element="tns:actualizarNotificacion" />
+  </message>
+  <message name="actualizarNotificacionResponse">
+    <part name="parameters" element="tns:actualizarNotificacionResponse" />
   </message>
   <portType name="NotificacionWS">
     <operation name="buscarNotificacion">
@@ -54,10 +54,6 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionRequest" message="tns:registrarNotificacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionResponse" message="tns:registrarNotificacionResponse" />
     </operation>
-    <operation name="actualizarNotificacion">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionRequest" message="tns:actualizarNotificacion" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionResponse" message="tns:actualizarNotificacionResponse" />
-    </operation>
     <operation name="eliminarNotificacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionRequest" message="tns:eliminarNotificacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionResponse" message="tns:eliminarNotificacionResponse" />
@@ -65,6 +61,10 @@
     <operation name="listarNotificaciones">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
+    </operation>
+    <operation name="actualizarNotificacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionRequest" message="tns:actualizarNotificacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionResponse" message="tns:actualizarNotificacionResponse" />
     </operation>
   </portType>
   <binding name="NotificacionWSPortBinding" type="tns:NotificacionWS">
@@ -96,15 +96,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarNotificacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarNotificacion">
       <soap:operation soapAction="" />
       <input>
@@ -115,6 +106,15 @@
       </output>
     </operation>
     <operation name="listarNotificaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarNotificacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

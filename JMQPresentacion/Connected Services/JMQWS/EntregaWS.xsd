@@ -18,12 +18,9 @@
   <xs:complexType name="EliminarEntregaResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="ListarEntregas">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="ListarEntregasResponse">
+  <xs:complexType name="RegistrarEntrega">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:entrega" />
+      <xs:element minOccurs="0" name="arg0" type="tns:entrega" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="entrega">
@@ -97,13 +94,16 @@
       <xs:element minOccurs="0" name="token_reset" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="RegistrarEntrega">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:entrega" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="RegistrarEntregaResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarEntregas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarEntregasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:entrega" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarEntrega">
     <xs:sequence>
@@ -122,14 +122,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:entrega" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ActualizarEntrega">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:entrega" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ActualizarEntregaResponse">
-    <xs:sequence />
   </xs:complexType>
   <xs:simpleType name="estadoCompra">
     <xs:restriction base="xs:string">
