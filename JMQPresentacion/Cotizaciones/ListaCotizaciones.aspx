@@ -20,8 +20,8 @@
                         <thead class="table-light">
                             <tr>
                                 <th>ID</th>
-                                <th>Fecha</th>
-                                <th>Producto</th>
+                                <th>Usuario</th>
+                                <th>Productos</th>
                                 <th>Estado</th>
                                 <th>Acciones</th>
                             </tr>
@@ -31,14 +31,14 @@
             <ItemTemplate>
                 <tr>
                     <td><%# Eval("id") %></td>
-                    <td><%# Eval("Fecha", "{0:dd/MM/yyyy}") %></td>
+                    <td><%# Eval("Usuario.nombreUsuario") %></td>
                     <td>
-                        <asp:Repeater ID="rptProductos" runat="server" DataSource='<%# Eval("Productos") %>'>
+                        <asp:Repeater ID="rptProductos" runat="server" >
                             <HeaderTemplate>
                                 <ul class="mb-0 ps-3">
                             </HeaderTemplate>
                             <ItemTemplate>
-                                <li><%# Eval("NombreProducto") %> (x<%# Eval("Cantidad") %>)</li>
+                                <li><%# Eval("descripcion") %> (x<%# Eval("Cantidad") %>)</li>
                             </ItemTemplate>
                             <FooterTemplate>
                                 </ul>
@@ -46,8 +46,8 @@
                         </asp:Repeater>
                     </td>
                     <td>
-                        <span class='badge <%# GetEstadoCssClass(Eval("Estado")) %>'>
-                            <%# Eval("Estado") %>
+                        <span class='badge <%# GetEstadoCssClass(Eval("estadoCotizacion")) %>'>
+                            <%# Eval("estadoCotizacion") %>
                         </span>
                     </td>
                     <td>

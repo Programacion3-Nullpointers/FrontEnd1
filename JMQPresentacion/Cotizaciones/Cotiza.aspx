@@ -44,9 +44,9 @@
 
         <asp:GridView ID="gvProductos" runat="server" CssClass="table table-bordered table-hover" AutoGenerateColumns="false">
             <Columns>
-                <asp:BoundField DataField="nombreProducto" HeaderText="Producto" />
+                <asp:BoundField DataField="descripcion" HeaderText="Producto" />
                 <asp:BoundField DataField="cantidad" HeaderText="Cantidad" />
-                <asp:BoundField DataField="precioUnitario" HeaderText="Precio Unitario" DataFormatString="{0:C}" />
+                <asp:BoundField DataField="precioCotizado" HeaderText="Precio Unitario" DataFormatString="{0:C}" />
             </Columns>
         </asp:GridView>
 
