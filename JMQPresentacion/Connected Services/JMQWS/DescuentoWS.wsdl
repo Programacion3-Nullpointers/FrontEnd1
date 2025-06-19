@@ -5,11 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/DescuentoWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-  <message name="BuscarDescuento">
-    <part name="parameters" element="tns:BuscarDescuento" />
+  <message name="ActualizarDescuento">
+    <part name="parameters" element="tns:ActualizarDescuento" />
   </message>
-  <message name="BuscarDescuentoResponse">
-    <part name="parameters" element="tns:BuscarDescuentoResponse" />
+  <message name="ActualizarDescuentoResponse">
+    <part name="parameters" element="tns:ActualizarDescuentoResponse" />
+  </message>
+  <message name="ListarCategorias">
+    <part name="parameters" element="tns:ListarCategorias" />
+  </message>
+  <message name="ListarCategoriasResponse">
+    <part name="parameters" element="tns:ListarCategoriasResponse" />
   </message>
   <message name="RegistrarDescuento">
     <part name="parameters" element="tns:RegistrarDescuento" />
@@ -23,11 +29,11 @@
   <message name="EliminarDescuentoResponse">
     <part name="parameters" element="tns:EliminarDescuentoResponse" />
   </message>
-  <message name="ListarCategorias">
-    <part name="parameters" element="tns:ListarCategorias" />
+  <message name="BuscarDescuento">
+    <part name="parameters" element="tns:BuscarDescuento" />
   </message>
-  <message name="ListarCategoriasResponse">
-    <part name="parameters" element="tns:ListarCategoriasResponse" />
+  <message name="BuscarDescuentoResponse">
+    <part name="parameters" element="tns:BuscarDescuentoResponse" />
   </message>
   <message name="hello">
     <part name="parameters" element="tns:hello" />
@@ -35,16 +41,14 @@
   <message name="helloResponse">
     <part name="parameters" element="tns:helloResponse" />
   </message>
-  <message name="ActualizarDescuento">
-    <part name="parameters" element="tns:ActualizarDescuento" />
-  </message>
-  <message name="ActualizarDescuentoResponse">
-    <part name="parameters" element="tns:ActualizarDescuentoResponse" />
-  </message>
   <portType name="DescuentoWS">
-    <operation name="BuscarDescuento">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoRequest" message="tns:BuscarDescuento" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoResponse" message="tns:BuscarDescuentoResponse" />
+    <operation name="ActualizarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoRequest" message="tns:ActualizarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoResponse" message="tns:ActualizarDescuentoResponse" />
+    </operation>
+    <operation name="ListarCategorias">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarCategoriasRequest" message="tns:ListarCategorias" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarCategoriasResponse" message="tns:ListarCategoriasResponse" />
     </operation>
     <operation name="RegistrarDescuento">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoRequest" message="tns:RegistrarDescuento" />
@@ -54,22 +58,27 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoRequest" message="tns:EliminarDescuento" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoResponse" message="tns:EliminarDescuentoResponse" />
     </operation>
-    <operation name="ListarCategorias">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarCategoriasRequest" message="tns:ListarCategorias" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarCategoriasResponse" message="tns:ListarCategoriasResponse" />
+    <operation name="BuscarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoRequest" message="tns:BuscarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoResponse" message="tns:BuscarDescuentoResponse" />
     </operation>
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloRequest" message="tns:hello" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloResponse" message="tns:helloResponse" />
     </operation>
-    <operation name="ActualizarDescuento">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoRequest" message="tns:ActualizarDescuento" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoResponse" message="tns:ActualizarDescuentoResponse" />
-    </operation>
   </portType>
   <binding name="DescuentoWSPortBinding" type="tns:DescuentoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="BuscarDescuento">
+    <operation name="ActualizarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarCategorias">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -96,7 +105,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ListarCategorias">
+    <operation name="BuscarDescuento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -106,15 +115,6 @@
       </output>
     </operation>
     <operation name="hello">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ActualizarDescuento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

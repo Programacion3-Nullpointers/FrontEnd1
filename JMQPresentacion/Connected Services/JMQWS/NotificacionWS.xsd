@@ -33,14 +33,6 @@
       <xs:element minOccurs="0" name="tipo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarNotificacion">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarNotificacionResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="listarNotificaciones">
     <xs:sequence />
   </xs:complexType>
@@ -49,12 +41,12 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:notificacion" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="enviarNotificacion">
+  <xs:complexType name="eliminarNotificacion">
     <xs:sequence>
-      <xs:element minOccurs="0" name="notificacion" type="tns:notificacion" />
+      <xs:element name="id" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="enviarNotificacionResponse">
+  <xs:complexType name="eliminarNotificacionResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="registrarNotificacion">
@@ -63,6 +55,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="registrarNotificacionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="enviarNotificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notificacion" type="tns:notificacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarNotificacionResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarNotificacion">
