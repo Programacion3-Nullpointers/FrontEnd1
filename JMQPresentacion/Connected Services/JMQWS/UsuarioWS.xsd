@@ -19,6 +19,19 @@
   <xs:element name="obtenerPorTokenResponse" type="tns:obtenerPorTokenResponse" />
   <xs:element name="registrarUsuario" type="tns:registrarUsuario" />
   <xs:element name="registrarUsuarioResponse" type="tns:registrarUsuarioResponse" />
+  <xs:complexType name="iniciarRecuperacionPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="iniciarRecuperacionPasswordResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="cambiarPasswordConToken">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -29,19 +42,6 @@
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Exception">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="message" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="iniciarRecuperacionPassword">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="iniciarRecuperacionPasswordResponse">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="registrarUsuario">
     <xs:sequence>
@@ -65,7 +65,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="registrarUsuarioResponse">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="buscarUsuario">
     <xs:sequence>

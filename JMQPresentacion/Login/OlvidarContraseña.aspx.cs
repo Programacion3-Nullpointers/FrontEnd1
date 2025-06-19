@@ -26,29 +26,43 @@ namespace JMQPresentacion.Login
             if (string.IsNullOrEmpty(email))
             {
                 MostrarMensaje("Por favor, ingresa tu correo.", false);
+                btnRegistrarse.Visible = false;
                 return;
             }
+            //Validacion básica de formato de correo
 
             try
             {
                 // Llamar al servicio SOAP real
                 UsuarioWSClient client = new UsuarioWSClient();
-                client.iniciarRecuperacionPassword(email);
+                var usuario = client.BuscarUsuarioPorCorreo(email);
 
+                if (usuario == null)
+                {
+                    // Mostrar mensaje personalizado con enlace si deseas
+                    MostrarMensaje("El correo ingresado no está registrado. <a href='Registrarse.aspx'>Regístrate aquí</a>", false);
+                    btnRegistrarse.Visible = true;
+                    return;
+                }
+
+                client.iniciarRecuperacionPassword(email);
                 MostrarMensaje("Hemos enviado un enlace de recuperación a tu correo.", true);
+                btnRegistrarse.Visible = false;
             }
             catch (System.Exception ex)
             {
-                // Posible error: usuario no encontrado en backend
-                MostrarMensaje("Error: " + ex.Message, false);
+                if (ex.Message.Contains("no está registrado") || ex.Message.Contains("registrado"))
+                {
+                    MostrarMensaje("El correo no está registrado. ¿Deseas registrarte?", false);
+                    btnRegistrarse.Visible = true;
+                }
+                else
+                {
+                    MostrarMensaje("Ocurrió un error: " + ex.Message, false);
+                    btnRegistrarse.Visible = false;
+                }
             }
-        }
 
-        // Simulación de validación de email en base de datos
-        private bool IsEmailRegistered(string email)
-        {
-            // Aquí consultarías la base de datos
-            return email == "usuario@example.com"; // Simulación de un correo registrado
         }
 
         private void MostrarMensaje(string mensaje, bool exito)
@@ -62,6 +76,10 @@ namespace JMQPresentacion.Login
                 divError.Attributes["class"] = "alert alert-danger";
         }
 
+        protected void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Login/Registrarse.aspx");
+        }
 
     }
 }

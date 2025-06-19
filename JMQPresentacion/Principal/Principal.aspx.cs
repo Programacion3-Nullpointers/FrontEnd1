@@ -42,7 +42,7 @@ namespace JMQPresentacion.Principal
             List<detalle> cart = (List<detalle>)Session["Cart"];
             Button btn = (Button)sender;
             int idProducto = int.Parse(btn.CommandArgument);
-            // Aquí buscaría el producto en la BD
+            // Aquí busca el producto en la BD
             producto producto1 = productoService.buscarProducto(idProducto);
             detalle detalle1 = new detalle { producto = producto1, cantidad = 1, precio_unitario = producto1.precio };
             cart.Add(detalle1);

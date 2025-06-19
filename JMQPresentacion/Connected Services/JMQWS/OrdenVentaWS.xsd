@@ -86,7 +86,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="registrarOrdenVentaServiceResponse">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ordenVenta" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Exception">
     <xs:sequence>

@@ -22,6 +22,7 @@ namespace JMQPresentacion.Cotizaciones
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("~/Acceso/NoAutorizado.aspx");
