@@ -23,6 +23,16 @@ namespace JMQPresentacion.Principal
             if (!IsPostBack)
             {
                 CargarProductos();
+
+                LinkButton boton = Master.FindControl("btnLogout") as LinkButton;
+                if (Session["Usuario"] == null)
+                {
+                    boton.Visible = false;
+                }
+                else
+                {
+                    boton.Visible = true;
+                }
             }
         }
         private void CargarProductos()
