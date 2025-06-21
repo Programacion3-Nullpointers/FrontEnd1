@@ -5,23 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/BoletaWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-  <message name="eliminarBoleta">
-    <part name="parameters" element="tns:eliminarBoleta" />
+  <message name="listarBoletas">
+    <part name="parameters" element="tns:listarBoletas" />
   </message>
-  <message name="eliminarBoletaResponse">
-    <part name="parameters" element="tns:eliminarBoletaResponse" />
-  </message>
-  <message name="buscarBoleta">
-    <part name="parameters" element="tns:buscarBoleta" />
-  </message>
-  <message name="buscarBoletaResponse">
-    <part name="parameters" element="tns:buscarBoletaResponse" />
-  </message>
-  <message name="actualizarBoleta">
-    <part name="parameters" element="tns:actualizarBoleta" />
-  </message>
-  <message name="actualizarBoletaResponse">
-    <part name="parameters" element="tns:actualizarBoletaResponse" />
+  <message name="listarBoletasResponse">
+    <part name="parameters" element="tns:listarBoletasResponse" />
   </message>
   <message name="registrarBoleta">
     <part name="parameters" element="tns:registrarBoleta" />
@@ -29,11 +17,23 @@
   <message name="registrarBoletaResponse">
     <part name="parameters" element="tns:registrarBoletaResponse" />
   </message>
-  <message name="listarBoletas">
-    <part name="parameters" element="tns:listarBoletas" />
+  <message name="actualizarBoleta">
+    <part name="parameters" element="tns:actualizarBoleta" />
   </message>
-  <message name="listarBoletasResponse">
-    <part name="parameters" element="tns:listarBoletasResponse" />
+  <message name="actualizarBoletaResponse">
+    <part name="parameters" element="tns:actualizarBoletaResponse" />
+  </message>
+  <message name="buscarBoleta">
+    <part name="parameters" element="tns:buscarBoleta" />
+  </message>
+  <message name="buscarBoletaResponse">
+    <part name="parameters" element="tns:buscarBoletaResponse" />
+  </message>
+  <message name="eliminarBoleta">
+    <part name="parameters" element="tns:eliminarBoleta" />
+  </message>
+  <message name="eliminarBoletaResponse">
+    <part name="parameters" element="tns:eliminarBoletaResponse" />
   </message>
   <message name="hello">
     <part name="parameters" element="tns:hello" />
@@ -42,25 +42,25 @@
     <part name="parameters" element="tns:helloResponse" />
   </message>
   <portType name="BoletaWS">
-    <operation name="eliminarBoleta">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaRequest" message="tns:eliminarBoleta" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaResponse" message="tns:eliminarBoletaResponse" />
-    </operation>
-    <operation name="buscarBoleta">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaRequest" message="tns:buscarBoleta" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaResponse" message="tns:buscarBoletaResponse" />
-    </operation>
-    <operation name="actualizarBoleta">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaRequest" message="tns:actualizarBoleta" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaResponse" message="tns:actualizarBoletaResponse" />
+    <operation name="listarBoletas">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasRequest" message="tns:listarBoletas" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasResponse" message="tns:listarBoletasResponse" />
     </operation>
     <operation name="registrarBoleta">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/registrarBoletaRequest" message="tns:registrarBoleta" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/registrarBoletaResponse" message="tns:registrarBoletaResponse" />
     </operation>
-    <operation name="listarBoletas">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasRequest" message="tns:listarBoletas" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasResponse" message="tns:listarBoletasResponse" />
+    <operation name="actualizarBoleta">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaRequest" message="tns:actualizarBoleta" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaResponse" message="tns:actualizarBoletaResponse" />
+    </operation>
+    <operation name="buscarBoleta">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaRequest" message="tns:buscarBoleta" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaResponse" message="tns:buscarBoletaResponse" />
+    </operation>
+    <operation name="eliminarBoleta">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaRequest" message="tns:eliminarBoleta" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaResponse" message="tns:eliminarBoletaResponse" />
     </operation>
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/BoletaWS/helloRequest" message="tns:hello" />
@@ -69,25 +69,7 @@
   </portType>
   <binding name="BoletaWSPortBinding" type="tns:BoletaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarBoleta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="buscarBoleta">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarBoleta">
+    <operation name="listarBoletas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +87,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarBoletas">
+    <operation name="actualizarBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarBoleta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

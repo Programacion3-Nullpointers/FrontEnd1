@@ -100,7 +100,7 @@ namespace JMQPresentacion.Login
             }
 
             // Insertar usuario
-            user = usuarioWSCLClient.registrarUsuario(user);
+            usuarioWSCLClient.registrarUsuario(user);
 
             // Guardar en sesión y redirigir
             Session["Usuario"] = user;

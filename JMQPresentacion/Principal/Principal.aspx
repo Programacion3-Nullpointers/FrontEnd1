@@ -12,16 +12,17 @@
             margin: 0;
             overflow-x: hidden;
         }
-      .card-img-container {
-            width: 100%;
-            height: 200px;
-            background-size: 120% auto;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-color: #fff;
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
+        .card-img-container {
+                width: 100%;
+                height: 200px;
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-color: #fff;
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
         }
+
 
 
     </style>

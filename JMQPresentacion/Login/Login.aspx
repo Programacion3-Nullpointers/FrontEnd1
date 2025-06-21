@@ -9,7 +9,7 @@
                 <div class="row mb-3 gap-1">
                     <label style ="font-family: Roboto;">Correo electrónico</label>
                     <div class="input-group">
-                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Ingresa tu correo electrónico" TextMode="Email" Style="color: gray;"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Ingresa tu correo electrónico" TextMode="Email" Style="color: black;"></asp:TextBox>
                     </div>
                     <label style ="font-family: Roboto;">Contraseña</label>
                     <div class="input-group mb-2"> 

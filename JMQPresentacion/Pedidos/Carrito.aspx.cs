@@ -49,7 +49,7 @@ namespace JMQPresentacion.Pedidos
                     // Guardar la orden en la base de datos
                     if (Session["Orden"] == null)
                     {
-                        orden = ordenVentaService.registrarOrdenVentaService(orden);
+                        ordenVentaService.registrarOrdenVentaService(orden);
                         Session["Orden"] = orden; // Guardar la orden en la sesión para usarla en DatosEntrega.aspx
                     }
                     Response.Redirect("~/Pedidos/DatosEntrega.aspx");
