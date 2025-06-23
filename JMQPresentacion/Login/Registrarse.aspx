@@ -98,5 +98,5 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
-    <script scr="/Public/scripts/registroExitoso.js" type="text/JavaScript"></script>
+    <script src="/Public/scripts/registroExitoso.js" type="text/JavaScript"></script>
 </asp:Content>
