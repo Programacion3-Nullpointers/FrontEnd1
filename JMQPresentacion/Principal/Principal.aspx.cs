@@ -25,7 +25,7 @@ namespace JMQPresentacion.Principal
 
                 LinkButton boton = Master.FindControl("btnLogout") as LinkButton;
                 boton.Visible = Session["Usuario"] != null;
-<<<<<<< HEAD
+
                 if (Request.QueryString["logout"] == "1")
                 {
                     string script = @"
@@ -55,14 +55,6 @@ namespace JMQPresentacion.Principal
 
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "bienvenidaLogin", script, true);
                 }
-
-                if (Request.QueryString["registro"] == "exitoso")
-                {
-                    // Use Bootstrap's JavaScript to show the modal
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowSuccessModal", "$('#registroExitosoModal').modal('show');", true);
-                }
-=======
->>>>>>> 807a3c8 (Actualizacion Front2)
             }
         }
 
