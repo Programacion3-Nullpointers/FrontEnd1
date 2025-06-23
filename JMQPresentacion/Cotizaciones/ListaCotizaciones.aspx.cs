@@ -96,7 +96,7 @@ namespace JMQPresentacion.Cotizaciones
             //Session["cotizacion"] = 
             // Aquí puedes hacer lo que necesites, por ejemplo:
             // redirigir a otra página con el detalle, pasando el id como parámetro:
-            Response.Redirect($"Cotiza.aspx?id={idCotizacion}");
+            Response.Redirect($"DetalleCotizacion.aspx?id={idCotizacion}");
 
             // O cargar datos en un modal o panel en la misma página, según tu lógica
         }

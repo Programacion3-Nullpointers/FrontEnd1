@@ -69,8 +69,8 @@ namespace JMQPresentacion.Pedidos
             DataRow row = dt.NewRow();
             row["Producto"] = txtProducto.Text;
             row["Cantidad"] = int.Parse(txtCantidad.Text);
-            //row["Precio"] = decimal.Parse(txtPrecio.Text);
-            //row["Subtotal"] = (int.Parse(txtCantidad.Text) * decimal.Parse(txtPrecio.Text));
+            row["Precio"] = decimal.Parse(txtPrecio.Text);
+            row["Subtotal"] = (int.Parse(txtCantidad.Text) * decimal.Parse(txtPrecio.Text));
 
             dt.Rows.Add(row);
             Session["Cotizacion"] = dt;
@@ -118,6 +118,22 @@ namespace JMQPresentacion.Pedidos
         protected void btnEnviarCotizacion_Click(object sender, EventArgs e)
         {
             cotizacion cot = new cotizacion();
+            cot.usuario = Session["Usuario"] as usuario;
+            cot.estadoCotizacion = "Enviada";
+            List<productoCotizacion> prods = new List<productoCotizacion>();
+            foreach (GridViewRow row in gvCotizacion.Rows)
+            {
+                productoCotizacion prod = new productoCotizacion
+                {
+                    descripcion = row.Cells[0].Text,
+                    cantidad = int.Parse(row.Cells[1].Text),
+                    precioCotizado = (double)decimal.Parse(row.Cells[2].Text)
+                };
+
+                prods.Add(prod);
+            }
+            cot.productos = prods.ToArray();
+
             cotizacionWSClient.registrarCotizacion(cot);
 
         }
