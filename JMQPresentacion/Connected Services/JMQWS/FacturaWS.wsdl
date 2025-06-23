@@ -44,6 +44,18 @@
   <message name="buscarFacturaResponse">
     <part name="parameters" element="tns:buscarFacturaResponse" />
   </message>
+  <message name="RegistrarFactura">
+    <part name="parameters" element="tns:RegistrarFactura" />
+  </message>
+  <message name="RegistrarFacturaResponse">
+    <part name="parameters" element="tns:RegistrarFacturaResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
   <portType name="FacturaWS">
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/helloRequest" message="tns:hello" />
@@ -69,6 +81,14 @@
     <operation name="buscarFactura">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaRequest" message="tns:buscarFactura" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaResponse" message="tns:buscarFacturaResponse" />
+    </operation>
+    <operation name="RegistrarFactura">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/RegistrarFacturaRequest" message="tns:RegistrarFactura" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/RegistrarFacturaResponse" message="tns:RegistrarFacturaResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/FacturaWS/helloResponse" message="tns:helloResponse" />
     </operation>
   </portType>
   <binding name="FacturaWSPortBinding" type="tns:FacturaWS">
@@ -122,6 +142,24 @@
       </fault>
     </operation>
     <operation name="buscarFactura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarFactura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

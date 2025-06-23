@@ -73,6 +73,7 @@
     <Content Include="Admin\CotizacionesAdmin.aspx" />
     <Content Include="Admin\Descuentos.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
+    <Content Include="AgregarCarrito.ashx" />
     <None Include="Connected Services\JMQWS\archivo.disco" />
     <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
     <None Include="Connected Services\JMQWS\configuration.svcinfo" />
@@ -516,6 +517,9 @@
     <Compile Include="Admin\ModificarProductos.aspx.designer.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AgregarCarrito.ashx.cs">
+      <DependentUpon>AgregarCarrito.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\JMQWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -641,6 +645,9 @@
     <Compile Include="Admin\ModificarUsuarios.aspx.designer.cs">
       <DependentUpon>ModificarUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SetRedirect.ashx.cs">
+      <DependentUpon>SetRedirect.ashx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainLayout.Master" />
@@ -677,6 +684,7 @@
     <Content Include="Public\js\bootstrap.min.js.map" />
     <Content Include="Public\js\jquery-3.7.1.min.map" />
     <Content Include="Public\js\jquery-3.7.1.slim.min.map" />
+    <Content Include="SetRedirect.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

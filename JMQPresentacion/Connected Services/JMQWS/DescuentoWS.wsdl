@@ -10,6 +10,20 @@
   </message>
   <message name="helloResponse">
     <part name="parameters" element="tns:helloResponse" />
+  <message name="ActualizarDescuentoResponse">
+    <part name="parameters" element="tns:ActualizarDescuentoResponse" />
+  </message>
+  <message name="EliminarDescuento">
+    <part name="parameters" element="tns:EliminarDescuento" />
+  </message>
+  <message name="EliminarDescuentoResponse">
+    <part name="parameters" element="tns:EliminarDescuentoResponse" />
+  </message>
+  <message name="RegistrarDescuento">
+    <part name="parameters" element="tns:RegistrarDescuento" />
+  </message>
+  <message name="RegistrarDescuentoResponse">
+    <part name="parameters" element="tns:RegistrarDescuentoResponse" />
   </message>
   <message name="BuscarDescuento">
     <part name="parameters" element="tns:BuscarDescuento" />
@@ -19,6 +33,12 @@
   </message>
   <message name="ListarDescuentos">
     <part name="parameters" element="tns:ListarDescuentos" />
+  </message>
+  <message name="ListarDescuentosResponse">
+    <part name="parameters" element="tns:ListarDescuentosResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
   </message>
   <message name="ListarDescuentosResponse">
     <part name="parameters" element="tns:ListarDescuentosResponse" />
@@ -45,6 +65,17 @@
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloRequest" message="tns:hello" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloResponse" message="tns:helloResponse" />
+    <operation name="ActualizarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoRequest" message="tns:ActualizarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoResponse" message="tns:ActualizarDescuentoResponse" />
+    </operation>
+    <operation name="EliminarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoRequest" message="tns:EliminarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoResponse" message="tns:EliminarDescuentoResponse" />
+    </operation>
+    <operation name="RegistrarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoRequest" message="tns:RegistrarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoResponse" message="tns:RegistrarDescuentoResponse" />
     </operation>
     <operation name="BuscarDescuento">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoRequest" message="tns:BuscarDescuento" />
@@ -65,11 +96,33 @@
     <operation name="ActualizarDescuento">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoRequest" message="tns:ActualizarDescuento" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoResponse" message="tns:ActualizarDescuentoResponse" />
+    <operation name="hello">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloResponse" message="tns:helloResponse" />
     </operation>
   </portType>
   <binding name="DescuentoWSPortBinding" type="tns:DescuentoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="hello">
+    <operation name="ActualizarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarDescuento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -79,6 +132,15 @@
       </output>
     </operation>
     <operation name="BuscarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarDescuentos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

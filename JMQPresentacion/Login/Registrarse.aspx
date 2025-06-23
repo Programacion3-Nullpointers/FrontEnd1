@@ -1,12 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Login/Login.Master" AutoEventWireup="true" CodeBehind="Registrarse.aspx.cs" Inherits="JMQPresentacion.Login.Registrarse" %>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <div class="container mt-2" style="max-width: 500px;">
-        <h2 class="h4 mb-3">Regístrate</h2> <!-- Título más pequeño -->
+        <h2 class="h4 mb-3">Regístrate</h2>
         <div class="card">
-            <div class="card-body p-3"> <!-- Padding reducido -->
+            <div class="card-body p-3">
                 <div class="mb-2">
                     <label class="form-label small">Tipo de Usuario:</label>
-                    <div class="d-flex gap-3 align-items-center"> <!-- gap-3 = 1rem de separación -->
+                    <div class="d-flex gap-3 align-items-center">
                         <div class="form-check form-check-inline">
                             <asp:RadioButton ID="rbEmpresa" runat="server" GroupName="TipoUsuario"
                                 CssClass="form-check-input" AutoPostBack="true"
@@ -21,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row g-2"> <!-- Espaciado entre filas reducido -->
+                <div class="row g-2">
                     <asp:Panel ID="pnlEmpresa" runat="server" Visible="False">
                         <div class="col-12">
                             <label class="form-label small">Razón Social</label>
@@ -40,7 +41,6 @@
                         </div>
                     </asp:Panel>
 
-                    <!-- Campos comunes con clases reducidas -->
                     <div class="col-md-6">
                         <label class="form-label small">Nombre</label>
                         <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control form-control-sm" placeholder="Nombre"></asp:TextBox>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-2 g-2"> <!-- Margen superior y espaciado reducido -->
+                <div class="row mt-2 g-2">
                     <div class="col-12 d-flex justify-content-between">
                         <asp:Button ID="btnGuardar" runat="server" Text="Registrarse" CssClass="btn btn-jmq w-100" OnClick="btnGuardar_Click"/> 
                     </div>
@@ -76,27 +76,17 @@
                     </div>
                 </div>
                 <div class="row mt-3 text-center">
-                    <a href="Login.aspx" class="ms-1" Style="color: gray; text-decoration: none;">Volver al inicio </a>
+                    <a href="Login.aspx" class="ms-1" style="color: gray; text-decoration: none;">Volver al inicio</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="registroExitosoModal" tabindex="-1" aria-labelledby="registroExitosoLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-success text-white">
-            <h5 class="modal-title" id="registroExitosoLabel">Registro exitoso</h5>
-          </div>
-          <div class="modal-body">
-            ¡Tu usuario fue registrado correctamente!
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
-          </div>
-        </div>
-      </div>
-    </div>
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
+<<<<<<< HEAD
     <script src="/Public/scripts/registroExitoso.js" type="text/JavaScript"></script>
+=======
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+>>>>>>> ramaLoui
 </asp:Content>

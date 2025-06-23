@@ -3,35 +3,56 @@ using JMQPresentacion.JMQWS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.WebSockets;
 
 namespace JMQPresentacion.Principal
 {
     public partial class Principal : System.Web.UI.Page
     {
         private ProductoWSClient productoService;
+
         protected void Page_Init(object sender, EventArgs e)
         {
-            productoService = new JMQWS.ProductoWSClient();
+            productoService = new ProductoWSClient();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             if (!IsPostBack)
             {
                 CargarProductos();
 
                 LinkButton boton = Master.FindControl("btnLogout") as LinkButton;
-                if (Session["Usuario"] == null)
+                boton.Visible = Session["Usuario"] != null;
+                if (Request.QueryString["logout"] == "1")
                 {
-                    boton.Visible = false;
+                    string script = @"
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Sesión cerrada',
+                        text: 'Has cerrado sesión correctamente.',
+                        confirmButtonColor: '#3085d6'
+                    });";
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "logoutAlert", script, true);
                 }
-                else
+                // ✅ Mostrar bienvenida si viene de Login
+                if (Session["MostrarBienvenida"] != null)
                 {
-                    boton.Visible = true;
+                    string nombre = Session["MostrarBienvenida"].ToString();
+                    Session.Remove("MostrarBienvenida");
+
+                    string script = $@"
+                        Swal.fire({{
+                            icon: 'success',
+                            title: '¡Bienvenido, {nombre}!',
+                            text: 'Nos alegra tenerte de vuelta.',
+                            timer: 1800,
+                            showConfirmButton: false
+                        }});";
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "bienvenidaLogin", script, true);
                 }
 
                 if (Request.QueryString["registro"] == "exitoso")
@@ -41,29 +62,16 @@ namespace JMQPresentacion.Principal
                 }
             }
         }
+
         private void CargarProductos()
         {
             List<producto> productos = productoService.listaProducto().ToList();
-            rptProductos.DataSource = productos;
-            rptProductos.DataBind();
-            }
 
-        protected void btnAgregarProductos_Click(object sender, EventArgs e)
-        {
-            if (Session["Cart"] == null)
-            {
-                Session["Cart"] = new List<detalle>();
-                //Session["Orden"] = new ordenVenta { estado_compra = estadoCompra.pendiente }; // Los demás datos se llenarán después
-            }
-            List<detalle> cart = (List<detalle>)Session["Cart"];
-            Button btn = (Button)sender;
-            int idProducto = int.Parse(btn.CommandArgument);
-            // Aquí busca el producto en la BD
-            producto producto1 = productoService.buscarProducto(idProducto);
-            detalle detalle1 = new detalle { producto = producto1, cantidad = 1, precio_unitario = producto1.precio };
-            cart.Add(detalle1);
-            Session["Cart"] = cart;
-            Response.Redirect("~/Pedidos/Carrito.aspx");
+            // Filtrar productos con stock > 0
+            List<producto> productosConStock = productos.Where(p => p.stock > 0).ToList();
+
+            rptProductos.DataSource = productosConStock;
+            rptProductos.DataBind();
         }
 
         public string ConvertirByteAImagenBase64(byte[] datosImagen)
@@ -81,6 +89,5 @@ namespace JMQPresentacion.Principal
         {
             Response.Redirect("~/Cotizaciones/ListaCotizaciones.aspx");
         }
-
     }
 }

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using JMQPresentacion.JMQWS;
-
+using System.Text.RegularExpressions;
 
 namespace JMQPresentacion.Login
 {
@@ -17,6 +17,7 @@ namespace JMQPresentacion.Login
         {
             usuarioWSCLClient = new JMQWS.UsuarioWSClient();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -30,8 +31,6 @@ namespace JMQPresentacion.Login
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-
-
             divError.Style["display"] = "none";
             lblError.Text = "";
 
@@ -56,22 +55,78 @@ namespace JMQPresentacion.Login
                 return;
             }
 
-            if (pnlEmpresa.Visible && txtRUC.Text.Length != 11)
+            if (!Regex.IsMatch(txtNombre.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$") ||
+                !Regex.IsMatch(txtApellido.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
             {
-                lblError.Text = "RUC inválido.";
+                lblError.Text = "El nombre y apellido solo deben contener letras.";
                 divError.Style["display"] = "block";
                 return;
             }
 
-            if (pnlCliente.Visible && txtDNI.Text.Length != 8)
+            if (txtNombre.Text.Trim().Length < 2 || txtApellido.Text.Trim().Length < 2)
             {
-                lblError.Text = "DNI inválido.";
+                lblError.Text = "El nombre y apellido deben tener al menos 2 caracteres.";
+                divError.Style["display"] = "block";
+                return;
+            }
+
+            if (txtDireccion.Text.Trim().Length < 4)
+            {
+                lblError.Text = "La dirección debe tener al menos 4 caracteres.";
+                divError.Style["display"] = "block";
+                return;
+            }
+
+            if (pnlEmpresa.Visible && !Regex.IsMatch(txtRazonSocial.Text, @"^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s\.\-&]{2,}$"))
+            {
+                lblError.Text = "La razón social solo puede contener letras, números, espacios y los símbolos '.', '-' y '&'.";
+                divError.Style["display"] = "block";
+                return;
+            }
+
+            if (pnlEmpresa.Visible)
+            {
+                if (!Regex.IsMatch(txtRUC.Text, @"^\d+$"))
+                {
+                    lblError.Text = "El RUC solo debe contener números.";
+                    divError.Style["display"] = "block";
+                    return;
+                }
+
+                if (txtRUC.Text.Length != 11)
+                {
+                    lblError.Text = "RUC inválido.";
+                    divError.Style["display"] = "block";
+                    return;
+                }
+            }
+
+            if (pnlCliente.Visible)
+            {
+                if (!Regex.IsMatch(txtDNI.Text, @"^\d+$"))
+                {
+                    lblError.Text = "El DNI solo debe contener números.";
+                    divError.Style["display"] = "block";
+                    return;
+                }
+
+                if (txtDNI.Text.Length != 8)
+                {
+                    lblError.Text = "DNI inválido.";
+                    divError.Style["display"] = "block";
+                    return;
+                }
+            }
+
+            if (!Regex.IsMatch(txtEmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                lblError.Text = "El formato del correo electrónico no es válido.";
                 divError.Style["display"] = "block";
                 return;
             }
 
             // Crear usuario
-            usuario user = new usuario ();
+            usuario user = new usuario();
             user.nombreUsuario = txtNombre.Text.Trim() + " " + txtApellido.Text.Trim();
             user.direccion = txtDireccion.Text.Trim();
             user.correo = txtEmail.Text.Trim();
@@ -90,7 +145,6 @@ namespace JMQPresentacion.Login
                 user.dni = txtDNI.Text.Trim();
             }
 
-            // Verificar si el correo ya existe
             usuario uss = usuarioWSCLClient.BuscarUsuarioPorCorreo(user.correo.ToString());
             if (uss != null)
             {
@@ -100,15 +154,40 @@ namespace JMQPresentacion.Login
             }
 
             // Insertar usuario
-            user = usuarioWSCLClient.registrarUsuario(user);
-
-            // Guardar en sesión y redirigir
+            usuarioWSCLClient.registrarUsuario(user);
             Session["Usuario"] = user;
+<<<<<<< HEAD
             ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowSuccessModal",
         "var myModal = new bootstrap.Modal(document.getElementById('registroExitosoModal')); myModal.show();", true);
 
             // Response.Redirect("/Principal/Principal.aspx?registro=exitoso");
+=======
 
+            // Nombre a mostrar en mensaje
+            string nombreMostrar = user.nombreUsuario.Split(' ')[0];
+            string destino = "/Principal/Principal.aspx";
+>>>>>>> ramaLoui
+
+            if (Session["RedirectAfterLogin"] != null)
+            {
+                destino = Session["RedirectAfterLogin"].ToString();
+                Session.Remove("RedirectAfterLogin");
+            }
+
+            // Mostrar mensaje de bienvenida y redirigir
+            string script = $@"
+                Swal.fire({{
+                    icon: 'success',
+                    title: '¡Bienvenido, {nombreMostrar}!',
+                    text: 'Tu registro fue exitoso.',
+                    timer: 1800,
+                    showConfirmButton: false
+                }});
+                setTimeout(function() {{
+                    window.location.href = '{destino}';
+                }}, 1800);";
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "bienvenidaRegistro", script, true);
         }
     }
 }

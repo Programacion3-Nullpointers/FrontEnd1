@@ -5,6 +5,18 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/ProductoWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
+=======
+  <message name="filtrarProductos">
+    <part name="parameters" element="tns:filtrarProductos" />
+  </message>
+  <message name="filtrarProductosResponse">
+    <part name="parameters" element="tns:filtrarProductosResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+>>>>>>> ramaLoui
   <message name="registrarProducto">
     <part name="parameters" element="tns:registrarProducto" />
   </message>
@@ -32,6 +44,12 @@
   <message name="descontarStockResponse">
     <part name="parameters" element="tns:descontarStockResponse" />
   </message>
+  <message name="descontarStock">
+    <part name="parameters" element="tns:descontarStock" />
+  </message>
+  <message name="descontarStockResponse">
+    <part name="parameters" element="tns:descontarStockResponse" />
+  </message>
   <message name="buscarProducto">
     <part name="parameters" element="tns:buscarProducto" />
   </message>
@@ -51,6 +69,14 @@
     <part name="parameters" element="tns:filtrarProductosResponse" />
   </message>
   <portType name="ProductoWS">
+<<<<<<< HEAD
+=======
+    <operation name="filtrarProductos">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosRequest" message="tns:filtrarProductos" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosResponse" message="tns:filtrarProductosResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductos/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+>>>>>>> ramaLoui
     <operation name="registrarProducto">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoRequest" message="tns:registrarProducto" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoResponse" message="tns:registrarProductoResponse" />
@@ -65,6 +91,11 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoRequest" message="tns:eliminarProducto" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoResponse" message="tns:eliminarProductoResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="descontarStock">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest" message="tns:descontarStock" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse" message="tns:descontarStockResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStock/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="descontarStock">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest" message="tns:descontarStock" />
@@ -89,6 +120,21 @@
   </portType>
   <binding name="ProductoWSPortBinding" type="tns:ProductoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+<<<<<<< HEAD
+=======
+    <operation name="filtrarProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+>>>>>>> ramaLoui
     <operation name="registrarProducto">
       <soap:operation soapAction="" />
       <input>
@@ -114,6 +160,18 @@
       </fault>
     </operation>
     <operation name="eliminarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="descontarStock">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
