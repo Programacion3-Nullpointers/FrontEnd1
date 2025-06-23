@@ -6,6 +6,9 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
+    <!-- 🔹 ScriptManager necesario para SweetAlert -->
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
     <style>
         body {
             font-family: Arial, sans-serif;

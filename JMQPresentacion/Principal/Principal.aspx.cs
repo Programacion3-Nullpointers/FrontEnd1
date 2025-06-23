@@ -25,6 +25,35 @@ namespace JMQPresentacion.Principal
 
                 LinkButton boton = Master.FindControl("btnLogout") as LinkButton;
                 boton.Visible = Session["Usuario"] != null;
+                if (Request.QueryString["logout"] == "1")
+                {
+                    string script = @"
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Sesión cerrada',
+                        text: 'Has cerrado sesión correctamente.',
+                        confirmButtonColor: '#3085d6'
+                    });";
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "logoutAlert", script, true);
+                }
+                // ✅ Mostrar bienvenida si viene de Login
+                if (Session["MostrarBienvenida"] != null)
+                {
+                    string nombre = Session["MostrarBienvenida"].ToString();
+                    Session.Remove("MostrarBienvenida");
+
+                    string script = $@"
+                        Swal.fire({{
+                            icon: 'success',
+                            title: '¡Bienvenido, {nombre}!',
+                            text: 'Nos alegra tenerte de vuelta.',
+                            timer: 1800,
+                            showConfirmButton: false
+                        }});";
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "bienvenidaLogin", script, true);
+                }
             }
         }
 
