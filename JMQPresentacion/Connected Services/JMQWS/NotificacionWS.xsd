@@ -49,20 +49,20 @@
   <xs:complexType name="eliminarNotificacionResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="registrarNotificacion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="notificacion" type="tns:notificacion" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="registrarNotificacionResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="enviarNotificacion">
     <xs:sequence>
       <xs:element minOccurs="0" name="notificacion" type="tns:notificacion" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="enviarNotificacionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="registrarNotificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="notificacion" type="tns:notificacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarNotificacionResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarNotificacion">

@@ -33,6 +33,12 @@ namespace JMQPresentacion.Principal
                 {
                     boton.Visible = true;
                 }
+
+                if (Request.QueryString["registro"] == "exitoso")
+                {
+                    // Use Bootstrap's JavaScript to show the modal
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowSuccessModal", "$('#registroExitosoModal').modal('show');", true);
+                }
             }
         }
         private void CargarProductos()
