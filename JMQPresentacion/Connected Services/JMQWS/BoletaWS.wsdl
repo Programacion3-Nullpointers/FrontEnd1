@@ -37,6 +37,9 @@
   <message name="listarBoletas">
     <part name="parameters" element="tns:listarBoletas" />
   </message>
+  <message name="listarBoletas">
+    <part name="parameters" element="tns:listarBoletas" />
+  </message>
   <message name="listarBoletasResponse">
     <part name="parameters" element="tns:listarBoletasResponse" />
   </message>

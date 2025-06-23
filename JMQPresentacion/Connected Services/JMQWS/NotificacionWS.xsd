@@ -42,7 +42,10 @@
     <xs:sequence />
   </xs:complexType>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
   <xs:complexType name="listarNotificaciones">
     <xs:sequence />
   </xs:complexType>

@@ -6,7 +6,10 @@
     </xsd:schema>
   </types>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
   <message name="filtrarProductos">
     <part name="parameters" element="tns:filtrarProductos" />
   </message>
@@ -50,6 +53,12 @@
   <message name="descontarStockResponse">
     <part name="parameters" element="tns:descontarStockResponse" />
   </message>
+  <message name="descontarStock">
+    <part name="parameters" element="tns:descontarStock" />
+  </message>
+  <message name="descontarStockResponse">
+    <part name="parameters" element="tns:descontarStockResponse" />
+  </message>
   <message name="buscarProducto">
     <part name="parameters" element="tns:buscarProducto" />
   </message>
@@ -70,7 +79,10 @@
   </message>
   <portType name="ProductoWS">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
     <operation name="filtrarProductos">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosRequest" message="tns:filtrarProductos" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosResponse" message="tns:filtrarProductosResponse" />
@@ -102,6 +114,11 @@
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse" message="tns:descontarStockResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStock/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+    <operation name="descontarStock">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest" message="tns:descontarStock" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse" message="tns:descontarStockResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStock/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="buscarProducto">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProductoRequest" message="tns:buscarProducto" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProductoResponse" message="tns:buscarProductoResponse" />
@@ -121,7 +138,10 @@
   <binding name="ProductoWSPortBinding" type="tns:ProductoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
     <operation name="filtrarProductos">
       <soap:operation soapAction="" />
       <input>
@@ -160,6 +180,18 @@
       </fault>
     </operation>
     <operation name="eliminarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="descontarStock">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

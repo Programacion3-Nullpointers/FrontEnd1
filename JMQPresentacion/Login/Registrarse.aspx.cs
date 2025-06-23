@@ -155,18 +155,13 @@ namespace JMQPresentacion.Login
 
             // Insertar usuario
             usuarioWSCLClient.registrarUsuario(user);
-            Session["Usuario"] = user;
-<<<<<<< HEAD
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowSuccessModal",
-        "var myModal = new bootstrap.Modal(document.getElementById('registroExitosoModal')); myModal.show();", true);
 
-            // Response.Redirect("/Principal/Principal.aspx?registro=exitoso");
-=======
+            // Guardar en sesión y redirigir
+            Session["Usuario"] = user;
 
             // Nombre a mostrar en mensaje
             string nombreMostrar = user.nombreUsuario.Split(' ')[0];
             string destino = "/Principal/Principal.aspx";
->>>>>>> ramaLoui
 
             if (Session["RedirectAfterLogin"] != null)
             {

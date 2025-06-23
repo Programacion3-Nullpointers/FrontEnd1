@@ -6,7 +6,10 @@
     </xsd:schema>
   </types>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
   <message name="listarProductosPorCotizacion">
     <part name="parameters" element="tns:listarProductosPorCotizacion" />
   </message>
@@ -49,7 +52,10 @@
   <message name="EliminarProductoCotizacionResponse">
     <part name="parameters" element="tns:EliminarProductoCotizacionResponse" />
   </message>
+<<<<<<< HEAD
 >>>>>>> ramaLoui
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
@@ -57,6 +63,7 @@
     <part name="parameters" element="tns:helloResponse" />
   </message>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <message name="RegistrarProdCotizacion">
     <part name="parameters" element="tns:RegistrarProdCotizacion" />
   </message>
@@ -102,6 +109,9 @@
   <portType name="ProductoCotizacionWS">
 =======
   <portType name="ProductoCotizacionWS">
+=======
+  <portType name="ProductoCotizacionWS">
+>>>>>>> 08305fe (Actualizacion productos front)
     <operation name="listarProductosPorCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacionRequest" message="tns:listarProductosPorCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacionResponse" message="tns:listarProductosPorCotizacionResponse" />
@@ -130,12 +140,16 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionRequest" message="tns:EliminarProductoCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionResponse" message="tns:EliminarProductoCotizacionResponse" />
     </operation>
+<<<<<<< HEAD
 >>>>>>> ramaLoui
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest" message="tns:hello" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloResponse" message="tns:helloResponse" />
     </operation>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <operation name="RegistrarProdCotizacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionRequest" message="tns:RegistrarProdCotizacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionResponse" message="tns:RegistrarProdCotizacionResponse" />
@@ -171,6 +185,11 @@
   </portType>
   <binding name="ProductoCotizacionWSPortBinding" type="tns:ProductoCotizacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+=======
+  </portType>
+  <binding name="ProductoCotizacionWSPortBinding" type="tns:ProductoCotizacionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+>>>>>>> 08305fe (Actualizacion productos front)
     <operation name="listarProductosPorCotizacion">
       <soap:operation soapAction="" />
       <input>
@@ -234,7 +253,10 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
 >>>>>>> ramaLoui
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
     <operation name="hello">
       <soap:operation soapAction="" />
       <input>
@@ -244,6 +266,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="RegistrarProdCotizacion">
       <soap:operation soapAction="" />
@@ -310,6 +333,8 @@
     </operation>
 =======
 >>>>>>> ramaLoui
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
   </binding>
   <service name="ProductoCotizacionWS">
     <port name="ProductoCotizacionWSPort" binding="tns:ProductoCotizacionWSPortBinding">

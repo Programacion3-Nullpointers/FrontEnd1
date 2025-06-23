@@ -6,9 +6,12 @@
     </xsd:schema>
   </types>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <message name="enviarNotificacion">
     <part name="parameters" element="tns:enviarNotificacion" />
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
   <message name="registrarNotificacion">
     <part name="parameters" element="tns:registrarNotificacion" />
   </message>
@@ -23,7 +26,10 @@
   </message>
   <message name="actualizarNotificacion">
     <part name="parameters" element="tns:actualizarNotificacion" />
+<<<<<<< HEAD
 >>>>>>> ramaLoui
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
   </message>
   <message name="actualizarNotificacionResponse">
     <part name="parameters" element="tns:actualizarNotificacionResponse" />
@@ -40,6 +46,7 @@
   <message name="buscarNotificacionResponse">
     <part name="parameters" element="tns:buscarNotificacionResponse" />
   </message>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <message name="listarNotificaciones">
     <part name="parameters" element="tns:listarNotificaciones" />
@@ -70,6 +77,8 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionRequest" message="tns:enviarNotificacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionResponse" message="tns:enviarNotificacionResponse" />
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
   <message name="enviarNotificacion">
     <part name="parameters" element="tns:enviarNotificacion" />
   </message>
@@ -92,12 +101,16 @@
     <operation name="listarNotificaciones">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesResponse" message="tns:listarNotificacionesResponse" />
+<<<<<<< HEAD
 >>>>>>> ramaLoui
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
     </operation>
     <operation name="buscarNotificacion">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/buscarNotificacionRequest" message="tns:buscarNotificacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/buscarNotificacionResponse" message="tns:buscarNotificacionResponse" />
     </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="listarNotificaciones">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesRequest" message="tns:listarNotificaciones" />
@@ -119,10 +132,16 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionRequest" message="tns:enviarNotificacion" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionResponse" message="tns:enviarNotificacionResponse" />
 >>>>>>> ramaLoui
+=======
+    <operation name="enviarNotificacion">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionRequest" message="tns:enviarNotificacion" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionResponse" message="tns:enviarNotificacionResponse" />
+>>>>>>> 08305fe (Actualizacion productos front)
     </operation>
   </portType>
   <binding name="NotificacionWSPortBinding" type="tns:NotificacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="enviarNotificacion">
       <soap:operation soapAction="" />
@@ -153,6 +172,8 @@
     </operation>
     <operation name="actualizarNotificacion">
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
     <operation name="registrarNotificacion">
 >>>>>>> ramaLoui
       <soap:operation soapAction="" />
@@ -173,8 +194,11 @@
       </output>
     </operation>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <operation name="registrarNotificacion">
 =======
+=======
+>>>>>>> 08305fe (Actualizacion productos front)
     <operation name="actualizarNotificacion">
       <soap:operation soapAction="" />
       <input>
@@ -195,6 +219,15 @@
     </operation>
     <operation name="buscarNotificacion">
 >>>>>>> ramaLoui
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="enviarNotificacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
