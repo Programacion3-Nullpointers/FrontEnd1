@@ -104,9 +104,10 @@ namespace JMQPresentacion.Login
 
             // Guardar en sesión y redirigir
             Session["Usuario"] = user;
-            //ScriptManager.RegisterStartupScript(this, this.GetType(), "mostrarModal", "mostrarModalRegistro();", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "ShowSuccessModal",
+        "var myModal = new bootstrap.Modal(document.getElementById('registroExitosoModal')); myModal.show();", true);
 
-            Response.Redirect("/Principal/Principal.aspx");
+            // Response.Redirect("/Principal/Principal.aspx?registro=exitoso");
 
         }
     }

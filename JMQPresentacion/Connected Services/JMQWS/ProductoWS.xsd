@@ -9,6 +9,8 @@
   <xs:element name="descontarStockResponse" type="tns:descontarStockResponse" />
   <xs:element name="eliminarProducto" type="tns:eliminarProducto" />
   <xs:element name="eliminarProductoResponse" type="tns:eliminarProductoResponse" />
+  <xs:element name="filtrarProductos" type="tns:filtrarProductos" />
+  <xs:element name="filtrarProductosResponse" type="tns:filtrarProductosResponse" />
   <xs:element name="listaProducto" type="tns:listaProducto" />
   <xs:element name="listaProductoResponse" type="tns:listaProductoResponse" />
   <xs:element name="registrarProducto" type="tns:registrarProducto" />
@@ -94,6 +96,22 @@
   <xs:complexType name="buscarProductoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filtrarProductos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombreCategoria" type="xs:string" />
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="precioMin" type="xs:double" />
+      <xs:element minOccurs="0" name="precioMax" type="xs:double" />
+      <xs:element minOccurs="0" name="stockMin" type="xs:int" />
+      <xs:element minOccurs="0" name="stockMax" type="xs:int" />
+      <xs:element minOccurs="0" name="conDescuento" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filtrarProductosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
