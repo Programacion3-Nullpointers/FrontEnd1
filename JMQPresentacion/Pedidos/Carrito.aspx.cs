@@ -64,32 +64,18 @@ namespace JMQPresentacion.Pedidos
 
             ordenVenta orden = new ordenVenta
             {
-                // Verificar si el carrito tiene productos
-                if (Session["Cart"] != null && ((List<detalle>)Session["Cart"]).Count > 0)
-                {
-                    ordenVenta orden = new ordenVenta
-                    {
-                        estado_compra = estadoCompra.pendiente,
-                        fecha_orden = DateTime.Now,
-                        activo = true,
-                        usuario = (usuario)Session["Usuario"],
-                    };
-                    detalle[] arrDetalles = ((List<detalle>)Session["Cart"]).ToArray();
-                    orden.detalle = arrDetalles;
-                    // Guardar la orden en la base de datos
-                    if (Session["Orden"] == null)
-                    {
-                        ordenVentaService.registrarOrdenVentaService(orden);
-                        Session["Orden"] = orden; // Guardar la orden en la sesión para usarla en DatosEntrega.aspx
-                    }
-                    Response.Redirect("~/Pedidos/DatosEntrega.aspx");
-                }
-                else
-                {
-                    // Mostrar mensaje de error o redirigir a una página de error
-                    string script = "alert('El carrito está vacío. Por favor, agrega productos antes de proceder al pago.');";
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertaCarritoVacio", script, true);
-                }
+                estado_compra = estadoCompra.pendiente,
+                fecha_orden = DateTime.Now,
+                activo = true,
+                usuario = (usuario)Session["Usuario"],
+                detalle = ((List<detalle>)Session["Cart"]).ToArray()
+            };
+
+            // Guardar en sesión y registrar
+            if (Session["Orden"] == null)
+            {
+                ordenVentaService.registrarOrdenVentaService(orden);
+                Session["Orden"] = orden;
             }
 
             Response.Redirect("~/Pedidos/DatosEntrega.aspx");

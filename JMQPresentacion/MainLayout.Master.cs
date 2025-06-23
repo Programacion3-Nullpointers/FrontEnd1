@@ -48,5 +48,23 @@ namespace JMQPresentacion
                 litCantidadCarrito.Text = "";
             }
         }
+
+        private void MostrarCantidadCarrito()
+        {
+            if (Session["Cart"] != null)
+            {
+                List<detalle> carrito = Session["Cart"] as List<detalle>;
+                int cantidadTotal = carrito.Sum(d => d.cantidad);
+
+                litCantidadCarrito.Text = $@"
+                    <span class='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>
+                        {cantidadTotal}
+                    </span>";
+            }
+            else
+            {
+                litCantidadCarrito.Text = "";
+            }
+        }
     }
 }

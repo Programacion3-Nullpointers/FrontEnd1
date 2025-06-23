@@ -84,9 +84,8 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
-<<<<<<< HEAD
+
     <script src="/Public/scripts/registroExitoso.js" type="text/JavaScript"></script>
-=======
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
->>>>>>> ramaLoui
 </asp:Content>

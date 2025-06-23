@@ -34,21 +34,7 @@ namespace JMQPresentacion.Admin
             }
             if (!IsPostBack)
             {
-               var categorias = categoriaService.ListarCategorias(); // Asegúrate que esta función exista en tu WS
-
-                ddlCategoriaFiltro.DataSource = categorias;
-                ddlCategoriaFiltro.DataTextField = "nombre";
-                ddlCategoriaFiltro.DataValueField = "nombre";  // O usa id si cambias filtro a usar id
-                ddlCategoriaFiltro.DataBind();
-
-                ddlCategoriaFiltro.Items.Insert(0, new ListItem("Todas las categorías", ""));
-                // Si no hay lista guardada en sesión, inicialízala con algunos datos de ejemplo
-                if (Session["Productos"] == null)
-                {
-                    List<producto> listaInicial = new List<producto>();
-                    listaInicial = productoService.listaProducto().ToList();
-                    Session["Productos"] = listaInicial;
-                }
+                var categorias = categoriaService.ListarCategorias();
 
                 ddlCategoriaFiltro.DataSource = categorias;
                 ddlCategoriaFiltro.DataTextField = "nombre";
@@ -89,14 +75,6 @@ namespace JMQPresentacion.Admin
 
                 gvProductos.DataSource = resultado;
                 gvProductos.DataBind();
-
-                txtBuscarNombre.Attributes["list"] = "listaProductos";
-                listaProductos.InnerHtml = "";  // Limpieza por si hay render previo
-
-                foreach (var p in lista)
-                {
-                    listaProductos.InnerHtml += $"<option value='{Server.HtmlEncode(p.nombre)}' />";
-                }
             }
             else
             {
@@ -155,99 +133,6 @@ namespace JMQPresentacion.Admin
             lblMensaje.Visible = productosFiltrados == null || !productosFiltrados.Any();
             lblMensaje.Text = "⚠️ Producto no encontrado.";
 
-            gvProductos.DataSource = productosFiltrados;
-            gvProductos.DataBind();
-        }
-        protected void btnBuscarNombre_Click(object sender, EventArgs e)
-        {
-            string termino = txtBuscarNombre.Text.Trim().ToLower();
-            var lista = Session["Productos"] as List<producto>;
-
-            // Validar si hay lista cargada y término no vacío
-            if (!string.IsNullOrEmpty(termino) && lista != null)
-            {
-                var resultado = lista
-                    .Where(p => p.nombre != null && p.nombre.ToLower().Contains(termino))
-                    .ToList();
-
-                if (resultado.Count == 0)
-                {
-                    lblMensaje.Text = "⚠️ Producto no encontrado.";
-                    lblMensaje.Visible = true;
-                }
-                else
-                {
-                    lblMensaje.Visible = false;
-                }
-
-                gvProductos.DataSource = resultado;
-                gvProductos.DataBind();
-            }
-            else
-            {
-                // Si no hay término o lista, oculta mensaje y limpia GridView si lo deseas
-                lblMensaje.Text = "Ingrese un nombre válido para buscar.";
-                lblMensaje.Visible = true;
-
-                gvProductos.DataSource = null;
-                gvProductos.DataBind();
-            }
-        }
-        protected void btnReset_Click(object sender, EventArgs e)
-        {
-            var lista = productoService.listaProducto().ToList();
-            Session["Productos"] = lista;
-
-            gvProductos.DataSource = lista.OrderBy(p => p.id).ToList();
-            gvProductos.DataBind();
-
-            txtBuscarNombre.Text = "";
-        }
-
-        protected void btnAplicarFiltros_Click(object sender, EventArgs e)
-        {
-            string categoriaNombre = ddlCategoriaFiltro.SelectedValue;
-            bool? activo = null;
-
-            if (ddlActivoFiltro.SelectedValue == "true") activo = true;
-            else if (ddlActivoFiltro.SelectedValue == "false") activo = false;
-
-            double? precioMin = null;
-            double? precioMax = null;
-            int? stockMin = null;
-            int? stockMax = null;
-
-            if (double.TryParse(txtPrecioMin.Text, out double min)) precioMin = min;
-            if (double.TryParse(txtPrecioMax.Text, out double max)) precioMax = max;
-
-            if (int.TryParse(txtStockMin.Text, out int sMin)) stockMin = sMin;
-            if (int.TryParse(txtStockMax.Text, out int sMax)) stockMax = sMax;
-
-            bool? conDescuento = null;
-            if (ddlConDescuentoFiltro.SelectedValue == "true") conDescuento = true;
-            else if (ddlConDescuentoFiltro.SelectedValue == "false") conDescuento = false;
-
-            // Obtener resultados filtrados del WebService
-            var productosFiltrados = productoService.filtrarProductos(
-                categoriaNombre,
-                activo ?? true, // Si no se seleccionó, asumir activo
-                precioMin ?? 0.0,
-                precioMax ?? double.MaxValue,
-                stockMin ?? 0,
-                stockMax ?? int.MaxValue,
-                conDescuento ?? false
-            );
-            if (productosFiltrados == null || !productosFiltrados.Any())
-            {
-                lblMensaje.Text = "⚠️ Producto no encontrado.";
-                lblMensaje.Visible = true;
-            }
-            else
-            {
-                lblMensaje.Visible = false;
-            }
-
-            // Mostrar en GridView
             gvProductos.DataSource = productosFiltrados;
             gvProductos.DataBind();
         }

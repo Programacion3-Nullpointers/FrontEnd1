@@ -33,8 +33,6 @@ namespace JMQPresentacion.Login
                 {
                     Response.Redirect("/Principal/Principal.aspx");
                 }
-
-               
             }
         }
 
@@ -58,14 +56,17 @@ namespace JMQPresentacion.Login
                 {
                     Session["Usuario"] = user;
 
+                    // Obtener nombre
                     string nombreMostrar = user.nombreUsuario.Split(' ')[0];
 
+                    // Si es admin, redirigir directamente sin JS
                     if (user.tipoUsuario == tipoUsuario.ADMIN)
                     {
                         Response.Redirect("/Admin/PrincipalAdmin.aspx");
                         return;
                     }
 
+                    // Si viene de una página protegida, redirigir sin esperar JS
                     if (Session["RedirectAfterLogin"] != null)
                     {
                         string redirect = Session["RedirectAfterLogin"].ToString();
@@ -74,11 +75,23 @@ namespace JMQPresentacion.Login
                         return;
                     }
 
-                    // 🟢 Guardar mensaje y redirigir a esta misma página para mostrar SweetAlert
-                    Session["MostrarBienvenida"] = nombreMostrar;
-                    Response.Redirect("/Principal/Principal.aspx");
+                    // Redirección común con SweetAlert
+                    string script = $@"
+                        Swal.fire({{
+                            icon: 'success',
+                            title: '¡Bienvenido, {nombreMostrar}!',
+                            text: 'Nos alegra tenerte de vuelta.',
+                            timer: 1800,
+                            showConfirmButton: false
+                        }});
+                        setTimeout(function() {{
+                            window.location.href = '/Principal/Principal.aspx';
+                        }}, 1800);";
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "bienvenidaLogin", script, true);
                     return;
                 }
+
                 else
                 {
                     lblError.Text = "Contraseña incorrecta.";

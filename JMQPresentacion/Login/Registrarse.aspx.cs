@@ -155,8 +155,6 @@ namespace JMQPresentacion.Login
 
             // Insertar usuario
             usuarioWSCLClient.registrarUsuario(user);
-
-            // Guardar en sesión y redirigir
             Session["Usuario"] = user;
 
             // Nombre a mostrar en mensaje
