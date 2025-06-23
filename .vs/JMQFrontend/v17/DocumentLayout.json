@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\jmqpresentacion\\agregarcarrito.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\agregarcarrito.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|c:\\users\\luis\\onedrive\\documentos\\proyecto_p3_ta\\frontend1\\jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\principal\\principal.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
@@ -43,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\pedidos\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\jmqpresentacion\\agregarcarrito.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\agregarcarrito.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\jmqpresentacion\\setredirect.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A681D1DC-2BF6-4039-BD21-A21249837B58}|JMQPresentacion\\JMQPresentacion.csproj|solutionrelative:jmqpresentacion\\setredirect.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -82,7 +82,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Carrito.aspx.cs",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
               "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\Carrito.aspx.cs",
@@ -95,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx.cs",
               "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Login.aspx.cs",
@@ -108,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Carrito.aspx",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Pedidos\\Carrito.aspx",
               "RelativeDocumentMoniker": "JMQPresentacion\\Pedidos\\Carrito.aspx",
@@ -121,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainLayout.Master.cs",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\MainLayout.Master.cs",
               "RelativeDocumentMoniker": "JMQPresentacion\\MainLayout.Master.cs",
@@ -134,12 +134,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainLayout.Master",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\MainLayout.Master",
               "RelativeDocumentMoniker": "JMQPresentacion\\MainLayout.Master",
               "ToolTip": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\MainLayout.Master",
               "RelativeToolTip": "JMQPresentacion\\MainLayout.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-06-22T22:11:08.098Z",
               "IsPinned": true,
@@ -147,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Login.aspx",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Login\\Login.aspx",
               "RelativeDocumentMoniker": "JMQPresentacion\\Login\\Login.aspx",
@@ -161,18 +162,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Principal.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx.cs",
-              "ToolTip": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx.cs",
-              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAYwDQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T05:45:15.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Principal.aspx",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx",
               "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx",
@@ -185,7 +174,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "AgregarCarrito.ashx.cs",
+              "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\AgregarCarrito.ashx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\AgregarCarrito.ashx.cs",
+              "ToolTip": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\AgregarCarrito.ashx.cs",
+              "RelativeToolTip": "JMQPresentacion\\AgregarCarrito.ashx.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T22:39:44.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Principal.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx.cs",
+              "RelativeDocumentMoniker": "JMQPresentacion\\Principal\\Principal.aspx.cs",
+              "ToolTip": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Principal\\Principal.aspx.cs",
+              "RelativeToolTip": "JMQPresentacion\\Principal\\Principal.aspx.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwDQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T05:45:15.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ModificarProductos.aspx",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarProductos.aspx",
               "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarProductos.aspx",
@@ -197,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ModificarProductos.aspx.cs",
               "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\Admin\\ModificarProductos.aspx.cs",
               "RelativeDocumentMoniker": "JMQPresentacion\\Admin\\ModificarProductos.aspx.cs",
@@ -242,18 +256,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T23:31:19.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AgregarCarrito.ashx.cs",
-              "DocumentMoniker": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\AgregarCarrito.ashx.cs",
-              "RelativeDocumentMoniker": "JMQPresentacion\\AgregarCarrito.ashx.cs",
-              "ToolTip": "C:\\Users\\LUIS\\OneDrive\\Documentos\\Proyecto_P3_TA\\FrontEnd1\\JMQPresentacion\\AgregarCarrito.ashx.cs",
-              "RelativeToolTip": "JMQPresentacion\\AgregarCarrito.ashx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T22:39:44.126Z"
             },
             {
               "$type": "Document",
