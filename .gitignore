@@ -1,34 +1,51 @@
+# ─────────────────────────────────────────────
 # Archivos generados por Visual Studio
+# ─────────────────────────────────────────────
 .vs/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
+# ─────────────────────────────────────────────
 # Archivos de build
+# ─────────────────────────────────────────────
 bin/
 obj/
+Debug/
+Release/
 *.dll
 *.pdb
 *.exe
 *.cache
 *.log
 
+# ─────────────────────────────────────────────
 # Paquetes
+# ─────────────────────────────────────────────
 packages/
 
-# Node/npm si usas cosas del frontend
+# ─────────────────────────────────────────────
+# Node.js / npm (por si se usa frontend)
+# ─────────────────────────────────────────────
 node_modules/
 
-# Configuraciones de IDE
+# ─────────────────────────────────────────────
+# Configuraciones de IDEs
+# ─────────────────────────────────────────────
 .idea/
 .vscode/
 *.iml
 
+# ─────────────────────────────────────────────
 # Archivos temporales y de conflictos
+# ─────────────────────────────────────────────
 *.orig
 *.rej
 *.tmp
 
-# Otros
+# ─────────────────────────────────────────────
+# Archivos sensibles o específicos del proyecto
+# ─────────────────────────────────────────────
 .env
+*.wsdl
