@@ -107,7 +107,7 @@
   </xs:complexType>
   <xs:complexType name="BuscarUsuarioPorCorreo">
     <xs:sequence>
-      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="BuscarUsuarioPorCorreoResponse">

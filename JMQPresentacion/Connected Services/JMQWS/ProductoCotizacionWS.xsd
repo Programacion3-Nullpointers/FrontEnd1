@@ -61,6 +61,14 @@
       <xs:element minOccurs="0" name="return" type="tns:productoCotizacion" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="RegistrarProdCotizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:productoCotizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarProdCotizacionResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="listarProductosPorCotizacion">
     <xs:sequence>
       <xs:element name="arg0" type="xs:int" />
@@ -70,14 +78,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:productoCotizacion" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="RegistrarProdCotizacion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:productoCotizacion" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="RegistrarProdCotizacionResponse">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="ActualizarPrecioProdCoti">
     <xs:sequence>
