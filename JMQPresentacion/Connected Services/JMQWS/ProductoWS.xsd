@@ -84,14 +84,6 @@
   <xs:complexType name="actualizarProductoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="reporteStock">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="reporteStockResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="registrarProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="producto" type="tns:producto" />
@@ -99,6 +91,14 @@
   </xs:complexType>
   <xs:complexType name="registrarProductoResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteStock">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteStockResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listaProducto">
     <xs:sequence />

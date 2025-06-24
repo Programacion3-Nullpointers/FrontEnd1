@@ -8,7 +8,9 @@
         <h2 class="h4 mb-3">Restablecer Contraseña</h2>
         <div class="card">
             <div class="card-body p-3">
-                <asp:Label ID="lblMensaje" runat="server" CssClass="small text-danger" Visible="false" />
+
+                <div id="mensajeFlotante" runat="server" style="display:none;" class="mensaje-flotante alert" />
+
 
                 <div class="mb-3">
                     <label class="form-label small">Nueva contraseña:</label>

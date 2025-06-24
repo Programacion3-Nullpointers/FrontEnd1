@@ -64,9 +64,7 @@ namespace JMQPresentacion.Login
 
                 if (resultado)
                 {
-                    lblMensaje.CssClass = "alert alert-success mt-2";
-                    lblMensaje.Text = "Tu contraseña ha sido restablecida correctamente.";
-                    lblMensaje.Visible = true;
+                    MostrarMensaje("Tu contraseña ha sido restablecida correctamente.", true);
                     btnRestablecer.Enabled = false;
                 }
                 else
@@ -80,11 +78,12 @@ namespace JMQPresentacion.Login
             }
         }
 
-        private void MostrarMensaje(string mensaje)
+        private void MostrarMensaje(string mensaje, bool esExito = false)
         {
-            lblMensaje.Text = mensaje;
-            lblMensaje.CssClass = "alert alert-danger mt-2";
-            lblMensaje.Visible = true;
+            mensajeFlotante.InnerText = mensaje;
+            mensajeFlotante.Attributes["class"] = "mensaje-flotante alert " + (esExito ? "alert-success" : "alert-danger");
+            mensajeFlotante.Style["display"] = "block";
         }
+
     }
 }

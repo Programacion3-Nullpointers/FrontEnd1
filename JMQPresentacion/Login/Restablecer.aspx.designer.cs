@@ -15,13 +15,13 @@ namespace JMQPresentacion.Login
     {
 
         /// <summary>
-        /// lblMensaje control.
+        /// mensajeFlotante control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mensajeFlotante;
 
         /// <summary>
         /// txtNuevaPassword control.
