@@ -7,128 +7,155 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace JMQPresentacion.Pedidos
+namespace JMQPresentacion.Admin
 {
 
 
-    public partial class MetodoPago
+    public partial class Reportes
     {
 
         /// <summary>
-        /// Control rblComprobante.
+        /// Control ddlMesInicioProd.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblComprobante;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesInicioProd;
 
         /// <summary>
-        /// Control pnlFactura.
+        /// Control txtAnioInicioProd.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFactura;
+        protected global::System.Web.UI.WebControls.TextBox txtAnioInicioProd;
 
         /// <summary>
-        /// Control txtRazonSocial.
+        /// Control ddlMesFinProd.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRazonSocial;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesFinProd;
 
         /// <summary>
-        /// Control txtRUC.
+        /// Control txtAnioFinProd.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRUC;
+        protected global::System.Web.UI.WebControls.TextBox txtAnioFinProd;
 
         /// <summary>
-        /// Control rbInterbank.
+        /// Control btnGenerarProd.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbInterbank;
+        protected global::System.Web.UI.WebControls.Button btnGenerarProd;
 
         /// <summary>
-        /// Control rbVisa.
+        /// Control ddlMesInicioStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbVisa;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesInicioStock;
 
         /// <summary>
-        /// Control pnlVisa.
+        /// Control txtAnioInicioStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlVisa;
+        protected global::System.Web.UI.WebControls.TextBox txtAnioInicioStock;
 
         /// <summary>
-        /// Control lblPagoTotal.
+        /// Control ddlMesFinStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPagoTotal;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesFinStock;
 
         /// <summary>
-        /// Control btnPagar.
+        /// Control txtAnioFinStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPagar;
+        protected global::System.Web.UI.WebControls.TextBox txtAnioFinStock;
 
         /// <summary>
-        /// Control divError.
+        /// Control btnGenerarStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divError;
+        protected global::System.Web.UI.WebControls.Button btnGenerarStock;
 
         /// <summary>
-        /// Control lblError.
+        /// Control ddlMesInicioClientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesInicioClientes;
 
         /// <summary>
-        /// Control lblTotal.
+        /// Control txtAnioInicioClientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.TextBox txtAnioInicioClientes;
 
         /// <summary>
-        /// Control lblTotal2.
+        /// Control ddlMesFinClientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesFinClientes;
+
+        /// <summary>
+        /// Control txtAnioFinClientes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAnioFinClientes;
+
+        /// <summary>
+        /// Control txtMinCompras.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMinCompras;
+
+        /// <summary>
+        /// Control btnGenerarClientes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenerarClientes;
     }
 }
