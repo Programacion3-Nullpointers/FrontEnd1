@@ -296,9 +296,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerPorTokenResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerProdCotizaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>

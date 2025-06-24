@@ -10,14 +10,9 @@
   <xs:element name="listarComprobantesResponse" type="tns:listarComprobantesResponse" />
   <xs:element name="registrarComprobante" type="tns:registrarComprobante" />
   <xs:element name="registrarComprobanteResponse" type="tns:registrarComprobanteResponse" />
-  <xs:complexType name="buscarComprobante">
+  <xs:complexType name="actualizarComprobante">
     <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarComprobanteResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:comprobantePago" />
+      <xs:element minOccurs="0" name="comprobante" type="tns:comprobantePago" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="comprobantePago" abstract="true">
@@ -81,29 +76,24 @@
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="direccion" type="xs:string" />
       <xs:element minOccurs="0" name="dni" type="xs:string" />
-      <xs:element minOccurs="0" name="fecha_expiracion_token" type="xs:dateTime" />
       <xs:element name="id" type="xs:int" />
       <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
       <xs:element minOccurs="0" name="RUC" type="xs:string" />
       <xs:element minOccurs="0" name="razonsocial" type="xs:string" />
       <xs:element minOccurs="0" name="tipoUsuario" type="tns:tipoUsuario" />
-      <xs:element minOccurs="0" name="token_reset" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarComprobante">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="comprobante" type="tns:comprobantePago" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarComprobanteResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarComprobantes">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarComprobantesResponse">
+  <xs:complexType name="buscarComprobante">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comprobantePago" />
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarComprobanteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:comprobantePago" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarComprobante">
@@ -113,6 +103,14 @@
   </xs:complexType>
   <xs:complexType name="eliminarComprobanteResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarComprobantes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarComprobantesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comprobantePago" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="registrarComprobante">
     <xs:sequence>
