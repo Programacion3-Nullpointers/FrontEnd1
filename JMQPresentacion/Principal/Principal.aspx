@@ -6,24 +6,26 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
+    <!-- 🔹 ScriptManager necesario para SweetAlert -->
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             overflow-x: hidden;
         }
-      .card-img-container {
+
+        .card-img-container {
             width: 100%;
             height: 200px;
-            background-size: 120% auto;
+            background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
             background-color: #fff;
             border-top-left-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
         }
-
-
     </style>
 
     <!-- 🔹 Sección de bienvenida -->
@@ -63,7 +65,7 @@
             <ItemTemplate>
                 <div class="col mb-5">
                     <div class="card h-100 shadow border-0">
-                        <!-- Imagen con fondo (reemplazo de <img>) -->
+                        <!-- Imagen -->
                         <div class="card-img-container"
                              style='<%# "background-image: url(" + ConvertirByteAImagenBase64((byte[])Eval("imagen")) + ");" %>'>
                         </div>
@@ -76,21 +78,19 @@
 
                             <asp:Button ID="btnAgregar" runat="server" Text="Agregar al Carrito"
                                 CssClass="btn btn-outline-primary mt-auto"
-                                CommandArgument='<%# Eval("id") %>'
-                                OnClick="btnAgregarProductos_Click" />
+                                OnClientClick='<%# "agregarAlCarrito(" + Eval("id") + "); return false;" %>' />
                         </div>
                     </div>
                 </div>
             </ItemTemplate>
 
-
             <FooterTemplate>
-                </div> <!-- Cierre final del grid -->
+                </div> <!-- cierre del grid -->
             </FooterTemplate>
         </asp:Repeater>
     </div>
 
-    <!-- 🔹 Sección de cotización -->
+    <!-- 🔹 Sección Cotizar -->
     <div class="container mt-5 mb-5 text-center">
         <div class="row justify-content-center">
             <div class="col-md-8 p-4 border rounded" style="background-color: #f8f9fa;">
@@ -120,6 +120,42 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
+    <!-- ✅ SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- ✅ Script para agregar al carrito -->
+    <script>
+        function agregarAlCarrito(idProducto) {
+            fetch(`/AgregarCarrito.ashx?id=${idProducto}`, { credentials: 'include' })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Agregado al carrito',
+                            text: data.message,
+                            timer: 1500,
+                            showConfirmButton: false
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: data.message
+                        });
+                    }
+                })
+                .catch(() => {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error inesperado',
+                        text: 'No se pudo agregar el producto al carrito.'
+                    });
+                });
+        }
+    </script>
+
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="Public/js/scripts.js"></script>
 </asp:Content>
