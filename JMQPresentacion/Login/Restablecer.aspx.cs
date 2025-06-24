@@ -23,11 +23,17 @@ namespace JMQPresentacion.Login
                 try
                 {
                     UsuarioWSClient client = new UsuarioWSClient();
-                    var usuario = client.obtenerPorToken(token);  // esto validará expiración también
+                    bool esValido = client.validarTokenPassword(token);
+
+                    if (!esValido)
+                    {
+                        MostrarMensaje("El enlace ha expirado o no es válido.");
+                        btnRestablecer.Enabled = false;
+                    }
                 }
                 catch (System.Exception ex)
                 {
-                    MostrarMensaje("Token inválido o expirado: " + ex.Message);
+                    MostrarMensaje("Error al validar el token: " + ex.Message);
                     btnRestablecer.Enabled = false;
                 }
             }
@@ -65,7 +71,7 @@ namespace JMQPresentacion.Login
                 }
                 else
                 {
-                    MostrarMensaje("El token ha expirado o ya fue utilizado.");
+                    MostrarMensaje("No fue posible cambiar la contraseña.");
                 }
             }
             catch (System.Exception ex)
