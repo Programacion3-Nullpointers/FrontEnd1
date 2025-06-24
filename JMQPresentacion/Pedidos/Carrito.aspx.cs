@@ -74,7 +74,7 @@ namespace JMQPresentacion.Pedidos
             // Guardar en sesión y registrar
             if (Session["Orden"] == null)
             {
-                ordenVentaService.registrarOrdenVentaService(orden);
+                orden = ordenVentaService.registrarOrdenVentaService(orden);
                 Session["Orden"] = orden;
             }
 
