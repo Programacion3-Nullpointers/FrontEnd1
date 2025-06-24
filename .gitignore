@@ -57,3 +57,4 @@ node_modules/
 *.svcmap
 # Ignorar archivos de servicios conectados
 JMQPresentacion/Connected Services/
+
