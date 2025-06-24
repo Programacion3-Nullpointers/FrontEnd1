@@ -16,21 +16,16 @@ namespace JMQPresentacion.Usuarios
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (Session["usuario"] == null)
+            if (Session["Usuario"] == null || ((usuario)Session["Usuario"]).tipoUsuario != tipoUsuario.ADMIN)
             {
+                // Redirigir al login u otra acción
                 Response.Redirect("~/Login/Login.aspx");
+                return;
             }
             usuarioWSCLClient = new JMQWS.UsuarioWSClient();
         }
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Validar si el usuario ha iniciado sesión
-            if (Session["Usuario"] == null)
-            {
-                Response.Redirect("~/Acceso/NoAutorizado.aspx");
-                return;
-            }
             if (!IsPostBack)
             {
                 // Si no hay lista guardada en sesión, inicialízala con algunos datos de ejemplo
@@ -172,7 +167,6 @@ namespace JMQPresentacion.Usuarios
                 user.razonsocial = txtRazonSocialMod.Text;
                 user.direccion = txtDireccionMod.Text;
                 user.RUC = txtRUCMod.Text;
-                
 
                  usuarioWSCLClient.actualizarUsuario(user);
             }

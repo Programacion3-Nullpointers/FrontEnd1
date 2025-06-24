@@ -1,29 +1,38 @@
-﻿using JMQPresentacion.JMQWS;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
+using JMQPresentacion.JMQWS;
 
 namespace JMQPresentacion.Cotizaciones
 {
     public partial class ListaCotizaciones : System.Web.UI.Page
     {
         private CotizacionWSClient cotizacionWSCLClient;
-        private ProductoCotizacionWSClient productoCotizacionWSClient;
 
         protected void Page_Init(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            usuario user = (usuario)Session["Usuario"];
+            if (user == null)
+            {
+                // Redirigir al login u otra acción
+                Response.Redirect("~/Login/Login.aspx");
+
+                return;
+            }
+
+=======
             if (Session["usuario"] == null)
             {
-                Response.Redirect("~/Login/Login.aspx");
+                Response.Redirect("~/Login.aspx");
             }
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
             cotizacionWSCLClient = new JMQWS.CotizacionWSClient();
-            productoCotizacionWSClient = new JMQWS.ProductoCotizacionWSClient();
             rptCotizaciones.ItemDataBound += rptCotizaciones_ItemDataBound;
 
         }
@@ -38,7 +47,13 @@ namespace JMQPresentacion.Cotizaciones
         private void CargarCotizaciones()
         {
             // Ejemplo: Obtener datos de la base de datos o servicio
-            usuario user = Session["usuario"] as usuario;
+<<<<<<< HEAD
+            usuario user = (usuario)Session["Usuario"];
+            var cotizaciones = cotizacionWSCLClient.obtenerCotizacionesPorUsuario(user.id); 
+
+            if (cotizaciones != null && cotizaciones.Length > 0) 
+=======
+            usuario user = Session["Usuario"] as usuario;
             if (user == null)
             {
                 // Redirigir al login u otra acción
@@ -50,6 +65,7 @@ namespace JMQPresentacion.Cotizaciones
             var cotizaciones = cotizacionWSCLClient.obtenerCotizacionesPorUsuario(user.id);
             
             if (cotizaciones != null && cotizaciones.Length > 0)
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
             {
                 rptCotizaciones.DataSource = cotizaciones;
                 rptCotizaciones.DataBind();
@@ -81,7 +97,7 @@ namespace JMQPresentacion.Cotizaciones
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 var cotizacion = (cotizacion)e.Item.DataItem;
-                cotizacion.productos = productoCotizacionWSClient.listarProductosPorCotizacion(cotizacion.id);
+
                 var rptProductos = (Repeater)e.Item.FindControl("rptProductos");
                 rptProductos.DataSource = cotizacion.productos;
                 rptProductos.DataBind();
@@ -91,9 +107,8 @@ namespace JMQPresentacion.Cotizaciones
         protected void VerDetalle_Click(object sender, EventArgs e)
         {
             LinkButton btn = (LinkButton)sender;
-            
             int idCotizacion = Convert.ToInt32(btn.CommandArgument);
-            //Session["cotizacion"] = 
+
             // Aquí puedes hacer lo que necesites, por ejemplo:
             // redirigir a otra página con el detalle, pasando el id como parámetro:
             Response.Redirect($"Cotiza.aspx?id={idCotizacion}");

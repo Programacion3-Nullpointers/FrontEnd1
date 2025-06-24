@@ -105,6 +105,25 @@
   <xs:complexType name="RegistrarEntregaResponse">
     <xs:sequence />
   </xs:complexType>
+<<<<<<< HEAD
+  <xs:complexType name="ListarEntregas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarEntregasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:entrega" />
+    </xs:sequence>
+  </xs:complexType>
+=======
+  <xs:complexType name="ActualizarEntrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:entrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarEntregaResponse">
+    <xs:sequence />
+  </xs:complexType>
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
   <xs:complexType name="BuscarEntrega">
     <xs:sequence>
       <xs:element name="arg0" type="xs:int" />

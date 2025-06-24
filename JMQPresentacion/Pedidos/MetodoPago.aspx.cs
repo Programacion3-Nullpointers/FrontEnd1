@@ -10,7 +10,6 @@ namespace JMQPresentacion.Pedidos
 {
     public partial class MetodoPago : System.Web.UI.Page
     {
-        private ComprobantePagoWSClient comprobanteService;
         private BoletaWSClient boletaService;
         private FacturaWSClient facturaService;
         protected void Page_Init(object sender, EventArgs e)
@@ -57,12 +56,19 @@ namespace JMQPresentacion.Pedidos
                 string textoSeleccionado = rblComprobante.SelectedItem.Text;
                 if (textoSeleccionado == "Factura")
                 {
+                    // Validar campos obligatorios para factura
+                    if (string.IsNullOrWhiteSpace(txtRazonSocial.Text) || string.IsNullOrWhiteSpace(txtRUC.Text))
+                    {
+                        divError.Style["display"] = "block";
+                        lblError.Text = "Debe completar la Razón Social y el RUC para emitir una factura.";
+                        return;
+                    }
                     try
                     {
                         factura factura1 = new factura
                         {
-                            RUC = ((usuario)Session["Usuario"]).RUC,
-                            razon_social = ((usuario)Session["Usuario"]).razonsocial,
+                            RUC = txtRUC.Text.Trim(),
+                            razon_social = txtRazonSocial.Text.Trim(),
                             direccion = ((usuario)Session["Usuario"]).direccion,
                             fecha_emision = DateTime.Now,
                             orden = (ordenVenta)Session["Orden"],
@@ -117,6 +123,11 @@ namespace JMQPresentacion.Pedidos
                 }
                 Response.Redirect("/Principal/Principal.aspx");
             }
+        }
+
+        protected void rblComprobante_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pnlFactura.Visible = rblComprobante.SelectedValue == "Factura";
         }
     }
 }
