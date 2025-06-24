@@ -18,16 +18,15 @@ namespace JMQPresentacion.Admin
         {
             if (Session["usuario"] == null)
             {
-            Response.Redirect("~/Login.aspx");
+                Response.Redirect("~/Login.aspx");
             }
 
             productoService = new JMQWS.ProductoWSClient();
+            categoriaService = new JMQWS.CategoriaWSClient();
         }
-
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Validar si el usuario ha iniciado sesión
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("~/Acceso/NoAutorizado.aspx");
@@ -35,20 +34,107 @@ namespace JMQPresentacion.Admin
             }
             if (!IsPostBack)
             {
-                // Si no hay lista guardada en sesión, inicialízala con algunos datos de ejemplo
-                if (Session["Productos"] == null)
-                {
-                    List<producto> listaInicial = new List<producto>();
-                    listaInicial = productoService.listaProducto().ToList();
-                    Session["Productos"] = listaInicial;
-                }
+                var categorias = categoriaService.ListarCategorias();
 
-                // Mostrar la tabla
-                List<producto> lista = Session["Productos"] as List<producto>;
-                gvProductos.DataSource = lista.OrderBy(u => u.id).ToList();
+                ddlCategoriaFiltro.DataSource = categorias;
+                ddlCategoriaFiltro.DataTextField = "nombre";
+                ddlCategoriaFiltro.DataValueField = "nombre";
+                ddlCategoriaFiltro.DataBind();
+
+                ddlCategoriaFiltro.Items.Insert(0, new ListItem("Todas las categorías", ""));
+
+                var productos = productoService.listaProducto().ToList();
+                Session["Productos"] = productos;
+                Session["TodosLosProductos"] = productos;
+
+                gvProductos.DataSource = productos.OrderBy(p => p.id).ToList();
+                gvProductos.DataBind();
+
+                txtBuscarNombre.Attributes["list"] = "listaProductos";
+                listaProductos.InnerHtml = "";
+                foreach (var p in productos)
+                {
+                    listaProductos.InnerHtml += $"<option value='{Server.HtmlEncode(p.nombre)}' />";
+                }
+            }
+        }
+
+        protected void btnBuscarNombre_Click(object sender, EventArgs e)
+        {
+            string termino = txtBuscarNombre.Text.Trim().ToLower();
+            var lista = Session["TodosLosProductos"] as List<producto>;
+
+            if (!string.IsNullOrEmpty(termino) && lista != null)
+            {
+                var resultado = lista
+                    .Where(p => p.nombre != null && p.nombre.ToLower().Contains(termino))
+                    .ToList();
+
+                lblMensaje.Visible = resultado.Count == 0;
+                lblMensaje.Text = resultado.Count == 0 ? "⚠️ Producto no encontrado." : "";
+
+                gvProductos.DataSource = resultado;
                 gvProductos.DataBind();
             }
+            else
+            {
+                lblMensaje.Text = "Ingrese un nombre válido para buscar.";
+                lblMensaje.Visible = true;
+                gvProductos.DataSource = null;
+                gvProductos.DataBind();
+            }
+        }
 
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            var lista = productoService.listaProducto().ToList();
+            Session["Productos"] = lista;
+            Session["TodosLosProductos"] = lista;
+
+            gvProductos.DataSource = lista.OrderBy(p => p.id).ToList();
+            gvProductos.DataBind();
+
+            txtBuscarNombre.Text = "";
+        }
+
+        protected void btnAplicarFiltros_Click(object sender, EventArgs e)
+        {
+            string categoriaNombre = ddlCategoriaFiltro.SelectedValue;
+            bool? activo = null;
+
+            if (ddlActivoFiltro.SelectedValue == "true") activo = true;
+            else if (ddlActivoFiltro.SelectedValue == "false") activo = false;
+
+            double? precioMin = null;
+            double? precioMax = null;
+            int? stockMin = null;
+            int? stockMax = null;
+
+            if (double.TryParse(txtPrecioMin.Text, out double min)) precioMin = min;
+            if (double.TryParse(txtPrecioMax.Text, out double max)) precioMax = max;
+
+            if (int.TryParse(txtStockMin.Text, out int sMin)) stockMin = sMin;
+            if (int.TryParse(txtStockMax.Text, out int sMax)) stockMax = sMax;
+
+            bool? conDescuento = null;
+            if (ddlConDescuentoFiltro.SelectedValue == "true") conDescuento = true;
+            else if (ddlConDescuentoFiltro.SelectedValue == "false") conDescuento = false;
+
+            var productosFiltrados = productoService.filtrarProductos(
+                categoriaNombre,
+                activo ?? true,
+                precioMin ?? 0.0,
+                precioMax ?? double.MaxValue,
+                stockMin ?? 0,
+                stockMax ?? int.MaxValue,
+                conDescuento ?? false
+            );
+
+            lblMensaje.Visible = productosFiltrados == null || !productosFiltrados.Any();
+            lblMensaje.Text = "⚠️ Producto no encontrado.";
+
+            gvProductos.DataSource = productosFiltrados;
+            gvProductos.DataBind();
         }
 
         protected void btnGuardarProducto_Click(object sender, EventArgs e)
@@ -94,9 +180,9 @@ namespace JMQPresentacion.Admin
                     nombre = txtCategoriaNombre.Text
                 };
                 nuevo.descripcion = txtDescripcion.Text;
-                if (fuImagen.HasFile)
+                if (fileUploadFotoProducto.HasFile)
                 {
-                    nuevo.imagen = fuImagen.FileBytes;
+                    nuevo.imagen = fileUploadFotoProducto.FileBytes;
                 }
                 else
                 {
@@ -234,9 +320,9 @@ namespace JMQPresentacion.Admin
                 prod.descripcion = txtDescripcionMod.Text;
 
                 // ✅ Asignar nueva imagen si se subió
-                if (fuImagen.HasFile)
+                if (fileUploadFotoProducto.HasFile)
                 {
-                    prod.imagen = fuImagen.FileBytes;
+                    prod.imagen = fileUploadFotoProducto.FileBytes;
                 }
 
                 prod.precio = Convert.ToDouble(txtPrecioMod.Text);
@@ -255,6 +341,7 @@ namespace JMQPresentacion.Admin
             Session["Productos"] = lista;
             gvProductos.DataSource = lista.OrderBy(u => u.id).ToList();
             gvProductos.DataBind();
+
 
             ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModalModificar", "cerrarModalModificar();", true);
         }
