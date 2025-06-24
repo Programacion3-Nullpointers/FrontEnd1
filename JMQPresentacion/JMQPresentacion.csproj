@@ -69,7 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Acceso\NoAutorizado.aspx" />
     <Content Include="Admin\CotizacionesAdmin.aspx" />
     <Content Include="Admin\Descuentos.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
@@ -89,12 +88,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarDescuentoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarDetalleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarEntregaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarEstadoCotizacionResponse.datasource">
@@ -142,12 +135,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.BuscarDescuentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.BuscarDetalleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.BuscarEntregaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarFacturaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -166,9 +153,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.buscarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.categoria.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -182,9 +166,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.descuento.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.detalle.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarBoletaResponse.datasource">
@@ -205,12 +186,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarDetalleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarEntregaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarFacturaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -229,9 +204,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.eliminarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.entrega.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.enviarNotificacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -239,9 +211,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.helloResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listaProductoResponse.datasource">
@@ -257,12 +226,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarCotizacionesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarDetallesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarEntregasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarFacturasResponse.datasource">
@@ -295,12 +258,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerPorTokenResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerProdCotizaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ordenVenta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -325,12 +282,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarDescuentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarDetalleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarEntregaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarFacturaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -338,9 +289,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarProductoResponse.datasource">
@@ -352,12 +300,68 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarProductosResponse.datasource">
+    <None Include="Connected Services\JMQWS\DetalleWS.wsdl" />
+    <None Include="Connected Services\JMQWS\DetalleWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JMQWS\EntregaWS.wsdl" />
+    <None Include="Connected Services\JMQWS\EntregaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarDetalleResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarDescuentosResponse.datasource">
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ActualizarEntregaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.BuscarDetalleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.BuscarEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.detalle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarDetalleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.EliminarEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.entrega.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarDetallesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarEntregasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarDetalleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerProdCotizaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+<<<<<<< HEAD
+=======
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerPorTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+>>>>>>> 349ad7d0a711a0a273ebc5883bf4019d252c7d8f
     <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -365,9 +369,9 @@
     <Content Include="Cotizaciones\ListaCotizaciones.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\OlvidarContraseña.aspx" />
+    <Content Include="Login\Reestablecer.aspx" />
     <Content Include="Login\Registrarse.aspx" />
     <Content Include="Admin\Pagos.aspx" />
-    <Content Include="Login\Restablecer.aspx" />
     <Content Include="Pedidos\Carrito.aspx" />
     <Content Include="Cotizaciones\Cotiza.aspx" />
     <Content Include="Pedidos\DatosEntrega.aspx" />
@@ -446,14 +450,6 @@
     <None Include="Connected Services\JMQWS\DescuentoWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\JMQWS\DetalleWS.wsdl" />
-    <None Include="Connected Services\JMQWS\DetalleWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\JMQWS\EntregaWS.wsdl" />
-    <None Include="Connected Services\JMQWS\EntregaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\JMQWS\FacturaWS.wsdl" />
     <None Include="Connected Services\JMQWS\FacturaWS.xsd">
       <SubType>Designer</SubType>
@@ -488,13 +484,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Acceso\NoAutorizado.aspx.cs">
-      <DependentUpon>NoAutorizado.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Acceso\NoAutorizado.aspx.designer.cs">
-      <DependentUpon>NoAutorizado.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\CotizacionesAdmin.aspx.cs">
       <DependentUpon>CotizacionesAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -549,19 +538,19 @@
     <Compile Include="Login\OlvidarContraseña.aspx.designer.cs">
       <DependentUpon>OlvidarContraseña.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login\Reestablecer.aspx.cs">
+      <DependentUpon>Reestablecer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Reestablecer.aspx.designer.cs">
+      <DependentUpon>Reestablecer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login\Registrarse.aspx.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login\Registrarse.aspx.designer.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login\Restablecer.aspx.cs">
-      <DependentUpon>Restablecer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login\Restablecer.aspx.designer.cs">
-      <DependentUpon>Restablecer.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainLayout.Master.cs">
       <DependentUpon>MainLayout.Master</DependentUpon>
