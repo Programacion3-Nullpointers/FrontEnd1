@@ -14,7 +14,7 @@
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="ID" />
                 <asp:BoundField DataField="nombreUsuario" HeaderText="Nombre de Usuario" />
-                <asp:BoundField DataField="tipoUsuario" HeaderText="Tipo de Usuario" />
+                <asp:BoundField DataField="tipoUsuario" HeaderText="Tipo de Usuario" /> 
                 <asp:BoundField DataField="correo" HeaderText="Correo" />
                 <asp:BoundField DataField="razonsocial" HeaderText="Razón Social" />
                 <asp:BoundField DataField="direccion" HeaderText="Dirección" />
@@ -34,7 +34,7 @@
     <asp:Panel ID="pnlModalAgregar" runat="server" CssClass="modal" Style="display: none;">
         <div class="modal-content">
             <span class="cerrar" onclick="cerrarModal()">&times;</span>
-            <h3>Agregar Usuario</h3>
+            <h3>Modificar Usuario</h3>
 
             <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="input-modal" placeholder="Nombre de Usuario" />
             <asp:TextBox ID="txtCorreo" runat="server" CssClass="input-modal" placeholder="Correo" />
