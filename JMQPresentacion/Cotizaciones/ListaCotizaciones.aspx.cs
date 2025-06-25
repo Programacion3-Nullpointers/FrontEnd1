@@ -98,5 +98,7 @@ namespace JMQPresentacion.Cotizaciones
 
             // O cargar datos en un modal o panel en la misma página, según tu lógica
         }
+        
+
     }
 }

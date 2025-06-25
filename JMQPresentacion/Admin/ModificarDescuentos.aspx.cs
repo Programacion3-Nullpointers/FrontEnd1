@@ -58,14 +58,14 @@ namespace JMQPresentacion.Admin
                 {
                     user.numDescuento = Convert.ToInt32(txtnumDescuento.Text);
                     
-                    if (txtactivo.Text == "Activo")
-                    {
-                        user.activo = true;
-                    }
-                    else if (txtactivo.Text == "Inactivo")
-                    {
-                        user.activo = false;
-                    }
+                    //if (txtactivo.Text == "Activo")
+                    //{
+                    //    user.activo = true;
+                    //}
+                    //else if (txtactivo.Text == "Inactivo")
+                    //{
+                    //    user.activo = false;
+                    //}
                     
                 }
 
@@ -81,7 +81,7 @@ namespace JMQPresentacion.Admin
                 descuento nuevo = new descuento();
                 nuevo.id = nuevoId;
                 nuevo.numDescuento = Convert.ToInt32(txtnumDescuento.Text);
-                nuevo.activo = txtactivo.Text.Trim() == "Activo";
+                //nuevo.activo = txtactivo.Text.Trim() == "Activo";
 
 
                 descuentoWSClient.RegistrarDescuento(nuevo);
@@ -95,7 +95,7 @@ namespace JMQPresentacion.Admin
 
             // Limpiar
             txtnumDescuento.Text = "";
-            txtactivo.Text = "";
+            //txtactivo.Text = "";
             
 
             // Cerrar modal
@@ -136,14 +136,14 @@ namespace JMQPresentacion.Admin
                     {
                         hfIdDescuento.Value = usuario.id.ToString();
                         txtDescuentoMod.Text = usuario.numDescuento.ToString();
-                        if (usuario.activo == true)
-                        {
-                            txtActivoMod.Text = "Activo";
-                        }
-                        else
-                        {
-                            txtActivoMod.Text = "Inactivo";
-                        }
+                        //if (usuario.activo == true)
+                        //{
+                        //    txtActivoMod.Text = "Activo";
+                        //}
+                        //else
+                        //{
+                        //    txtActivoMod.Text = "Inactivo";
+                        //}
 
 
                             // Mostrar modal de modificación
@@ -164,14 +164,14 @@ namespace JMQPresentacion.Admin
             if (user != null)
             {
                 user.numDescuento = Convert.ToInt32(txtDescuentoMod.Text);
-                if (txtActivoMod.Text == "Activo")
-                {
-                    user.activo = true;
-                }
-                else if (txtActivoMod.Text == "Inactivo")
-                {
-                    user.activo = false;
-                }
+                //if (txtActivoMod.Text == "Activo")
+                //{
+                //    user.activo = true;
+                //}
+                //else if (txtActivoMod.Text == "Inactivo")
+                //{
+                //    user.activo = false;
+                //}
 
 
                     descuentoWSClient.ActualizarDescuento(user);
