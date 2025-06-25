@@ -11,18 +11,34 @@ namespace JMQPresentacion.Admin
     public partial class Reportes : System.Web.UI.Page
     {
         private UsuarioWSClient usuarioWSClient;
+        private CategoriaWSClient categoriaWSClient;
         private ProductoWSClient productoWSClient;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             usuarioWSClient = new JMQWS.UsuarioWSClient();
             productoWSClient = new JMQWS.ProductoWSClient();
+            CargarCategorias();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void CargarCategorias()
+        {
+            List<categoria> categorias = categoriaWSClient.ListarCategorias().ToList();
+
+            ddlCategorias.DataSource = categorias;
+            ddlCategorias.DataTextField = "nombre"; 
+            ddlCategorias.DataValueField = "id";     
+            ddlCategorias.DataBind();
+
+            // Opción adicional manual: "Ninguno"
+            ddlCategorias.Items.Insert(0, new ListItem("Ninguno", "0"));
+        }
+
         protected void btnGenerarReporte_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -44,10 +60,7 @@ namespace JMQPresentacion.Admin
                         break;
 
                     case "btnGenerarStock":
-                        int? mesInicioStock = int.TryParse(ddlMesInicioStock.SelectedValue, out int tempMesInicioStock) ? tempMesInicioStock : (int?)null;
-                        int? anioInicioStock = int.TryParse(txtAnioInicioStock.Text, out int tempAnioInicioStock) ? tempAnioInicioStock : (int?)null;
-                        int? mesFinStock = int.TryParse(ddlMesFinStock.SelectedValue, out int tempMesFinStock) ? tempMesFinStock : (int?)null;
-                        int? anioFinStock = int.TryParse(txtAnioFinStock.Text, out int tempAnioFinStock) ? tempAnioFinStock : (int?)null;
+                        int categoriaId = int.Parse(ddlCategorias.SelectedValue);
                         // Lógica para reporte de stock
                         FileBuffer = productoWSClient.reporteStock();
                         break;

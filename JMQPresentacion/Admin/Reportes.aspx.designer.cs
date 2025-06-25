@@ -60,40 +60,31 @@ namespace JMQPresentacion.Admin
         protected global::System.Web.UI.WebControls.Button btnGenerarProd;
 
         /// <summary>
-        /// Control ddlMesInicioStock.
+        /// Control StockMin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMesInicioStock;
+        protected global::System.Web.UI.WebControls.TextBox StockMin;
 
         /// <summary>
-        /// Control txtAnioInicioStock.
+        /// Control StockMax.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAnioInicioStock;
+        protected global::System.Web.UI.WebControls.TextBox StockMax;
 
         /// <summary>
-        /// Control ddlMesFinStock.
+        /// Control ddlCategorias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMesFinStock;
-
-        /// <summary>
-        /// Control txtAnioFinStock.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAnioFinStock;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategorias;
 
         /// <summary>
         /// Control btnGenerarStock.
