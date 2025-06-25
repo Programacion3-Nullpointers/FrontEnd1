@@ -85,8 +85,8 @@
         <label>Año Fin</label>
         <asp:TextBox ID="txtAnioFinProd" runat="server" CssClass="input-modal" TextMode="Number"/>
 
-        <asp:Button ID="btnGenerarProd" runat="server" Text="Generar Reporte" CssClass="btn-add" 
-            OnClientClick="window.open('VerReporte.aspx', '_blank'); return false;" />
+        <asp:Button ID="btnGenerarProd" runat="server" Text="Generar Reporte" CssClass="btn-add" OnClick="btnGenerarReporte_Click"
+            OnClientClick="this.form.target='_blank'; setTimeout(function(){this.form.target='';}.bind(this), 100);" />
     </div>
 
     <!-- Reporte de Stock -->
@@ -131,8 +131,8 @@
         <label>Año Fin</label>
         <asp:TextBox ID="txtAnioFinStock" runat="server" CssClass="input-modal" TextMode="Number"/>
 
-        <asp:Button ID="btnGenerarStock" runat="server" Text="Generar Reporte" CssClass="btn-add" 
-            OnClientClick="window.open('VerReporte.aspx', '_blank'); return false;" />
+        <asp:Button ID="btnGenerarStock" runat="server" Text="Generar Reporte" CssClass="btn-add" OnClick="btnGenerarReporte_Click"
+            OnClientClick="this.form.target='_blank'; setTimeout(function(){this.form.target='';}.bind(this), 100);" />
     </div>
 
     <!-- Reporte Clientes Recurrentes -->
@@ -180,8 +180,8 @@
         <label>Mínimo de Compras</label>
         <asp:TextBox ID="txtMinCompras" runat="server" CssClass="input-modal" placeholder="Ej. 3"/>
 
-        <asp:Button ID="btnGenerarClientes" runat="server" Text="Generar Reporte" CssClass="btn-add" 
-            OnClientClick="window.open('VerReporte.aspx', '_blank'); return false;" />
+        <asp:Button ID="btnGenerarClientes" runat="server" Text="Generar Reporte" CssClass="btn-add" OnClick="btnGenerarReporte_Click"
+            OnClientClick="this.form.target='_blank'; setTimeout(function(){this.form.target='';}.bind(this), 100);" />
     </div>
 </asp:Content>
 

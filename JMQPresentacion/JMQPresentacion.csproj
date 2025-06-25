@@ -296,9 +296,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerPorTokenResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerProdCotizaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -368,10 +365,14 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.reporteStockResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.validarTokenPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Cotizaciones\DetalleCotizacion.aspx" />
     <Content Include="Cotizaciones\ListaCotizaciones.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\OlvidarContraseña.aspx" />
@@ -533,6 +534,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Cotizaciones\DetalleCotizacion.aspx.cs">
+      <DependentUpon>DetalleCotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cotizaciones\DetalleCotizacion.aspx.designer.cs">
+      <DependentUpon>DetalleCotizacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cotizaciones\ListaCotizaciones.aspx.cs">
       <DependentUpon>ListaCotizaciones.aspx</DependentUpon>

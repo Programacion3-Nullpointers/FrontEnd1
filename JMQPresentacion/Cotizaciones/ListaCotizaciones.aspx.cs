@@ -16,6 +16,7 @@ namespace JMQPresentacion.Cotizaciones
 
         protected void Page_Init(object sender, EventArgs e)
         {
+
             if (Session["usuario"] == null)
             {
                 Response.Redirect("~/Login.aspx");
@@ -35,6 +36,7 @@ namespace JMQPresentacion.Cotizaciones
         private void CargarCotizaciones()
         {
             // Ejemplo: Obtener datos de la base de datos o servicio
+
             usuario user = Session["Usuario"] as usuario;
             if (user == null)
             {
@@ -92,7 +94,7 @@ namespace JMQPresentacion.Cotizaciones
 
             // Aquí puedes hacer lo que necesites, por ejemplo:
             // redirigir a otra página con el detalle, pasando el id como parámetro:
-            Response.Redirect($"Cotiza.aspx?id={idCotizacion}");
+            Response.Redirect($"DetalleCotizacion.aspx?id={idCotizacion}");
 
             // O cargar datos en un modal o panel en la misma página, según tu lógica
         }
