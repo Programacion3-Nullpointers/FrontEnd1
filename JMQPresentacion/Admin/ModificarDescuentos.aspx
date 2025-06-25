@@ -11,8 +11,6 @@
         <Columns>
             <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="numDescuento" HeaderText="Porcentaje" />
-            <asp:BoundField DataField="activo" HeaderText="Estado" /> 
-            
 
             <asp:TemplateField HeaderText="Acciones">
                 <ItemTemplate>
@@ -31,7 +29,7 @@
         <h3>Modificar Usuario</h3>
 
         <asp:TextBox ID="txtnumDescuento" runat="server" CssClass="input-modal" placeholder="Descuento" />
-        <asp:TextBox ID="txtactivo" runat="server" CssClass="input-modal" placeholder="activo" />
+        <%--<asp:TextBox ID="txtactivo" runat="server" CssClass="input-modal" placeholder="activo" />--%>
         
         <asp:Button ID="btnGuardarDescuento" runat="server" Text="Guardar" CssClass="btn-add" OnClick="btnGuardarDescuento_Click" />
     </div>
@@ -46,7 +44,7 @@
         <asp:HiddenField ID="hfIdDescuento" runat="server" />
 
         <asp:TextBox ID="txtDescuentoMod" runat="server" CssClass="input-modal" placeholder="Descuento" />
-        <asp:TextBox ID="txtActivoMod" runat="server" CssClass="input-modal" placeholder="Activo" />
+        <%--<asp:TextBox ID="txtActivoMod" runat="server" CssClass="input-modal" placeholder="Activo" />--%>
         
         <asp:Button ID="btnActualizarDescuento" runat="server" Text="Actualizar" CssClass="btn-edit" OnClick="btnActualizarDescuento_Click" />
     </div>
