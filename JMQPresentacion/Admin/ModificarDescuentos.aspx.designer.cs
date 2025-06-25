@@ -42,15 +42,6 @@ namespace JMQPresentacion.Admin
         protected global::System.Web.UI.WebControls.TextBox txtnumDescuento;
 
         /// <summary>
-        /// Control txtactivo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtactivo;
-
-        /// <summary>
         /// Control btnGuardarDescuento.
         /// </summary>
         /// <remarks>
@@ -85,15 +76,6 @@ namespace JMQPresentacion.Admin
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescuentoMod;
-
-        /// <summary>
-        /// Control txtActivoMod.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtActivoMod;
 
         /// <summary>
         /// Control btnActualizarDescuento.

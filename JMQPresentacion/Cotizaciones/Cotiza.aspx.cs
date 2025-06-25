@@ -42,7 +42,7 @@ namespace JMQPresentacion.Pedidos
                     int idCotizacion = Convert.ToInt32(Request.QueryString["id"]);
                     //usuario usu = Session["usuario"] as usuario;
                     //cotizacion coti = cotizacionWSClient.buscarCotizacion(usu.id);
-                    CargarCotizacion(idCotizacion);
+                    //CargarCotizacion(idCotizacion);
                 }
             }
         }
@@ -91,29 +91,7 @@ namespace JMQPresentacion.Pedidos
             
         }
 
-        private void CargarCotizacion(int id)
-        {
-            try
-            {
-                
-                // Llama a tu servicio web CotizacionWS
-                cotizacion cotiza = cotizacionWSClient.buscarCotizacion(id); // O el método correcto según tu WS
-
-                // Muestra los datos generales (por ejemplo, en labels)
-                lblEstado.Text = cotiza.estadoCotizacion.ToString();
-                
-
-                // Carga productos asociados
-                var productos = productoCotizacionWSClient.listarProductosPorCotizacion(id);
-
-                gvProductos.DataSource = productos;
-                gvProductos.DataBind();
-            }
-            catch (System.Exception ex)
-            {
-                lblError.Text = "Error al cargar la cotización: " + ex.Message;
-            }
-        }
+        
 
         protected void btnEnviarCotizacion_Click(object sender, EventArgs e)
         {
