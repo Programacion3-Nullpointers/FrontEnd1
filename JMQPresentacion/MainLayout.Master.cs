@@ -3,32 +3,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 using JMQPresentacion.JMQWS;  // Asegúrate que 'detalle' esté en este namespace
 
 namespace JMQPresentacion
 {
     public partial class MainLayout : System.Web.UI.MasterPage
     {
+        protected HtmlButton btnUserDropdown;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                // Verifica si estos controles están declarados en el .master correctamente
-                phLogin.Visible = Session["Usuario"] == null;
-                phLogout.Visible = Session["Usuario"] != null;
+                if (Session["Usuario"] != null)
+                {
+                    usuario user = (usuario)Session["Usuario"];
+                    lblNombreUsuario.Text = $"{user.nombreUsuario}"; // Asume propiedades 'nombre' y 'apellido'
+
+                    phLogin.Visible = false;           // Oculta el PlaceHolder de "Iniciar Sesión"
+                    phUsuarioLogueado.Visible = true;  // Muestra el PlaceHolder del dropdown de usuario
+                }
+                else
+                {
+                    phLogin.Visible = true;            // Muestra el PlaceHolder de "Iniciar Sesión"
+                    phUsuarioLogueado.Visible = false; // Oculta el PlaceHolder del dropdown de usuario
+                }
 
                 // Asegúrate que btnLogout.Top y btnLogout (sidebar) no choquen en nombres o acciones
                 MostrarCantidadCarrito();
             }
         }
 
-        protected void btnLogout_Click(object sender, EventArgs e)
+        protected void lbCerrarSesion_Click(object sender, EventArgs e)
         {
-            Session["Usuario"] = null;
-            Response.Redirect("/Principal/Principal.aspx?logout=1");
-      
+            Session.Clear();
+            Session.Abandon();
+            FormsAuthentication.SignOut(); // Si usas autenticación de formularios
+            Response.Redirect("~/Login/Login.aspx");
+
         }
 
         private void MostrarCantidadCarrito()

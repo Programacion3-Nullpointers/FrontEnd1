@@ -23,7 +23,7 @@ namespace JMQPresentacion.Principal
             {
                 CargarProductos();
 
-                LinkButton boton = Master.FindControl("btnLogout") as LinkButton;
+                LinkButton boton = Master.FindControl("lbCerrarSesion") as LinkButton;
                 boton.Visible = Session["Usuario"] != null;
 
                 if (Request.QueryString["logout"] == "1")

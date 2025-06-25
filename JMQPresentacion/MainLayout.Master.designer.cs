@@ -33,15 +33,6 @@ namespace JMQPresentacion
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control btnLogout.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnLogout;
-
-        /// <summary>
         /// Control phLogin.
         /// </summary>
         /// <remarks>
@@ -51,22 +42,31 @@ namespace JMQPresentacion
         protected global::System.Web.UI.WebControls.PlaceHolder phLogin;
 
         /// <summary>
-        /// Control phLogout.
+        /// Control phUsuarioLogueado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phLogout;
+        protected global::System.Web.UI.WebControls.PlaceHolder phUsuarioLogueado;
 
         /// <summary>
-        /// Control btnLogoutTop.
+        /// Control lblNombreUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnLogoutTop;
+        protected global::System.Web.UI.WebControls.Label lblNombreUsuario;
+
+        /// <summary>
+        /// Control lbCerrarSesion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbCerrarSesion;
 
         /// <summary>
         /// Control litCantidadCarrito.

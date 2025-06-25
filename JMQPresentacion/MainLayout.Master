@@ -79,9 +79,9 @@
             <a class="menu-item" href="#">Compras</a>
             <a class="menu-item" href="/Cotizaciones/ListaCotizaciones.aspx">Cotizaciones</a>
             
-            <asp:LinkButton ID="btnLogout" runat="server" CssClass="menu-item logout" OnClick="btnLogout_Click" Visible="false">
+<%--            <asp:LinkButton ID="btnLogout" runat="server" CssClass="menu-item logout" OnClick="btnLogout_Click" Visible="false">
                 Logout
-            </asp:LinkButton>
+            </asp:LinkButton>--%>
         </div>
 
         <!-- NAVBAR -->
@@ -119,16 +119,23 @@
                 <!-- 🔧 FIN DE CORRECCIÓN -->
 
                 <div class="d-flex gap-2">
-                    <asp:PlaceHolder ID="phLogin" runat="server" Visible="false">
+                    <asp:PlaceHolder ID="phLogin" runat="server">
                         <a href="/Login/Login.aspx" class="btn btn-outline-light" title="Iniciar sesión">
-                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-user"></i> Iniciar Sesión
                         </a>
                     </asp:PlaceHolder>
 
-                    <asp:PlaceHolder ID="phLogout" runat="server" Visible="false">
-                        <asp:LinkButton ID="btnLogoutTop" runat="server" CssClass="btn btn-outline-danger" OnClick="btnLogout_Click" ToolTip="Cerrar sesión">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                        </asp:LinkButton>
+                    <asp:PlaceHolder ID="phUsuarioLogueado" runat="server">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" id="btnUserDropdown" data-bs-toggle="dropdown" aria-expanded="false" runat="server">
+                                <i class="fas fa-user"></i> <asp:Label ID="lblNombreUsuario" runat="server"></asp:Label>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnUserDropdown">
+                                <li><a class="dropdown-item" href="/Login/Reestablecer.aspx">Cambiar Contraseña</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><asp:LinkButton ID="lbCerrarSesion" runat="server" CssClass="dropdown-item" OnClick="lbCerrarSesion_Click">Cerrar Sesión</asp:LinkButton></li>
+                            </ul>
+                        </div>
                     </asp:PlaceHolder>
 
                     <a href="/Pedidos/Carrito.aspx" class="btn btn-outline-light position-relative" title="Ver carrito">
