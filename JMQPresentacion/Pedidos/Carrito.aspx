@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainLayout.Master" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="JMQPresentacion.Pedidos.Carrito" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
@@ -114,19 +113,5 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
-    <script>
-        // Mostrar SweetAlert si hay login=1 en la URL
-        window.addEventListener("DOMContentLoaded", function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get("login") === "1") {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Sesión iniciada',
-                    text: 'Has iniciado sesión correctamente.',
-                    timer: 1800,
-                    showConfirmButton: false
-                });
-            }
-        });
-    </script>
+    <!-- Ya no hay JavaScript adicional porque se eliminó el SweetAlert -->
 </asp:Content>

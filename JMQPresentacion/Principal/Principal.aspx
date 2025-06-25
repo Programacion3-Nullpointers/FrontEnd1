@@ -34,52 +34,29 @@
         <p class="text-center">Descubre nuestros mejores productos y ofertas exclusivas.</p>
     </div>
 
-  <!-- 🔍 Buscador + Filtros (ajustado) -->
-    <div class="container bg-light mt-4 p-4 rounded-4 shadow-sm border">
-        <div class="row g-3">
-            <!-- Fila superior: Buscador y botón -->
-            <div class="col-md-8">
-                <asp:TextBox ID="txtBuscarNombre" runat="server" CssClass="form-control shadow-sm" placeholder="Buscar producto..." />
-            </div>
-            <div class="col-md-4">
-                <asp:Button ID="btnBuscarNombre" runat="server" Text="🔍"
-                CssClass="btn btn-outline-primary shadow-sm px-3"
-                OnClick="btnBuscarNombre_Click" />
-            </div>
-
-            <!-- Fila inferior: Checkbox y Categoría -->
-            <div class="col-md-4 d-flex align-items-center">
-                <asp:CheckBox 
-                    ID="chkOfertas" 
-                    runat="server" 
-                    AutoPostBack="true"
-                    OnCheckedChanged="chkOfertas_CheckedChanged"
-                    CssClass="form-check-input me-2 shadow-sm" />
-                <label class="form-check-label fw-semibold text-success" for="chkOfertas">
-                    🎁 Ofertas especiales
-                </label>
-            </div>
-
-            <div class="col-md-8">
-                <label for="ddlCategoria" class="form-label fw-bold text-primary mb-1">🔍 Categoría:</label>
-                <asp:DropDownList 
-                    ID="ddlCategoria" 
-                    runat="server" 
-                    AutoPostBack="true"
-                    OnSelectedIndexChanged="ddlCategoria_SelectedIndexChanged"
-                    CssClass="form-select border-primary shadow-sm" />
+    <!-- 🔹 Beneficios -->
+    <div class="container-fluid bg-white py-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-3 mb-md-0 border-end border-secondary">
+                    <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">DELIVERY GRATIS</h5>
+                    <p class="mb-0 small">Para todo Lima, Perú<br> para compras a partir de S/. 200</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0 border-end border-secondary">
+                    <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">PAGO SEGURO</h5>
+                    <p class="mb-0 small">Aceptamos Visa, American Express<br> y Mastercard</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">ASISTENCIA 24/7</h5>
+                    <p class="mb-0 small">Si tiene algún problema, no dude en contactarnos<br>Llámanos: 203-4077</p>
+                </div>
             </div>
         </div>
     </div>
 
-
-
     <!-- 🔹 Productos Destacados -->
     <div class="container bg-white mt-5">
         <h2 class="text-center bg-white mb-4">Productos Destacados</h2>
-        <!-- ✅ Mensaje si no se encuentran productos -->
-        <asp:Label ID="lblMensaje" runat="server" Visible="false" CssClass="text-danger text-center fw-bold d-block mb-3" />
-
         <asp:Repeater ID="rptProductos" runat="server">
             <HeaderTemplate>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -112,25 +89,7 @@
             </FooterTemplate>
         </asp:Repeater>
     </div>
-     <!-- 🔹 Beneficios -->
-     <div class="container-fluid bg-white py-4">
-         <div class="container">
-             <div class="row text-center">
-                 <div class="col-md-4 mb-3 mb-md-0 border-end border-secondary">
-                     <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">DELIVERY GRATIS</h5>
-                     <p class="mb-0 small">Para todo Lima, Perú<br> para compras a partir de S/. 200</p>
-                 </div>
-                 <div class="col-md-4 mb-3 mb-md-0 border-end border-secondary">
-                     <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">PAGO SEGURO</h5>
-                     <p class="mb-0 small">Aceptamos Visa, American Express<br> y Mastercard</p>
-                 </div>
-                 <div class="col-md-4">
-                     <h5 class="text-uppercase fw-bold mb-2" style="color: #026670;">ASISTENCIA 24/7</h5>
-                     <p class="mb-0 small">Si tiene algún problema, no dude en contactarnos<br>Llámanos: 203-4077</p>
-                 </div>
-             </div>
-         </div>
-     </div>
+
     <!-- 🔹 Sección Cotizar -->
     <div class="container mt-5 mb-5 text-center">
         <div class="row justify-content-center">

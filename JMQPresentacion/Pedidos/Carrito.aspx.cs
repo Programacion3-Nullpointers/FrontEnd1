@@ -22,20 +22,6 @@ namespace JMQPresentacion.Pedidos
             {
                 VerificarSesion();
                 CargarCarrito();
-
-                // ✅ Mostrar mensaje si se viene desde el login
-                if (Request.QueryString["login"] == "1")
-                {
-                    string script = @"
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Sesión iniciada',
-                            text: 'Has iniciado sesión correctamente.',
-                            timer: 1800,
-                            showConfirmButton: false
-                        });";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "sesionIniciada", script, true);
-                }
             }
         }
 

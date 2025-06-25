@@ -156,13 +156,31 @@ namespace JMQPresentacion.Login
             // Insertar usuario
             user = usuarioWSCLClient.registrarUsuario(user);
             Session["Usuario"] = user;
-            usuarioWSCLClient.registrarUsuario(user);
 
-            // Guardar redirección al carrito (opcional)
-            Session["RedirectAfterLogin"] = "/Pedidos/Carrito.aspx";
+            // Nombre a mostrar en mensaje
+            string nombreMostrar = user.nombreUsuario.Split(' ')[0];
+            string destino = "/Principal/Principal.aspx";
 
-            // Redirigir directamente a Login.aspx sin usar JS
-            Response.Redirect("/Login/Login.aspx");
+            if (Session["RedirectAfterLogin"] != null)
+            {
+                destino = Session["RedirectAfterLogin"].ToString();
+                Session.Remove("RedirectAfterLogin");
+            }
+
+            // Mostrar mensaje de bienvenida y redirigir
+            string script = $@"
+                Swal.fire({{
+                    icon: 'success',
+                    title: '¡Bienvenido, {nombreMostrar}!',
+                    text: 'Tu registro fue exitoso.',
+                    timer: 1800,
+                    showConfirmButton: false
+                }});
+                setTimeout(function() {{
+                    window.location.href = '{destino}';
+                }}, 1800);";
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "bienvenidaRegistro", script, true);
         }
     }
 }

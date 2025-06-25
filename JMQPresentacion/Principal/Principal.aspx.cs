@@ -21,8 +21,7 @@ namespace JMQPresentacion.Principal
         {
             if (!IsPostBack)
             {
-                CargarCategoriasDesdeWS();
-                CargarProductosFiltrados();
+                CargarProductos();
 
                 LinkButton boton = Master.FindControl("btnLogout") as LinkButton;
                 boton.Visible = Session["Usuario"] != null;
@@ -39,7 +38,7 @@ namespace JMQPresentacion.Principal
 
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "logoutAlert", script, true);
                 }
-
+                // ✅ Mostrar bienvenida si viene de Login
                 if (Session["MostrarBienvenida"] != null)
                 {
                     string nombre = Session["MostrarBienvenida"].ToString();
@@ -59,93 +58,15 @@ namespace JMQPresentacion.Principal
             }
         }
 
-        protected void btnBuscarNombre_Click(object sender, EventArgs e)
+        private void CargarProductos()
         {
-            string termino = txtBuscarNombre.Text.Trim().ToLower();
-            var lista = (Session["TodosLosProductos"] as producto[])?.ToList();
+            List<producto> productos = productoService.listaProducto().ToList();
 
-            if (!string.IsNullOrEmpty(termino) && lista != null)
-            {
-                var resultado = lista
-                    .Where(p => p.nombre != null && p.nombre.ToLower().Contains(termino))
-                    .ToList();
+            // Filtrar productos con stock > 0
+            List<producto> productosConStock = productos.Where(p => p.stock > 0).ToList();
 
-                lblMensaje.Visible = resultado.Count == 0;
-                lblMensaje.Text = resultado.Count == 0 ? "⚠️ Producto no encontrado." : "";
-
-                rptProductos.DataSource = resultado;
-                rptProductos.DataBind();
-            }
-            else
-            {
-                lblMensaje.Text = "Ingrese un nombre válido para buscar.";
-                lblMensaje.Visible = true;
-                rptProductos.DataSource = null;
-                rptProductos.DataBind();
-            }
-        }
-
-        private void CargarProductosFiltrados()
-        {
-            string categoriaNombre = ddlCategoria.SelectedValue;
-            bool activo = true;
-
-            bool filtroCategoria = !string.IsNullOrEmpty(categoriaNombre) && categoriaNombre != "0";
-            bool filtroOfertas = chkOfertas.Checked;
-
-            producto[] productosFiltrados;
-
-            if (!filtroCategoria && !filtroOfertas)
-            {
-                productosFiltrados = productoService.listaProducto();
-                Session["TodosLosProductos"] = productosFiltrados;
-            }
-            else
-            {
-                string categoriaFinal = filtroCategoria ? categoriaNombre : null;
-                bool conDescuento = filtroOfertas;
-
-                productosFiltrados = productoService.filtrarProductos(
-                    categoriaFinal,
-                    activo,
-                    0.0,
-                    double.MaxValue,
-                    0,
-                    int.MaxValue,
-                    conDescuento
-                );
-                Session["TodosLosProductos"] = productosFiltrados;
-            }
-
-            lblMensaje.Visible = productosFiltrados == null || !productosFiltrados.Any();
-            lblMensaje.Text = "⚠️ No se encontraron productos.";
-
-            rptProductos.DataSource = productosFiltrados;
+            rptProductos.DataSource = productosConStock;
             rptProductos.DataBind();
-        }
-
-        private void CargarCategoriasDesdeWS()
-        {
-            CategoriaWSClient categoriaService = new CategoriaWSClient();
-            var categorias = categoriaService.ListarCategorias();
-
-            ddlCategoria.Items.Clear();
-            ddlCategoria.Items.Add(new ListItem("Todas las categorías", "")); // default
-
-            foreach (var cat in categorias)
-            {
-                ddlCategoria.Items.Add(new ListItem(cat.nombre, cat.nombre));
-            }
-        }
-
-        protected void ddlCategoria_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CargarProductosFiltrados();
-        }
-
-        protected void chkOfertas_CheckedChanged(object sender, EventArgs e)
-        {
-            CargarProductosFiltrados();
         }
 
         public string ConvertirByteAImagenBase64(byte[] datosImagen)

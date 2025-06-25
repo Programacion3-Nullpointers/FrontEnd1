@@ -57,7 +57,7 @@
 <asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content">
         <div class="welcome-text">
-            <h1>Bienvenido, <asp:Literal ID="litNombreAdmin" runat="server" /></h1>
+            <h1>Bienvenido, ((Administrador))</h1>
             <h2>Bienvenido a Inversiones JMQ</h2>
             <h3>Panel Administrativo</h3>
         </div>

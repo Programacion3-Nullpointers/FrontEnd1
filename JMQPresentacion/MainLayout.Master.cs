@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using JMQPresentacion.JMQWS;
+using JMQPresentacion.JMQWS;  // Asegúrate que 'detalle' esté en este namespace
 
 namespace JMQPresentacion
 {
@@ -14,20 +15,20 @@ namespace JMQPresentacion
         {
             if (!IsPostBack)
             {
+                // Verifica si estos controles están declarados en el .master correctamente
                 phLogin.Visible = Session["Usuario"] == null;
                 phLogout.Visible = Session["Usuario"] != null;
 
+                // Asegúrate que btnLogout.Top y btnLogout (sidebar) no choquen en nombres o acciones
                 MostrarCantidadCarrito();
             }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            // Limpiar sesión de usuario y carrito
             Session["Usuario"] = null;
-            Session["Cart"] = null; // 🟡 Aquí eliminamos el carrito también
-
             Response.Redirect("/Principal/Principal.aspx?logout=1");
+      
         }
 
         private void MostrarCantidadCarrito()

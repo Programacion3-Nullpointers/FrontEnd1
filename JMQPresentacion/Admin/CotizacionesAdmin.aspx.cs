@@ -51,16 +51,10 @@ namespace JMQPresentacion.Cotizaciones
                     //    new cotizacion{id = 1,usuario = demoUser,estadoCotizacion = "Pendiente" },
                     //    new cotizacion{id = 2,usuario = demoUser, estadoCotizacion = "Aprobada" }
                     //};
-                    var resultado = cotizacionWSClient.listarCotizaciones();
-                    List<cotizacion> listaInicial = resultado != null ? resultado.ToList() : new List<cotizacion>();
 
-                    if (listaInicial.Count == 0)
-                    {
-                        // Mostrar mensaje (ejemplo: etiqueta visible o alerta JS)
-                        ScriptManager.RegisterStartupScript(this, GetType(), "SinDatos", "alert('No hay cotizaciones por el momento.');", true);
-                    }
+                    List<cotizacion> listaInicial = cotizacionWSClient.listarCotizaciones().ToList();
+
                     Session["Cotizaciones"] = listaInicial;
-
                 }
 
                 CargarGrid();
@@ -69,24 +63,21 @@ namespace JMQPresentacion.Cotizaciones
 
         private void CargarGrid()
         {
-            var cotizaciones = cotizacionWSClient.listarCotizaciones();
-            List<cotizacion> lista = cotizaciones != null ? cotizaciones.ToList() : new List<cotizacion>();
-
-            Session["Cotizaciones"] = lista;
+            Session["Cotizaciones"] = cotizacionWSClient.listarCotizaciones().ToList();
+            List<cotizacion> lista = Session["Cotizaciones"] as List<cotizacion>;
 
             var gridData = lista.OrderBy(c => c.id)
                                 .Select(c => new
                                 {
                                     id = c.id,
-                                    nombreUsuario = c.usuario?.nombreUsuario ?? "—",
-                                    correo = c.usuario?.correo ?? "—",
+                                    nombreUsuario = c.usuario.nombreUsuario,
+                                    correo = c.usuario.correo,
                                     estado = c.estadoCotizacion
                                 }).ToList();
 
             gvCotizaciones.DataSource = gridData;
             gvCotizaciones.DataBind();
         }
-
 
         protected void btnGuardarCotizacion_Click(object sender, EventArgs e)
         {
