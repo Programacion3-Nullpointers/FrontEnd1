@@ -1,4 +1,4 @@
-﻿    <%@ Page Title="Generador de Reportes" Language="C#" MasterPageFile="~/Admin/MainLayout2.Master" AutoEventWireup="true" CodeBehind="Reportes.aspx.cs" Inherits="JMQPresentacion.Admin.Reportes" %>
+﻿<%@ Page Title="Generador de Reportes" Language="C#" MasterPageFile="~/Admin/MainLayout2.Master" AutoEventWireup="true" CodeBehind="Reportes.aspx.cs" Inherits="JMQPresentacion.Admin.Reportes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -49,7 +49,6 @@
 
         <label>Mes Inicio</label>
         <asp:DropDownList ID="ddlMesInicioProd" runat="server" CssClass="input-modal">
-            <asp:ListItem Text="---" Value="0" />
             <asp:ListItem Text="Enero" Value="1" />
             <asp:ListItem Text="Febrero" Value="2" />
             <asp:ListItem Text="Marzo" Value="3" />
@@ -65,11 +64,10 @@
         </asp:DropDownList>
 
         <label>Año Inicio</label>
-        <asp:TextBox ID="txtAnioInicioProd" runat="server" CssClass="input-modal" TextMode="Number"/>
+        <asp:TextBox ID="txtAnioInicioProd" runat="server" CssClass="input-modal" MaxLength="4" TextMode="Number"/>
 
         <label>Mes Fin</label>
         <asp:DropDownList ID="ddlMesFinProd" runat="server" CssClass="input-modal">
-            <asp:ListItem Text="---" Value="0" />
             <asp:ListItem Text="Enero" Value="1" />
             <asp:ListItem Text="Febrero" Value="2" />
             <asp:ListItem Text="Marzo" Value="3" />
@@ -95,13 +93,43 @@
     <div class="recuadro-reporte">
         <h4>Reporte de Stock</h4>
 
-        <label>Stock Mínimo</label>
-        <asp:TextBox ID="StockMin" runat="server" CssClass="input-modal" TextMode="Number"/>
+        <label>Mes Inicio</label>
+        <asp:DropDownList ID="ddlMesInicioStock" runat="server" CssClass="input-modal">
+            <asp:ListItem Text="Enero" Value="1" />
+            <asp:ListItem Text="Febrero" Value="2" />
+            <asp:ListItem Text="Marzo" Value="3" />
+            <asp:ListItem Text="Abril" Value="4" />
+            <asp:ListItem Text="Mayo" Value="5" />
+            <asp:ListItem Text="Junio" Value="6" />
+            <asp:ListItem Text="Julio" Value="7" />
+            <asp:ListItem Text="Agosto" Value="8" />
+            <asp:ListItem Text="Septiembre" Value="9" />
+            <asp:ListItem Text="Octubre" Value="10" />
+            <asp:ListItem Text="Noviembre" Value="11" />
+            <asp:ListItem Text="Diciembre" Value="12" />
+        </asp:DropDownList>
 
-        <label>Stock Máximo</label>
-        <asp:TextBox ID="StockMax" runat="server" CssClass="input-modal" TextMode="Number"/>
+        <label>Año Inicio</label>
+        <asp:TextBox ID="txtAnioInicioStock" runat="server" CssClass="input-modal" TextMode="Number"/>
 
-        <asp:DropDownList ID="ddlCategorias" runat="server" AutoPostBack="true" />
+        <label>Mes Fin</label>
+        <asp:DropDownList ID="ddlMesFinStock" runat="server" CssClass="input-modal">
+            <asp:ListItem Text="Enero" Value="1" />
+            <asp:ListItem Text="Febrero" Value="2" />
+            <asp:ListItem Text="Marzo" Value="3" />
+            <asp:ListItem Text="Abril" Value="4" />
+            <asp:ListItem Text="Mayo" Value="5" />
+            <asp:ListItem Text="Junio" Value="6" />
+            <asp:ListItem Text="Julio" Value="7" />
+            <asp:ListItem Text="Agosto" Value="8" />
+            <asp:ListItem Text="Septiembre" Value="9" />
+            <asp:ListItem Text="Octubre" Value="10" />
+            <asp:ListItem Text="Noviembre" Value="11" />
+            <asp:ListItem Text="Diciembre" Value="12" />
+        </asp:DropDownList>
+
+        <label>Año Fin</label>
+        <asp:TextBox ID="txtAnioFinStock" runat="server" CssClass="input-modal" TextMode="Number"/>
 
         <asp:Button ID="btnGenerarStock" runat="server" Text="Generar Reporte" CssClass="btn-add" OnClick="btnGenerarReporte_Click"
             OnClientClick="this.form.target='_blank'; setTimeout(function(){this.form.target='';}.bind(this), 100);" />
@@ -113,7 +141,6 @@
 
         <label>Mes Inicio</label>
         <asp:DropDownList ID="ddlMesInicioClientes" runat="server" CssClass="input-modal">
-            <asp:ListItem Text="---" Value="0" />
             <asp:ListItem Text="Enero" Value="1" />
             <asp:ListItem Text="Febrero" Value="2" />
             <asp:ListItem Text="Marzo" Value="3" />
@@ -133,7 +160,6 @@
 
         <label>Mes Fin</label>
         <asp:DropDownList ID="ddlMesFinClientes" runat="server" CssClass="input-modal">
-            <asp:ListItem Text="---" Value="0" />
             <asp:ListItem Text="Enero" Value="1" />
             <asp:ListItem Text="Febrero" Value="2" />
             <asp:ListItem Text="Marzo" Value="3" />

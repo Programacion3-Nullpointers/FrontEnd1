@@ -49,4 +49,12 @@ node_modules/
 # ─────────────────────────────────────────────
 .env
 *.wsdl
-JMQPresentacion/Connected Services/JMQWS/
+
+*.datasource
+*.svcinfo
+*.disco
+*.xsd
+*.svcmap
+# Ignorar archivos de servicios conectados
+JMQPresentacion/Connected Services/
+
