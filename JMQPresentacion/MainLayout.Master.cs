@@ -37,13 +37,12 @@ namespace JMQPresentacion
             }
         }
 
-        protected void lbCerrarSesion_Click(object sender, EventArgs e)
+        protected void btnLogout_Click(object sender, EventArgs e)
         {
+            // Lógica para cerrar la sesión del usuario
             Session.Clear();
             Session.Abandon();
-            FormsAuthentication.SignOut(); // Si usas autenticación de formularios
-            Response.Redirect("~/Login/Login.aspx");
-
+            Response.Redirect("~/Principal/Principal.aspx"); // Redirige a la página principal
         }
 
         private void MostrarCantidadCarrito()
