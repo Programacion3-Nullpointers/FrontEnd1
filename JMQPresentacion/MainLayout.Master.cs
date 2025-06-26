@@ -5,8 +5,10 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 using System.Web.UI.HtmlControls;
 using JMQPresentacion.JMQWS;  // Asegúrate que 'detalle' esté en este namespace
+
 
 namespace JMQPresentacion
 {
@@ -30,6 +32,8 @@ namespace JMQPresentacion
                     phLogin.Visible = true;            // Muestra el PlaceHolder de "Iniciar Sesión"
                     phUsuarioLogueado.Visible = false; // Oculta el PlaceHolder del dropdown de usuario
                 }
+                phLogin.Visible = Session["Usuario"] == null;
+                //phLogout.Visible = Session["Usuario"] != null;
 
                 MostrarCantidadCarrito();
             }
@@ -41,6 +45,11 @@ namespace JMQPresentacion
             Session.Clear();
             Session.Abandon();
             Response.Redirect("~/Principal/Principal.aspx"); // Redirige a la página principal
+            // Limpiar sesión de usuario y carrito
+            Session["Usuario"] = null;
+            Session["Cart"] = null; // 🟡 Aquí eliminamos el carrito también
+
+            Response.Redirect("/Principal/Principal.aspx?logout=1");
         }
 
         private void MostrarCantidadCarrito()
