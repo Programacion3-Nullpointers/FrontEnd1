@@ -16,8 +16,9 @@ namespace JMQPresentacion.Admin
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            usuarioWSClient = new JMQWS.UsuarioWSClient();
-            productoWSClient = new JMQWS.ProductoWSClient();
+            usuarioWSClient = new UsuarioWSClient();
+            productoWSClient = new ProductoWSClient();
+            categoriaWSClient = new CategoriaWSClient();
             CargarCategorias();
         }
 
@@ -60,9 +61,13 @@ namespace JMQPresentacion.Admin
                         break;
 
                     case "btnGenerarStock":
+                        int? stockMin = int.TryParse(StockMin.Text, out int tempStockMin) ? tempStockMin : (int?)null;
+                        int? stockMax = int.TryParse(StockMax.Text, out int tempStockMax) ? tempStockMax : (int?)null;
                         int categoriaId = int.Parse(ddlCategorias.SelectedValue);
+                        int?[] args = new int?[] { stockMin, stockMax, categoriaId };
+
                         // Lógica para reporte de stock
-                        FileBuffer = productoWSClient.reporteStock();
+                        FileBuffer = productoWSClient.reporteStock(args);
                         break;
 
                     case "btnGenerarClientes":
