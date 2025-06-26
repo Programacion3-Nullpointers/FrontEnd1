@@ -104,6 +104,7 @@
                     <ItemTemplate>
                         <asp:Button ID="btnEditar" runat="server" CommandName="Editar" CommandArgument='<%# Eval("id") %>' CssClass="btn-edit" Text="✏️"/>
                         <asp:Button ID="btnEliminar" runat="server" CommandName="Eliminar" CommandArgument='<%# Eval("id") %>' CssClass="btn-delete" Text="🗑️" OnClientClick="return confirm('¿Estás seguro que deseas eliminar este usuario?');" />
+                        <asp:Button ID="btnVerPedidos" runat="server" CommandName="VerPedidos" CommandArgument='<%# Eval("id") %>' Text="Ver Pedidos" />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

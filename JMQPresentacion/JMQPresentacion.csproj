@@ -74,6 +74,7 @@
     <Content Include="Admin\Descuentos.aspx" />
     <Content Include="Admin\ModificarDescuentos.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
+    <Content Include="Admin\VerPedidosAdmin.aspx" />
     <Content Include="AgregarCarrito.ashx" />
     <None Include="Connected Services\JMQWS\archivo.disco" />
     <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
@@ -392,6 +393,7 @@
     <Content Include="Login\Registrarse.aspx" />
     <Content Include="Admin\Pagos.aspx" />
     <Content Include="Login\Restablecer.aspx" />
+    <Content Include="Login\VerPedidos.aspx" />
     <Content Include="Pedidos\Carrito.aspx" />
     <Content Include="Cotizaciones\Cotiza.aspx" />
     <Content Include="Pedidos\DatosEntrega.aspx" />
@@ -547,6 +549,13 @@
     <Compile Include="Admin\ModificarProductos.aspx.designer.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\VerPedidosAdmin.aspx.cs">
+      <DependentUpon>VerPedidosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VerPedidosAdmin.aspx.designer.cs">
+      <DependentUpon>VerPedidosAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarCarrito.ashx.cs">
       <DependentUpon>AgregarCarrito.ashx</DependentUpon>
     </Compile>
@@ -603,6 +612,13 @@
     </Compile>
     <Compile Include="Login\Restablecer.aspx.designer.cs">
       <DependentUpon>Restablecer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\VerPedidos.aspx.cs">
+      <DependentUpon>VerPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\VerPedidos.aspx.designer.cs">
+      <DependentUpon>VerPedidos.aspx</DependentUpon>
     </Compile>
     <Compile Include="MainLayout.Master.cs">
       <DependentUpon>MainLayout.Master</DependentUpon>

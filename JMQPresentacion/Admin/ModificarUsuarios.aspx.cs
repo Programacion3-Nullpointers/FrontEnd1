@@ -134,6 +134,11 @@ namespace JMQPresentacion.Usuarios
                         ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalModificar", "mostrarModalModificar();", true);
                     }
                 }
+                if (e.CommandName == "VerPedidos")
+                {
+                    int idUsuario = Convert.ToInt32(e.CommandArgument);
+                    Response.Redirect($"VerPedidosAdmin.aspx?idUsuario={idUsuario}");
+                }
             }
         }
 
