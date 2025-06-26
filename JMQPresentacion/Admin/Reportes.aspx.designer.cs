@@ -60,31 +60,40 @@ namespace JMQPresentacion.Admin
         protected global::System.Web.UI.WebControls.Button btnGenerarProd;
 
         /// <summary>
-        /// Control StockMin.
+        /// Control ddlMesInicioStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StockMin;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesInicioStock;
 
         /// <summary>
-        /// Control StockMax.
+        /// Control txtAnioInicioStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StockMax;
+        protected global::System.Web.UI.WebControls.TextBox txtAnioInicioStock;
 
         /// <summary>
-        /// Control ddlCategorias.
+        /// Control ddlMesFinStock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategorias;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMesFinStock;
+
+        /// <summary>
+        /// Control txtAnioFinStock.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAnioFinStock;
 
         /// <summary>
         /// Control btnGenerarStock.

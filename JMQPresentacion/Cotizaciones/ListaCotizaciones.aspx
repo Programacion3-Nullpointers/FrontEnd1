@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
     <div class="container mt-4">
+        
         <h2 class="text-center mb-4">Mis Cotizaciones</h2>
         
         <!-- 🔹 Panel vacío (se muestra si no hay cotizaciones) -->

@@ -77,15 +77,16 @@
     <form id="form1" runat="server">
         <!-- SIDEBAR -->
         <div class="sidebar">
-            <a class="menu-title" href="/Principal/Principal.aspx">Menú</a>
-            <a class="menu-item" href="#">Compras</a>
+            <a class="menu-title" href="#">Menú</a>
+            <a class="menu-item" href="/Principal/Principal.aspx">Compras</a>
             <a class="menu-item" href="/Cotizaciones/ListaCotizaciones.aspx">Cotizaciones</a>
+            
+<<<<<<< HEAD
+=======
             <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Style="display: none;">
                 Logout
             </asp:LinkButton>
-            <asp:LinkButton ID="btnLogout" runat="server" CssClass="menu-item logout" OnClick="btnLogout_Click" Visible="false">
-                Logout
-            </asp:LinkButton>
+>>>>>>> ramaNoelia2
         </div>
 
         <!-- NAVBAR -->
@@ -95,31 +96,7 @@
                     <img alt="Logo" src="/Public/images/logo1.png" style="width:150px;">
                 </a>
 
-                <!-- 🔧 CORREGIDO: Reemplazado form por div -->
-                <div class="d-flex">
-                    <button class="btn px-3 py-2 me-3" style="background-color: #1B4592; color: white; border: none;" type="button" data-bs-toggle="offcanvas" data-bs-target="#categoriesMenu">
-                        <i class="fas fa-bars"></i> Categorías
-                    </button>
-
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="categoriesMenu">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title">¡Hola!</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">Herramientas</li>
-                                <li class="list-group-item">Maquinaria</li>
-                                <li class="list-group-item">Limpieza</li>
-                                <li class="list-group-item">Pintura</li>
-                                <li class="list-group-item">Disolventes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <input class="form-control me-2" type="search" style="width:500px;" placeholder="Buscar..." />
-                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
-                </div>
+               
                 <!-- 🔧 FIN DE CORRECCIÓN -->
 
                 <div class="d-flex gap-2">
