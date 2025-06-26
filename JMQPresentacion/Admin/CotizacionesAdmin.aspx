@@ -41,19 +41,26 @@
             <%--<button type="button" class="btn-add" onclick="mostrarModal(false)">➕ Agregar Cotización</button>--%>
         </div>
 
-        <asp:GridView ID="gvCotizaciones" runat="server" AutoGenerateColumns="False" OnRowCommand="gvCotizaciones_RowCommand">
+        <asp:GridView ID="gvCotizaciones" runat="server" AutoGenerateColumns="False"
+                      OnRowCommand="gvCotizaciones_RowCommand"
+                      EmptyDataText="No hay cotizaciones por el momento"
+                      CssClass="table table-bordered mt-3 text-center">
+
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="ID" />
-                <asp:BoundField DataField="nombreUsuario" HeaderText="Usuario" />
+                <asp:BoundField DataField="nombreUsuario" HeaderText="Nombre de Usuario" />
+                <asp:BoundField DataField="correo" HeaderText="Correo" />
                 <asp:BoundField DataField="estado" HeaderText="Estado" />
+
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
-                        <asp:Button ID="btnEditar" runat="server" CommandName="Editar" CommandArgument='<%# Eval("id") %>' CssClass="btn-edit" Text="✏️" />
-                        <asp:Button ID="btnEliminar" runat="server" CommandName="Eliminar" CommandArgument='<%# Eval("id") %>' CssClass="btn-delete" Text="🗑️" OnClientClick="return confirm('¿Eliminar esta cotización?');" />
+                        <asp:Button ID="btnEditar" runat="server" CommandName="Editar" CommandArgument='<%# Eval("id") %>' CssClass="btn btn-sm btn-warning me-2" Text="✏️" />
+                        <asp:Button ID="btnEliminar" runat="server" CommandName="Eliminar" CommandArgument='<%# Eval("id") %>' CssClass="btn btn-sm btn-danger" Text="🗑️" OnClientClick="return confirm('¿Estás seguro que deseas eliminar esta cotización?');" />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+
     </div>
 
     <!-- Modal Cotización -->

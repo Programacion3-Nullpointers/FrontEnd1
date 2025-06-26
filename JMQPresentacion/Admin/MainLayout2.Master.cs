@@ -14,7 +14,7 @@ namespace JMQPresentacion
         {
             if (Session["Usuario"] == null || ((usuario)Session["Usuario"]).tipoUsuario != tipoUsuario.ADMIN)
             {
-                Response.Redirect("/Principal/Principal.aspx");
+                Response.Redirect("/Acceso/NoAutorizado.aspx");
             }
         }
 
