@@ -7,74 +7,83 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace JMQPresentacion.Pedidos
+namespace JMQPresentacion.Admin
 {
 
 
-    public partial class Cotiza
+    public partial class ModificarDescuentos
     {
 
         /// <summary>
-        /// Control txtProducto.
+        /// Control gvDescuentos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProducto;
+        protected global::System.Web.UI.WebControls.GridView gvDescuentos;
 
         /// <summary>
-        /// Control txtCantidad.
+        /// Control pnlModalAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
+        protected global::System.Web.UI.WebControls.Panel pnlModalAgregar;
 
         /// <summary>
-        /// Control txtPrecio.
+        /// Control txtnumDescuento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecio;
+        protected global::System.Web.UI.WebControls.TextBox txtnumDescuento;
 
         /// <summary>
-        /// Control btnAgregar.
+        /// Control btnGuardarDescuento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
+        protected global::System.Web.UI.WebControls.Button btnGuardarDescuento;
 
         /// <summary>
-        /// Control gvCotizacion.
+        /// Control pnlModalModificar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCotizacion;
+        protected global::System.Web.UI.WebControls.Panel pnlModalModificar;
 
         /// <summary>
-        /// Control lblTotal.
+        /// Control hfIdDescuento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.HiddenField hfIdDescuento;
 
         /// <summary>
-        /// Control btnEnviarCotizacion.
+        /// Control txtDescuentoMod.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviarCotizacion;
+        protected global::System.Web.UI.WebControls.TextBox txtDescuentoMod;
+
+        /// <summary>
+        /// Control btnActualizarDescuento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizarDescuento;
     }
 }

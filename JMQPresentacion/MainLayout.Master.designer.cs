@@ -33,6 +33,7 @@ namespace JMQPresentacion
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+<<<<<<< HEAD
         /// btnLogout control.
         /// </summary>
         /// <remarks>
@@ -43,6 +44,9 @@ namespace JMQPresentacion
 
         /// <summary>
         /// phLogin control.
+=======
+        /// Control phLogin.
+>>>>>>> origin/main
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
@@ -51,22 +55,39 @@ namespace JMQPresentacion
         protected global::System.Web.UI.WebControls.PlaceHolder phLogin;
 
         /// <summary>
+<<<<<<< HEAD
         /// phLogout control.
+=======
+        /// Control phUsuarioLogueado.
+>>>>>>> origin/main
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phLogout;
+        protected global::System.Web.UI.WebControls.PlaceHolder phUsuarioLogueado;
 
         /// <summary>
+<<<<<<< HEAD
         /// btnLogoutTop control.
+=======
+        /// Control lblNombreUsuario.
+>>>>>>> origin/main
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnLogoutTop;
+        protected global::System.Web.UI.WebControls.Label lblNombreUsuario;
+
+        /// <summary>
+        /// Control hpVerPedidos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hpVerPedidos;
 
         /// <summary>
         /// litCantidadCarrito control.

@@ -42,7 +42,7 @@ namespace JMQPresentacion.Pedidos
                     int idCotizacion = Convert.ToInt32(Request.QueryString["id"]);
                     //usuario usu = Session["usuario"] as usuario;
                     //cotizacion coti = cotizacionWSClient.buscarCotizacion(usu.id);
-                    CargarCotizacion(idCotizacion);
+                    //CargarCotizacion(idCotizacion);
                 }
             }
         }
@@ -69,8 +69,8 @@ namespace JMQPresentacion.Pedidos
             DataRow row = dt.NewRow();
             row["Producto"] = txtProducto.Text;
             row["Cantidad"] = int.Parse(txtCantidad.Text);
-            //row["Precio"] = decimal.Parse(txtPrecio.Text);
-            //row["Subtotal"] = (int.Parse(txtCantidad.Text) * decimal.Parse(txtPrecio.Text));
+            row["Precio"] = decimal.Parse(txtPrecio.Text);
+            row["Subtotal"] = (int.Parse(txtCantidad.Text) * decimal.Parse(txtPrecio.Text));
 
             dt.Rows.Add(row);
             Session["Cotizacion"] = dt;
@@ -91,33 +91,27 @@ namespace JMQPresentacion.Pedidos
             
         }
 
-        private void CargarCotizacion(int id)
-        {
-            try
-            {
-                
-                // Llama a tu servicio web CotizacionWS
-                cotizacion cotiza = cotizacionWSClient.buscarCotizacion(id); // O el método correcto según tu WS
-
-                // Muestra los datos generales (por ejemplo, en labels)
-                lblEstado.Text = cotiza.estadoCotizacion.ToString();
-                
-
-                // Carga productos asociados
-                var productos = productoCotizacionWSClient.listarProductosPorCotizacion(id);
-
-                gvProductos.DataSource = productos;
-                gvProductos.DataBind();
-            }
-            catch (System.Exception ex)
-            {
-                lblError.Text = "Error al cargar la cotización: " + ex.Message;
-            }
-        }
+        
 
         protected void btnEnviarCotizacion_Click(object sender, EventArgs e)
         {
             cotizacion cot = new cotizacion();
+            cot.usuario = Session["Usuario"] as usuario;
+            cot.estadoCotizacion = "Enviada";
+            List<productoCotizacion> prods = new List<productoCotizacion>();
+            foreach (GridViewRow row in gvCotizacion.Rows)
+            {
+                productoCotizacion prod = new productoCotizacion
+                {
+                    descripcion = row.Cells[0].Text,
+                    cantidad = int.Parse(row.Cells[1].Text),
+                    precioCotizado = (double)decimal.Parse(row.Cells[2].Text)
+                };
+
+                prods.Add(prod);
+            }
+            cot.productos = prods.ToArray();
+
             cotizacionWSClient.registrarCotizacion(cot);
 
         }

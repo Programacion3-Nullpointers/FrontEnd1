@@ -7,74 +7,74 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace JMQPresentacion.Pedidos
+namespace JMQPresentacion.Admin
 {
 
 
-    public partial class Cotiza
+    public partial class VerPedidosAdmin
     {
 
         /// <summary>
-        /// Control txtProducto.
+        /// Control hfIdUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProducto;
+        protected global::System.Web.UI.WebControls.HiddenField hfIdUsuario;
 
         /// <summary>
-        /// Control txtCantidad.
+        /// Control gvOrdenesVenta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
+        protected global::System.Web.UI.WebControls.GridView gvOrdenesVenta;
 
         /// <summary>
-        /// Control txtPrecio.
+        /// Control lblNoPedidos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecio;
+        protected global::System.Web.UI.WebControls.Label lblNoPedidos;
 
         /// <summary>
-        /// Control btnAgregar.
+        /// Control pnlModalEditarEstado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
+        protected global::System.Web.UI.WebControls.Panel pnlModalEditarEstado;
 
         /// <summary>
-        /// Control gvCotizacion.
+        /// Control hfIdOrdenVentaEditar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCotizacion;
+        protected global::System.Web.UI.WebControls.HiddenField hfIdOrdenVentaEditar;
 
         /// <summary>
-        /// Control lblTotal.
+        /// Control ddlEstadoOrden.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEstadoOrden;
 
         /// <summary>
-        /// Control btnEnviarCotizacion.
+        /// Control btnGuardarEstado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEnviarCotizacion;
+        protected global::System.Web.UI.WebControls.Button btnGuardarEstado;
     }
 }
