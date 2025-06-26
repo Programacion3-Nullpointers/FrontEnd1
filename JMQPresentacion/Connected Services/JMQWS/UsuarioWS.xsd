@@ -11,8 +11,6 @@
   <xs:element name="cambiarPasswordConTokenResponse" type="tns:cambiarPasswordConTokenResponse" />
   <xs:element name="eliminarUsuario" type="tns:eliminarUsuario" />
   <xs:element name="eliminarUsuarioResponse" type="tns:eliminarUsuarioResponse" />
-  <xs:element name="filtrarUsuarios" type="tns:filtrarUsuarios" />
-  <xs:element name="filtrarUsuariosResponse" type="tns:filtrarUsuariosResponse" />
   <xs:element name="iniciarRecuperacionPassword" type="tns:iniciarRecuperacionPassword" />
   <xs:element name="iniciarRecuperacionPasswordResponse" type="tns:iniciarRecuperacionPasswordResponse" />
   <xs:element name="listarUsuarios" type="tns:listarUsuarios" />
@@ -105,17 +103,6 @@
   <xs:complexType name="obtenerPorTokenResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="filtrarUsuarios">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="tipoEntidad" type="xs:string" />
-      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="filtrarUsuariosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="BuscarUsuarioPorCorreo">

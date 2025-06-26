@@ -1,41 +1,17 @@
 ﻿using System;
 using System.Web.UI;
-using JMQPresentacion.JMQWS;
 
 namespace JMQPresentacion.Login
 {
     public partial class Restablecer : Page
     {
-        private string token;
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!IsPostBack && string.IsNullOrEmpty(Request.QueryString["token"]))
             {
-                token = Request.QueryString["token"];
-                if (string.IsNullOrEmpty(token))
-                {
-                    MostrarMensaje("Token no válido o ausente.");
-                    btnRestablecer.Enabled = false;
-                    return;
-                }
-
-                try
-                {
-                    UsuarioWSClient client = new UsuarioWSClient();
-                    bool esValido = client.validarTokenPassword(token);
-
-                    if (!esValido)
-                    {
-                        MostrarMensaje("El enlace ha expirado o no es válido.");
-                        btnRestablecer.Enabled = false;
-                    }
-                }
-                catch (System.Exception ex)
-                {
-                    MostrarMensaje("Error al validar el token: " + ex.Message);
-                    btnRestablecer.Enabled = false;
-                }
+                lblMensaje.Text = "Token inválido o ausente.";
+                lblMensaje.Visible = true;
+                btnRestablecer.Enabled = false;
             }
         }
 
@@ -43,48 +19,31 @@ namespace JMQPresentacion.Login
         {
             string nuevaPassword = txtNuevaPassword.Text.Trim();
             string confirmarPassword = txtConfirmarPassword.Text.Trim();
-            token = Request.QueryString["token"];
-
-            if (string.IsNullOrEmpty(nuevaPassword) || string.IsNullOrEmpty(confirmarPassword))
-            {
-                MostrarMensaje("Ambos campos son obligatorios.");
-                return;
-            }
+            string token = Request.QueryString["token"];
 
             if (nuevaPassword != confirmarPassword)
             {
-                MostrarMensaje("Las contraseñas no coinciden.");
+                lblMensaje.Text = "Las contraseñas no coinciden.";
+                lblMensaje.Visible = true;
                 return;
             }
 
+            // Aquí llamas al servicio web para cambiar la contraseña
             try
             {
-                UsuarioWSClient client = new UsuarioWSClient();
-                bool resultado = client.cambiarPasswordConToken(token, nuevaPassword);
+                var cliente = new JMQWS.UsuarioWSClient();
+                cliente.cambiarPasswordConToken(token, nuevaPassword);
 
-                if (resultado)
-                {
-                    lblMensaje.CssClass = "alert alert-success mt-2";
-                    lblMensaje.Text = "Tu contraseña ha sido restablecida correctamente.";
-                    lblMensaje.Visible = true;
-                    btnRestablecer.Enabled = false;
-                }
-                else
-                {
-                    MostrarMensaje("No fue posible cambiar la contraseña.");
-                }
+                lblMensaje.CssClass = "text-success";
+                lblMensaje.Text = "Contraseña restablecida correctamente.";
+                lblMensaje.Visible = true;
+                btnRestablecer.Enabled = false;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                MostrarMensaje("Ocurrió un error: " + ex.Message);
+                lblMensaje.Text = "Error al restablecer contraseña: " + ex.Message;
+                lblMensaje.Visible = true;
             }
-        }
-
-        private void MostrarMensaje(string mensaje)
-        {
-            lblMensaje.Text = mensaje;
-            lblMensaje.CssClass = "alert alert-danger mt-2";
-            lblMensaje.Visible = true;
         }
     }
 }

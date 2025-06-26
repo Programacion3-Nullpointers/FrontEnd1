@@ -1,4 +1,4 @@
-﻿using JMQPresentacion.Cotizaciones;
+using JMQPresentacion.Cotizaciones;
 using JMQPresentacion.JMQWS;
 using System;
 using System.Collections.Generic;

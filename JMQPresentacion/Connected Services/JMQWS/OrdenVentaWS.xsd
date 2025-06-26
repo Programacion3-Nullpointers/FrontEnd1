@@ -95,14 +95,6 @@
       <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarOrdenVentaService">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarOrdenVentaServiceResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="eliminarDetalleDeOrdenVenta">
     <xs:sequence>
       <xs:element minOccurs="0" name="ordenVenta" type="tns:ordenVenta" />
@@ -110,6 +102,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarDetalleDeOrdenVentaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="eliminarOrdenVentaService">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarOrdenVentaServiceResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="obtenerOrdenesVentasPorUsuario">

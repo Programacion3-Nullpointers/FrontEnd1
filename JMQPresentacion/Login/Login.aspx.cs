@@ -66,15 +66,6 @@ namespace JMQPresentacion.Login
                         return;
                     }
 
-                    // 🔁 Redirigir al carrito si viene de registro
-                    if (Session["RedirigirACarrito"] != null && (bool)Session["RedirigirACarrito"])
-                    {
-                        Session.Remove("RedirigirACarrito");
-                        Response.Redirect("/Pedidos/Carrito.aspx");
-                        return;
-                    }
-
-                    // 🔁 Redirigir a ruta previa si existía
                     if (Session["RedirectAfterLogin"] != null)
                     {
                         string redirect = Session["RedirectAfterLogin"].ToString();
@@ -83,7 +74,7 @@ namespace JMQPresentacion.Login
                         return;
                     }
 
-                    // 🟢 Mostrar mensaje en Principal
+                    // 🟢 Guardar mensaje y redirigir a esta misma página para mostrar SweetAlert
                     Session["MostrarBienvenida"] = nombreMostrar;
                     Response.Redirect("/Principal/Principal.aspx");
                     return;
@@ -102,6 +93,5 @@ namespace JMQPresentacion.Login
                 return;
             }
         }
-
     }
 }
