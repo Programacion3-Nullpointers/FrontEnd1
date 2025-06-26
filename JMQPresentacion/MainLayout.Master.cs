@@ -33,7 +33,7 @@ namespace JMQPresentacion
                     phUsuarioLogueado.Visible = false; // Oculta el PlaceHolder del dropdown de usuario
                 }
                 phLogin.Visible = Session["Usuario"] == null;
-                phLogout.Visible = Session["Usuario"] != null;
+                //phLogout.Visible = Session["Usuario"] != null;
 
                 MostrarCantidadCarrito();
             }
