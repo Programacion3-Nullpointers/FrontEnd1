@@ -1,121 +1,106 @@
-﻿using JMQPresentacion.JMQWS;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using JMQPresentacion.JMQWS;
 
 namespace JMQPresentacion.Pedidos
 {
     public partial class Carrito : System.Web.UI.Page
     {
         private OrdenVentaWSClient ordenVentaService;
-
         protected void Page_Init(object sender, EventArgs e)
         {
-            ordenVentaService = new OrdenVentaWSClient();
+            ordenVentaService = new JMQWS.OrdenVentaWSClient();
         }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                VerificarSesion();
-                CargarCarrito();
-
-                // ✅ Mostrar mensaje si se viene desde el login
-                if (Request.QueryString["login"] == "1")
+                if (Session["Cart"] != null)
                 {
-                    string script = @"
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Sesión iniciada',
-                            text: 'Has iniciado sesión correctamente.',
-                            timer: 1800,
-                            showConfirmButton: false
-                        });";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "sesionIniciada", script, true);
+                    CargarCarrito();
                 }
-            }
-        }
-
-        private void VerificarSesion()
-        {
-            bool logueado = Session["Usuario"] != null;
-
-            phBotonSesion.Visible = !logueado;
-            phBotonCheckout.Visible = logueado;
-        }
-
-        private void CargarCarrito()
-        {
-            if (Session["Cart"] != null)
-            {
-                List<detalle> detalles = (List<detalle>)Session["Cart"];
-                rptCarrito.DataSource = detalles;
-                rptCarrito.DataBind();
-
-                decimal total = detalles.Sum(item => item.cantidad * (decimal)item.precio_unitario);
-
-                lblTotal.Text = "S/ " + total.ToString("F2");
-                lblTotal2.Text = lblTotal.Text;
-            }
-            else
-            {
-                lblTotal.Text = "S/ 0.00";
-                lblTotal2.Text = "S/ 0.00";
             }
         }
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-            if (Session["Cart"] == null || ((List<detalle>)Session["Cart"]).Count == 0)
+            if (Session["Usuario"] == null)
             {
-                string script = "alert('El carrito está vacío. Por favor, agrega productos antes de continuar.');";
-                ClientScript.RegisterStartupScript(this.GetType(), "alertaCarritoVacio", script, true);
-                return;
+                Response.Redirect("~/Login/Login.aspx");
             }
-
-            ordenVenta orden = new ordenVenta
+            else
             {
-                estado_compra = estadoCompra.pendiente,
-                fecha_orden = DateTime.Now,
-                activo = true,
-                usuario = (usuario)Session["Usuario"],
-                detalle = ((List<detalle>)Session["Cart"]).ToArray()
-            };
-
-            // Guardar en sesión y registrar
-            if (Session["Orden"] == null)
-            {
-                orden = ordenVentaService.registrarOrdenVentaService(orden);
-                Session["Orden"] = orden;
+                // Verificar si el carrito tiene productos
+                if (Session["Cart"] != null && ((List<detalle>)Session["Cart"]).Count > 0)
+                {
+                    ordenVenta orden = new ordenVenta
+                    {
+                        estado_compra = estadoCompra.pendiente,
+                        fecha_orden = DateTime.Now,
+                        activo = true,
+                        usuario = (usuario)Session["Usuario"],
+                    };
+                    detalle[] arrDetalles = ((List<detalle>)Session["Cart"]).ToArray();
+                    orden.detalle = arrDetalles;
+                    // Guardar la orden en la base de datos
+                    if (Session["Orden"] == null)
+                    {
+                        orden = ordenVentaService.registrarOrdenVentaService(orden);
+                        Session["Orden"] = orden; // Guardar la orden en la sesión para usarla en DatosEntrega.aspx
+                    }
+                    Response.Redirect("~/Pedidos/DatosEntrega.aspx");
+                }
+                else
+                {
+                    // Mostrar mensaje de error o redirigir a una página de error
+                    string script = "alert('El carrito está vacío. Por favor, agrega productos antes de proceder al pago.');";
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertaCarritoVacio", script, true);
+                }
             }
-
-            Response.Redirect("~/Pedidos/DatosEntrega.aspx");
         }
 
+        private void CargarCarrito()
+        {
+            List<detalle> detalles = (List<detalle>)Session["Cart"];
+            rptCarrito.DataSource = detalles;
+            rptCarrito.DataBind();
+            lblTotal.Text = "S/ " + detalles.Sum(item => item.cantidad * item.precio_unitario).ToString("F2");
+            lblTotal2.Text = lblTotal.Text;
+        }
         protected void CambiarCantidad(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             int index = Convert.ToInt32(btn.CommandArgument);
+            RepeaterItem item = (RepeaterItem)btn.NamingContainer;
+            //Obtener la lista desde ViewState
             List<detalle> detalles = (List<detalle>)Session["Cart"];
 
-            if (btn.Text == "-" && detalles[index].cantidad > 1)
-                detalles[index].cantidad--;
-            else if (btn.Text == "+" && detalles[index].cantidad < detalles[index].producto.stock)
-                detalles[index].cantidad++;
-
+            // Modificar la cantidad
+            if (btn.Text == "-")
+            {
+                if (detalles[index].cantidad > 1) // Evitar cantidades menores a 1
+                    detalles[index].cantidad--;
+            }
+            else if (btn.Text == "+")
+            {
+                if (detalles[index].cantidad < detalles[index].producto.stock)
+                    detalles[index].cantidad++;
+            }
             Session["Cart"] = detalles;
             CargarCarrito();
         }
-
         protected void btnEliminarProducto_Click(object sender, EventArgs e)
         {
-            int index = int.Parse(((Button)sender).CommandArgument);
+            Button btnEliminar = (Button)sender;
+            int index = int.Parse(btnEliminar.CommandArgument);
+
             List<detalle> detalles = (List<detalle>)Session["Cart"];
 
-            if (index >= 0 && index < detalles.Count)
+            if (detalles != null && index >= 0 && index < detalles.Count)
             {
                 detalles.RemoveAt(index);
                 Session["Cart"] = detalles;

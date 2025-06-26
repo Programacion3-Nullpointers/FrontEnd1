@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using JMQPresentacion.JMQWS;
+using System.Linq;
+
 
 namespace JMQPresentacion.Usuarios
 {
@@ -14,16 +16,16 @@ namespace JMQPresentacion.Usuarios
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (Session["Usuario"] == null || ((usuario)Session["Usuario"]).tipoUsuario != tipoUsuario.ADMIN)
+            if (Session["usuario"] == null)
             {
-                // Redirigir al login u otra acción
                 Response.Redirect("~/Login/Login.aspx");
-                return;
             }
             usuarioWSCLClient = new JMQWS.UsuarioWSClient();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Validar si el usuario ha iniciado sesión
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("~/Acceso/NoAutorizado.aspx");
@@ -31,16 +33,22 @@ namespace JMQPresentacion.Usuarios
             }
             if (!IsPostBack)
             {
+                // Si no hay lista guardada en sesión, inicialízala con algunos datos de ejemplo
                 if (Session["Usuarios"] == null)
                 {
-                    List<usuario> listaInicial = usuarioWSCLClient.listarUsuarios().ToList();
+                    List<usuario> listaInicial = new List<usuario>();
+                    listaInicial = usuarioWSCLClient.listarUsuarios().ToList();
+
+
                     Session["Usuarios"] = listaInicial;
                 }
 
+                // Mostrar la tabla
                 List<usuario> lista = Session["Usuarios"] as List<usuario>;
                 gvUsuarios.DataSource = lista.OrderBy(u => u.id).ToList();
                 gvUsuarios.DataBind();
             }
+
         }
 
         protected void btnGuardarUsuario_Click(object sender, EventArgs e)
@@ -52,6 +60,7 @@ namespace JMQPresentacion.Usuarios
 
             if (idEditar > 0)
             {
+                // Editar usuario existente
                 usuario user = lista.FirstOrDefault(x => x.id == idEditar);
                 if (user != null)
                 {
@@ -61,10 +70,12 @@ namespace JMQPresentacion.Usuarios
                     user.direccion = txtDireccion.Text;
                     user.RUC = txtRUC.Text;
                 }
+
                 ViewState["EditarId"] = null;
             }
             else
             {
+                // ➕ Buscar el menor ID disponible
                 int nuevoId = Enumerable.Range(1, lista.Count + 1)
                         .Except(lista.Select(u => u.id))
                         .First();
@@ -72,9 +83,9 @@ namespace JMQPresentacion.Usuarios
                 usuario nuevo = new usuario();
                 nuevo.id = nuevoId;
                 nuevo.nombreUsuario = txtNombreUsuario.Text;
-                nuevo.contrasena = "";
+                nuevo.contrasena = ""; // contraseña vacía, según lo que indicaste
                 nuevo.correo = txtCorreo.Text;
-                nuevo.tipoUsuario = new tipoUsuario();
+                nuevo.tipoUsuario = new tipoUsuario(); // o asigná un valor real si lo tenés
                 nuevo.razonsocial = txtRazonSocial.Text;
                 nuevo.direccion = txtDireccion.Text;
                 nuevo.RUC = txtRUC.Text;
@@ -82,18 +93,22 @@ namespace JMQPresentacion.Usuarios
                 lista.Add(nuevo);
             }
 
+            // Guardar y actualizar
             Session["Usuarios"] = lista;
             gvUsuarios.DataSource = lista.OrderBy(u => u.id).ToList();
             gvUsuarios.DataBind();
 
+            // Limpiar
             txtNombreUsuario.Text = "";
             txtCorreo.Text = "";
             txtRazonSocial.Text = "";
             txtDireccion.Text = "";
             txtRUC.Text = "";
 
+            // Cerrar modal
             ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModal", "cerrarModal();", true);
         }
+
 
         protected void gvUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -108,19 +123,22 @@ namespace JMQPresentacion.Usuarios
 
                     if (usuarioAEliminar != null)
                     {
-                        lista.Remove(usuarioAEliminar);
-                        Session["Usuarios"] = lista;
+                        lista.Remove(usuarioAEliminar); // Eliminar de la lista
+                        Session["Usuarios"] = lista;     // Guardar la lista actualizada en la sesión
                         usuarioWSCLClient.eliminarUsuario(id);
 
                         gvUsuarios.DataSource = lista.OrderBy(u => u.id).ToList();
                         gvUsuarios.DataBind();
+                        // Refrescar la tabla
                     }
                 }
 
                 if (e.CommandName == "Editar")
                 {
                     int id = Convert.ToInt32(e.CommandArgument);
-                    var usuario = usuarioWSCLClient.buscarUsuario(id);
+
+                    // Obtener los datos del usuario desde la base de datos
+                    var usuario = usuarioWSCLClient.buscarUsuario(id); // Este método lo defines tú
 
                     if (usuario != null)
                     {
@@ -131,13 +149,10 @@ namespace JMQPresentacion.Usuarios
                         txtDireccionMod.Text = usuario.direccion;
                         txtRUCMod.Text = usuario.RUC;
 
+                        // Mostrar modal de modificación
                         ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalModificar", "mostrarModalModificar();", true);
+
                     }
-                }
-                if (e.CommandName == "VerPedidos")
-                {
-                    int idUsuario = Convert.ToInt32(e.CommandArgument);
-                    Response.Redirect($"VerPedidosAdmin.aspx?idUsuario={idUsuario}");
                 }
             }
         }
@@ -157,76 +172,17 @@ namespace JMQPresentacion.Usuarios
                 user.razonsocial = txtRazonSocialMod.Text;
                 user.direccion = txtDireccionMod.Text;
                 user.RUC = txtRUCMod.Text;
+                
 
-                usuarioWSCLClient.actualizarUsuario(user);
+                 usuarioWSCLClient.actualizarUsuario(user);
             }
 
             Session["Usuarios"] = lista;
             gvUsuarios.DataSource = lista.OrderBy(u => u.id).ToList();
             gvUsuarios.DataBind();
 
+            // Cerrar modal
             ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModalModificar", "cerrarModalModificar();", true);
         }
-        protected void btnBuscar_Click(object sender, EventArgs e)
-        {
-            string textoBusqueda = txtBuscar.Text.Trim().ToLower();
-
-            if (Session["Usuarios"] != null)
-            {
-                List<usuario> listaOriginal = Session["Usuarios"] as List<usuario>;
-
-                var listaFiltrada = listaOriginal.Where(u =>
-                    (!string.IsNullOrEmpty(u.nombreUsuario) && u.nombreUsuario.ToLower().Contains(textoBusqueda)) ||
-                    (!string.IsNullOrEmpty(u.dni) && u.dni.ToLower().Contains(textoBusqueda)) ||
-                    (!string.IsNullOrEmpty(u.RUC) && u.RUC.ToLower().Contains(textoBusqueda))
-                ).ToList();
-
-                if (listaFiltrada.Count == 0)
-                {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "sinResultados", "alert('No se encontraron coincidencias.');", true);
-                }
-
-                gvUsuarios.DataSource = listaFiltrada.OrderBy(u => u.id).ToList();
-                gvUsuarios.DataBind();
-            }
-        }
-
-
-        protected void btnFiltrar_Click(object sender, EventArgs e)
-        {
-            string tipoEntidad = ddlTipoEntidad.SelectedValue;
-
-            // Valor por defecto: true
-            bool activo = true;
-            if (ddlActivo.SelectedValue == "false") activo = false;
-
-            var resultado = usuarioWSCLClient.filtrarUsuarios(tipoEntidad, activo);
-            List<usuario> listaFiltrada = resultado != null ? resultado.ToList() : new List<usuario>();
-
-            if (listaFiltrada.Count == 0)
-            {
-                ScriptManager.RegisterStartupScript(this, GetType(), "sinResultados", "alert('No se encontraron usuarios con esos filtros.');", true);
-            }
-
-            Session["Usuarios"] = listaFiltrada;
-            gvUsuarios.DataSource = listaFiltrada.OrderBy(u => u.id).ToList();
-            gvUsuarios.DataBind();
-        }
-
-
-
-        protected void btnResetFiltros_Click(object sender, EventArgs e)
-        {
-            ddlTipoEntidad.SelectedIndex = 0;
-            ddlActivo.SelectedIndex = 0;
-            txtBuscar.Text = ""; // Limpiar campo de búsqueda
-
-            List<usuario> lista = usuarioWSCLClient.listarUsuarios().ToList();
-            Session["Usuarios"] = lista;
-
-            gvUsuarios.DataSource = lista.OrderBy(u => u.id).ToList();
-            gvUsuarios.DataBind();
-        }
-
     }
 }

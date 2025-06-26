@@ -24,33 +24,6 @@ namespace JMQPresentacion.Pedidos
         protected global::System.Web.UI.WebControls.RadioButtonList rblComprobante;
 
         /// <summary>
-        /// Control pnlFactura.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFactura;
-
-        /// <summary>
-        /// Control txtRazonSocial.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRazonSocial;
-
-        /// <summary>
-        /// Control txtRUC.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRUC;
-
-        /// <summary>
         /// Control rbInterbank.
         /// </summary>
         /// <remarks>
@@ -78,13 +51,31 @@ namespace JMQPresentacion.Pedidos
         protected global::System.Web.UI.WebControls.Panel pnlVisa;
 
         /// <summary>
-        /// Control lblPagoTotal.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPagoTotal;
+        protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// Control lblTotal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotal;
+
+        /// <summary>
+        /// Control lblTotal2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotal2;
 
         /// <summary>
         /// Control btnPagar.
@@ -112,23 +103,5 @@ namespace JMQPresentacion.Pedidos
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblError;
-
-        /// <summary>
-        /// Control lblTotal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
-
-        /// <summary>
-        /// Control lblTotal2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal2;
     }
 }

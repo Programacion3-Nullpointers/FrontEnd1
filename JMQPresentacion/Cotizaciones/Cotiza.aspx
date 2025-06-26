@@ -35,7 +35,23 @@
         </div>
     </div>
 
-    
+    <div class="container mt-4">
+        <h2 class="mb-3">Detalle de Cotización</h2>
+
+        <div class="mb-3">
+            <strong>Estado:</strong> <asp:Label ID="lblEstado" runat="server" />
+        </div>
+
+        <asp:GridView ID="gvProductos" runat="server" CssClass="table table-bordered table-hover" AutoGenerateColumns="false">
+            <Columns>
+                <asp:BoundField DataField="descripcion" HeaderText="Producto" />
+                <asp:BoundField DataField="cantidad" HeaderText="Cantidad" />
+                <asp:BoundField DataField="precioCotizado" HeaderText="Precio Unitario" DataFormatString="{0:C}" />
+            </Columns>
+        </asp:GridView>
+
+        <asp:Label ID="lblError" runat="server" CssClass="text-danger" />
+    </div>
 
     <div class="mt-3 text-center">
         <asp:Button ID="btnEnviarCotizacion" runat="server" Text="Enviar Cotización" CssClass="btn btn-success" OnClick="btnEnviarCotizacion_Click" />

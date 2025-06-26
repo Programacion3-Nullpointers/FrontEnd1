@@ -42,24 +42,6 @@ namespace JMQPresentacion.Pedidos
         protected global::System.Web.UI.WebControls.Label lblTotal2;
 
         /// <summary>
-        /// Control phBotonSesion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phBotonSesion;
-
-        /// <summary>
-        /// Control phBotonCheckout.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phBotonCheckout;
-
-        /// <summary>
         /// Control btnCheckout.
         /// </summary>
         /// <remarks>
