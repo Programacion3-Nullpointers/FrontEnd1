@@ -49,4 +49,4 @@ node_modules/
 # ─────────────────────────────────────────────
 .env
 *.wsdl
-JMQPresentacion/Connected Services/JMQWS/
+JMQPresentacion/Connected Services/
