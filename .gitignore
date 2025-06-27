@@ -6,6 +6,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.dbmdl
+*.dtbcache.json
 
 # ─────────────────────────────────────────────
 # Archivos de build
@@ -19,11 +21,16 @@ Release/
 *.exe
 *.cache
 *.log
+*.rsp
+*.config
+*.targets
+*.xml
 
 # ─────────────────────────────────────────────
 # Paquetes
 # ─────────────────────────────────────────────
 packages/
+*.nupkg
 
 # ─────────────────────────────────────────────
 # Node.js / npm (por si se usa frontend)
@@ -48,13 +55,14 @@ node_modules/
 # Archivos sensibles o específicos del proyecto
 # ─────────────────────────────────────────────
 .env
-*.wsdl
 
+# ─────────────────────────────────────────────
+# Servicios conectados y WSDL
+# ─────────────────────────────────────────────
+*.wsdl
+*.xsd
 *.datasource
 *.svcinfo
-*.disco
-*.xsd
 *.svcmap
-# Ignorar archivos de servicios conectados
+*.disco
 JMQPresentacion/Connected Services/
-
