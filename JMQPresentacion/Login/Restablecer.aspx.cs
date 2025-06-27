@@ -66,6 +66,7 @@ namespace JMQPresentacion.Login
                 {
                     MostrarMensaje("Tu contraseña ha sido restablecida correctamente.", true);
                     btnRestablecer.Enabled = false;
+                    Response.AddHeader("REFRESH", "2;URL=Login.aspx"); // redirige en 2 segundos
                 }
                 else
                 {
