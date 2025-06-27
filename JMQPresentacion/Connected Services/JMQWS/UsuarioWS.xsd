@@ -11,8 +11,6 @@
   <xs:element name="cambiarPasswordConTokenResponse" type="tns:cambiarPasswordConTokenResponse" />
   <xs:element name="eliminarUsuario" type="tns:eliminarUsuario" />
   <xs:element name="eliminarUsuarioResponse" type="tns:eliminarUsuarioResponse" />
-  <xs:element name="filtrarUsuarios" type="tns:filtrarUsuarios" />
-  <xs:element name="filtrarUsuariosResponse" type="tns:filtrarUsuariosResponse" />
   <xs:element name="iniciarRecuperacionPassword" type="tns:iniciarRecuperacionPassword" />
   <xs:element name="iniciarRecuperacionPasswordResponse" type="tns:iniciarRecuperacionPasswordResponse" />
   <xs:element name="listarUsuarios" type="tns:listarUsuarios" />
@@ -21,6 +19,7 @@
   <xs:element name="registrarUsuarioResponse" type="tns:registrarUsuarioResponse" />
   <xs:element name="reporteClientes" type="tns:reporteClientes" />
   <xs:element name="reporteClientesResponse" type="tns:reporteClientesResponse" />
+<<<<<<< HEAD
   <xs:element name="validarTokenPassword" type="tns:validarTokenPassword" />
   <xs:element name="validarTokenPasswordResponse" type="tns:validarTokenPasswordResponse" />
   <xs:complexType name="cambiarPasswordConToken">
@@ -39,6 +38,8 @@
       <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+=======
+>>>>>>> origin/main
   <xs:complexType name="iniciarRecuperacionPassword">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -89,6 +90,7 @@
       <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:complexType name="validarTokenPassword">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="xs:string" />
@@ -97,6 +99,14 @@
   <xs:complexType name="validarTokenPasswordResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
+=======
+  <xs:complexType name="reporteClientes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteClientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+>>>>>>> origin/main
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarUsuario">
@@ -115,6 +125,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
+<<<<<<< HEAD
   <xs:complexType name="filtrarUsuarios">
     <xs:sequence>
       <xs:element minOccurs="0" name="tipoEntidad" type="xs:string" />
@@ -124,6 +135,16 @@
   <xs:complexType name="filtrarUsuariosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+=======
+  <xs:complexType name="obtenerPorToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorTokenResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
+>>>>>>> origin/main
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="BuscarUsuarioPorCorreo">

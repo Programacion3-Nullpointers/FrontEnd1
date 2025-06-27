@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/DescuentoWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
   <message name="RegistrarDescuento">
     <part name="parameters" element="tns:RegistrarDescuento" />
   </message>
@@ -53,12 +54,15 @@
   <message name="desactivarDescuentoResponse">
     <part name="parameters" element="tns:desactivarDescuentoResponse" />
   </message>
+=======
+>>>>>>> origin/main
   <message name="hello">
     <part name="parameters" element="tns:hello" />
   </message>
   <message name="helloResponse">
     <part name="parameters" element="tns:helloResponse" />
   </message>
+<<<<<<< HEAD
   <portType name="DescuentoWS">
     <operation name="RegistrarDescuento">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoRequest" message="tns:RegistrarDescuento" />
@@ -92,10 +96,44 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/desactivarDescuentoRequest" message="tns:desactivarDescuento" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/desactivarDescuentoResponse" message="tns:desactivarDescuentoResponse" />
     </operation>
+=======
+  <message name="ActualizarDescuento">
+    <part name="parameters" element="tns:ActualizarDescuento" />
+  </message>
+  <message name="ActualizarDescuentoResponse">
+    <part name="parameters" element="tns:ActualizarDescuentoResponse" />
+  </message>
+  <message name="BuscarDescuento">
+    <part name="parameters" element="tns:BuscarDescuento" />
+  </message>
+  <message name="BuscarDescuentoResponse">
+    <part name="parameters" element="tns:BuscarDescuentoResponse" />
+  </message>
+  <message name="EliminarDescuento">
+    <part name="parameters" element="tns:EliminarDescuento" />
+  </message>
+  <message name="EliminarDescuentoResponse">
+    <part name="parameters" element="tns:EliminarDescuentoResponse" />
+  </message>
+  <message name="ListarDescuentos">
+    <part name="parameters" element="tns:ListarDescuentos" />
+  </message>
+  <message name="ListarDescuentosResponse">
+    <part name="parameters" element="tns:ListarDescuentosResponse" />
+  </message>
+  <message name="RegistrarDescuento">
+    <part name="parameters" element="tns:RegistrarDescuento" />
+  </message>
+  <message name="RegistrarDescuentoResponse">
+    <part name="parameters" element="tns:RegistrarDescuentoResponse" />
+  </message>
+  <portType name="DescuentoWS">
+>>>>>>> origin/main
     <operation name="hello">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloRequest" message="tns:hello" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloResponse" message="tns:helloResponse" />
     </operation>
+<<<<<<< HEAD
   </portType>
   <binding name="DescuentoWSPortBinding" type="tns:DescuentoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -171,6 +209,31 @@
         <soap:body use="literal" />
       </output>
     </operation>
+=======
+    <operation name="ActualizarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoRequest" message="tns:ActualizarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoResponse" message="tns:ActualizarDescuentoResponse" />
+    </operation>
+    <operation name="BuscarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoRequest" message="tns:BuscarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoResponse" message="tns:BuscarDescuentoResponse" />
+    </operation>
+    <operation name="EliminarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoRequest" message="tns:EliminarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoResponse" message="tns:EliminarDescuentoResponse" />
+    </operation>
+    <operation name="ListarDescuentos">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarDescuentosRequest" message="tns:ListarDescuentos" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarDescuentosResponse" message="tns:ListarDescuentosResponse" />
+    </operation>
+    <operation name="RegistrarDescuento">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoRequest" message="tns:RegistrarDescuento" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoResponse" message="tns:RegistrarDescuentoResponse" />
+    </operation>
+  </portType>
+  <binding name="DescuentoWSPortBinding" type="tns:DescuentoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+>>>>>>> origin/main
     <operation name="hello">
       <soap:operation soapAction="" />
       <input>
@@ -180,6 +243,54 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
+=======
+    <operation name="ActualizarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarDescuentos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarDescuento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+>>>>>>> origin/main
   </binding>
   <service name="DescuentoWS">
     <port name="DescuentoWSPort" binding="tns:DescuentoWSPortBinding">

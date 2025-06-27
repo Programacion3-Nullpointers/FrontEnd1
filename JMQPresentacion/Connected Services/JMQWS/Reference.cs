@@ -329,6 +329,7 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/actualizarProductoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/actualizarProductoResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.actualizarProductoResponse> actualizarProductoAsync(JMQPresentacion.JMQWS.actualizarProductoRequest request);
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProductoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProductoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProducto/Fault/Exception", Name="Exception")]
@@ -348,6 +349,16 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.filtrarProductosResponse> filtrarProductosAsync(JMQPresentacion.JMQWS.filtrarProductosRequest request);
+=======
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStock/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.descontarStockResponse descontarStock(JMQPresentacion.JMQWS.descontarStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.descontarStockResponse> descontarStockAsync(JMQPresentacion.JMQWS.descontarStockRequest request);
+>>>>>>> origin/main
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosResponse")]
@@ -386,14 +397,51 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/listaProductoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/listaProductoResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listaProductoResponse> listaProductoAsync(JMQPresentacion.JMQWS.listaProductoRequest request);
         
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStock/Fault/Exception", Name="Exception")]
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        JMQPresentacion.JMQWS.descontarStockResponse descontarStock(JMQPresentacion.JMQWS.descontarStockRequest request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.reporteMasVendidosResponse reporteMasVendidos(JMQPresentacion.JMQWS.reporteMasVendidosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.descontarStockResponse> descontarStockAsync(JMQPresentacion.JMQWS.descontarStockRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteMasVendidosResponse> reporteMasVendidosAsync(JMQPresentacion.JMQWS.reporteMasVendidosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.reporteStockResponse reporteStock(JMQPresentacion.JMQWS.reporteStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteStockResponse> reporteStockAsync(JMQPresentacion.JMQWS.reporteStockRequest request);
+        
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProducto/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.eliminarProductoResponse eliminarProducto(JMQPresentacion.JMQWS.eliminarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarProductoResponse> eliminarProductoAsync(JMQPresentacion.JMQWS.eliminarProductoRequest request);
+        
+        // CODEGEN: El parámetro 'producto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProducto/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.registrarProductoResponse registrarProducto(JMQPresentacion.JMQWS.registrarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarProductoResponse> registrarProductoAsync(JMQPresentacion.JMQWS.registrarProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductos/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.filtrarProductosResponse filtrarProductos(JMQPresentacion.JMQWS.filtrarProductosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.filtrarProductosResponse> filtrarProductosAsync(JMQPresentacion.JMQWS.filtrarProductosRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -491,6 +539,210 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProducto", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class actualizarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.producto producto;
+        
+        public actualizarProductoRequest() {
+        }
+        
+        public actualizarProductoRequest(JMQPresentacion.JMQWS.producto producto) {
+            this.producto = producto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProductoResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class actualizarProductoResponse {
+        
+        public actualizarProductoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="descontarStock", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class descontarStockRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int stock;
+        
+        public descontarStockRequest() {
+        }
+        
+        public descontarStockRequest(int id, int stock) {
+            this.id = id;
+            this.stock = stock;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="descontarStockResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class descontarStockResponse {
+        
+        public descontarStockResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaProducto", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class listaProductoRequest {
+        
+        public listaProductoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaProductoResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class listaProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.producto[] @return;
+        
+        public listaProductoResponse() {
+        }
+        
+        public listaProductoResponse(JMQPresentacion.JMQWS.producto[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteMasVendidos", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class reporteMasVendidosRequest {
+        
+        public reporteMasVendidosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteMasVendidosResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class reporteMasVendidosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public reporteMasVendidosResponse() {
+        }
+        
+        public reporteMasVendidosResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteStock", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class reporteStockRequest {
+        
+        public reporteStockRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteStockResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class reporteStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public reporteStockResponse() {
+        }
+        
+        public reporteStockResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProducto", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarProductoRequest() {
+        }
+        
+        public eliminarProductoRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProductoResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarProductoResponse {
+        
+        public eliminarProductoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarProducto", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.producto producto;
+        
+        public registrarProductoRequest() {
+        }
+        
+        public registrarProductoRequest(JMQPresentacion.JMQWS.producto producto) {
+            this.producto = producto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarProductoResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarProductoResponse {
+        
+        public registrarProductoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+>>>>>>> origin/main
     [System.ServiceModel.MessageContractAttribute(WrapperName="filtrarProductos", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class filtrarProductosRequest {
         
@@ -554,6 +806,7 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+<<<<<<< HEAD
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -699,6 +952,8 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+=======
+>>>>>>> origin/main
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProductoWSChannel : JMQPresentacion.JMQWS.ProductoWS, System.ServiceModel.IClientChannel {
     }
@@ -771,12 +1026,108 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.buscarProductoResponse JMQPresentacion.JMQWS.ProductoWS.buscarProducto(JMQPresentacion.JMQWS.buscarProductoRequest request) {
             return base.Channel.buscarProducto(request);
         }
         
         public JMQPresentacion.JMQWS.producto buscarProducto(int id) {
             JMQPresentacion.JMQWS.buscarProductoRequest inValue = new JMQPresentacion.JMQWS.buscarProductoRequest();
+=======
+        JMQPresentacion.JMQWS.descontarStockResponse JMQPresentacion.JMQWS.ProductoWS.descontarStock(JMQPresentacion.JMQWS.descontarStockRequest request) {
+            return base.Channel.descontarStock(request);
+        }
+        
+        public void descontarStock(int id, int stock) {
+            JMQPresentacion.JMQWS.descontarStockRequest inValue = new JMQPresentacion.JMQWS.descontarStockRequest();
+            inValue.id = id;
+            inValue.stock = stock;
+            JMQPresentacion.JMQWS.descontarStockResponse retVal = ((JMQPresentacion.JMQWS.ProductoWS)(this)).descontarStock(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.descontarStockResponse> JMQPresentacion.JMQWS.ProductoWS.descontarStockAsync(JMQPresentacion.JMQWS.descontarStockRequest request) {
+            return base.Channel.descontarStockAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.descontarStockResponse> descontarStockAsync(int id, int stock) {
+            JMQPresentacion.JMQWS.descontarStockRequest inValue = new JMQPresentacion.JMQWS.descontarStockRequest();
+            inValue.id = id;
+            inValue.stock = stock;
+            return ((JMQPresentacion.JMQWS.ProductoWS)(this)).descontarStockAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.listaProductoResponse JMQPresentacion.JMQWS.ProductoWS.listaProducto(JMQPresentacion.JMQWS.listaProductoRequest request) {
+            return base.Channel.listaProducto(request);
+        }
+        
+        public JMQPresentacion.JMQWS.producto[] listaProducto() {
+            JMQPresentacion.JMQWS.listaProductoRequest inValue = new JMQPresentacion.JMQWS.listaProductoRequest();
+            JMQPresentacion.JMQWS.listaProductoResponse retVal = ((JMQPresentacion.JMQWS.ProductoWS)(this)).listaProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listaProductoResponse> JMQPresentacion.JMQWS.ProductoWS.listaProductoAsync(JMQPresentacion.JMQWS.listaProductoRequest request) {
+            return base.Channel.listaProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listaProductoResponse> listaProductoAsync() {
+            JMQPresentacion.JMQWS.listaProductoRequest inValue = new JMQPresentacion.JMQWS.listaProductoRequest();
+            return ((JMQPresentacion.JMQWS.ProductoWS)(this)).listaProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.reporteMasVendidosResponse JMQPresentacion.JMQWS.ProductoWS.reporteMasVendidos(JMQPresentacion.JMQWS.reporteMasVendidosRequest request) {
+            return base.Channel.reporteMasVendidos(request);
+        }
+        
+        public byte[] reporteMasVendidos() {
+            JMQPresentacion.JMQWS.reporteMasVendidosRequest inValue = new JMQPresentacion.JMQWS.reporteMasVendidosRequest();
+            JMQPresentacion.JMQWS.reporteMasVendidosResponse retVal = ((JMQPresentacion.JMQWS.ProductoWS)(this)).reporteMasVendidos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteMasVendidosResponse> JMQPresentacion.JMQWS.ProductoWS.reporteMasVendidosAsync(JMQPresentacion.JMQWS.reporteMasVendidosRequest request) {
+            return base.Channel.reporteMasVendidosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteMasVendidosResponse> reporteMasVendidosAsync() {
+            JMQPresentacion.JMQWS.reporteMasVendidosRequest inValue = new JMQPresentacion.JMQWS.reporteMasVendidosRequest();
+            return ((JMQPresentacion.JMQWS.ProductoWS)(this)).reporteMasVendidosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.reporteStockResponse JMQPresentacion.JMQWS.ProductoWS.reporteStock(JMQPresentacion.JMQWS.reporteStockRequest request) {
+            return base.Channel.reporteStock(request);
+        }
+        
+        public byte[] reporteStock() {
+            JMQPresentacion.JMQWS.reporteStockRequest inValue = new JMQPresentacion.JMQWS.reporteStockRequest();
+            JMQPresentacion.JMQWS.reporteStockResponse retVal = ((JMQPresentacion.JMQWS.ProductoWS)(this)).reporteStock(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteStockResponse> JMQPresentacion.JMQWS.ProductoWS.reporteStockAsync(JMQPresentacion.JMQWS.reporteStockRequest request) {
+            return base.Channel.reporteStockAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteStockResponse> reporteStockAsync() {
+            JMQPresentacion.JMQWS.reporteStockRequest inValue = new JMQPresentacion.JMQWS.reporteStockRequest();
+            return ((JMQPresentacion.JMQWS.ProductoWS)(this)).reporteStockAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.eliminarProductoResponse JMQPresentacion.JMQWS.ProductoWS.eliminarProducto(JMQPresentacion.JMQWS.eliminarProductoRequest request) {
+            return base.Channel.eliminarProducto(request);
+        }
+        
+        public void eliminarProducto(int id) {
+            JMQPresentacion.JMQWS.eliminarProductoRequest inValue = new JMQPresentacion.JMQWS.eliminarProductoRequest();
+>>>>>>> origin/main
             inValue.id = id;
             JMQPresentacion.JMQWS.buscarProductoResponse retVal = ((JMQPresentacion.JMQWS.ProductoWS)(this)).buscarProducto(inValue);
             return retVal.@return;
@@ -791,6 +1142,28 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.buscarProductoRequest inValue = new JMQPresentacion.JMQWS.buscarProductoRequest();
             inValue.id = id;
             return ((JMQPresentacion.JMQWS.ProductoWS)(this)).buscarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.registrarProductoResponse JMQPresentacion.JMQWS.ProductoWS.registrarProducto(JMQPresentacion.JMQWS.registrarProductoRequest request) {
+            return base.Channel.registrarProducto(request);
+        }
+        
+        public void registrarProducto(JMQPresentacion.JMQWS.producto producto) {
+            JMQPresentacion.JMQWS.registrarProductoRequest inValue = new JMQPresentacion.JMQWS.registrarProductoRequest();
+            inValue.producto = producto;
+            JMQPresentacion.JMQWS.registrarProductoResponse retVal = ((JMQPresentacion.JMQWS.ProductoWS)(this)).registrarProducto(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarProductoResponse> JMQPresentacion.JMQWS.ProductoWS.registrarProductoAsync(JMQPresentacion.JMQWS.registrarProductoRequest request) {
+            return base.Channel.registrarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarProductoResponse> registrarProductoAsync(JMQPresentacion.JMQWS.producto producto) {
+            JMQPresentacion.JMQWS.registrarProductoRequest inValue = new JMQPresentacion.JMQWS.registrarProductoRequest();
+            inValue.producto = producto;
+            return ((JMQPresentacion.JMQWS.ProductoWS)(this)).registrarProductoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -827,6 +1200,7 @@ namespace JMQPresentacion.JMQWS {
             inValue.conDescuento = conDescuento;
             return ((JMQPresentacion.JMQWS.ProductoWS)(this)).filtrarProductosAsync(inValue);
         }
+<<<<<<< HEAD
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.reporteMasVendidosResponse JMQPresentacion.JMQWS.ProductoWS.reporteMasVendidos(JMQPresentacion.JMQWS.reporteMasVendidosRequest request) {
@@ -936,12 +1310,15 @@ namespace JMQPresentacion.JMQWS {
             inValue.stock = stock;
             return ((JMQPresentacion.JMQWS.ProductoWS)(this)).descontarStockAsync(inValue);
         }
+=======
+>>>>>>> origin/main
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://jmqws.inversiones.jmq.com/", ConfigurationName="JMQWS.OrdenVentaWS")]
     public interface OrdenVentaWS {
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVenta/Fault/Exception", Name="Exception")]
@@ -992,23 +1369,17 @@ namespace JMQPresentacion.JMQWS {
         // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaService/Fault/Exc" +
+=======
+        // CODEGEN: El parámetro 'ordenVenta' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/agregarDetalleAOrdenVentaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/agregarDetalleAOrdenVentaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/agregarDetalleAOrdenVenta/Fault/Exc" +
+>>>>>>> origin/main
             "eption", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse eliminarOrdenVentaService(JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest request);
+        JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaResponse agregarDetalleAOrdenVenta(JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse> eliminarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaService/Fault/Ex" +
-            "ception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse registrarOrdenVentaService(JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse> registrarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/agregarDetalleAOrdenVentaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/agregarDetalleAOrdenVentaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaResponse> agregarDetalleAOrdenVentaAsync(JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaRequest request);
         
         // CODEGEN: El parámetro 'ordenVenta' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/actualizarOrdenVentaServiceResponse" +
@@ -1036,6 +1407,7 @@ namespace JMQPresentacion.JMQWS {
             "sponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.actualizarEstadoOrdenVentaServiceResponse> actualizarEstadoOrdenVentaServiceAsync(JMQPresentacion.JMQWS.actualizarEstadoOrdenVentaServiceRequest request);
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/buscarOrdenVentaServicesByIdRequest" +
             "", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/buscarOrdenVentaServicesByIdRespons" +
@@ -1050,6 +1422,65 @@ namespace JMQPresentacion.JMQWS {
             "", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/buscarOrdenVentaServicesByIdRespons" +
             "e")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarOrdenVentaServicesByIdResponse> buscarOrdenVentaServicesByIdAsync(JMQPresentacion.JMQWS.buscarOrdenVentaServicesByIdRequest request);
+=======
+        // CODEGEN: El parámetro 'ordenVenta' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarDetalleDeOrdenVentaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarDetalleDeOrdenVentaResponse" +
+            "")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarDetalleDeOrdenVenta/Fault/E" +
+            "xception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaResponse eliminarDetalleDeOrdenVenta(JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarDetalleDeOrdenVentaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarDetalleDeOrdenVentaResponse" +
+            "")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaResponse> eliminarDetalleDeOrdenVentaAsync(JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuarioReque" +
+            "st", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuarioRespo" +
+            "nse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuario/Faul" +
+            "t/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse obtenerOrdenesVentasPorUsuario(JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuarioReque" +
+            "st", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/obtenerOrdenesVentasPorUsuarioRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse> obtenerOrdenesVentasPorUsuarioAsync(JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaService/Fault/Ex" +
+            "ception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse registrarOrdenVentaService(JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/registrarOrdenVentaServiceResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse> registrarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest request);
+        
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaService/Fault/Exc" +
+            "eption", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse eliminarOrdenVentaService(JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/eliminarOrdenVentaServiceResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse> eliminarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVenta/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.listarOrdenVentaResponse listarOrdenVenta(JMQPresentacion.JMQWS.listarOrdenVentaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/OrdenVentaWS/listarOrdenVentaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarOrdenVentaResponse> listarOrdenVentaAsync(JMQPresentacion.JMQWS.listarOrdenVentaRequest request);
+>>>>>>> origin/main
     }
     
     /// <remarks/>
@@ -1469,6 +1900,7 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenVenta", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class listarOrdenVentaRequest {
         
@@ -1629,34 +2061,35 @@ namespace JMQPresentacion.JMQWS {
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="registrarOrdenVentaService", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class registrarOrdenVentaServiceRequest {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarDetalleAOrdenVenta", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class agregarDetalleAOrdenVentaRequest {
+>>>>>>> origin/main
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public JMQPresentacion.JMQWS.ordenVenta ordenVenta;
         
-        public registrarOrdenVentaServiceRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.detalle detalle;
+        
+        public agregarDetalleAOrdenVentaRequest() {
         }
         
-        public registrarOrdenVentaServiceRequest(JMQPresentacion.JMQWS.ordenVenta ordenVenta) {
+        public agregarDetalleAOrdenVentaRequest(JMQPresentacion.JMQWS.ordenVenta ordenVenta, JMQPresentacion.JMQWS.detalle detalle) {
             this.ordenVenta = ordenVenta;
+            this.detalle = detalle;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarOrdenVentaServiceResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class registrarOrdenVentaServiceResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarDetalleAOrdenVentaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class agregarDetalleAOrdenVentaResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public JMQPresentacion.JMQWS.ordenVenta @return;
-        
-        public registrarOrdenVentaServiceResponse() {
-        }
-        
-        public registrarOrdenVentaServiceResponse(JMQPresentacion.JMQWS.ordenVenta @return) {
-            this.@return = @return;
+        public agregarDetalleAOrdenVentaResponse() {
         }
     }
     
@@ -1724,8 +2157,46 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="buscarOrdenVentaServicesById", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class buscarOrdenVentaServicesByIdRequest {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDetalleDeOrdenVenta", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarDetalleDeOrdenVentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.ordenVenta ordenVenta;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.detalle detalle;
+        
+        public eliminarDetalleDeOrdenVentaRequest() {
+        }
+        
+        public eliminarDetalleDeOrdenVentaRequest(JMQPresentacion.JMQWS.ordenVenta ordenVenta, JMQPresentacion.JMQWS.detalle detalle) {
+            this.ordenVenta = ordenVenta;
+            this.detalle = detalle;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDetalleDeOrdenVentaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarDetalleDeOrdenVentaResponse {
+        
+        public eliminarDetalleDeOrdenVentaResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerOrdenesVentasPorUsuario", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class obtenerOrdenesVentasPorUsuarioRequest {
+>>>>>>> origin/main
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -1757,6 +2228,101 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+<<<<<<< HEAD
+=======
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarOrdenVentaService", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarOrdenVentaServiceRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.ordenVenta ordenVenta;
+        
+        public registrarOrdenVentaServiceRequest() {
+        }
+        
+        public registrarOrdenVentaServiceRequest(JMQPresentacion.JMQWS.ordenVenta ordenVenta) {
+            this.ordenVenta = ordenVenta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarOrdenVentaServiceResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarOrdenVentaServiceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.ordenVenta @return;
+        
+        public registrarOrdenVentaServiceResponse() {
+        }
+        
+        public registrarOrdenVentaServiceResponse(JMQPresentacion.JMQWS.ordenVenta @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrdenVentaService", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarOrdenVentaServiceRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarOrdenVentaServiceRequest() {
+        }
+        
+        public eliminarOrdenVentaServiceRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarOrdenVentaServiceResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarOrdenVentaServiceResponse {
+        
+        public eliminarOrdenVentaServiceResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenVenta", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class listarOrdenVentaRequest {
+        
+        public listarOrdenVentaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenVentaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class listarOrdenVentaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.ordenVenta[] @return;
+        
+        public listarOrdenVentaResponse() {
+        }
+        
+        public listarOrdenVentaResponse(JMQPresentacion.JMQWS.ordenVenta[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+>>>>>>> origin/main
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface OrdenVentaWSChannel : JMQPresentacion.JMQWS.OrdenVentaWS, System.ServiceModel.IClientChannel {
     }
@@ -1785,6 +2351,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.listarOrdenVentaResponse JMQPresentacion.JMQWS.OrdenVentaWS.listarOrdenVenta(JMQPresentacion.JMQWS.listarOrdenVentaRequest request) {
             return base.Channel.listarOrdenVenta(request);
         }
@@ -1879,46 +2446,29 @@ namespace JMQPresentacion.JMQWS {
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse JMQPresentacion.JMQWS.OrdenVentaWS.eliminarOrdenVentaService(JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest request) {
             return base.Channel.eliminarOrdenVentaService(request);
+=======
+        JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaResponse JMQPresentacion.JMQWS.OrdenVentaWS.agregarDetalleAOrdenVenta(JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaRequest request) {
+            return base.Channel.agregarDetalleAOrdenVenta(request);
+>>>>>>> origin/main
         }
         
-        public void eliminarOrdenVentaService(int id) {
-            JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest inValue = new JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest();
-            inValue.id = id;
-            JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse retVal = ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).eliminarOrdenVentaService(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse> JMQPresentacion.JMQWS.OrdenVentaWS.eliminarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest request) {
-            return base.Channel.eliminarOrdenVentaServiceAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse> eliminarOrdenVentaServiceAsync(int id) {
-            JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest inValue = new JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest();
-            inValue.id = id;
-            return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).eliminarOrdenVentaServiceAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse JMQPresentacion.JMQWS.OrdenVentaWS.registrarOrdenVentaService(JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest request) {
-            return base.Channel.registrarOrdenVentaService(request);
-        }
-        
-        public JMQPresentacion.JMQWS.ordenVenta registrarOrdenVentaService(JMQPresentacion.JMQWS.ordenVenta ordenVenta) {
-            JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest inValue = new JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest();
+        public void agregarDetalleAOrdenVenta(JMQPresentacion.JMQWS.ordenVenta ordenVenta, JMQPresentacion.JMQWS.detalle detalle) {
+            JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaRequest inValue = new JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaRequest();
             inValue.ordenVenta = ordenVenta;
-            JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse retVal = ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).registrarOrdenVentaService(inValue);
-            return retVal.@return;
+            inValue.detalle = detalle;
+            JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaResponse retVal = ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).agregarDetalleAOrdenVenta(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse> JMQPresentacion.JMQWS.OrdenVentaWS.registrarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest request) {
-            return base.Channel.registrarOrdenVentaServiceAsync(request);
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaResponse> JMQPresentacion.JMQWS.OrdenVentaWS.agregarDetalleAOrdenVentaAsync(JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaRequest request) {
+            return base.Channel.agregarDetalleAOrdenVentaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse> registrarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.ordenVenta ordenVenta) {
-            JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest inValue = new JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest();
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaResponse> agregarDetalleAOrdenVentaAsync(JMQPresentacion.JMQWS.ordenVenta ordenVenta, JMQPresentacion.JMQWS.detalle detalle) {
+            JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaRequest inValue = new JMQPresentacion.JMQWS.agregarDetalleAOrdenVentaRequest();
             inValue.ordenVenta = ordenVenta;
-            return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).registrarOrdenVentaServiceAsync(inValue);
+            inValue.detalle = detalle;
+            return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).agregarDetalleAOrdenVentaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1968,6 +2518,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.buscarOrdenVentaServicesByIdResponse JMQPresentacion.JMQWS.OrdenVentaWS.buscarOrdenVentaServicesById(JMQPresentacion.JMQWS.buscarOrdenVentaServicesByIdRequest request) {
             return base.Channel.buscarOrdenVentaServicesById(request);
         }
@@ -1988,6 +2539,118 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.buscarOrdenVentaServicesByIdRequest inValue = new JMQPresentacion.JMQWS.buscarOrdenVentaServicesByIdRequest();
             inValue.id = id;
             return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).buscarOrdenVentaServicesByIdAsync(inValue);
+=======
+        JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaResponse JMQPresentacion.JMQWS.OrdenVentaWS.eliminarDetalleDeOrdenVenta(JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaRequest request) {
+            return base.Channel.eliminarDetalleDeOrdenVenta(request);
+        }
+        
+        public void eliminarDetalleDeOrdenVenta(JMQPresentacion.JMQWS.ordenVenta ordenVenta, JMQPresentacion.JMQWS.detalle detalle) {
+            JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaRequest inValue = new JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaRequest();
+            inValue.ordenVenta = ordenVenta;
+            inValue.detalle = detalle;
+            JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaResponse retVal = ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).eliminarDetalleDeOrdenVenta(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaResponse> JMQPresentacion.JMQWS.OrdenVentaWS.eliminarDetalleDeOrdenVentaAsync(JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaRequest request) {
+            return base.Channel.eliminarDetalleDeOrdenVentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaResponse> eliminarDetalleDeOrdenVentaAsync(JMQPresentacion.JMQWS.ordenVenta ordenVenta, JMQPresentacion.JMQWS.detalle detalle) {
+            JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaRequest inValue = new JMQPresentacion.JMQWS.eliminarDetalleDeOrdenVentaRequest();
+            inValue.ordenVenta = ordenVenta;
+            inValue.detalle = detalle;
+            return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).eliminarDetalleDeOrdenVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse JMQPresentacion.JMQWS.OrdenVentaWS.obtenerOrdenesVentasPorUsuario(JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioRequest request) {
+            return base.Channel.obtenerOrdenesVentasPorUsuario(request);
+        }
+        
+        public JMQPresentacion.JMQWS.ordenVenta[] obtenerOrdenesVentasPorUsuario(int id) {
+            JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioRequest inValue = new JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioRequest();
+            inValue.id = id;
+            JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse retVal = ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).obtenerOrdenesVentasPorUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse> JMQPresentacion.JMQWS.OrdenVentaWS.obtenerOrdenesVentasPorUsuarioAsync(JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioRequest request) {
+            return base.Channel.obtenerOrdenesVentasPorUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse> obtenerOrdenesVentasPorUsuarioAsync(int id) {
+            JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioRequest inValue = new JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioRequest();
+            inValue.id = id;
+            return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).obtenerOrdenesVentasPorUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse JMQPresentacion.JMQWS.OrdenVentaWS.registrarOrdenVentaService(JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest request) {
+            return base.Channel.registrarOrdenVentaService(request);
+        }
+        
+        public JMQPresentacion.JMQWS.ordenVenta registrarOrdenVentaService(JMQPresentacion.JMQWS.ordenVenta ordenVenta) {
+            JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest inValue = new JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest();
+            inValue.ordenVenta = ordenVenta;
+            JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse retVal = ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).registrarOrdenVentaService(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse> JMQPresentacion.JMQWS.OrdenVentaWS.registrarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest request) {
+            return base.Channel.registrarOrdenVentaServiceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarOrdenVentaServiceResponse> registrarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.ordenVenta ordenVenta) {
+            JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest inValue = new JMQPresentacion.JMQWS.registrarOrdenVentaServiceRequest();
+            inValue.ordenVenta = ordenVenta;
+            return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).registrarOrdenVentaServiceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse JMQPresentacion.JMQWS.OrdenVentaWS.eliminarOrdenVentaService(JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest request) {
+            return base.Channel.eliminarOrdenVentaService(request);
+        }
+        
+        public void eliminarOrdenVentaService(int id) {
+            JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest inValue = new JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest();
+            inValue.id = id;
+            JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse retVal = ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).eliminarOrdenVentaService(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse> JMQPresentacion.JMQWS.OrdenVentaWS.eliminarOrdenVentaServiceAsync(JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest request) {
+            return base.Channel.eliminarOrdenVentaServiceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarOrdenVentaServiceResponse> eliminarOrdenVentaServiceAsync(int id) {
+            JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest inValue = new JMQPresentacion.JMQWS.eliminarOrdenVentaServiceRequest();
+            inValue.id = id;
+            return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).eliminarOrdenVentaServiceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.listarOrdenVentaResponse JMQPresentacion.JMQWS.OrdenVentaWS.listarOrdenVenta(JMQPresentacion.JMQWS.listarOrdenVentaRequest request) {
+            return base.Channel.listarOrdenVenta(request);
+        }
+        
+        public JMQPresentacion.JMQWS.ordenVenta[] listarOrdenVenta() {
+            JMQPresentacion.JMQWS.listarOrdenVentaRequest inValue = new JMQPresentacion.JMQWS.listarOrdenVentaRequest();
+            JMQPresentacion.JMQWS.listarOrdenVentaResponse retVal = ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).listarOrdenVenta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarOrdenVentaResponse> JMQPresentacion.JMQWS.OrdenVentaWS.listarOrdenVentaAsync(JMQPresentacion.JMQWS.listarOrdenVentaRequest request) {
+            return base.Channel.listarOrdenVentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarOrdenVentaResponse> listarOrdenVentaAsync() {
+            JMQPresentacion.JMQWS.listarOrdenVentaRequest inValue = new JMQPresentacion.JMQWS.listarOrdenVentaRequest();
+            return ((JMQPresentacion.JMQWS.OrdenVentaWS)(this)).listarOrdenVentaAsync(inValue);
+>>>>>>> origin/main
         }
     }
     
@@ -2011,14 +2674,13 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarFacturaResponse> ActualizarFacturaAsync(JMQPresentacion.JMQWS.ActualizarFacturaRequest request);
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaResponse")]
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        JMQPresentacion.JMQWS.buscarFacturaResponse buscarFactura(JMQPresentacion.JMQWS.buscarFacturaRequest request);
+        JMQPresentacion.JMQWS.ActualizarFacturaResponse ActualizarFactura(JMQPresentacion.JMQWS.ActualizarFacturaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarFacturaResponse> buscarFacturaAsync(JMQPresentacion.JMQWS.buscarFacturaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/ActualizarFacturaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarFacturaResponse> ActualizarFacturaAsync(JMQPresentacion.JMQWS.ActualizarFacturaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/ListarFacturasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/ListarFacturasResponse")]
@@ -2030,6 +2692,18 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/ListarFacturasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/ListarFacturasResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarFacturasResponse> ListarFacturasAsync(JMQPresentacion.JMQWS.ListarFacturasRequest request);
         
+<<<<<<< HEAD
+=======
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.buscarFacturaResponse buscarFactura(JMQPresentacion.JMQWS.buscarFacturaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/buscarFacturaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarFacturaResponse> buscarFacturaAsync(JMQPresentacion.JMQWS.buscarFacturaRequest request);
+        
+>>>>>>> origin/main
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/EliminarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/EliminarFacturaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -2037,6 +2711,24 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/EliminarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/EliminarFacturaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarFacturaResponse> EliminarFacturaAsync(JMQPresentacion.JMQWS.EliminarFacturaRequest request);
+<<<<<<< HEAD
+=======
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/RegistrarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/RegistrarFacturaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.RegistrarFacturaResponse RegistrarFactura(JMQPresentacion.JMQWS.RegistrarFacturaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/RegistrarFacturaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/RegistrarFacturaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarFacturaResponse> RegistrarFacturaAsync(JMQPresentacion.JMQWS.RegistrarFacturaRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class helloRequest {
+>>>>>>> origin/main
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/FacturaWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/FacturaWS/helloResponse")]
@@ -2326,6 +3018,7 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarFactura", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class RegistrarFacturaRequest {
         
@@ -2354,6 +3047,8 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+=======
+>>>>>>> origin/main
     [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarFactura", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class ActualizarFacturaRequest {
         
@@ -2382,6 +3077,37 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarFacturas", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarFacturasRequest {
+        
+        public ListarFacturasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarFacturasResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarFacturasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.factura[] @return;
+        
+        public ListarFacturasResponse() {
+        }
+        
+        public ListarFacturasResponse(JMQPresentacion.JMQWS.factura[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+>>>>>>> origin/main
     [System.ServiceModel.MessageContractAttribute(WrapperName="buscarFactura", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class buscarFacturaRequest {
         
@@ -2418,34 +3144,6 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarFacturas", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class ListarFacturasRequest {
-        
-        public ListarFacturasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarFacturasResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class ListarFacturasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public JMQPresentacion.JMQWS.factura[] @return;
-        
-        public ListarFacturasResponse() {
-        }
-        
-        public ListarFacturasResponse(JMQPresentacion.JMQWS.factura[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarFactura", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class EliminarFacturaRequest {
         
@@ -2464,6 +3162,49 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarFacturaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarFacturaResponse {
+        
+        public EliminarFacturaResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarFactura", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarFacturaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public EliminarFacturaRequest() {
+        }
+        
+        public EliminarFacturaRequest(int arg0) {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarFactura", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarFacturaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.factura arg0;
+        
+        public RegistrarFacturaRequest() {
+        }
+        
+        public RegistrarFacturaRequest(JMQPresentacion.JMQWS.factura arg0) {
+>>>>>>> origin/main
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarFacturaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class EliminarFacturaResponse {
         
@@ -2504,6 +3245,12 @@ namespace JMQPresentacion.JMQWS {
         
         public helloResponse(string @return) {
             this.@return = @return;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarFacturaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarFacturaResponse {
+        
+        public RegistrarFacturaResponse() {
+>>>>>>> origin/main
         }
     }
     
@@ -2535,25 +3282,30 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.RegistrarFacturaResponse JMQPresentacion.JMQWS.FacturaWS.RegistrarFactura(JMQPresentacion.JMQWS.RegistrarFacturaRequest request) {
             return base.Channel.RegistrarFactura(request);
+=======
+        JMQPresentacion.JMQWS.helloResponse JMQPresentacion.JMQWS.FacturaWS.hello(JMQPresentacion.JMQWS.helloRequest request) {
+            return base.Channel.hello(request);
         }
         
-        public void RegistrarFactura(JMQPresentacion.JMQWS.factura arg0) {
-            JMQPresentacion.JMQWS.RegistrarFacturaRequest inValue = new JMQPresentacion.JMQWS.RegistrarFacturaRequest();
-            inValue.arg0 = arg0;
-            JMQPresentacion.JMQWS.RegistrarFacturaResponse retVal = ((JMQPresentacion.JMQWS.FacturaWS)(this)).RegistrarFactura(inValue);
+        public string hello(string name) {
+            JMQPresentacion.JMQWS.helloRequest inValue = new JMQPresentacion.JMQWS.helloRequest();
+            inValue.name = name;
+            JMQPresentacion.JMQWS.helloResponse retVal = ((JMQPresentacion.JMQWS.FacturaWS)(this)).hello(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarFacturaResponse> JMQPresentacion.JMQWS.FacturaWS.RegistrarFacturaAsync(JMQPresentacion.JMQWS.RegistrarFacturaRequest request) {
-            return base.Channel.RegistrarFacturaAsync(request);
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> JMQPresentacion.JMQWS.FacturaWS.helloAsync(JMQPresentacion.JMQWS.helloRequest request) {
+            return base.Channel.helloAsync(request);
         }
         
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarFacturaResponse> RegistrarFacturaAsync(JMQPresentacion.JMQWS.factura arg0) {
-            JMQPresentacion.JMQWS.RegistrarFacturaRequest inValue = new JMQPresentacion.JMQWS.RegistrarFacturaRequest();
-            inValue.arg0 = arg0;
-            return ((JMQPresentacion.JMQWS.FacturaWS)(this)).RegistrarFacturaAsync(inValue);
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> helloAsync(string name) {
+            JMQPresentacion.JMQWS.helloRequest inValue = new JMQPresentacion.JMQWS.helloRequest();
+            inValue.name = name;
+            return ((JMQPresentacion.JMQWS.FacturaWS)(this)).helloAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2576,6 +3328,51 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.ActualizarFacturaRequest inValue = new JMQPresentacion.JMQWS.ActualizarFacturaRequest();
             inValue.arg0 = arg0;
             return ((JMQPresentacion.JMQWS.FacturaWS)(this)).ActualizarFacturaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.ListarFacturasResponse JMQPresentacion.JMQWS.FacturaWS.ListarFacturas(JMQPresentacion.JMQWS.ListarFacturasRequest request) {
+            return base.Channel.ListarFacturas(request);
+        }
+        
+        public JMQPresentacion.JMQWS.factura[] ListarFacturas() {
+            JMQPresentacion.JMQWS.ListarFacturasRequest inValue = new JMQPresentacion.JMQWS.ListarFacturasRequest();
+            JMQPresentacion.JMQWS.ListarFacturasResponse retVal = ((JMQPresentacion.JMQWS.FacturaWS)(this)).ListarFacturas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarFacturasResponse> JMQPresentacion.JMQWS.FacturaWS.ListarFacturasAsync(JMQPresentacion.JMQWS.ListarFacturasRequest request) {
+            return base.Channel.ListarFacturasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarFacturasResponse> ListarFacturasAsync() {
+            JMQPresentacion.JMQWS.ListarFacturasRequest inValue = new JMQPresentacion.JMQWS.ListarFacturasRequest();
+            return ((JMQPresentacion.JMQWS.FacturaWS)(this)).ListarFacturasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.buscarFacturaResponse JMQPresentacion.JMQWS.FacturaWS.buscarFactura(JMQPresentacion.JMQWS.buscarFacturaRequest request) {
+            return base.Channel.buscarFactura(request);
+>>>>>>> origin/main
+        }
+        
+        public JMQPresentacion.JMQWS.factura buscarFactura(int arg0) {
+            JMQPresentacion.JMQWS.buscarFacturaRequest inValue = new JMQPresentacion.JMQWS.buscarFacturaRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.buscarFacturaResponse retVal = ((JMQPresentacion.JMQWS.FacturaWS)(this)).buscarFactura(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarFacturaResponse> JMQPresentacion.JMQWS.FacturaWS.buscarFacturaAsync(JMQPresentacion.JMQWS.buscarFacturaRequest request) {
+            return base.Channel.buscarFacturaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarFacturaResponse> buscarFacturaAsync(int arg0) {
+            JMQPresentacion.JMQWS.buscarFacturaRequest inValue = new JMQPresentacion.JMQWS.buscarFacturaRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.FacturaWS)(this)).buscarFacturaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2645,6 +3442,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.helloResponse JMQPresentacion.JMQWS.FacturaWS.hello(JMQPresentacion.JMQWS.helloRequest request) {
             return base.Channel.hello(request);
         }
@@ -2665,6 +3463,27 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.helloRequest inValue = new JMQPresentacion.JMQWS.helloRequest();
             inValue.name = name;
             return ((JMQPresentacion.JMQWS.FacturaWS)(this)).helloAsync(inValue);
+=======
+        JMQPresentacion.JMQWS.RegistrarFacturaResponse JMQPresentacion.JMQWS.FacturaWS.RegistrarFactura(JMQPresentacion.JMQWS.RegistrarFacturaRequest request) {
+            return base.Channel.RegistrarFactura(request);
+        }
+        
+        public void RegistrarFactura(JMQPresentacion.JMQWS.factura arg0) {
+            JMQPresentacion.JMQWS.RegistrarFacturaRequest inValue = new JMQPresentacion.JMQWS.RegistrarFacturaRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.RegistrarFacturaResponse retVal = ((JMQPresentacion.JMQWS.FacturaWS)(this)).RegistrarFactura(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarFacturaResponse> JMQPresentacion.JMQWS.FacturaWS.RegistrarFacturaAsync(JMQPresentacion.JMQWS.RegistrarFacturaRequest request) {
+            return base.Channel.RegistrarFacturaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarFacturaResponse> RegistrarFacturaAsync(JMQPresentacion.JMQWS.factura arg0) {
+            JMQPresentacion.JMQWS.RegistrarFacturaRequest inValue = new JMQPresentacion.JMQWS.RegistrarFacturaRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.FacturaWS)(this)).RegistrarFacturaAsync(inValue);
+>>>>>>> origin/main
         }
     }
     
@@ -2680,14 +3499,15 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/registrarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/registrarBoletaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarBoletaResponse> registrarBoletaAsync(JMQPresentacion.JMQWS.registrarBoletaRequest request);
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaResponse")]
+<<<<<<< HEAD
+=======
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        JMQPresentacion.JMQWS.buscarBoletaResponse buscarBoleta(JMQPresentacion.JMQWS.buscarBoletaRequest request);
+        JMQPresentacion.JMQWS.eliminarBoletaResponse eliminarBoleta(JMQPresentacion.JMQWS.eliminarBoletaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarBoletaResponse> buscarBoletaAsync(JMQPresentacion.JMQWS.buscarBoletaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarBoletaResponse> eliminarBoletaAsync(JMQPresentacion.JMQWS.eliminarBoletaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasResponse")]
@@ -2706,6 +3526,39 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.actualizarBoletaResponse> actualizarBoletaAsync(JMQPresentacion.JMQWS.actualizarBoletaRequest request);
         
+>>>>>>> origin/main
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.buscarBoletaResponse buscarBoleta(JMQPresentacion.JMQWS.buscarBoletaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/buscarBoletaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarBoletaResponse> buscarBoletaAsync(JMQPresentacion.JMQWS.buscarBoletaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+<<<<<<< HEAD
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.listarBoletasResponse listarBoletas(JMQPresentacion.JMQWS.listarBoletasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/listarBoletasResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarBoletasResponse> listarBoletasAsync(JMQPresentacion.JMQWS.listarBoletasRequest request);
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaResponse")]
+=======
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/helloResponse")]
+>>>>>>> origin/main
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.helloResponse hello(JMQPresentacion.JMQWS.helloRequest request);
+        
+<<<<<<< HEAD
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/actualizarBoletaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.actualizarBoletaResponse> actualizarBoletaAsync(JMQPresentacion.JMQWS.actualizarBoletaRequest request);
+        
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/eliminarBoletaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -2720,6 +3573,8 @@ namespace JMQPresentacion.JMQWS {
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         JMQPresentacion.JMQWS.helloResponse hello(JMQPresentacion.JMQWS.helloRequest request);
         
+=======
+>>>>>>> origin/main
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/BoletaWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/BoletaWS/helloResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> helloAsync(JMQPresentacion.JMQWS.helloRequest request);
     }
@@ -2755,6 +3610,93 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarBoleta", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarBoletaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public eliminarBoletaRequest() {
+        }
+        
+        public eliminarBoletaRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarBoletaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarBoletaResponse {
+        
+        public eliminarBoletaResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBoletas", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class listarBoletasRequest {
+        
+        public listarBoletasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBoletasResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class listarBoletasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.boleta[] @return;
+        
+        public listarBoletasResponse() {
+        }
+        
+        public listarBoletasResponse(JMQPresentacion.JMQWS.boleta[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarBoleta", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class actualizarBoletaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.boleta arg0;
+        
+        public actualizarBoletaRequest() {
+        }
+        
+        public actualizarBoletaRequest(JMQPresentacion.JMQWS.boleta arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarBoletaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class actualizarBoletaResponse {
+        
+        public actualizarBoletaResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+>>>>>>> origin/main
     [System.ServiceModel.MessageContractAttribute(WrapperName="buscarBoleta", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class buscarBoletaRequest {
         
@@ -2788,6 +3730,7 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+<<<<<<< HEAD
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2872,6 +3815,8 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+=======
+>>>>>>> origin/main
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface BoletaWSChannel : JMQPresentacion.JMQWS.BoletaWS, System.ServiceModel.IClientChannel {
     }
@@ -2922,26 +3867,27 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        JMQPresentacion.JMQWS.buscarBoletaResponse JMQPresentacion.JMQWS.BoletaWS.buscarBoleta(JMQPresentacion.JMQWS.buscarBoletaRequest request) {
-            return base.Channel.buscarBoleta(request);
+<<<<<<< HEAD
+=======
+        JMQPresentacion.JMQWS.eliminarBoletaResponse JMQPresentacion.JMQWS.BoletaWS.eliminarBoleta(JMQPresentacion.JMQWS.eliminarBoletaRequest request) {
+            return base.Channel.eliminarBoleta(request);
         }
         
-        public JMQPresentacion.JMQWS.boleta buscarBoleta(int arg0) {
-            JMQPresentacion.JMQWS.buscarBoletaRequest inValue = new JMQPresentacion.JMQWS.buscarBoletaRequest();
+        public void eliminarBoleta(int arg0) {
+            JMQPresentacion.JMQWS.eliminarBoletaRequest inValue = new JMQPresentacion.JMQWS.eliminarBoletaRequest();
             inValue.arg0 = arg0;
-            JMQPresentacion.JMQWS.buscarBoletaResponse retVal = ((JMQPresentacion.JMQWS.BoletaWS)(this)).buscarBoleta(inValue);
-            return retVal.@return;
+            JMQPresentacion.JMQWS.eliminarBoletaResponse retVal = ((JMQPresentacion.JMQWS.BoletaWS)(this)).eliminarBoleta(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarBoletaResponse> JMQPresentacion.JMQWS.BoletaWS.buscarBoletaAsync(JMQPresentacion.JMQWS.buscarBoletaRequest request) {
-            return base.Channel.buscarBoletaAsync(request);
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarBoletaResponse> JMQPresentacion.JMQWS.BoletaWS.eliminarBoletaAsync(JMQPresentacion.JMQWS.eliminarBoletaRequest request) {
+            return base.Channel.eliminarBoletaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarBoletaResponse> buscarBoletaAsync(int arg0) {
-            JMQPresentacion.JMQWS.buscarBoletaRequest inValue = new JMQPresentacion.JMQWS.buscarBoletaRequest();
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarBoletaResponse> eliminarBoletaAsync(int arg0) {
+            JMQPresentacion.JMQWS.eliminarBoletaRequest inValue = new JMQPresentacion.JMQWS.eliminarBoletaRequest();
             inValue.arg0 = arg0;
-            return ((JMQPresentacion.JMQWS.BoletaWS)(this)).buscarBoletaAsync(inValue);
+            return ((JMQPresentacion.JMQWS.BoletaWS)(this)).eliminarBoletaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2985,6 +3931,79 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.actualizarBoletaRequest inValue = new JMQPresentacion.JMQWS.actualizarBoletaRequest();
             inValue.arg0 = arg0;
             return ((JMQPresentacion.JMQWS.BoletaWS)(this)).actualizarBoletaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+>>>>>>> origin/main
+        JMQPresentacion.JMQWS.buscarBoletaResponse JMQPresentacion.JMQWS.BoletaWS.buscarBoleta(JMQPresentacion.JMQWS.buscarBoletaRequest request) {
+            return base.Channel.buscarBoleta(request);
+        }
+        
+        public JMQPresentacion.JMQWS.boleta buscarBoleta(int arg0) {
+            JMQPresentacion.JMQWS.buscarBoletaRequest inValue = new JMQPresentacion.JMQWS.buscarBoletaRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.buscarBoletaResponse retVal = ((JMQPresentacion.JMQWS.BoletaWS)(this)).buscarBoleta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarBoletaResponse> JMQPresentacion.JMQWS.BoletaWS.buscarBoletaAsync(JMQPresentacion.JMQWS.buscarBoletaRequest request) {
+            return base.Channel.buscarBoletaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarBoletaResponse> buscarBoletaAsync(int arg0) {
+            JMQPresentacion.JMQWS.buscarBoletaRequest inValue = new JMQPresentacion.JMQWS.buscarBoletaRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.BoletaWS)(this)).buscarBoletaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+        JMQPresentacion.JMQWS.listarBoletasResponse JMQPresentacion.JMQWS.BoletaWS.listarBoletas(JMQPresentacion.JMQWS.listarBoletasRequest request) {
+            return base.Channel.listarBoletas(request);
+        }
+        
+        public JMQPresentacion.JMQWS.boleta[] listarBoletas() {
+            JMQPresentacion.JMQWS.listarBoletasRequest inValue = new JMQPresentacion.JMQWS.listarBoletasRequest();
+            JMQPresentacion.JMQWS.listarBoletasResponse retVal = ((JMQPresentacion.JMQWS.BoletaWS)(this)).listarBoletas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarBoletasResponse> JMQPresentacion.JMQWS.BoletaWS.listarBoletasAsync(JMQPresentacion.JMQWS.listarBoletasRequest request) {
+            return base.Channel.listarBoletasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarBoletasResponse> listarBoletasAsync() {
+            JMQPresentacion.JMQWS.listarBoletasRequest inValue = new JMQPresentacion.JMQWS.listarBoletasRequest();
+            return ((JMQPresentacion.JMQWS.BoletaWS)(this)).listarBoletasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.actualizarBoletaResponse JMQPresentacion.JMQWS.BoletaWS.actualizarBoleta(JMQPresentacion.JMQWS.actualizarBoletaRequest request) {
+            return base.Channel.actualizarBoleta(request);
+=======
+        JMQPresentacion.JMQWS.helloResponse JMQPresentacion.JMQWS.BoletaWS.hello(JMQPresentacion.JMQWS.helloRequest request) {
+            return base.Channel.hello(request);
+>>>>>>> origin/main
+        }
+        
+        public string hello(string name) {
+            JMQPresentacion.JMQWS.helloRequest inValue = new JMQPresentacion.JMQWS.helloRequest();
+            inValue.name = name;
+            JMQPresentacion.JMQWS.helloResponse retVal = ((JMQPresentacion.JMQWS.BoletaWS)(this)).hello(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> JMQPresentacion.JMQWS.BoletaWS.helloAsync(JMQPresentacion.JMQWS.helloRequest request) {
+            return base.Channel.helloAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> helloAsync(string name) {
+            JMQPresentacion.JMQWS.helloRequest inValue = new JMQPresentacion.JMQWS.helloRequest();
+            inValue.name = name;
+            return ((JMQPresentacion.JMQWS.BoletaWS)(this)).helloAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3037,6 +4056,7 @@ namespace JMQPresentacion.JMQWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://jmqws.inversiones.jmq.com/", ConfigurationName="JMQWS.DescuentoWS")]
     public interface DescuentoWS {
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -3104,6 +4124,8 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/desactivarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/desactivarDescuentoResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.desactivarDescuentoResponse> desactivarDescuentoAsync(JMQPresentacion.JMQWS.desactivarDescuentoRequest request);
         
+=======
+>>>>>>> origin/main
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/helloResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -3112,6 +4134,51 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/helloResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> helloAsync(JMQPresentacion.JMQWS.helloRequest request);
+<<<<<<< HEAD
+=======
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.ActualizarDescuentoResponse ActualizarDescuento(JMQPresentacion.JMQWS.ActualizarDescuentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/ActualizarDescuentoResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarDescuentoResponse> ActualizarDescuentoAsync(JMQPresentacion.JMQWS.ActualizarDescuentoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.BuscarDescuentoResponse BuscarDescuento(JMQPresentacion.JMQWS.BuscarDescuentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/BuscarDescuentoResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarDescuentoResponse> BuscarDescuentoAsync(JMQPresentacion.JMQWS.BuscarDescuentoRequest request);
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.EliminarDescuentoResponse EliminarDescuento(JMQPresentacion.JMQWS.EliminarDescuentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/EliminarDescuentoResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarDescuentoResponse> EliminarDescuentoAsync(JMQPresentacion.JMQWS.EliminarDescuentoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarDescuentosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarDescuentosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.ListarDescuentosResponse ListarDescuentos(JMQPresentacion.JMQWS.ListarDescuentosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarDescuentosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/ListarDescuentosResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarDescuentosResponse> ListarDescuentosAsync(JMQPresentacion.JMQWS.ListarDescuentosRequest request);
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.RegistrarDescuentoResponse RegistrarDescuento(JMQPresentacion.JMQWS.RegistrarDescuentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DescuentoWS/RegistrarDescuentoResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarDescuentoResponse> RegistrarDescuentoAsync(JMQPresentacion.JMQWS.RegistrarDescuentoRequest request);
+>>>>>>> origin/main
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3145,6 +4212,7 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="activarDescuento", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class activarDescuentoRequest {
         
@@ -3275,6 +4343,8 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+=======
+>>>>>>> origin/main
     [System.ServiceModel.MessageContractAttribute(WrapperName="BuscarDescuento", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class BuscarDescuentoRequest {
         
@@ -3311,6 +4381,7 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarDescuento", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class ActualizarDescuentoRequest {
         
@@ -3341,15 +4412,26 @@ namespace JMQPresentacion.JMQWS {
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="desactivarDescuento", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class desactivarDescuentoRequest {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarDescuento", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarDescuentoRequest {
+>>>>>>> origin/main
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int arg0;
         
+<<<<<<< HEAD
         public desactivarDescuentoRequest() {
         }
         
         public desactivarDescuentoRequest(int arg0) {
+=======
+        public EliminarDescuentoRequest() {
+        }
+        
+        public EliminarDescuentoRequest(int arg0) {
+>>>>>>> origin/main
             this.arg0 = arg0;
         }
     }
@@ -3357,10 +4439,73 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="desactivarDescuentoResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class desactivarDescuentoResponse {
         
         public desactivarDescuentoResponse() {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarDescuentoResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarDescuentoResponse {
+        
+        public EliminarDescuentoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarDescuentos", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarDescuentosRequest {
+        
+        public ListarDescuentosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarDescuentosResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarDescuentosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.descuento[] @return;
+        
+        public ListarDescuentosResponse() {
+        }
+        
+        public ListarDescuentosResponse(JMQPresentacion.JMQWS.descuento[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarDescuento", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarDescuentoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.descuento arg0;
+        
+        public RegistrarDescuentoRequest() {
+        }
+        
+        public RegistrarDescuentoRequest(JMQPresentacion.JMQWS.descuento arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarDescuentoResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarDescuentoResponse {
+        
+        public RegistrarDescuentoResponse() {
+>>>>>>> origin/main
         }
     }
     
@@ -3392,6 +4537,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.RegistrarDescuentoResponse JMQPresentacion.JMQWS.DescuentoWS.RegistrarDescuento(JMQPresentacion.JMQWS.RegistrarDescuentoRequest request) {
             return base.Channel.RegistrarDescuento(request);
         }
@@ -3573,6 +4719,8 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+=======
+>>>>>>> origin/main
         JMQPresentacion.JMQWS.helloResponse JMQPresentacion.JMQWS.DescuentoWS.hello(JMQPresentacion.JMQWS.helloRequest request) {
             return base.Channel.hello(request);
         }
@@ -3594,6 +4742,119 @@ namespace JMQPresentacion.JMQWS {
             inValue.name = name;
             return ((JMQPresentacion.JMQWS.DescuentoWS)(this)).helloAsync(inValue);
         }
+<<<<<<< HEAD
+=======
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.ActualizarDescuentoResponse JMQPresentacion.JMQWS.DescuentoWS.ActualizarDescuento(JMQPresentacion.JMQWS.ActualizarDescuentoRequest request) {
+            return base.Channel.ActualizarDescuento(request);
+        }
+        
+        public void ActualizarDescuento(JMQPresentacion.JMQWS.descuento arg0) {
+            JMQPresentacion.JMQWS.ActualizarDescuentoRequest inValue = new JMQPresentacion.JMQWS.ActualizarDescuentoRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.ActualizarDescuentoResponse retVal = ((JMQPresentacion.JMQWS.DescuentoWS)(this)).ActualizarDescuento(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarDescuentoResponse> JMQPresentacion.JMQWS.DescuentoWS.ActualizarDescuentoAsync(JMQPresentacion.JMQWS.ActualizarDescuentoRequest request) {
+            return base.Channel.ActualizarDescuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarDescuentoResponse> ActualizarDescuentoAsync(JMQPresentacion.JMQWS.descuento arg0) {
+            JMQPresentacion.JMQWS.ActualizarDescuentoRequest inValue = new JMQPresentacion.JMQWS.ActualizarDescuentoRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.DescuentoWS)(this)).ActualizarDescuentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.BuscarDescuentoResponse JMQPresentacion.JMQWS.DescuentoWS.BuscarDescuento(JMQPresentacion.JMQWS.BuscarDescuentoRequest request) {
+            return base.Channel.BuscarDescuento(request);
+        }
+        
+        public JMQPresentacion.JMQWS.descuento BuscarDescuento(int arg0) {
+            JMQPresentacion.JMQWS.BuscarDescuentoRequest inValue = new JMQPresentacion.JMQWS.BuscarDescuentoRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.BuscarDescuentoResponse retVal = ((JMQPresentacion.JMQWS.DescuentoWS)(this)).BuscarDescuento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarDescuentoResponse> JMQPresentacion.JMQWS.DescuentoWS.BuscarDescuentoAsync(JMQPresentacion.JMQWS.BuscarDescuentoRequest request) {
+            return base.Channel.BuscarDescuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarDescuentoResponse> BuscarDescuentoAsync(int arg0) {
+            JMQPresentacion.JMQWS.BuscarDescuentoRequest inValue = new JMQPresentacion.JMQWS.BuscarDescuentoRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.DescuentoWS)(this)).BuscarDescuentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.EliminarDescuentoResponse JMQPresentacion.JMQWS.DescuentoWS.EliminarDescuento(JMQPresentacion.JMQWS.EliminarDescuentoRequest request) {
+            return base.Channel.EliminarDescuento(request);
+        }
+        
+        public void EliminarDescuento(int arg0) {
+            JMQPresentacion.JMQWS.EliminarDescuentoRequest inValue = new JMQPresentacion.JMQWS.EliminarDescuentoRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.EliminarDescuentoResponse retVal = ((JMQPresentacion.JMQWS.DescuentoWS)(this)).EliminarDescuento(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarDescuentoResponse> JMQPresentacion.JMQWS.DescuentoWS.EliminarDescuentoAsync(JMQPresentacion.JMQWS.EliminarDescuentoRequest request) {
+            return base.Channel.EliminarDescuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarDescuentoResponse> EliminarDescuentoAsync(int arg0) {
+            JMQPresentacion.JMQWS.EliminarDescuentoRequest inValue = new JMQPresentacion.JMQWS.EliminarDescuentoRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.DescuentoWS)(this)).EliminarDescuentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.ListarDescuentosResponse JMQPresentacion.JMQWS.DescuentoWS.ListarDescuentos(JMQPresentacion.JMQWS.ListarDescuentosRequest request) {
+            return base.Channel.ListarDescuentos(request);
+        }
+        
+        public JMQPresentacion.JMQWS.descuento[] ListarDescuentos() {
+            JMQPresentacion.JMQWS.ListarDescuentosRequest inValue = new JMQPresentacion.JMQWS.ListarDescuentosRequest();
+            JMQPresentacion.JMQWS.ListarDescuentosResponse retVal = ((JMQPresentacion.JMQWS.DescuentoWS)(this)).ListarDescuentos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarDescuentosResponse> JMQPresentacion.JMQWS.DescuentoWS.ListarDescuentosAsync(JMQPresentacion.JMQWS.ListarDescuentosRequest request) {
+            return base.Channel.ListarDescuentosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarDescuentosResponse> ListarDescuentosAsync() {
+            JMQPresentacion.JMQWS.ListarDescuentosRequest inValue = new JMQPresentacion.JMQWS.ListarDescuentosRequest();
+            return ((JMQPresentacion.JMQWS.DescuentoWS)(this)).ListarDescuentosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.RegistrarDescuentoResponse JMQPresentacion.JMQWS.DescuentoWS.RegistrarDescuento(JMQPresentacion.JMQWS.RegistrarDescuentoRequest request) {
+            return base.Channel.RegistrarDescuento(request);
+        }
+        
+        public void RegistrarDescuento(JMQPresentacion.JMQWS.descuento arg0) {
+            JMQPresentacion.JMQWS.RegistrarDescuentoRequest inValue = new JMQPresentacion.JMQWS.RegistrarDescuentoRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.RegistrarDescuentoResponse retVal = ((JMQPresentacion.JMQWS.DescuentoWS)(this)).RegistrarDescuento(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarDescuentoResponse> JMQPresentacion.JMQWS.DescuentoWS.RegistrarDescuentoAsync(JMQPresentacion.JMQWS.RegistrarDescuentoRequest request) {
+            return base.Channel.RegistrarDescuentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarDescuentoResponse> RegistrarDescuentoAsync(JMQPresentacion.JMQWS.descuento arg0) {
+            JMQPresentacion.JMQWS.RegistrarDescuentoRequest inValue = new JMQPresentacion.JMQWS.RegistrarDescuentoRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.DescuentoWS)(this)).RegistrarDescuentoAsync(inValue);
+        }
+>>>>>>> origin/main
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -3618,14 +4879,6 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/listarComprobantesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/listarComprobantesResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarComprobantesResponse> listarComprobantesAsync(JMQPresentacion.JMQWS.listarComprobantesRequest request);
         
-        // CODEGEN: El parámetro 'comprobante' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        JMQPresentacion.JMQWS.registrarComprobanteResponse registrarComprobante(JMQPresentacion.JMQWS.registrarComprobanteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarComprobanteResponse> registrarComprobanteAsync(JMQPresentacion.JMQWS.registrarComprobanteRequest request);
-        
         // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/eliminarComprobanteRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/eliminarComprobanteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -3633,6 +4886,14 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/eliminarComprobanteRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/eliminarComprobanteResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarComprobanteResponse> eliminarComprobanteAsync(JMQPresentacion.JMQWS.eliminarComprobanteRequest request);
+        
+        // CODEGEN: El parámetro 'comprobante' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.registrarComprobanteResponse registrarComprobante(JMQPresentacion.JMQWS.registrarComprobanteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/registrarComprobanteResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarComprobanteResponse> registrarComprobanteAsync(JMQPresentacion.JMQWS.registrarComprobanteRequest request);
         
         // CODEGEN: El parámetro 'comprobante' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/actualizarComprobanteRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ComprobantePagoWS/actualizarComprobanteResponse")]
@@ -3710,34 +4971,6 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarComprobante", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class registrarComprobanteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public JMQPresentacion.JMQWS.comprobantePago comprobante;
-        
-        public registrarComprobanteRequest() {
-        }
-        
-        public registrarComprobanteRequest(JMQPresentacion.JMQWS.comprobantePago comprobante) {
-            this.comprobante = comprobante;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarComprobanteResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class registrarComprobanteResponse {
-        
-        public registrarComprobanteResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarComprobante", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class eliminarComprobanteRequest {
         
@@ -3760,6 +4993,34 @@ namespace JMQPresentacion.JMQWS {
     public partial class eliminarComprobanteResponse {
         
         public eliminarComprobanteResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarComprobante", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarComprobanteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.comprobantePago comprobante;
+        
+        public registrarComprobanteRequest() {
+        }
+        
+        public registrarComprobanteRequest(JMQPresentacion.JMQWS.comprobantePago comprobante) {
+            this.comprobante = comprobante;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarComprobanteResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarComprobanteResponse {
+        
+        public registrarComprobanteResponse() {
         }
     }
     
@@ -3863,28 +5124,6 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        JMQPresentacion.JMQWS.registrarComprobanteResponse JMQPresentacion.JMQWS.ComprobantePagoWS.registrarComprobante(JMQPresentacion.JMQWS.registrarComprobanteRequest request) {
-            return base.Channel.registrarComprobante(request);
-        }
-        
-        public void registrarComprobante(JMQPresentacion.JMQWS.comprobantePago comprobante) {
-            JMQPresentacion.JMQWS.registrarComprobanteRequest inValue = new JMQPresentacion.JMQWS.registrarComprobanteRequest();
-            inValue.comprobante = comprobante;
-            JMQPresentacion.JMQWS.registrarComprobanteResponse retVal = ((JMQPresentacion.JMQWS.ComprobantePagoWS)(this)).registrarComprobante(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarComprobanteResponse> JMQPresentacion.JMQWS.ComprobantePagoWS.registrarComprobanteAsync(JMQPresentacion.JMQWS.registrarComprobanteRequest request) {
-            return base.Channel.registrarComprobanteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarComprobanteResponse> registrarComprobanteAsync(JMQPresentacion.JMQWS.comprobantePago comprobante) {
-            JMQPresentacion.JMQWS.registrarComprobanteRequest inValue = new JMQPresentacion.JMQWS.registrarComprobanteRequest();
-            inValue.comprobante = comprobante;
-            return ((JMQPresentacion.JMQWS.ComprobantePagoWS)(this)).registrarComprobanteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.eliminarComprobanteResponse JMQPresentacion.JMQWS.ComprobantePagoWS.eliminarComprobante(JMQPresentacion.JMQWS.eliminarComprobanteRequest request) {
             return base.Channel.eliminarComprobante(request);
         }
@@ -3904,6 +5143,28 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.eliminarComprobanteRequest inValue = new JMQPresentacion.JMQWS.eliminarComprobanteRequest();
             inValue.id = id;
             return ((JMQPresentacion.JMQWS.ComprobantePagoWS)(this)).eliminarComprobanteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.registrarComprobanteResponse JMQPresentacion.JMQWS.ComprobantePagoWS.registrarComprobante(JMQPresentacion.JMQWS.registrarComprobanteRequest request) {
+            return base.Channel.registrarComprobante(request);
+        }
+        
+        public void registrarComprobante(JMQPresentacion.JMQWS.comprobantePago comprobante) {
+            JMQPresentacion.JMQWS.registrarComprobanteRequest inValue = new JMQPresentacion.JMQWS.registrarComprobanteRequest();
+            inValue.comprobante = comprobante;
+            JMQPresentacion.JMQWS.registrarComprobanteResponse retVal = ((JMQPresentacion.JMQWS.ComprobantePagoWS)(this)).registrarComprobante(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarComprobanteResponse> JMQPresentacion.JMQWS.ComprobantePagoWS.registrarComprobanteAsync(JMQPresentacion.JMQWS.registrarComprobanteRequest request) {
+            return base.Channel.registrarComprobanteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarComprobanteResponse> registrarComprobanteAsync(JMQPresentacion.JMQWS.comprobantePago comprobante) {
+            JMQPresentacion.JMQWS.registrarComprobanteRequest inValue = new JMQPresentacion.JMQWS.registrarComprobanteRequest();
+            inValue.comprobante = comprobante;
+            return ((JMQPresentacion.JMQWS.ComprobantePagoWS)(this)).registrarComprobanteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3934,12 +5195,30 @@ namespace JMQPresentacion.JMQWS {
     public interface EntregaWS {
         
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         JMQPresentacion.JMQWS.RegistrarEntregaResponse RegistrarEntrega(JMQPresentacion.JMQWS.RegistrarEntregaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarEntregaResponse> RegistrarEntregaAsync(JMQPresentacion.JMQWS.RegistrarEntregaRequest request);
+=======
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.EliminarEntregaResponse EliminarEntrega(JMQPresentacion.JMQWS.EliminarEntregaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarEntregaResponse> EliminarEntregaAsync(JMQPresentacion.JMQWS.EliminarEntregaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.ListarEntregasResponse ListarEntregas(JMQPresentacion.JMQWS.ListarEntregasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarEntregasResponse> ListarEntregasAsync(JMQPresentacion.JMQWS.ListarEntregasRequest request);
+>>>>>>> origin/main
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaResponse")]
@@ -3966,6 +5245,7 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarEntregaResponse> ActualizarEntregaAsync(JMQPresentacion.JMQWS.ActualizarEntregaRequest request);
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -3974,6 +5254,43 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarEntregasResponse> ListarEntregasAsync(JMQPresentacion.JMQWS.ListarEntregasRequest request);
+=======
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.RegistrarEntregaResponse RegistrarEntrega(JMQPresentacion.JMQWS.RegistrarEntregaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarEntregaResponse> RegistrarEntregaAsync(JMQPresentacion.JMQWS.RegistrarEntregaRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarEntrega", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarEntregaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public EliminarEntregaRequest() {
+        }
+        
+        public EliminarEntregaRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarEntregaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarEntregaResponse {
+        
+        public EliminarEntregaResponse() {
+        }
+>>>>>>> origin/main
     }
     
     /// <remarks/>
@@ -4122,6 +5439,7 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarEntrega", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class RegistrarEntregaRequest {
         
@@ -4144,6 +5462,30 @@ namespace JMQPresentacion.JMQWS {
     public partial class RegistrarEntregaResponse {
         
         public RegistrarEntregaResponse() {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarEntregas", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarEntregasRequest {
+        
+        public ListarEntregasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarEntregasResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarEntregasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.entrega[] @return;
+        
+        public ListarEntregasResponse() {
+        }
+        
+        public ListarEntregasResponse(JMQPresentacion.JMQWS.entrega[] @return) {
+            this.@return = @return;
+>>>>>>> origin/main
         }
     }
     
@@ -4242,16 +5584,32 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="ListarEntregas", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class ListarEntregasRequest {
         
         public ListarEntregasRequest() {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarEntrega", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarEntregaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.entrega arg0;
+        
+        public RegistrarEntregaRequest() {
+        }
+        
+        public RegistrarEntregaRequest(JMQPresentacion.JMQWS.entrega arg0) {
+            this.arg0 = arg0;
+>>>>>>> origin/main
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="ListarEntregasResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class ListarEntregasResponse {
         
@@ -4264,6 +5622,12 @@ namespace JMQPresentacion.JMQWS {
         
         public ListarEntregasResponse(JMQPresentacion.JMQWS.entrega[] @return) {
             this.@return = @return;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarEntregaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarEntregaResponse {
+        
+        public RegistrarEntregaResponse() {
+>>>>>>> origin/main
         }
     }
     
@@ -4295,6 +5659,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.RegistrarEntregaResponse JMQPresentacion.JMQWS.EntregaWS.RegistrarEntrega(JMQPresentacion.JMQWS.RegistrarEntregaRequest request) {
             return base.Channel.RegistrarEntrega(request);
         }
@@ -4314,6 +5679,48 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.RegistrarEntregaRequest inValue = new JMQPresentacion.JMQWS.RegistrarEntregaRequest();
             inValue.arg0 = arg0;
             return ((JMQPresentacion.JMQWS.EntregaWS)(this)).RegistrarEntregaAsync(inValue);
+=======
+        JMQPresentacion.JMQWS.EliminarEntregaResponse JMQPresentacion.JMQWS.EntregaWS.EliminarEntrega(JMQPresentacion.JMQWS.EliminarEntregaRequest request) {
+            return base.Channel.EliminarEntrega(request);
+        }
+        
+        public void EliminarEntrega(int arg0) {
+            JMQPresentacion.JMQWS.EliminarEntregaRequest inValue = new JMQPresentacion.JMQWS.EliminarEntregaRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.EliminarEntregaResponse retVal = ((JMQPresentacion.JMQWS.EntregaWS)(this)).EliminarEntrega(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarEntregaResponse> JMQPresentacion.JMQWS.EntregaWS.EliminarEntregaAsync(JMQPresentacion.JMQWS.EliminarEntregaRequest request) {
+            return base.Channel.EliminarEntregaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarEntregaResponse> EliminarEntregaAsync(int arg0) {
+            JMQPresentacion.JMQWS.EliminarEntregaRequest inValue = new JMQPresentacion.JMQWS.EliminarEntregaRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.EntregaWS)(this)).EliminarEntregaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.ListarEntregasResponse JMQPresentacion.JMQWS.EntregaWS.ListarEntregas(JMQPresentacion.JMQWS.ListarEntregasRequest request) {
+            return base.Channel.ListarEntregas(request);
+        }
+        
+        public JMQPresentacion.JMQWS.entrega[] ListarEntregas() {
+            JMQPresentacion.JMQWS.ListarEntregasRequest inValue = new JMQPresentacion.JMQWS.ListarEntregasRequest();
+            JMQPresentacion.JMQWS.ListarEntregasResponse retVal = ((JMQPresentacion.JMQWS.EntregaWS)(this)).ListarEntregas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarEntregasResponse> JMQPresentacion.JMQWS.EntregaWS.ListarEntregasAsync(JMQPresentacion.JMQWS.ListarEntregasRequest request) {
+            return base.Channel.ListarEntregasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarEntregasResponse> ListarEntregasAsync() {
+            JMQPresentacion.JMQWS.ListarEntregasRequest inValue = new JMQPresentacion.JMQWS.ListarEntregasRequest();
+            return ((JMQPresentacion.JMQWS.EntregaWS)(this)).ListarEntregasAsync(inValue);
+>>>>>>> origin/main
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4384,6 +5791,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.ListarEntregasResponse JMQPresentacion.JMQWS.EntregaWS.ListarEntregas(JMQPresentacion.JMQWS.ListarEntregasRequest request) {
             return base.Channel.ListarEntregas(request);
         }
@@ -4402,6 +5810,27 @@ namespace JMQPresentacion.JMQWS {
         public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarEntregasResponse> ListarEntregasAsync() {
             JMQPresentacion.JMQWS.ListarEntregasRequest inValue = new JMQPresentacion.JMQWS.ListarEntregasRequest();
             return ((JMQPresentacion.JMQWS.EntregaWS)(this)).ListarEntregasAsync(inValue);
+=======
+        JMQPresentacion.JMQWS.RegistrarEntregaResponse JMQPresentacion.JMQWS.EntregaWS.RegistrarEntrega(JMQPresentacion.JMQWS.RegistrarEntregaRequest request) {
+            return base.Channel.RegistrarEntrega(request);
+        }
+        
+        public void RegistrarEntrega(JMQPresentacion.JMQWS.entrega arg0) {
+            JMQPresentacion.JMQWS.RegistrarEntregaRequest inValue = new JMQPresentacion.JMQWS.RegistrarEntregaRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.RegistrarEntregaResponse retVal = ((JMQPresentacion.JMQWS.EntregaWS)(this)).RegistrarEntrega(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarEntregaResponse> JMQPresentacion.JMQWS.EntregaWS.RegistrarEntregaAsync(JMQPresentacion.JMQWS.RegistrarEntregaRequest request) {
+            return base.Channel.RegistrarEntregaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarEntregaResponse> RegistrarEntregaAsync(JMQPresentacion.JMQWS.entrega arg0) {
+            JMQPresentacion.JMQWS.RegistrarEntregaRequest inValue = new JMQPresentacion.JMQWS.RegistrarEntregaRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.EntregaWS)(this)).RegistrarEntregaAsync(inValue);
+>>>>>>> origin/main
         }
     }
     
@@ -4409,6 +5838,7 @@ namespace JMQPresentacion.JMQWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://jmqws.inversiones.jmq.com/", ConfigurationName="JMQWS.DetalleWS")]
     public interface DetalleWS {
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/ListarDetallesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/ListarDetallesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -4442,6 +5872,8 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/RegistrarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/RegistrarDetalleResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarDetalleResponse> RegistrarDetalleAsync(JMQPresentacion.JMQWS.RegistrarDetalleRequest request);
         
+=======
+>>>>>>> origin/main
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/BuscarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/BuscarDetalleResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -4450,6 +5882,7 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/BuscarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/BuscarDetalleResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarDetalleResponse> BuscarDetalleAsync(JMQPresentacion.JMQWS.BuscarDetalleRequest request);
+<<<<<<< HEAD
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4567,6 +6000,41 @@ namespace JMQPresentacion.JMQWS {
         
         public RegistrarDetalleResponse() {
         }
+=======
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.ActualizarDetalleResponse ActualizarDetalle(JMQPresentacion.JMQWS.ActualizarDetalleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarDetalleResponse> ActualizarDetalleAsync(JMQPresentacion.JMQWS.ActualizarDetalleRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/ListarDetallesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/ListarDetallesResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.ListarDetallesResponse ListarDetalles(JMQPresentacion.JMQWS.ListarDetallesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/ListarDetallesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/ListarDetallesResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarDetallesResponse> ListarDetallesAsync(JMQPresentacion.JMQWS.ListarDetallesRequest request);
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.EliminarDetalleResponse EliminarDetalle(JMQPresentacion.JMQWS.EliminarDetalleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarDetalleResponse> EliminarDetalleAsync(JMQPresentacion.JMQWS.EliminarDetalleRequest request);
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/RegistrarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/RegistrarDetalleResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.RegistrarDetalleResponse RegistrarDetalle(JMQPresentacion.JMQWS.RegistrarDetalleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/DetalleWS/RegistrarDetalleRequest", ReplyAction="http://jmqws.inversiones.jmq.com/DetalleWS/RegistrarDetalleResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarDetalleResponse> RegistrarDetalleAsync(JMQPresentacion.JMQWS.RegistrarDetalleRequest request);
+>>>>>>> origin/main
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4610,6 +6078,126 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+<<<<<<< HEAD
+=======
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarDetalle", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ActualizarDetalleRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.detalle arg0;
+        
+        public ActualizarDetalleRequest() {
+        }
+        
+        public ActualizarDetalleRequest(JMQPresentacion.JMQWS.detalle arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarDetalleResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ActualizarDetalleResponse {
+        
+        public ActualizarDetalleResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarDetalles", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarDetallesRequest {
+        
+        public ListarDetallesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarDetallesResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarDetallesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.detalle[] @return;
+        
+        public ListarDetallesResponse() {
+        }
+        
+        public ListarDetallesResponse(JMQPresentacion.JMQWS.detalle[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarDetalle", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarDetalleRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg1;
+        
+        public EliminarDetalleRequest() {
+        }
+        
+        public EliminarDetalleRequest(int arg0, int arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarDetalleResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarDetalleResponse {
+        
+        public EliminarDetalleResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarDetalle", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarDetalleRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.detalle arg0;
+        
+        public RegistrarDetalleRequest() {
+        }
+        
+        public RegistrarDetalleRequest(JMQPresentacion.JMQWS.detalle arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarDetalleResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarDetalleResponse {
+        
+        public RegistrarDetalleResponse() {
+        }
+    }
+    
+>>>>>>> origin/main
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface DetalleWSChannel : JMQPresentacion.JMQWS.DetalleWS, System.ServiceModel.IClientChannel {
     }
@@ -4635,6 +6223,73 @@ namespace JMQPresentacion.JMQWS {
         
         public DetalleWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+        JMQPresentacion.JMQWS.ListarDetallesResponse JMQPresentacion.JMQWS.DetalleWS.ListarDetalles(JMQPresentacion.JMQWS.ListarDetallesRequest request) {
+            return base.Channel.ListarDetalles(request);
+        }
+        
+        public JMQPresentacion.JMQWS.detalle[] ListarDetalles() {
+            JMQPresentacion.JMQWS.ListarDetallesRequest inValue = new JMQPresentacion.JMQWS.ListarDetallesRequest();
+            JMQPresentacion.JMQWS.ListarDetallesResponse retVal = ((JMQPresentacion.JMQWS.DetalleWS)(this)).ListarDetalles(inValue);
+=======
+        JMQPresentacion.JMQWS.BuscarDetalleResponse JMQPresentacion.JMQWS.DetalleWS.BuscarDetalle(JMQPresentacion.JMQWS.BuscarDetalleRequest request) {
+            return base.Channel.BuscarDetalle(request);
+        }
+        
+        public JMQPresentacion.JMQWS.detalle BuscarDetalle(int arg0, int arg1) {
+            JMQPresentacion.JMQWS.BuscarDetalleRequest inValue = new JMQPresentacion.JMQWS.BuscarDetalleRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            JMQPresentacion.JMQWS.BuscarDetalleResponse retVal = ((JMQPresentacion.JMQWS.DetalleWS)(this)).BuscarDetalle(inValue);
+>>>>>>> origin/main
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarDetallesResponse> JMQPresentacion.JMQWS.DetalleWS.ListarDetallesAsync(JMQPresentacion.JMQWS.ListarDetallesRequest request) {
+            return base.Channel.ListarDetallesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarDetallesResponse> ListarDetallesAsync() {
+            JMQPresentacion.JMQWS.ListarDetallesRequest inValue = new JMQPresentacion.JMQWS.ListarDetallesRequest();
+            return ((JMQPresentacion.JMQWS.DetalleWS)(this)).ListarDetallesAsync(inValue);
+=======
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarDetalleResponse> JMQPresentacion.JMQWS.DetalleWS.BuscarDetalleAsync(JMQPresentacion.JMQWS.BuscarDetalleRequest request) {
+            return base.Channel.BuscarDetalleAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarDetalleResponse> BuscarDetalleAsync(int arg0, int arg1) {
+            JMQPresentacion.JMQWS.BuscarDetalleRequest inValue = new JMQPresentacion.JMQWS.BuscarDetalleRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((JMQPresentacion.JMQWS.DetalleWS)(this)).BuscarDetalleAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.ActualizarDetalleResponse JMQPresentacion.JMQWS.DetalleWS.ActualizarDetalle(JMQPresentacion.JMQWS.ActualizarDetalleRequest request) {
+            return base.Channel.ActualizarDetalle(request);
+        }
+        
+        public void ActualizarDetalle(JMQPresentacion.JMQWS.detalle arg0) {
+            JMQPresentacion.JMQWS.ActualizarDetalleRequest inValue = new JMQPresentacion.JMQWS.ActualizarDetalleRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.ActualizarDetalleResponse retVal = ((JMQPresentacion.JMQWS.DetalleWS)(this)).ActualizarDetalle(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarDetalleResponse> JMQPresentacion.JMQWS.DetalleWS.ActualizarDetalleAsync(JMQPresentacion.JMQWS.ActualizarDetalleRequest request) {
+            return base.Channel.ActualizarDetalleAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarDetalleResponse> ActualizarDetalleAsync(JMQPresentacion.JMQWS.detalle arg0) {
+            JMQPresentacion.JMQWS.ActualizarDetalleRequest inValue = new JMQPresentacion.JMQWS.ActualizarDetalleRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.DetalleWS)(this)).ActualizarDetalleAsync(inValue);
+>>>>>>> origin/main
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4683,6 +6338,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.ActualizarDetalleResponse JMQPresentacion.JMQWS.DetalleWS.ActualizarDetalle(JMQPresentacion.JMQWS.ActualizarDetalleRequest request) {
             return base.Channel.ActualizarDetalle(request);
         }
@@ -4729,26 +6385,32 @@ namespace JMQPresentacion.JMQWS {
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.BuscarDetalleResponse JMQPresentacion.JMQWS.DetalleWS.BuscarDetalle(JMQPresentacion.JMQWS.BuscarDetalleRequest request) {
             return base.Channel.BuscarDetalle(request);
+=======
+        JMQPresentacion.JMQWS.RegistrarDetalleResponse JMQPresentacion.JMQWS.DetalleWS.RegistrarDetalle(JMQPresentacion.JMQWS.RegistrarDetalleRequest request) {
+            return base.Channel.RegistrarDetalle(request);
+>>>>>>> origin/main
         }
         
-        public JMQPresentacion.JMQWS.detalle BuscarDetalle(int arg0, int arg1) {
-            JMQPresentacion.JMQWS.BuscarDetalleRequest inValue = new JMQPresentacion.JMQWS.BuscarDetalleRequest();
+        public void RegistrarDetalle(JMQPresentacion.JMQWS.detalle arg0) {
+            JMQPresentacion.JMQWS.RegistrarDetalleRequest inValue = new JMQPresentacion.JMQWS.RegistrarDetalleRequest();
             inValue.arg0 = arg0;
-            inValue.arg1 = arg1;
-            JMQPresentacion.JMQWS.BuscarDetalleResponse retVal = ((JMQPresentacion.JMQWS.DetalleWS)(this)).BuscarDetalle(inValue);
-            return retVal.@return;
+            JMQPresentacion.JMQWS.RegistrarDetalleResponse retVal = ((JMQPresentacion.JMQWS.DetalleWS)(this)).RegistrarDetalle(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarDetalleResponse> JMQPresentacion.JMQWS.DetalleWS.BuscarDetalleAsync(JMQPresentacion.JMQWS.BuscarDetalleRequest request) {
-            return base.Channel.BuscarDetalleAsync(request);
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarDetalleResponse> JMQPresentacion.JMQWS.DetalleWS.RegistrarDetalleAsync(JMQPresentacion.JMQWS.RegistrarDetalleRequest request) {
+            return base.Channel.RegistrarDetalleAsync(request);
         }
         
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarDetalleResponse> BuscarDetalleAsync(int arg0, int arg1) {
-            JMQPresentacion.JMQWS.BuscarDetalleRequest inValue = new JMQPresentacion.JMQWS.BuscarDetalleRequest();
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarDetalleResponse> RegistrarDetalleAsync(JMQPresentacion.JMQWS.detalle arg0) {
+            JMQPresentacion.JMQWS.RegistrarDetalleRequest inValue = new JMQPresentacion.JMQWS.RegistrarDetalleRequest();
             inValue.arg0 = arg0;
+<<<<<<< HEAD
             inValue.arg1 = arg1;
             return ((JMQPresentacion.JMQWS.DetalleWS)(this)).BuscarDetalleAsync(inValue);
+=======
+            return ((JMQPresentacion.JMQWS.DetalleWS)(this)).RegistrarDetalleAsync(inValue);
+>>>>>>> origin/main
         }
     }
     
@@ -4767,6 +6429,7 @@ namespace JMQPresentacion.JMQWS {
         
         // CODEGEN: El parámetro 'notificacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionResponse")]
+<<<<<<< HEAD
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         JMQPresentacion.JMQWS.enviarNotificacionResponse enviarNotificacion(JMQPresentacion.JMQWS.enviarNotificacionRequest request);
         
@@ -4775,19 +6438,13 @@ namespace JMQPresentacion.JMQWS {
         
         // CODEGEN: El parámetro 'notificacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionResponse")]
+=======
+>>>>>>> origin/main
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        JMQPresentacion.JMQWS.registrarNotificacionResponse registrarNotificacion(JMQPresentacion.JMQWS.registrarNotificacionRequest request);
+        JMQPresentacion.JMQWS.enviarNotificacionResponse enviarNotificacion(JMQPresentacion.JMQWS.enviarNotificacionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarNotificacionResponse> registrarNotificacionAsync(JMQPresentacion.JMQWS.registrarNotificacionRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        JMQPresentacion.JMQWS.eliminarNotificacionResponse eliminarNotificacion(JMQPresentacion.JMQWS.eliminarNotificacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarNotificacionResponse> eliminarNotificacionAsync(JMQPresentacion.JMQWS.eliminarNotificacionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/enviarNotificacionResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.enviarNotificacionResponse> enviarNotificacionAsync(JMQPresentacion.JMQWS.enviarNotificacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/listarNotificacionesResponse")]
@@ -4799,12 +6456,28 @@ namespace JMQPresentacion.JMQWS {
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarNotificacionesResponse> listarNotificacionesAsync(JMQPresentacion.JMQWS.listarNotificacionesRequest request);
         
         // CODEGEN: El parámetro 'notificacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.registrarNotificacionResponse registrarNotificacion(JMQPresentacion.JMQWS.registrarNotificacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/registrarNotificacionResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarNotificacionResponse> registrarNotificacionAsync(JMQPresentacion.JMQWS.registrarNotificacionRequest request);
+        
+        // CODEGEN: El parámetro 'notificacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         JMQPresentacion.JMQWS.actualizarNotificacionResponse actualizarNotificacion(JMQPresentacion.JMQWS.actualizarNotificacionRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/actualizarNotificacionResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.actualizarNotificacionResponse> actualizarNotificacionAsync(JMQPresentacion.JMQWS.actualizarNotificacionRequest request);
+        
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.eliminarNotificacionResponse eliminarNotificacion(JMQPresentacion.JMQWS.eliminarNotificacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/NotificacionWS/eliminarNotificacionResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarNotificacionResponse> eliminarNotificacionAsync(JMQPresentacion.JMQWS.eliminarNotificacionRequest request);
     }
     
     /// <remarks/>
@@ -4978,6 +6651,7 @@ namespace JMQPresentacion.JMQWS {
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="enviarNotificacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class enviarNotificacionRequest {
+<<<<<<< HEAD
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -5006,15 +6680,17 @@ namespace JMQPresentacion.JMQWS {
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="registrarNotificacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class registrarNotificacionRequest {
+=======
+>>>>>>> origin/main
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public JMQPresentacion.JMQWS.notificacion notificacion;
         
-        public registrarNotificacionRequest() {
+        public enviarNotificacionRequest() {
         }
         
-        public registrarNotificacionRequest(JMQPresentacion.JMQWS.notificacion notificacion) {
+        public enviarNotificacionRequest(JMQPresentacion.JMQWS.notificacion notificacion) {
             this.notificacion = notificacion;
         }
     }
@@ -5022,38 +6698,10 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarNotificacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class registrarNotificacionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarNotificacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class enviarNotificacionResponse {
         
-        public registrarNotificacionResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNotificacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class eliminarNotificacionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarNotificacionRequest() {
-        }
-        
-        public eliminarNotificacionRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNotificacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class eliminarNotificacionResponse {
-        
-        public eliminarNotificacionResponse() {
+        public enviarNotificacionResponse() {
         }
     }
     
@@ -5088,6 +6736,34 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarNotificacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarNotificacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.notificacion notificacion;
+        
+        public registrarNotificacionRequest() {
+        }
+        
+        public registrarNotificacionRequest(JMQPresentacion.JMQWS.notificacion notificacion) {
+            this.notificacion = notificacion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarNotificacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarNotificacionResponse {
+        
+        public registrarNotificacionResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarNotificacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class actualizarNotificacionRequest {
         
@@ -5110,6 +6786,34 @@ namespace JMQPresentacion.JMQWS {
     public partial class actualizarNotificacionResponse {
         
         public actualizarNotificacionResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNotificacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarNotificacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarNotificacionRequest() {
+        }
+        
+        public eliminarNotificacionRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNotificacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarNotificacionResponse {
+        
+        public eliminarNotificacionResponse() {
         }
     }
     
@@ -5143,6 +6847,8 @@ namespace JMQPresentacion.JMQWS {
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.buscarNotificacionResponse JMQPresentacion.JMQWS.NotificacionWS.buscarNotificacion(JMQPresentacion.JMQWS.buscarNotificacionRequest request) {
             return base.Channel.buscarNotificacion(request);
+<<<<<<< HEAD
+=======
         }
         
         public JMQPresentacion.JMQWS.notificacion buscarNotificacion(int id) {
@@ -5161,6 +6867,50 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.buscarNotificacionRequest inValue = new JMQPresentacion.JMQWS.buscarNotificacionRequest();
             inValue.id = id;
             return ((JMQPresentacion.JMQWS.NotificacionWS)(this)).buscarNotificacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.enviarNotificacionResponse JMQPresentacion.JMQWS.NotificacionWS.enviarNotificacion(JMQPresentacion.JMQWS.enviarNotificacionRequest request) {
+            return base.Channel.enviarNotificacion(request);
+        }
+        
+        public void enviarNotificacion(JMQPresentacion.JMQWS.notificacion notificacion) {
+            JMQPresentacion.JMQWS.enviarNotificacionRequest inValue = new JMQPresentacion.JMQWS.enviarNotificacionRequest();
+            inValue.notificacion = notificacion;
+            JMQPresentacion.JMQWS.enviarNotificacionResponse retVal = ((JMQPresentacion.JMQWS.NotificacionWS)(this)).enviarNotificacion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.enviarNotificacionResponse> JMQPresentacion.JMQWS.NotificacionWS.enviarNotificacionAsync(JMQPresentacion.JMQWS.enviarNotificacionRequest request) {
+            return base.Channel.enviarNotificacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.enviarNotificacionResponse> enviarNotificacionAsync(JMQPresentacion.JMQWS.notificacion notificacion) {
+            JMQPresentacion.JMQWS.enviarNotificacionRequest inValue = new JMQPresentacion.JMQWS.enviarNotificacionRequest();
+            inValue.notificacion = notificacion;
+            return ((JMQPresentacion.JMQWS.NotificacionWS)(this)).enviarNotificacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.listarNotificacionesResponse JMQPresentacion.JMQWS.NotificacionWS.listarNotificaciones(JMQPresentacion.JMQWS.listarNotificacionesRequest request) {
+            return base.Channel.listarNotificaciones(request);
+>>>>>>> origin/main
+        }
+        
+        public JMQPresentacion.JMQWS.notificacion[] listarNotificaciones() {
+            JMQPresentacion.JMQWS.listarNotificacionesRequest inValue = new JMQPresentacion.JMQWS.listarNotificacionesRequest();
+            JMQPresentacion.JMQWS.listarNotificacionesResponse retVal = ((JMQPresentacion.JMQWS.NotificacionWS)(this)).listarNotificaciones(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarNotificacionesResponse> JMQPresentacion.JMQWS.NotificacionWS.listarNotificacionesAsync(JMQPresentacion.JMQWS.listarNotificacionesRequest request) {
+            return base.Channel.listarNotificacionesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarNotificacionesResponse> listarNotificacionesAsync() {
+            JMQPresentacion.JMQWS.listarNotificacionesRequest inValue = new JMQPresentacion.JMQWS.listarNotificacionesRequest();
+            return ((JMQPresentacion.JMQWS.NotificacionWS)(this)).listarNotificacionesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5208,49 +6958,6 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        JMQPresentacion.JMQWS.eliminarNotificacionResponse JMQPresentacion.JMQWS.NotificacionWS.eliminarNotificacion(JMQPresentacion.JMQWS.eliminarNotificacionRequest request) {
-            return base.Channel.eliminarNotificacion(request);
-        }
-        
-        public void eliminarNotificacion(int id) {
-            JMQPresentacion.JMQWS.eliminarNotificacionRequest inValue = new JMQPresentacion.JMQWS.eliminarNotificacionRequest();
-            inValue.id = id;
-            JMQPresentacion.JMQWS.eliminarNotificacionResponse retVal = ((JMQPresentacion.JMQWS.NotificacionWS)(this)).eliminarNotificacion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarNotificacionResponse> JMQPresentacion.JMQWS.NotificacionWS.eliminarNotificacionAsync(JMQPresentacion.JMQWS.eliminarNotificacionRequest request) {
-            return base.Channel.eliminarNotificacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarNotificacionResponse> eliminarNotificacionAsync(int id) {
-            JMQPresentacion.JMQWS.eliminarNotificacionRequest inValue = new JMQPresentacion.JMQWS.eliminarNotificacionRequest();
-            inValue.id = id;
-            return ((JMQPresentacion.JMQWS.NotificacionWS)(this)).eliminarNotificacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        JMQPresentacion.JMQWS.listarNotificacionesResponse JMQPresentacion.JMQWS.NotificacionWS.listarNotificaciones(JMQPresentacion.JMQWS.listarNotificacionesRequest request) {
-            return base.Channel.listarNotificaciones(request);
-        }
-        
-        public JMQPresentacion.JMQWS.notificacion[] listarNotificaciones() {
-            JMQPresentacion.JMQWS.listarNotificacionesRequest inValue = new JMQPresentacion.JMQWS.listarNotificacionesRequest();
-            JMQPresentacion.JMQWS.listarNotificacionesResponse retVal = ((JMQPresentacion.JMQWS.NotificacionWS)(this)).listarNotificaciones(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarNotificacionesResponse> JMQPresentacion.JMQWS.NotificacionWS.listarNotificacionesAsync(JMQPresentacion.JMQWS.listarNotificacionesRequest request) {
-            return base.Channel.listarNotificacionesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarNotificacionesResponse> listarNotificacionesAsync() {
-            JMQPresentacion.JMQWS.listarNotificacionesRequest inValue = new JMQPresentacion.JMQWS.listarNotificacionesRequest();
-            return ((JMQPresentacion.JMQWS.NotificacionWS)(this)).listarNotificacionesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.actualizarNotificacionResponse JMQPresentacion.JMQWS.NotificacionWS.actualizarNotificacion(JMQPresentacion.JMQWS.actualizarNotificacionRequest request) {
             return base.Channel.actualizarNotificacion(request);
         }
@@ -5271,12 +6978,35 @@ namespace JMQPresentacion.JMQWS {
             inValue.notificacion = notificacion;
             return ((JMQPresentacion.JMQWS.NotificacionWS)(this)).actualizarNotificacionAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.eliminarNotificacionResponse JMQPresentacion.JMQWS.NotificacionWS.eliminarNotificacion(JMQPresentacion.JMQWS.eliminarNotificacionRequest request) {
+            return base.Channel.eliminarNotificacion(request);
+        }
+        
+        public void eliminarNotificacion(int id) {
+            JMQPresentacion.JMQWS.eliminarNotificacionRequest inValue = new JMQPresentacion.JMQWS.eliminarNotificacionRequest();
+            inValue.id = id;
+            JMQPresentacion.JMQWS.eliminarNotificacionResponse retVal = ((JMQPresentacion.JMQWS.NotificacionWS)(this)).eliminarNotificacion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarNotificacionResponse> JMQPresentacion.JMQWS.NotificacionWS.eliminarNotificacionAsync(JMQPresentacion.JMQWS.eliminarNotificacionRequest request) {
+            return base.Channel.eliminarNotificacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarNotificacionResponse> eliminarNotificacionAsync(int id) {
+            JMQPresentacion.JMQWS.eliminarNotificacionRequest inValue = new JMQPresentacion.JMQWS.eliminarNotificacionRequest();
+            inValue.id = id;
+            return ((JMQPresentacion.JMQWS.NotificacionWS)(this)).eliminarNotificacionAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://jmqws.inversiones.jmq.com/", ConfigurationName="JMQWS.CotizacionWS")]
     public interface CotizacionWS {
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacion/Fault/Exception", Name="Exception")]
@@ -5287,6 +7017,8 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarCotizacionResponse> buscarCotizacionAsync(JMQPresentacion.JMQWS.buscarCotizacionRequest request);
         
+=======
+>>>>>>> origin/main
         // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/CotizacionWS/eliminarCotizacion/Fault/Exception", Name="Exception")]
@@ -5297,6 +7029,19 @@ namespace JMQPresentacion.JMQWS {
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarCotizacionResponse> eliminarCotizacionAsync(JMQPresentacion.JMQWS.eliminarCotizacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+<<<<<<< HEAD
+=======
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacion/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.buscarCotizacionResponse buscarCotizacion(JMQPresentacion.JMQWS.buscarCotizacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/buscarCotizacionResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarCotizacionResponse> buscarCotizacionAsync(JMQPresentacion.JMQWS.buscarCotizacionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+>>>>>>> origin/main
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizaciones/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -5306,6 +7051,22 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/listarCotizacionesResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarCotizacionesResponse> listarCotizacionesAsync(JMQPresentacion.JMQWS.listarCotizacionesRequest request);
         
+<<<<<<< HEAD
+=======
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioReques" +
+            "t", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse obtenerCotizacionesPorUsuario(JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioReques" +
+            "t", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioRespon" +
+            "se")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse> obtenerCotizacionesPorUsuarioAsync(JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest request);
+        
+>>>>>>> origin/main
         // CODEGEN: El parámetro 'cotizacion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/registrarCotizacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/registrarCotizacionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/CotizacionWS/registrarCotizacion/Fault/Exception" +
@@ -5333,6 +7094,7 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarEstadoCotizacionRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/actualizarEstadoCotizacionResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.actualizarEstadoCotizacionResponse> actualizarEstadoCotizacionAsync(JMQPresentacion.JMQWS.actualizarEstadoCotizacionRequest request);
+<<<<<<< HEAD
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioReques" +
@@ -5346,6 +7108,36 @@ namespace JMQPresentacion.JMQWS {
             "t", ReplyAction="http://jmqws.inversiones.jmq.com/CotizacionWS/obtenerCotizacionesPorUsuarioRespon" +
             "se")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse> obtenerCotizacionesPorUsuarioAsync(JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest request);
+=======
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCotizacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarCotizacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarCotizacionRequest() {
+        }
+        
+        public eliminarCotizacionRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCotizacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarCotizacionResponse {
+        
+        public eliminarCotizacionResponse() {
+        }
+>>>>>>> origin/main
     }
     
     /// <remarks/>
@@ -5563,6 +7355,7 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCotizacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class eliminarCotizacionRequest {
         
@@ -5591,6 +7384,8 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+=======
+>>>>>>> origin/main
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarCotizaciones", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class listarCotizacionesRequest {
         
@@ -5619,6 +7414,45 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCotizacionesPorUsuario", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class obtenerCotizacionesPorUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public obtenerCotizacionesPorUsuarioRequest() {
+        }
+        
+        public obtenerCotizacionesPorUsuarioRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCotizacionesPorUsuarioResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class obtenerCotizacionesPorUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.cotizacion[] @return;
+        
+        public obtenerCotizacionesPorUsuarioResponse() {
+        }
+        
+        public obtenerCotizacionesPorUsuarioResponse(JMQPresentacion.JMQWS.cotizacion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+>>>>>>> origin/main
     [System.ServiceModel.MessageContractAttribute(WrapperName="registrarCotizacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class registrarCotizacionRequest {
         
@@ -5705,6 +7539,7 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+<<<<<<< HEAD
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5741,6 +7576,8 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+=======
+>>>>>>> origin/main
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CotizacionWSChannel : JMQPresentacion.JMQWS.CotizacionWS, System.ServiceModel.IClientChannel {
     }
@@ -5769,6 +7606,31 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+=======
+        JMQPresentacion.JMQWS.eliminarCotizacionResponse JMQPresentacion.JMQWS.CotizacionWS.eliminarCotizacion(JMQPresentacion.JMQWS.eliminarCotizacionRequest request) {
+            return base.Channel.eliminarCotizacion(request);
+        }
+        
+        public void eliminarCotizacion(int id) {
+            JMQPresentacion.JMQWS.eliminarCotizacionRequest inValue = new JMQPresentacion.JMQWS.eliminarCotizacionRequest();
+            inValue.id = id;
+            JMQPresentacion.JMQWS.eliminarCotizacionResponse retVal = ((JMQPresentacion.JMQWS.CotizacionWS)(this)).eliminarCotizacion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarCotizacionResponse> JMQPresentacion.JMQWS.CotizacionWS.eliminarCotizacionAsync(JMQPresentacion.JMQWS.eliminarCotizacionRequest request) {
+            return base.Channel.eliminarCotizacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarCotizacionResponse> eliminarCotizacionAsync(int id) {
+            JMQPresentacion.JMQWS.eliminarCotizacionRequest inValue = new JMQPresentacion.JMQWS.eliminarCotizacionRequest();
+            inValue.id = id;
+            return ((JMQPresentacion.JMQWS.CotizacionWS)(this)).eliminarCotizacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+>>>>>>> origin/main
         JMQPresentacion.JMQWS.buscarCotizacionResponse JMQPresentacion.JMQWS.CotizacionWS.buscarCotizacion(JMQPresentacion.JMQWS.buscarCotizacionRequest request) {
             return base.Channel.buscarCotizacion(request);
         }
@@ -5792,6 +7654,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.eliminarCotizacionResponse JMQPresentacion.JMQWS.CotizacionWS.eliminarCotizacion(JMQPresentacion.JMQWS.eliminarCotizacionRequest request) {
             return base.Channel.eliminarCotizacion(request);
         }
@@ -5814,6 +7677,8 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+=======
+>>>>>>> origin/main
         JMQPresentacion.JMQWS.listarCotizacionesResponse JMQPresentacion.JMQWS.CotizacionWS.listarCotizaciones(JMQPresentacion.JMQWS.listarCotizacionesRequest request) {
             return base.Channel.listarCotizaciones(request);
         }
@@ -5835,6 +7700,32 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+=======
+        JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse JMQPresentacion.JMQWS.CotizacionWS.obtenerCotizacionesPorUsuario(JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest request) {
+            return base.Channel.obtenerCotizacionesPorUsuario(request);
+        }
+        
+        public JMQPresentacion.JMQWS.cotizacion[] obtenerCotizacionesPorUsuario(int idUsuario) {
+            JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest inValue = new JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest();
+            inValue.idUsuario = idUsuario;
+            JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse retVal = ((JMQPresentacion.JMQWS.CotizacionWS)(this)).obtenerCotizacionesPorUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse> JMQPresentacion.JMQWS.CotizacionWS.obtenerCotizacionesPorUsuarioAsync(JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest request) {
+            return base.Channel.obtenerCotizacionesPorUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse> obtenerCotizacionesPorUsuarioAsync(int idUsuario) {
+            JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest inValue = new JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest();
+            inValue.idUsuario = idUsuario;
+            return ((JMQPresentacion.JMQWS.CotizacionWS)(this)).obtenerCotizacionesPorUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+>>>>>>> origin/main
         JMQPresentacion.JMQWS.registrarCotizacionResponse JMQPresentacion.JMQWS.CotizacionWS.registrarCotizacion(JMQPresentacion.JMQWS.registrarCotizacionRequest request) {
             return base.Channel.registrarCotizacion(request);
         }
@@ -5901,6 +7792,7 @@ namespace JMQPresentacion.JMQWS {
             inValue.estado = estado;
             return ((JMQPresentacion.JMQWS.CotizacionWS)(this)).actualizarEstadoCotizacionAsync(inValue);
         }
+<<<<<<< HEAD
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioResponse JMQPresentacion.JMQWS.CotizacionWS.obtenerCotizacionesPorUsuario(JMQPresentacion.JMQWS.obtenerCotizacionesPorUsuarioRequest request) {
@@ -5924,6 +7816,8 @@ namespace JMQPresentacion.JMQWS {
             inValue.idUsuario = idUsuario;
             return ((JMQPresentacion.JMQWS.CotizacionWS)(this)).obtenerCotizacionesPorUsuarioAsync(inValue);
         }
+=======
+>>>>>>> origin/main
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -5943,35 +7837,17 @@ namespace JMQPresentacion.JMQWS {
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarProductoCotizacionResponse> EliminarProductoCotizacionAsync(JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionReq" +
-            "uest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionRes" +
-            "ponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacio" +
+            "nRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacio" +
+            "nResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        JMQPresentacion.JMQWS.listarProductoCotizacionResponse listarProductoCotizacion(JMQPresentacion.JMQWS.listarProductoCotizacionRequest request);
+        JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse listarProductosPorCotizacion(JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionReq" +
-            "uest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarProductoCotizacionResponse> listarProductoCotizacionAsync(JMQPresentacion.JMQWS.listarProductoCotizacionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        JMQPresentacion.JMQWS.obtenerProdCotizaResponse obtenerProdCotiza(JMQPresentacion.JMQWS.obtenerProdCotizaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerProdCotizaResponse> obtenerProdCotizaAsync(JMQPresentacion.JMQWS.obtenerProdCotizaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        JMQPresentacion.JMQWS.helloResponse hello(JMQPresentacion.JMQWS.helloRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> helloAsync(JMQPresentacion.JMQWS.helloRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacio" +
+            "nRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacio" +
+            "nResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse> listarProductosPorCotizacionAsync(JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest request);
         
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/RegistrarProdCotizacionRequ" +
@@ -6009,6 +7885,123 @@ namespace JMQPresentacion.JMQWS {
             "ponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarPrecioProdCotiResponse> ActualizarPrecioProdCotiAsync(JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest request);
         
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionR" +
+            "equest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.EliminarProductoCotizacionResponse EliminarProductoCotizacion(JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionR" +
+            "equest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/EliminarProductoCotizacionR" +
+            "esponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarProductoCotizacionResponse> EliminarProductoCotizacionAsync(JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionReq" +
+            "uest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.listarProductoCotizacionResponse listarProductoCotizacion(JMQPresentacion.JMQWS.listarProductoCotizacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionReq" +
+            "uest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductoCotizacionRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarProductoCotizacionResponse> listarProductoCotizacionAsync(JMQPresentacion.JMQWS.listarProductoCotizacionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.obtenerProdCotizaResponse obtenerProdCotiza(JMQPresentacion.JMQWS.obtenerProdCotizaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/obtenerProdCotizaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerProdCotizaResponse> obtenerProdCotizaAsync(JMQPresentacion.JMQWS.obtenerProdCotizaRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductosPorCotizacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class listarProductosPorCotizacionRequest {
+        
+<<<<<<< HEAD
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.helloResponse hello(JMQPresentacion.JMQWS.helloRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/helloResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> helloAsync(JMQPresentacion.JMQWS.helloRequest request);
+=======
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public listarProductosPorCotizacionRequest() {
+        }
+>>>>>>> origin/main
+        
+        public listarProductosPorCotizacionRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductosPorCotizacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class listarProductosPorCotizacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.productoCotizacion[] @return;
+        
+<<<<<<< HEAD
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarProductoCotizacio" +
+            "nRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarProductoCotizacio" +
+            "nResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.ActualizarProductoCotizacionResponse ActualizarProductoCotizacion(JMQPresentacion.JMQWS.ActualizarProductoCotizacionRequest request);
+=======
+        public listarProductosPorCotizacionResponse() {
+        }
+        
+        public listarProductosPorCotizacionResponse(JMQPresentacion.JMQWS.productoCotizacion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarProdCotizacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarProdCotizacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.productoCotizacion arg0;
+>>>>>>> origin/main
+        
+        public RegistrarProdCotizacionRequest() {
+        }
+        
+<<<<<<< HEAD
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarPrecioProdCotiReq" +
+            "uest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarPrecioProdCotiRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.ActualizarPrecioProdCotiResponse ActualizarPrecioProdCoti(JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarPrecioProdCotiReq" +
+            "uest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/ActualizarPrecioProdCotiRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarPrecioProdCotiResponse> ActualizarPrecioProdCotiAsync(JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest request);
+        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacio" +
             "nRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacio" +
@@ -6016,11 +8009,110 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse listarProductosPorCotizacion(JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest request);
+=======
+        public RegistrarProdCotizacionRequest(JMQPresentacion.JMQWS.productoCotizacion arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarProdCotizacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarProdCotizacionResponse {
+>>>>>>> origin/main
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacio" +
-            "nRequest", ReplyAction="http://jmqws.inversiones.jmq.com/ProductoCotizacionWS/listarProductosPorCotizacio" +
-            "nResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse> listarProductosPorCotizacionAsync(JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest request);
+        public RegistrarProdCotizacionResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarProductoCotizacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ActualizarProductoCotizacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.productoCotizacion arg0;
+        
+        public ActualizarProductoCotizacionRequest() {
+        }
+        
+        public ActualizarProductoCotizacionRequest(JMQPresentacion.JMQWS.productoCotizacion arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarProductoCotizacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ActualizarProductoCotizacionResponse {
+        
+        public ActualizarProductoCotizacionResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarPrecioProdCoti", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ActualizarPrecioProdCotiRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.productoCotizacion arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double arg1;
+        
+        public ActualizarPrecioProdCotiRequest() {
+        }
+        
+        public ActualizarPrecioProdCotiRequest(JMQPresentacion.JMQWS.productoCotizacion arg0, double arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarPrecioProdCotiResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ActualizarPrecioProdCotiResponse {
+        
+        public ActualizarPrecioProdCotiResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarProductoCotizacion", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarProductoCotizacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public EliminarProductoCotizacionRequest() {
+        }
+        
+        public EliminarProductoCotizacionRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarProductoCotizacionResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarProductoCotizacionResponse {
+        
+        public EliminarProductoCotizacionResponse() {
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6115,6 +8207,7 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+<<<<<<< HEAD
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6240,6 +8333,8 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+=======
+>>>>>>> origin/main
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProductoCotizacionWSChannel : JMQPresentacion.JMQWS.ProductoCotizacionWS, System.ServiceModel.IClientChannel {
     }
@@ -6265,6 +8360,119 @@ namespace JMQPresentacion.JMQWS {
         
         public ProductoCotizacionWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.EliminarProductoCotizacionResponse JMQPresentacion.JMQWS.ProductoCotizacionWS.EliminarProductoCotizacion(JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest request) {
+            return base.Channel.EliminarProductoCotizacion(request);
+        }
+        
+        public void EliminarProductoCotizacion(int arg0) {
+            JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest inValue = new JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.EliminarProductoCotizacionResponse retVal = ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).EliminarProductoCotizacion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarProductoCotizacionResponse> JMQPresentacion.JMQWS.ProductoCotizacionWS.EliminarProductoCotizacionAsync(JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest request) {
+            return base.Channel.EliminarProductoCotizacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarProductoCotizacionResponse> EliminarProductoCotizacionAsync(int arg0) {
+            JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest inValue = new JMQPresentacion.JMQWS.EliminarProductoCotizacionRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).EliminarProductoCotizacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse JMQPresentacion.JMQWS.ProductoCotizacionWS.listarProductosPorCotizacion(JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest request) {
+            return base.Channel.listarProductosPorCotizacion(request);
+        }
+        
+        public JMQPresentacion.JMQWS.productoCotizacion[] listarProductosPorCotizacion(int arg0) {
+            JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest inValue = new JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse retVal = ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).listarProductosPorCotizacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse> JMQPresentacion.JMQWS.ProductoCotizacionWS.listarProductosPorCotizacionAsync(JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest request) {
+            return base.Channel.listarProductosPorCotizacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.listarProductosPorCotizacionResponse> listarProductosPorCotizacionAsync(int arg0) {
+            JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest inValue = new JMQPresentacion.JMQWS.listarProductosPorCotizacionRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).listarProductosPorCotizacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse JMQPresentacion.JMQWS.ProductoCotizacionWS.RegistrarProdCotizacion(JMQPresentacion.JMQWS.RegistrarProdCotizacionRequest request) {
+            return base.Channel.RegistrarProdCotizacion(request);
+        }
+        
+        public void RegistrarProdCotizacion(JMQPresentacion.JMQWS.productoCotizacion arg0) {
+            JMQPresentacion.JMQWS.RegistrarProdCotizacionRequest inValue = new JMQPresentacion.JMQWS.RegistrarProdCotizacionRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse retVal = ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).RegistrarProdCotizacion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse> JMQPresentacion.JMQWS.ProductoCotizacionWS.RegistrarProdCotizacionAsync(JMQPresentacion.JMQWS.RegistrarProdCotizacionRequest request) {
+            return base.Channel.RegistrarProdCotizacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarProdCotizacionResponse> RegistrarProdCotizacionAsync(JMQPresentacion.JMQWS.productoCotizacion arg0) {
+            JMQPresentacion.JMQWS.RegistrarProdCotizacionRequest inValue = new JMQPresentacion.JMQWS.RegistrarProdCotizacionRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).RegistrarProdCotizacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.ActualizarProductoCotizacionResponse JMQPresentacion.JMQWS.ProductoCotizacionWS.ActualizarProductoCotizacion(JMQPresentacion.JMQWS.ActualizarProductoCotizacionRequest request) {
+            return base.Channel.ActualizarProductoCotizacion(request);
+        }
+        
+        public void ActualizarProductoCotizacion(JMQPresentacion.JMQWS.productoCotizacion arg0) {
+            JMQPresentacion.JMQWS.ActualizarProductoCotizacionRequest inValue = new JMQPresentacion.JMQWS.ActualizarProductoCotizacionRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.ActualizarProductoCotizacionResponse retVal = ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).ActualizarProductoCotizacion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarProductoCotizacionResponse> JMQPresentacion.JMQWS.ProductoCotizacionWS.ActualizarProductoCotizacionAsync(JMQPresentacion.JMQWS.ActualizarProductoCotizacionRequest request) {
+            return base.Channel.ActualizarProductoCotizacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarProductoCotizacionResponse> ActualizarProductoCotizacionAsync(JMQPresentacion.JMQWS.productoCotizacion arg0) {
+            JMQPresentacion.JMQWS.ActualizarProductoCotizacionRequest inValue = new JMQPresentacion.JMQWS.ActualizarProductoCotizacionRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).ActualizarProductoCotizacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.ActualizarPrecioProdCotiResponse JMQPresentacion.JMQWS.ProductoCotizacionWS.ActualizarPrecioProdCoti(JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest request) {
+            return base.Channel.ActualizarPrecioProdCoti(request);
+        }
+        
+        public void ActualizarPrecioProdCoti(JMQPresentacion.JMQWS.productoCotizacion arg0, double arg1) {
+            JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest inValue = new JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            JMQPresentacion.JMQWS.ActualizarPrecioProdCotiResponse retVal = ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).ActualizarPrecioProdCoti(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarPrecioProdCotiResponse> JMQPresentacion.JMQWS.ProductoCotizacionWS.ActualizarPrecioProdCotiAsync(JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest request) {
+            return base.Channel.ActualizarPrecioProdCotiAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarPrecioProdCotiResponse> ActualizarPrecioProdCotiAsync(JMQPresentacion.JMQWS.productoCotizacion arg0, double arg1) {
+            JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest inValue = new JMQPresentacion.JMQWS.ActualizarPrecioProdCotiRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).ActualizarPrecioProdCotiAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6332,6 +8540,7 @@ namespace JMQPresentacion.JMQWS {
             inValue.arg0 = arg0;
             return ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).obtenerProdCotizaAsync(inValue);
         }
+<<<<<<< HEAD
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.helloResponse JMQPresentacion.JMQWS.ProductoCotizacionWS.hello(JMQPresentacion.JMQWS.helloRequest request) {
@@ -6446,12 +8655,15 @@ namespace JMQPresentacion.JMQWS {
             inValue.arg0 = arg0;
             return ((JMQPresentacion.JMQWS.ProductoCotizacionWS)(this)).listarProductosPorCotizacionAsync(inValue);
         }
+=======
+>>>>>>> origin/main
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://jmqws.inversiones.jmq.com/", ConfigurationName="JMQWS.UsuarioWS")]
     public interface UsuarioWS {
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuario/Fault/Exception", Name="Exception")]
@@ -6460,6 +8672,27 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarUsuarioResponse> eliminarUsuarioAsync(JMQPresentacion.JMQWS.eliminarUsuarioRequest request);
+=======
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuario/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.registrarUsuarioResponse registrarUsuario(JMQPresentacion.JMQWS.registrarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarUsuarioResponse> registrarUsuarioAsync(JMQPresentacion.JMQWS.registrarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuario/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.buscarUsuarioResponse buscarUsuario(JMQPresentacion.JMQWS.buscarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarUsuarioResponse> buscarUsuarioAsync(JMQPresentacion.JMQWS.buscarUsuarioRequest request);
+>>>>>>> origin/main
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/listarUsuariosRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/listarUsuariosResponse")]
@@ -6492,6 +8725,7 @@ namespace JMQPresentacion.JMQWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/reporteClientesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/reporteClientesResponse")]
+<<<<<<< HEAD
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         JMQPresentacion.JMQWS.reporteClientesResponse reporteClientes(JMQPresentacion.JMQWS.reporteClientesRequest request);
@@ -6502,12 +8736,14 @@ namespace JMQPresentacion.JMQWS {
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuario/Fault/Exception", Name="Exception")]
+=======
+>>>>>>> origin/main
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        JMQPresentacion.JMQWS.registrarUsuarioResponse registrarUsuario(JMQPresentacion.JMQWS.registrarUsuarioRequest request);
+        JMQPresentacion.JMQWS.reporteClientesResponse reporteClientes(JMQPresentacion.JMQWS.reporteClientesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarUsuarioResponse> registrarUsuarioAsync(JMQPresentacion.JMQWS.registrarUsuarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/reporteClientesRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/reporteClientesResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteClientesResponse> reporteClientesAsync(JMQPresentacion.JMQWS.reporteClientesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioResponse")]
@@ -6519,14 +8755,60 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarUsuarioResponse> buscarUsuarioAsync(JMQPresentacion.JMQWS.buscarUsuarioRequest request);
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreo/Fault/Exception" +
             "", Name="Exception")]
+=======
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuario/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.eliminarUsuarioResponse eliminarUsuario(JMQPresentacion.JMQWS.eliminarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarUsuarioResponse> eliminarUsuarioAsync(JMQPresentacion.JMQWS.eliminarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPassword/Fault/Exce" +
+            "ption", Name="Exception")]
+>>>>>>> origin/main
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse BuscarUsuarioPorCorreo(JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse> BuscarUsuarioPorCorreoAsync(JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+<<<<<<< HEAD
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConToken/Fault/Exceptio" +
+            "n", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse cambiarPasswordConToken(JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse> cambiarPasswordConTokenAsync(JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordResponse")]
+=======
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(JMQPresentacion.JMQWS.Exception), Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreo/Fault/Exception" +
+            "", Name="Exception")]
+>>>>>>> origin/main
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.validarTokenPasswordResponse validarTokenPassword(JMQPresentacion.JMQWS.validarTokenPasswordRequest request);
+        
+<<<<<<< HEAD
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.validarTokenPasswordResponse> validarTokenPasswordAsync(JMQPresentacion.JMQWS.validarTokenPasswordRequest request);
+=======
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse> BuscarUsuarioPorCorreoAsync(JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest request);
         
@@ -6540,15 +8822,50 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse> cambiarPasswordConTokenAsync(JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarUsuario", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarUsuarioRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        JMQPresentacion.JMQWS.validarTokenPasswordResponse validarTokenPassword(JMQPresentacion.JMQWS.validarTokenPasswordRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.usuario usuario;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordResponse")]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.validarTokenPasswordResponse> validarTokenPasswordAsync(JMQPresentacion.JMQWS.validarTokenPasswordRequest request);
+        public registrarUsuarioRequest() {
+        }
+        
+        public registrarUsuarioRequest(JMQPresentacion.JMQWS.usuario usuario) {
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarUsuarioResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class registrarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.usuario @return;
+        
+        public registrarUsuarioResponse() {
+        }
+        
+        public registrarUsuarioResponse(JMQPresentacion.JMQWS.usuario @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarUsuario", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class buscarUsuarioRequest {
+>>>>>>> origin/main
         
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordResponse")]
@@ -6557,6 +8874,7 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse iniciarRecuperacionPassword(JMQPresentacion.JMQWS.iniciarRecuperacionPasswordRequest request);
         
+<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordRequest", ReplyAction="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse> iniciarRecuperacionPasswordAsync(JMQPresentacion.JMQWS.iniciarRecuperacionPasswordRequest request);
     }
@@ -6575,6 +8893,12 @@ namespace JMQPresentacion.JMQWS {
         }
         
         public eliminarUsuarioRequest(int id) {
+=======
+        public buscarUsuarioRequest() {
+        }
+        
+        public buscarUsuarioRequest(int id) {
+>>>>>>> origin/main
             this.id = id;
         }
     }
@@ -6582,10 +8906,25 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuarioResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class eliminarUsuarioResponse {
         
         public eliminarUsuarioResponse() {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarUsuarioResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class buscarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.usuario @return;
+        
+        public buscarUsuarioResponse() {
+        }
+        
+        public buscarUsuarioResponse(JMQPresentacion.JMQWS.usuario @return) {
+            this.@return = @return;
+>>>>>>> origin/main
         }
     }
     
@@ -6691,6 +9030,7 @@ namespace JMQPresentacion.JMQWS {
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="reporteClientes", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class reporteClientesRequest {
+<<<<<<< HEAD
         
         public reporteClientesRequest() {
         }
@@ -6719,33 +9059,27 @@ namespace JMQPresentacion.JMQWS {
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="registrarUsuario", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class registrarUsuarioRequest {
+=======
+>>>>>>> origin/main
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public JMQPresentacion.JMQWS.usuario usuario;
-        
-        public registrarUsuarioRequest() {
-        }
-        
-        public registrarUsuarioRequest(JMQPresentacion.JMQWS.usuario usuario) {
-            this.usuario = usuario;
+        public reporteClientesRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarUsuarioResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class registrarUsuarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteClientesResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class reporteClientesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public JMQPresentacion.JMQWS.usuario @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
         
-        public registrarUsuarioResponse() {
+        public reporteClientesResponse() {
         }
         
-        public registrarUsuarioResponse(JMQPresentacion.JMQWS.usuario @return) {
+        public reporteClientesResponse(byte[] @return) {
             this.@return = @return;
         }
     }
@@ -6781,11 +9115,149 @@ namespace JMQPresentacion.JMQWS {
         public buscarUsuarioResponse() {
         }
         
+<<<<<<< HEAD
         public buscarUsuarioResponse(JMQPresentacion.JMQWS.usuario @return) {
+=======
+        public obtenerPorTokenResponse(JMQPresentacion.JMQWS.usuario @return) {
             this.@return = @return;
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuario", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarUsuarioRequest() {
+        }
+        
+        public eliminarUsuarioRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuarioResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class eliminarUsuarioResponse {
+        
+        public eliminarUsuarioResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="iniciarRecuperacionPassword", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class iniciarRecuperacionPasswordRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public iniciarRecuperacionPasswordRequest() {
+        }
+        
+        public iniciarRecuperacionPasswordRequest(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="iniciarRecuperacionPasswordResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class iniciarRecuperacionPasswordResponse {
+        
+        public iniciarRecuperacionPasswordResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="BuscarUsuarioPorCorreo", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class BuscarUsuarioPorCorreoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        public BuscarUsuarioPorCorreoRequest() {
+        }
+        
+        public BuscarUsuarioPorCorreoRequest(string correo) {
+            this.correo = correo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="BuscarUsuarioPorCorreoResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class BuscarUsuarioPorCorreoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.usuario @return;
+        
+        public BuscarUsuarioPorCorreoResponse() {
+        }
+        
+        public BuscarUsuarioPorCorreoResponse(JMQPresentacion.JMQWS.usuario @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cambiarPasswordConToken", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class cambiarPasswordConTokenRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg1;
+        
+        public cambiarPasswordConTokenRequest() {
+        }
+        
+        public cambiarPasswordConTokenRequest(string arg0, string arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cambiarPasswordConTokenResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class cambiarPasswordConTokenResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public cambiarPasswordConTokenResponse() {
+        }
+        
+        public cambiarPasswordConTokenResponse(bool @return) {
+>>>>>>> origin/main
+            this.@return = @return;
+        }
+    }
+    
+<<<<<<< HEAD
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6927,6 +9399,8 @@ namespace JMQPresentacion.JMQWS {
         }
     }
     
+=======
+>>>>>>> origin/main
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioWSChannel : JMQPresentacion.JMQWS.UsuarioWS, System.ServiceModel.IClientChannel {
     }
@@ -6955,6 +9429,7 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         JMQPresentacion.JMQWS.eliminarUsuarioResponse JMQPresentacion.JMQWS.UsuarioWS.eliminarUsuario(JMQPresentacion.JMQWS.eliminarUsuarioRequest request) {
             return base.Channel.eliminarUsuario(request);
         }
@@ -6974,6 +9449,51 @@ namespace JMQPresentacion.JMQWS {
             JMQPresentacion.JMQWS.eliminarUsuarioRequest inValue = new JMQPresentacion.JMQWS.eliminarUsuarioRequest();
             inValue.id = id;
             return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).eliminarUsuarioAsync(inValue);
+=======
+        JMQPresentacion.JMQWS.registrarUsuarioResponse JMQPresentacion.JMQWS.UsuarioWS.registrarUsuario(JMQPresentacion.JMQWS.registrarUsuarioRequest request) {
+            return base.Channel.registrarUsuario(request);
+        }
+        
+        public JMQPresentacion.JMQWS.usuario registrarUsuario(JMQPresentacion.JMQWS.usuario usuario) {
+            JMQPresentacion.JMQWS.registrarUsuarioRequest inValue = new JMQPresentacion.JMQWS.registrarUsuarioRequest();
+            inValue.usuario = usuario;
+            JMQPresentacion.JMQWS.registrarUsuarioResponse retVal = ((JMQPresentacion.JMQWS.UsuarioWS)(this)).registrarUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarUsuarioResponse> JMQPresentacion.JMQWS.UsuarioWS.registrarUsuarioAsync(JMQPresentacion.JMQWS.registrarUsuarioRequest request) {
+            return base.Channel.registrarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarUsuarioResponse> registrarUsuarioAsync(JMQPresentacion.JMQWS.usuario usuario) {
+            JMQPresentacion.JMQWS.registrarUsuarioRequest inValue = new JMQPresentacion.JMQWS.registrarUsuarioRequest();
+            inValue.usuario = usuario;
+            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).registrarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.buscarUsuarioResponse JMQPresentacion.JMQWS.UsuarioWS.buscarUsuario(JMQPresentacion.JMQWS.buscarUsuarioRequest request) {
+            return base.Channel.buscarUsuario(request);
+        }
+        
+        public JMQPresentacion.JMQWS.usuario buscarUsuario(int id) {
+            JMQPresentacion.JMQWS.buscarUsuarioRequest inValue = new JMQPresentacion.JMQWS.buscarUsuarioRequest();
+            inValue.id = id;
+            JMQPresentacion.JMQWS.buscarUsuarioResponse retVal = ((JMQPresentacion.JMQWS.UsuarioWS)(this)).buscarUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarUsuarioResponse> JMQPresentacion.JMQWS.UsuarioWS.buscarUsuarioAsync(JMQPresentacion.JMQWS.buscarUsuarioRequest request) {
+            return base.Channel.buscarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarUsuarioResponse> buscarUsuarioAsync(int id) {
+            JMQPresentacion.JMQWS.buscarUsuarioRequest inValue = new JMQPresentacion.JMQWS.buscarUsuarioRequest();
+            inValue.id = id;
+            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).buscarUsuarioAsync(inValue);
+>>>>>>> origin/main
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7047,6 +9567,7 @@ namespace JMQPresentacion.JMQWS {
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.reporteClientesResponse JMQPresentacion.JMQWS.UsuarioWS.reporteClientes(JMQPresentacion.JMQWS.reporteClientesRequest request) {
             return base.Channel.reporteClientes(request);
+<<<<<<< HEAD
         }
         
         public byte[] reporteClientes() {
@@ -7068,24 +9589,24 @@ namespace JMQPresentacion.JMQWS {
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.registrarUsuarioResponse JMQPresentacion.JMQWS.UsuarioWS.registrarUsuario(JMQPresentacion.JMQWS.registrarUsuarioRequest request) {
             return base.Channel.registrarUsuario(request);
+=======
+>>>>>>> origin/main
         }
         
-        public JMQPresentacion.JMQWS.usuario registrarUsuario(JMQPresentacion.JMQWS.usuario usuario) {
-            JMQPresentacion.JMQWS.registrarUsuarioRequest inValue = new JMQPresentacion.JMQWS.registrarUsuarioRequest();
-            inValue.usuario = usuario;
-            JMQPresentacion.JMQWS.registrarUsuarioResponse retVal = ((JMQPresentacion.JMQWS.UsuarioWS)(this)).registrarUsuario(inValue);
+        public byte[] reporteClientes() {
+            JMQPresentacion.JMQWS.reporteClientesRequest inValue = new JMQPresentacion.JMQWS.reporteClientesRequest();
+            JMQPresentacion.JMQWS.reporteClientesResponse retVal = ((JMQPresentacion.JMQWS.UsuarioWS)(this)).reporteClientes(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarUsuarioResponse> JMQPresentacion.JMQWS.UsuarioWS.registrarUsuarioAsync(JMQPresentacion.JMQWS.registrarUsuarioRequest request) {
-            return base.Channel.registrarUsuarioAsync(request);
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteClientesResponse> JMQPresentacion.JMQWS.UsuarioWS.reporteClientesAsync(JMQPresentacion.JMQWS.reporteClientesRequest request) {
+            return base.Channel.reporteClientesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.registrarUsuarioResponse> registrarUsuarioAsync(JMQPresentacion.JMQWS.usuario usuario) {
-            JMQPresentacion.JMQWS.registrarUsuarioRequest inValue = new JMQPresentacion.JMQWS.registrarUsuarioRequest();
-            inValue.usuario = usuario;
-            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).registrarUsuarioAsync(inValue);
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.reporteClientesResponse> reporteClientesAsync() {
+            JMQPresentacion.JMQWS.reporteClientesRequest inValue = new JMQPresentacion.JMQWS.reporteClientesRequest();
+            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).reporteClientesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7105,6 +9626,7 @@ namespace JMQPresentacion.JMQWS {
             return base.Channel.buscarUsuarioAsync(request);
         }
         
+<<<<<<< HEAD
         public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.buscarUsuarioResponse> buscarUsuarioAsync(int id) {
             JMQPresentacion.JMQWS.buscarUsuarioRequest inValue = new JMQPresentacion.JMQWS.buscarUsuarioRequest();
             inValue.id = id;
@@ -7203,12 +9725,112 @@ namespace JMQPresentacion.JMQWS {
             inValue.arg0 = arg0;
             return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).iniciarRecuperacionPasswordAsync(inValue);
         }
+=======
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.obtenerPorTokenResponse> obtenerPorTokenAsync(string arg0) {
+            JMQPresentacion.JMQWS.obtenerPorTokenRequest inValue = new JMQPresentacion.JMQWS.obtenerPorTokenRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).obtenerPorTokenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.eliminarUsuarioResponse JMQPresentacion.JMQWS.UsuarioWS.eliminarUsuario(JMQPresentacion.JMQWS.eliminarUsuarioRequest request) {
+            return base.Channel.eliminarUsuario(request);
+        }
+        
+        public void eliminarUsuario(int id) {
+            JMQPresentacion.JMQWS.eliminarUsuarioRequest inValue = new JMQPresentacion.JMQWS.eliminarUsuarioRequest();
+            inValue.id = id;
+            JMQPresentacion.JMQWS.eliminarUsuarioResponse retVal = ((JMQPresentacion.JMQWS.UsuarioWS)(this)).eliminarUsuario(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarUsuarioResponse> JMQPresentacion.JMQWS.UsuarioWS.eliminarUsuarioAsync(JMQPresentacion.JMQWS.eliminarUsuarioRequest request) {
+            return base.Channel.eliminarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.eliminarUsuarioResponse> eliminarUsuarioAsync(int id) {
+            JMQPresentacion.JMQWS.eliminarUsuarioRequest inValue = new JMQPresentacion.JMQWS.eliminarUsuarioRequest();
+            inValue.id = id;
+            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).eliminarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse JMQPresentacion.JMQWS.UsuarioWS.iniciarRecuperacionPassword(JMQPresentacion.JMQWS.iniciarRecuperacionPasswordRequest request) {
+            return base.Channel.iniciarRecuperacionPassword(request);
+        }
+        
+        public void iniciarRecuperacionPassword(string arg0) {
+            JMQPresentacion.JMQWS.iniciarRecuperacionPasswordRequest inValue = new JMQPresentacion.JMQWS.iniciarRecuperacionPasswordRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse retVal = ((JMQPresentacion.JMQWS.UsuarioWS)(this)).iniciarRecuperacionPassword(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse> JMQPresentacion.JMQWS.UsuarioWS.iniciarRecuperacionPasswordAsync(JMQPresentacion.JMQWS.iniciarRecuperacionPasswordRequest request) {
+            return base.Channel.iniciarRecuperacionPasswordAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.iniciarRecuperacionPasswordResponse> iniciarRecuperacionPasswordAsync(string arg0) {
+            JMQPresentacion.JMQWS.iniciarRecuperacionPasswordRequest inValue = new JMQPresentacion.JMQWS.iniciarRecuperacionPasswordRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).iniciarRecuperacionPasswordAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse JMQPresentacion.JMQWS.UsuarioWS.BuscarUsuarioPorCorreo(JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest request) {
+            return base.Channel.BuscarUsuarioPorCorreo(request);
+        }
+        
+        public JMQPresentacion.JMQWS.usuario BuscarUsuarioPorCorreo(string correo) {
+            JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest inValue = new JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest();
+            inValue.correo = correo;
+            JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse retVal = ((JMQPresentacion.JMQWS.UsuarioWS)(this)).BuscarUsuarioPorCorreo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse> JMQPresentacion.JMQWS.UsuarioWS.BuscarUsuarioPorCorreoAsync(JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest request) {
+            return base.Channel.BuscarUsuarioPorCorreoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoResponse> BuscarUsuarioPorCorreoAsync(string correo) {
+            JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest inValue = new JMQPresentacion.JMQWS.BuscarUsuarioPorCorreoRequest();
+            inValue.correo = correo;
+            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).BuscarUsuarioPorCorreoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse JMQPresentacion.JMQWS.UsuarioWS.cambiarPasswordConToken(JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest request) {
+            return base.Channel.cambiarPasswordConToken(request);
+        }
+        
+        public bool cambiarPasswordConToken(string arg0, string arg1) {
+            JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest inValue = new JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse retVal = ((JMQPresentacion.JMQWS.UsuarioWS)(this)).cambiarPasswordConToken(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse> JMQPresentacion.JMQWS.UsuarioWS.cambiarPasswordConTokenAsync(JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest request) {
+            return base.Channel.cambiarPasswordConTokenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.cambiarPasswordConTokenResponse> cambiarPasswordConTokenAsync(string arg0, string arg1) {
+            JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest inValue = new JMQPresentacion.JMQWS.cambiarPasswordConTokenRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((JMQPresentacion.JMQWS.UsuarioWS)(this)).cambiarPasswordConTokenAsync(inValue);
+        }
+>>>>>>> origin/main
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://jmqws.inversiones.jmq.com/", ConfigurationName="JMQWS.CategoriaWS")]
     public interface CategoriaWS {
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -7216,6 +9838,16 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarCategoriaResponse> EliminarCategoriaAsync(JMQPresentacion.JMQWS.EliminarCategoriaRequest request);
+=======
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ListarCategoriasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ListarCategoriasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        JMQPresentacion.JMQWS.ListarCategoriasResponse ListarCategorias(JMQPresentacion.JMQWS.ListarCategoriasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ListarCategoriasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ListarCategoriasResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarCategoriasResponse> ListarCategoriasAsync(JMQPresentacion.JMQWS.ListarCategoriasRequest request);
+>>>>>>> origin/main
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ObtenerCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ObtenerCategoriaResponse")]
@@ -7226,6 +9858,7 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ObtenerCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ObtenerCategoriaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ObtenerCategoriaResponse> ObtenerCategoriaAsync(JMQPresentacion.JMQWS.ObtenerCategoriaRequest request);
         
+<<<<<<< HEAD
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ListarCategoriasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ListarCategoriasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -7235,6 +9868,8 @@ namespace JMQPresentacion.JMQWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ListarCategoriasRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ListarCategoriasResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarCategoriasResponse> ListarCategoriasAsync(JMQPresentacion.JMQWS.ListarCategoriasRequest request);
         
+=======
+>>>>>>> origin/main
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/RegistrarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/RegistrarCategoriaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -7244,12 +9879,21 @@ namespace JMQPresentacion.JMQWS {
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarCategoriaResponse> RegistrarCategoriaAsync(JMQPresentacion.JMQWS.RegistrarCategoriaRequest request);
         
         // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         JMQPresentacion.JMQWS.ActualizarCategoriaResponse ActualizarCategoria(JMQPresentacion.JMQWS.ActualizarCategoriaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarCategoriaResponse> ActualizarCategoriaAsync(JMQPresentacion.JMQWS.ActualizarCategoriaRequest request);
+=======
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.EliminarCategoriaResponse EliminarCategoria(JMQPresentacion.JMQWS.EliminarCategoriaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/EliminarCategoriaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarCategoriaResponse> EliminarCategoriaAsync(JMQPresentacion.JMQWS.EliminarCategoriaRequest request);
+>>>>>>> origin/main
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/helloResponse")]
@@ -7259,11 +9903,23 @@ namespace JMQPresentacion.JMQWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/helloRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/helloResponse")]
         System.Threading.Tasks.Task<JMQPresentacion.JMQWS.helloResponse> helloAsync(JMQPresentacion.JMQWS.helloRequest request);
+<<<<<<< HEAD
+=======
+        
+        // CODEGEN: El parámetro 'arg0' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        JMQPresentacion.JMQWS.ActualizarCategoriaResponse ActualizarCategoria(JMQPresentacion.JMQWS.ActualizarCategoriaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaRequest", ReplyAction="http://jmqws.inversiones.jmq.com/CategoriaWS/ActualizarCategoriaResponse")]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ActualizarCategoriaResponse> ActualizarCategoriaAsync(JMQPresentacion.JMQWS.ActualizarCategoriaRequest request);
+>>>>>>> origin/main
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarCategoria", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class EliminarCategoriaRequest {
         
@@ -7286,6 +9942,30 @@ namespace JMQPresentacion.JMQWS {
     public partial class EliminarCategoriaResponse {
         
         public EliminarCategoriaResponse() {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarCategorias", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarCategoriasRequest {
+        
+        public ListarCategoriasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarCategoriasResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ListarCategoriasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.categoria[] @return;
+        
+        public ListarCategoriasResponse() {
+        }
+        
+        public ListarCategoriasResponse(JMQPresentacion.JMQWS.categoria[] @return) {
+            this.@return = @return;
+>>>>>>> origin/main
         }
     }
     
@@ -7328,28 +10008,89 @@ namespace JMQPresentacion.JMQWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="ListarCategorias", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
     public partial class ListarCategoriasRequest {
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarCategoria", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarCategoriaRequest {
         
-        public ListarCategoriasRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.categoria arg0;
+        
+        public RegistrarCategoriaRequest() {
+        }
+        
+        public RegistrarCategoriaRequest(JMQPresentacion.JMQWS.categoria arg0) {
+            this.arg0 = arg0;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ListarCategoriasResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
-    public partial class ListarCategoriasResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RegistrarCategoriaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class RegistrarCategoriaResponse {
+        
+        public RegistrarCategoriaResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarCategoria", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarCategoriaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public JMQPresentacion.JMQWS.categoria[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
         
-        public ListarCategoriasResponse() {
+        public EliminarCategoriaRequest() {
         }
         
-        public ListarCategoriasResponse(JMQPresentacion.JMQWS.categoria[] @return) {
-            this.@return = @return;
+        public EliminarCategoriaRequest(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EliminarCategoriaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class EliminarCategoriaResponse {
+        
+        public EliminarCategoriaResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarCategoria", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ActualizarCategoriaRequest {
+>>>>>>> origin/main
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://jmqws.inversiones.jmq.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public JMQPresentacion.JMQWS.categoria arg0;
+        
+        public ActualizarCategoriaRequest() {
+        }
+        
+        public ActualizarCategoriaRequest(JMQPresentacion.JMQWS.categoria arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ActualizarCategoriaResponse", WrapperNamespace="http://jmqws.inversiones.jmq.com/", IsWrapped=true)]
+    public partial class ActualizarCategoriaResponse {
+        
+        public ActualizarCategoriaResponse() {
         }
     }
     
@@ -7437,6 +10178,76 @@ namespace JMQPresentacion.JMQWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+        JMQPresentacion.JMQWS.EliminarCategoriaResponse JMQPresentacion.JMQWS.CategoriaWS.EliminarCategoria(JMQPresentacion.JMQWS.EliminarCategoriaRequest request) {
+            return base.Channel.EliminarCategoria(request);
+=======
+        JMQPresentacion.JMQWS.ListarCategoriasResponse JMQPresentacion.JMQWS.CategoriaWS.ListarCategorias(JMQPresentacion.JMQWS.ListarCategoriasRequest request) {
+            return base.Channel.ListarCategorias(request);
+        }
+        
+        public JMQPresentacion.JMQWS.categoria[] ListarCategorias() {
+            JMQPresentacion.JMQWS.ListarCategoriasRequest inValue = new JMQPresentacion.JMQWS.ListarCategoriasRequest();
+            JMQPresentacion.JMQWS.ListarCategoriasResponse retVal = ((JMQPresentacion.JMQWS.CategoriaWS)(this)).ListarCategorias(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarCategoriasResponse> JMQPresentacion.JMQWS.CategoriaWS.ListarCategoriasAsync(JMQPresentacion.JMQWS.ListarCategoriasRequest request) {
+            return base.Channel.ListarCategoriasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ListarCategoriasResponse> ListarCategoriasAsync() {
+            JMQPresentacion.JMQWS.ListarCategoriasRequest inValue = new JMQPresentacion.JMQWS.ListarCategoriasRequest();
+            return ((JMQPresentacion.JMQWS.CategoriaWS)(this)).ListarCategoriasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.ObtenerCategoriaResponse JMQPresentacion.JMQWS.CategoriaWS.ObtenerCategoria(JMQPresentacion.JMQWS.ObtenerCategoriaRequest request) {
+            return base.Channel.ObtenerCategoria(request);
+        }
+        
+        public JMQPresentacion.JMQWS.categoria ObtenerCategoria(int arg0) {
+            JMQPresentacion.JMQWS.ObtenerCategoriaRequest inValue = new JMQPresentacion.JMQWS.ObtenerCategoriaRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.ObtenerCategoriaResponse retVal = ((JMQPresentacion.JMQWS.CategoriaWS)(this)).ObtenerCategoria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ObtenerCategoriaResponse> JMQPresentacion.JMQWS.CategoriaWS.ObtenerCategoriaAsync(JMQPresentacion.JMQWS.ObtenerCategoriaRequest request) {
+            return base.Channel.ObtenerCategoriaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.ObtenerCategoriaResponse> ObtenerCategoriaAsync(int arg0) {
+            JMQPresentacion.JMQWS.ObtenerCategoriaRequest inValue = new JMQPresentacion.JMQWS.ObtenerCategoriaRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.CategoriaWS)(this)).ObtenerCategoriaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.RegistrarCategoriaResponse JMQPresentacion.JMQWS.CategoriaWS.RegistrarCategoria(JMQPresentacion.JMQWS.RegistrarCategoriaRequest request) {
+            return base.Channel.RegistrarCategoria(request);
+        }
+        
+        public void RegistrarCategoria(JMQPresentacion.JMQWS.categoria arg0) {
+            JMQPresentacion.JMQWS.RegistrarCategoriaRequest inValue = new JMQPresentacion.JMQWS.RegistrarCategoriaRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.RegistrarCategoriaResponse retVal = ((JMQPresentacion.JMQWS.CategoriaWS)(this)).RegistrarCategoria(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarCategoriaResponse> JMQPresentacion.JMQWS.CategoriaWS.RegistrarCategoriaAsync(JMQPresentacion.JMQWS.RegistrarCategoriaRequest request) {
+            return base.Channel.RegistrarCategoriaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.RegistrarCategoriaResponse> RegistrarCategoriaAsync(JMQPresentacion.JMQWS.categoria arg0) {
+            JMQPresentacion.JMQWS.RegistrarCategoriaRequest inValue = new JMQPresentacion.JMQWS.RegistrarCategoriaRequest();
+            inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.CategoriaWS)(this)).RegistrarCategoriaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         JMQPresentacion.JMQWS.EliminarCategoriaResponse JMQPresentacion.JMQWS.CategoriaWS.EliminarCategoria(JMQPresentacion.JMQWS.EliminarCategoriaRequest request) {
             return base.Channel.EliminarCategoria(request);
         }
@@ -7455,6 +10266,30 @@ namespace JMQPresentacion.JMQWS {
         public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarCategoriaResponse> EliminarCategoriaAsync(int arg0) {
             JMQPresentacion.JMQWS.EliminarCategoriaRequest inValue = new JMQPresentacion.JMQWS.EliminarCategoriaRequest();
             inValue.arg0 = arg0;
+            return ((JMQPresentacion.JMQWS.CategoriaWS)(this)).EliminarCategoriaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        JMQPresentacion.JMQWS.helloResponse JMQPresentacion.JMQWS.CategoriaWS.hello(JMQPresentacion.JMQWS.helloRequest request) {
+            return base.Channel.hello(request);
+>>>>>>> origin/main
+        }
+        
+        public void EliminarCategoria(int arg0) {
+            JMQPresentacion.JMQWS.EliminarCategoriaRequest inValue = new JMQPresentacion.JMQWS.EliminarCategoriaRequest();
+            inValue.arg0 = arg0;
+            JMQPresentacion.JMQWS.EliminarCategoriaResponse retVal = ((JMQPresentacion.JMQWS.CategoriaWS)(this)).EliminarCategoria(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarCategoriaResponse> JMQPresentacion.JMQWS.CategoriaWS.EliminarCategoriaAsync(JMQPresentacion.JMQWS.EliminarCategoriaRequest request) {
+            return base.Channel.EliminarCategoriaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<JMQPresentacion.JMQWS.EliminarCategoriaResponse> EliminarCategoriaAsync(int arg0) {
+            JMQPresentacion.JMQWS.EliminarCategoriaRequest inValue = new JMQPresentacion.JMQWS.EliminarCategoriaRequest();
+            inValue.arg0 = arg0;
+<<<<<<< HEAD
             return ((JMQPresentacion.JMQWS.CategoriaWS)(this)).EliminarCategoriaAsync(inValue);
         }
         
@@ -7568,5 +10403,9 @@ namespace JMQPresentacion.JMQWS {
             inValue.name = name;
             return ((JMQPresentacion.JMQWS.CategoriaWS)(this)).helloAsync(inValue);
         }
+=======
+            return ((JMQPresentacion.JMQWS.CategoriaWS)(this)).ActualizarCategoriaAsync(inValue);
+        }
+>>>>>>> origin/main
     }
 }
