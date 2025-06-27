@@ -8,9 +8,11 @@
     <title>Inversiones JMQ</title>
     
     <link rel="icon" type="image/x-icon" href="/Public/images/icon.png" />
-    <link href="/Public/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link href="/Public/css/site.css" rel="stylesheet" />
+    <link href="/Public/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Public/fonts/css/all.min.css" rel="stylesheet" />
+    <link href="/Public/css/site.css?v2.1" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server" />
 
     <style>
@@ -75,13 +77,16 @@
     <form id="form1" runat="server">
         <!-- SIDEBAR -->
         <div class="sidebar">
-            <a class="menu-title" href="/Principal/Principal.aspx">Menú</a>
-            <a class="menu-item" href="#">Compras</a>
+            <a class="menu-title" href="#">Menú</a>
+            <a class="menu-item" href="/Principal/Principal.aspx">Compras</a>
             <a class="menu-item" href="/Cotizaciones/ListaCotizaciones.aspx">Cotizaciones</a>
             
-            <asp:LinkButton ID="btnLogout" runat="server" CssClass="menu-item logout" OnClick="btnLogout_Click" Visible="false">
+<<<<<<< HEAD
+=======
+            <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Style="display: none;">
                 Logout
             </asp:LinkButton>
+>>>>>>> ramaNoelia2
         </div>
 
         <!-- NAVBAR -->
@@ -91,44 +96,29 @@
                     <img alt="Logo" src="/Public/images/logo1.png" style="width:150px;">
                 </a>
 
-                <!-- 🔧 CORREGIDO: Reemplazado form por div -->
-                <div class="d-flex">
-                    <button class="btn px-3 py-2 me-3" style="background-color: #1B4592; color: white; border: none;" type="button" data-bs-toggle="offcanvas" data-bs-target="#categoriesMenu">
-                        <i class="fas fa-bars"></i> Categorías
-                    </button>
-
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="categoriesMenu">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title">¡Hola!</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">Herramientas</li>
-                                <li class="list-group-item">Maquinaria</li>
-                                <li class="list-group-item">Limpieza</li>
-                                <li class="list-group-item">Pintura</li>
-                                <li class="list-group-item">Disolventes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <input class="form-control me-2" type="search" style="width:500px;" placeholder="Buscar..." />
-                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
-                </div>
+               
                 <!-- 🔧 FIN DE CORRECCIÓN -->
 
                 <div class="d-flex gap-2">
-                    <asp:PlaceHolder ID="phLogin" runat="server" Visible="false">
+                    <asp:PlaceHolder ID="phLogin" runat="server">
                         <a href="/Login/Login.aspx" class="btn btn-outline-light" title="Iniciar sesión">
-                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-user"></i> Iniciar Sesión
                         </a>
                     </asp:PlaceHolder>
 
-                    <asp:PlaceHolder ID="phLogout" runat="server" Visible="false">
-                        <asp:LinkButton ID="btnLogoutTop" runat="server" CssClass="btn btn-outline-danger" OnClick="btnLogout_Click" ToolTip="Cerrar sesión">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                        </asp:LinkButton>
+                    <asp:PlaceHolder ID="phUsuarioLogueado" runat="server">
+                        <div class="dropdown ps-3">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i> <asp:Label ID="lblNombreUsuario" runat="server"></asp:Label>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><asp:HyperLink ID="hpVerPedidos" runat="server" CssClass="dropdown-item" NavigateUrl="~/Login/VerPedidos.aspx">Ver pedidos</asp:HyperLink></li>
+                                <%--<li><asp:HyperLink ID="hpCambiarContrasena" runat="server" CssClass="dropdown-item" NavigateUrl="~/Login/Reestablecer.aspx">Cambiar Contraseña</asp:HyperLink></li>--%>
+                                <li><a class="dropdown-item" href="#" onclick="document.getElementById('<%= btnLogout.ClientID %>').click(); return false;">
+                                    Cerrar Sesión
+                                </a></li>
+                            </ul>
+                        </div>
                     </asp:PlaceHolder>
 
                     <a href="/Pedidos/Carrito.aspx" class="btn btn-outline-light position-relative" title="Ver carrito">
@@ -149,7 +139,8 @@
     </form>
 
     <!-- Scripts generales -->
-    <script src="/Public/js/bootstrap.bundle.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Public/js/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
