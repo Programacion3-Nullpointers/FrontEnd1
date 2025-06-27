@@ -17,6 +17,9 @@
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
                         <asp:Button ID="btnEditar" runat="server" CommandName="EditarEstado" CommandArgument='<%# Eval("id") %>' CssClass="btn-edit" Text="Editar estado" UseSubmitBehavior="False"/>
+                        <asp:LinkButton runat="server" CssClass="btn btn-sm btn-outline-primary" CommandArgument='<%# Eval("id") %>' OnClick="VerDetalle_Click">
+                                         <i class="fas fa-eye"></i> Ver
+                        </asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

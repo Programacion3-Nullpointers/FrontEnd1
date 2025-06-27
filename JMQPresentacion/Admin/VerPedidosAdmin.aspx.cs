@@ -127,5 +127,13 @@ namespace JMQPresentacion.Admin
                 Response.Write("<script>alert('No se pudo obtener el ID de la orden para actualizar.');</script>");
             }
         }
+
+        protected void VerDetalle_Click(object sender, EventArgs e)
+        {
+            LinkButton btn = (LinkButton)sender;
+            int idOrden = Convert.ToInt32(btn.CommandArgument);
+            Response.Redirect($"DetallePedidoAAdmin.aspx?id={idOrden}");
+
+        }
     }
 }
