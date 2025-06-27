@@ -5,6 +5,7 @@
     <div class="content">
     <div class="table-header">
         <h2>Gestión de Descuentos</h2>
+        <button type="button" class="btn-add" onclick="mostrarModal()">➕ Agregar Descuento</button>
     </div>
 
     <asp:GridView ID="gvDescuentos" runat="server" AutoGenerateColumns="False" OnRowCommand="gvDescuentos_RowCommand">
@@ -26,7 +27,7 @@
 <asp:Panel ID="pnlModalAgregar" runat="server" CssClass="modal" Style="display: none;">
     <div class="modal-content">
         <span class="cerrar" onclick="cerrarModal()">&times;</span>
-        <h3>Modificar Usuario</h3>
+        <h3>Agregar Descuento</h3>
 
         <asp:TextBox ID="txtnumDescuento" runat="server" CssClass="input-modal" placeholder="Descuento" />
         <%--<asp:TextBox ID="txtactivo" runat="server" CssClass="input-modal" placeholder="activo" />--%>
@@ -39,7 +40,7 @@
 <asp:Panel ID="pnlModalModificar" runat="server" CssClass="modal" Style="display: none;">
     <div class="modal-content">
         <span class="cerrar" onclick="cerrarModalModificar()">&times;</span>
-        <h3>Modificar Usuario</h3>
+        <h3>Modificar Descuento</h3>
 
         <asp:HiddenField ID="hfIdDescuento" runat="server" />
 
@@ -50,6 +51,12 @@
     </div>
 </asp:Panel>
     <script type="text/javascript">
+        function mostrarModal() {
+            document.getElementById('<%= pnlModalAgregar.ClientID %>').style.display = 'block';
+        }
+        function cerrarModal() {
+            document.getElementById('<%= pnlModalAgregar.ClientID %>').style.display = 'none';
+        }
         function mostrarModalModificar() {
             document.getElementById('<%= pnlModalModificar.ClientID %>').style.display = 'block';
         }

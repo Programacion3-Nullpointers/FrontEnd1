@@ -7,101 +7,119 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace JMQPresentacion
+namespace JMQPresentacion.Admin
 {
 
 
-    public partial class MainLayout
+    public partial class ModificarCategorias
     {
 
         /// <summary>
-        /// Control head.
+        /// Control gvCategorias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.GridView gvCategorias;
 
         /// <summary>
-        /// Control form1.
+        /// Control pnlModalAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel pnlModalAgregar;
 
         /// <summary>
-        /// Control btnLogout.
+        /// Control txtnombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnLogout;
+        protected global::System.Web.UI.WebControls.TextBox txtnombre;
 
         /// <summary>
-        /// Control phLogin.
+        /// Control txtdescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phLogin;
+        protected global::System.Web.UI.WebControls.TextBox txtdescripcion;
 
         /// <summary>
-        /// Control phUsuarioLogueado.
+        /// Control ddlDescuento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phUsuarioLogueado;
+        protected global::System.Web.UI.WebControls.DropDownList ddlDescuento;
 
         /// <summary>
-        /// Control lblNombreUsuario.
+        /// Control btnGuardarCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreUsuario;
+        protected global::System.Web.UI.WebControls.Button btnGuardarCategoria;
 
         /// <summary>
-        /// Control hpVerPedidos.
+        /// Control pnlModalModificar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hpVerPedidos;
+        protected global::System.Web.UI.WebControls.Panel pnlModalModificar;
 
         /// <summary>
-        /// Control litCantidadCarrito.
+        /// Control hfIdCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litCantidadCarrito;
+        protected global::System.Web.UI.WebControls.HiddenField hfIdCategoria;
 
         /// <summary>
-        /// Control Contenido.
+        /// Control txtnombreMod.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Contenido;
+        protected global::System.Web.UI.WebControls.TextBox txtnombreMod;
 
         /// <summary>
-        /// Control Scripts.
+        /// Control txtdescripcionMod.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Scripts;
+        protected global::System.Web.UI.WebControls.TextBox txtdescripcionMod;
+
+        /// <summary>
+        /// Control ddlDescuentoMod.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDescuentoMod;
+
+        /// <summary>
+        /// Control btnActualizarCategoria.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizarCategoria;
     }
 }
