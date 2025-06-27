@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jmqws.inversiones.jmq.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="EntregaWS" targetNamespace="http://jmqws.inversiones.jmq.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/JMQWS/EntregaWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
+    </xsd:schema>
+  </types>
+  <message name="EliminarEntrega">
+    <part name="parameters" element="tns:EliminarEntrega" />
+  </message>
+  <message name="EliminarEntregaResponse">
+    <part name="parameters" element="tns:EliminarEntregaResponse" />
+  </message>
+  <message name="ListarEntregas">
+    <part name="parameters" element="tns:ListarEntregas" />
+  </message>
+  <message name="ListarEntregasResponse">
+    <part name="parameters" element="tns:ListarEntregasResponse" />
+  </message>
+  <message name="BuscarEntrega">
+    <part name="parameters" element="tns:BuscarEntrega" />
+  </message>
+  <message name="BuscarEntregaResponse">
+    <part name="parameters" element="tns:BuscarEntregaResponse" />
+  </message>
+  <message name="ActualizarEntrega">
+    <part name="parameters" element="tns:ActualizarEntrega" />
+  </message>
+  <message name="ActualizarEntregaResponse">
+    <part name="parameters" element="tns:ActualizarEntregaResponse" />
+  </message>
+  <message name="RegistrarEntrega">
+    <part name="parameters" element="tns:RegistrarEntrega" />
+  </message>
+  <message name="RegistrarEntregaResponse">
+    <part name="parameters" element="tns:RegistrarEntregaResponse" />
+  </message>
+  <portType name="EntregaWS">
+    <operation name="EliminarEntrega">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaRequest" message="tns:EliminarEntrega" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaResponse" message="tns:EliminarEntregaResponse" />
+    </operation>
+    <operation name="ListarEntregas">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest" message="tns:ListarEntregas" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse" message="tns:ListarEntregasResponse" />
+    </operation>
+    <operation name="BuscarEntrega">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaRequest" message="tns:BuscarEntrega" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaResponse" message="tns:BuscarEntregaResponse" />
+    </operation>
+    <operation name="ActualizarEntrega">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaRequest" message="tns:ActualizarEntrega" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaResponse" message="tns:ActualizarEntregaResponse" />
+    </operation>
+    <operation name="RegistrarEntrega">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest" message="tns:RegistrarEntrega" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaResponse" message="tns:RegistrarEntregaResponse" />
+    </operation>
+  </portType>
+  <binding name="EntregaWSPortBinding" type="tns:EntregaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="EliminarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarEntregas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ActualizarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RegistrarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EntregaWS">
+    <port name="EntregaWSPort" binding="tns:EntregaWSPortBinding">
+      <soap:address location="http://localhost:8080/JMQWS/EntregaWS" />
+    </port>
+  </service>
+</definitions>

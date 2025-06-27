@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://jmqws.inversiones.jmq.com/" targetNamespace="http://jmqws.inversiones.jmq.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarDescuento" type="tns:ActualizarDescuento" />
+  <xs:element name="ActualizarDescuentoResponse" type="tns:ActualizarDescuentoResponse" />
+  <xs:element name="BuscarDescuento" type="tns:BuscarDescuento" />
+  <xs:element name="BuscarDescuentoResponse" type="tns:BuscarDescuentoResponse" />
+  <xs:element name="EliminarDescuento" type="tns:EliminarDescuento" />
+  <xs:element name="EliminarDescuentoResponse" type="tns:EliminarDescuentoResponse" />
+  <xs:element name="ListarDescuentos" type="tns:ListarDescuentos" />
+  <xs:element name="ListarDescuentosResponse" type="tns:ListarDescuentosResponse" />
+  <xs:element name="RegistrarDescuento" type="tns:RegistrarDescuento" />
+  <xs:element name="RegistrarDescuentoResponse" type="tns:RegistrarDescuentoResponse" />
+  <xs:element name="hello" type="tns:hello" />
+  <xs:element name="helloResponse" type="tns:helloResponse" />
+  <xs:complexType name="BuscarDescuento">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BuscarDescuentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:descuento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="descuento">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="numDescuento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListarDescuentos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarDescuentosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:descuento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarDescuento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:descuento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarDescuentoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="EliminarDescuento">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarDescuentoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarDescuento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:descuento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarDescuentoResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>
