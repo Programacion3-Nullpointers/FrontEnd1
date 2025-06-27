@@ -55,5 +55,13 @@ namespace JMQPresentacion.Login
                 lblNoPedidos.Visible = false;
             }
         }
+
+        protected void VerDetalle_Click(object sender, EventArgs e)
+        {
+            LinkButton btn = (LinkButton)sender;
+            int idOrden = Convert.ToInt32(btn.CommandArgument);
+            Response.Redirect($"DetallePedido.aspx?id={idOrden}");
+
+        }
     }
 }
