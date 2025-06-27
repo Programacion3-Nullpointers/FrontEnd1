@@ -11,22 +11,39 @@ namespace JMQPresentacion.Admin
     public partial class Reportes : System.Web.UI.Page
     {
         private UsuarioWSClient usuarioWSClient;
+        private CategoriaWSClient categoriaWSClient;
         private ProductoWSClient productoWSClient;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             usuarioWSClient = new JMQWS.UsuarioWSClient();
             productoWSClient = new JMQWS.ProductoWSClient();
+            categoriaWSClient = new CategoriaWSClient();
+            CargarCategorias();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void CargarCategorias()
+        {
+            List<categoria> categorias = categoriaWSClient.ListarCategorias().ToList();
+
+            ddlCategorias.DataSource = categorias;
+            ddlCategorias.DataTextField = "nombre";
+            ddlCategorias.DataValueField = "id";
+            ddlCategorias.DataBind();
+
+            // Opción adicional manual: "Ninguno"
+            ddlCategorias.Items.Insert(0, new ListItem("Ninguno", ""));
+        }
         protected void btnGenerarReporte_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             Byte[] FileBuffer = null;
+            int?[] args;
             if (btn == null) return;
             try
             {
@@ -39,17 +56,19 @@ namespace JMQPresentacion.Admin
                         int? anioInicioProd = int.TryParse(txtAnioInicioProd.Text, out int tempAnioInicio) ? tempAnioInicio : (int?)null;
                         int? mesFinProd = int.TryParse(ddlMesFinProd.SelectedValue, out int tempMesFin) ? tempMesFin : (int?)null;
                         int? anioFinProd = int.TryParse(txtAnioFinProd.Text, out int tempAnioFin) ? tempAnioFin : (int?)null;
+                        args = new int?[] { mesInicioProd, anioInicioProd, mesFinProd, anioFinProd};
                         // Lógica para reporte de productos más vendidos
-                        FileBuffer = productoWSClient.reporteMasVendidos();
+                        FileBuffer = productoWSClient.reporteMasVendidos(args);
                         break;
 
                     case "btnGenerarStock":
-                        int? mesInicioStock = int.TryParse(ddlMesInicioStock.SelectedValue, out int tempMesInicioStock) ? tempMesInicioStock : (int?)null;
-                        int? anioInicioStock = int.TryParse(txtAnioInicioStock.Text, out int tempAnioInicioStock) ? tempAnioInicioStock : (int?)null;
-                        int? mesFinStock = int.TryParse(ddlMesFinStock.SelectedValue, out int tempMesFinStock) ? tempMesFinStock : (int?)null;
-                        int? anioFinStock = int.TryParse(txtAnioFinStock.Text, out int tempAnioFinStock) ? tempAnioFinStock : (int?)null;
+                        int? stockMin = int.TryParse(StockMin.Text, out int tempStockMin) ? tempStockMin : (int?)null;
+                        int? stockMax = int.TryParse(StockMax.Text, out int tempStockMax) ? tempStockMax : (int?)null;
+                        int? categoriaId = int.TryParse(ddlCategorias.SelectedValue, out int tempIdCat) ? tempIdCat : (int?)null;
+                        args = new int?[] { stockMin, stockMax, categoriaId};
+
                         // Lógica para reporte de stock
-                        FileBuffer = productoWSClient.reporteStock();
+                        FileBuffer = productoWSClient.reporteStock(args);
                         break;
 
                     case "btnGenerarClientes":
@@ -58,8 +77,9 @@ namespace JMQPresentacion.Admin
                         int? mesFinClientes = int.TryParse(ddlMesFinClientes.SelectedValue, out int tempMesFinClientes) ? tempMesFinClientes : (int?)null;
                         int? anioFinClientes = int.TryParse(txtAnioFinClientes.Text, out int tempAnioFinClientes) ? tempAnioFinClientes : (int?)null;
                         int? minCompras = int.TryParse(txtMinCompras.Text, out int tempMinCompras) ? tempMinCompras : (int?)null;
+                        args = new int?[] { mesInicioClientes, anioInicioClientes, mesFinClientes, anioFinClientes, minCompras};
                         // Lógica para reporte de clientes recurrentes
-                        FileBuffer = usuarioWSClient.reporteClientes();
+                        FileBuffer = usuarioWSClient.reporteClientes(args);
                         break;
                 }
                 if (FileBuffer != null)
