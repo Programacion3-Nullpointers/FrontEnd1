@@ -34,7 +34,20 @@ namespace JMQPresentacion
 
         /// <summary>
 <<<<<<< HEAD
+<<<<<<< HEAD
         /// btnLogout control.
+=======
+        /// Control btnLogout.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnLogout;
+
+        /// <summary>
+        /// Control phLogin.
+>>>>>>> main
         /// </summary>
         /// <remarks>
         /// Auto-generated field.

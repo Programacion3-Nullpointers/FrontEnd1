@@ -5,6 +5,18 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/EntregaWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
+  <message name="EliminarEntrega">
+    <part name="parameters" element="tns:EliminarEntrega" />
+  </message>
+  <message name="EliminarEntregaResponse">
+    <part name="parameters" element="tns:EliminarEntregaResponse" />
+  </message>
+  <message name="ListarEntregas">
+    <part name="parameters" element="tns:ListarEntregas" />
+  </message>
+  <message name="ListarEntregasResponse">
+    <part name="parameters" element="tns:ListarEntregasResponse" />
+  </message>
   <message name="BuscarEntrega">
     <part name="parameters" element="tns:BuscarEntrega" />
   </message>
@@ -23,19 +35,15 @@
   <message name="RegistrarEntregaResponse">
     <part name="parameters" element="tns:RegistrarEntregaResponse" />
   </message>
-  <message name="ListarEntregas">
-    <part name="parameters" element="tns:ListarEntregas" />
-  </message>
-  <message name="ListarEntregasResponse">
-    <part name="parameters" element="tns:ListarEntregasResponse" />
-  </message>
-  <message name="EliminarEntrega">
-    <part name="parameters" element="tns:EliminarEntrega" />
-  </message>
-  <message name="EliminarEntregaResponse">
-    <part name="parameters" element="tns:EliminarEntregaResponse" />
-  </message>
   <portType name="EntregaWS">
+    <operation name="EliminarEntrega">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaRequest" message="tns:EliminarEntrega" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaResponse" message="tns:EliminarEntregaResponse" />
+    </operation>
+    <operation name="ListarEntregas">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest" message="tns:ListarEntregas" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse" message="tns:ListarEntregasResponse" />
+    </operation>
     <operation name="BuscarEntrega">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaRequest" message="tns:BuscarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaResponse" message="tns:BuscarEntregaResponse" />
@@ -48,17 +56,27 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest" message="tns:RegistrarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaResponse" message="tns:RegistrarEntregaResponse" />
     </operation>
-    <operation name="ListarEntregas">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest" message="tns:ListarEntregas" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse" message="tns:ListarEntregasResponse" />
-    </operation>
-    <operation name="EliminarEntrega">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaRequest" message="tns:EliminarEntrega" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaResponse" message="tns:EliminarEntregaResponse" />
-    </operation>
   </portType>
   <binding name="EntregaWSPortBinding" type="tns:EntregaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="EliminarEntrega">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListarEntregas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="BuscarEntrega">
       <soap:operation soapAction="" />
       <input>
@@ -78,24 +96,6 @@
       </output>
     </operation>
     <operation name="RegistrarEntrega">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarEntregas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="EliminarEntrega">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

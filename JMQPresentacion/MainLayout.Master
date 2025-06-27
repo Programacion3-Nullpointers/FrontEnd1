@@ -95,12 +95,11 @@
             <a class="menu-item" href="/Principal/Principal.aspx">Compras</a>
             <a class="menu-item" href="/Cotizaciones/ListaCotizaciones.aspx">Cotizaciones</a>
             
-<<<<<<< HEAD
-=======
+
             <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Style="display: none;">
                 Logout
             </asp:LinkButton>
->>>>>>> ramaNoelia2
+
         </div>
 
         <!-- NAVBAR -->
