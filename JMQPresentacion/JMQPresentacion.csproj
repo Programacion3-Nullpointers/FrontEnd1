@@ -74,6 +74,7 @@
     <Content Include="Admin\Descuentos.aspx" />
     <Content Include="Admin\ModificarDescuentos.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
+    <Content Include="Admin\Reportes.aspx" />
     <Content Include="Admin\VerPedidosAdmin.aspx" />
     <Content Include="AgregarCarrito.ashx" />
     <None Include="Connected Services\JMQWS\archivo.disco" />
@@ -382,6 +383,9 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarDescuentosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarPorOrdenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -548,6 +552,13 @@
     </Compile>
     <Compile Include="Admin\ModificarProductos.aspx.designer.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reportes.aspx.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Reportes.aspx.designer.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\VerPedidosAdmin.aspx.cs">
       <DependentUpon>VerPedidosAdmin.aspx</DependentUpon>
