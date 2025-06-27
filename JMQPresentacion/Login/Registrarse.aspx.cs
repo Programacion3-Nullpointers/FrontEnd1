@@ -154,8 +154,10 @@ namespace JMQPresentacion.Login
             }
 
             // Insertar usuario
+
             user = usuarioWSCLClient.registrarUsuario(user);
             Session["Usuario"] = user;
+
             usuarioWSCLClient.registrarUsuario(user);
 
             // Guardar redirección al carrito (opcional)
