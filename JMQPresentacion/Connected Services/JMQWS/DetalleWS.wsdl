@@ -11,18 +11,6 @@
   <message name="ListarDetallesResponse">
     <part name="parameters" element="tns:ListarDetallesResponse" />
   </message>
-  <message name="EliminarDetalle">
-    <part name="parameters" element="tns:EliminarDetalle" />
-  </message>
-  <message name="EliminarDetalleResponse">
-    <part name="parameters" element="tns:EliminarDetalleResponse" />
-  </message>
-  <message name="ActualizarDetalle">
-    <part name="parameters" element="tns:ActualizarDetalle" />
-  </message>
-  <message name="ActualizarDetalleResponse">
-    <part name="parameters" element="tns:ActualizarDetalleResponse" />
-  </message>
   <message name="RegistrarDetalle">
     <part name="parameters" element="tns:RegistrarDetalle" />
   </message>
@@ -35,18 +23,22 @@
   <message name="BuscarDetalleResponse">
     <part name="parameters" element="tns:BuscarDetalleResponse" />
   </message>
+  <message name="EliminarDetalle">
+    <part name="parameters" element="tns:EliminarDetalle" />
+  </message>
+  <message name="EliminarDetalleResponse">
+    <part name="parameters" element="tns:EliminarDetalleResponse" />
+  </message>
+  <message name="ActualizarDetalle">
+    <part name="parameters" element="tns:ActualizarDetalle" />
+  </message>
+  <message name="ActualizarDetalleResponse">
+    <part name="parameters" element="tns:ActualizarDetalleResponse" />
+  </message>
   <portType name="DetalleWS">
     <operation name="ListarDetalles">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/ListarDetallesRequest" message="tns:ListarDetalles" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/ListarDetallesResponse" message="tns:ListarDetallesResponse" />
-    </operation>
-    <operation name="EliminarDetalle">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleRequest" message="tns:EliminarDetalle" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleResponse" message="tns:EliminarDetalleResponse" />
-    </operation>
-    <operation name="ActualizarDetalle">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleRequest" message="tns:ActualizarDetalle" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleResponse" message="tns:ActualizarDetalleResponse" />
     </operation>
     <operation name="RegistrarDetalle">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/RegistrarDetalleRequest" message="tns:RegistrarDetalle" />
@@ -55,6 +47,14 @@
     <operation name="BuscarDetalle">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/BuscarDetalleRequest" message="tns:BuscarDetalle" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/BuscarDetalleResponse" message="tns:BuscarDetalleResponse" />
+    </operation>
+    <operation name="EliminarDetalle">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleRequest" message="tns:EliminarDetalle" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/EliminarDetalleResponse" message="tns:EliminarDetalleResponse" />
+    </operation>
+    <operation name="ActualizarDetalle">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleRequest" message="tns:ActualizarDetalle" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/DetalleWS/ActualizarDetalleResponse" message="tns:ActualizarDetalleResponse" />
     </operation>
   </portType>
   <binding name="DetalleWSPortBinding" type="tns:DetalleWS">
@@ -68,24 +68,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="EliminarDetalle">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ActualizarDetalle">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="RegistrarDetalle">
       <soap:operation soapAction="" />
       <input>
@@ -96,6 +78,24 @@
       </output>
     </operation>
     <operation name="BuscarDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ActualizarDetalle">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

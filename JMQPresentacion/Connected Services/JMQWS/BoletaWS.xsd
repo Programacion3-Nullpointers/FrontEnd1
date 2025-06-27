@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://jmqws.inversiones.jmq.com/" targetNamespace="http://jmqws.inversiones.jmq.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="actualizarComprobante" type="tns:actualizarComprobante" />
-  <xs:element name="actualizarComprobanteResponse" type="tns:actualizarComprobanteResponse" />
-  <xs:element name="buscarComprobante" type="tns:buscarComprobante" />
-  <xs:element name="buscarComprobanteResponse" type="tns:buscarComprobanteResponse" />
-  <xs:element name="eliminarComprobante" type="tns:eliminarComprobante" />
-  <xs:element name="eliminarComprobanteResponse" type="tns:eliminarComprobanteResponse" />
-  <xs:element name="listarComprobantes" type="tns:listarComprobantes" />
-  <xs:element name="listarComprobantesResponse" type="tns:listarComprobantesResponse" />
-  <xs:element name="registrarComprobante" type="tns:registrarComprobante" />
-  <xs:element name="registrarComprobanteResponse" type="tns:registrarComprobanteResponse" />
-  <xs:complexType name="actualizarComprobante">
+  <xs:element name="actualizarBoleta" type="tns:actualizarBoleta" />
+  <xs:element name="actualizarBoletaResponse" type="tns:actualizarBoletaResponse" />
+  <xs:element name="buscarBoleta" type="tns:buscarBoleta" />
+  <xs:element name="buscarBoletaResponse" type="tns:buscarBoletaResponse" />
+  <xs:element name="eliminarBoleta" type="tns:eliminarBoleta" />
+  <xs:element name="eliminarBoletaResponse" type="tns:eliminarBoletaResponse" />
+  <xs:element name="hello" type="tns:hello" />
+  <xs:element name="helloResponse" type="tns:helloResponse" />
+  <xs:element name="listarBoletas" type="tns:listarBoletas" />
+  <xs:element name="listarBoletasResponse" type="tns:listarBoletasResponse" />
+  <xs:element name="registrarBoleta" type="tns:registrarBoleta" />
+  <xs:element name="registrarBoletaResponse" type="tns:registrarBoletaResponse" />
+  <xs:complexType name="listarBoletas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarBoletasResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="comprobante" type="tns:comprobantePago" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:boleta" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="boleta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:comprobantePago">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dni" type="xs:string" />
+          <xs:element minOccurs="0" name="fecha_emision" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="nombre" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="comprobantePago" abstract="true">
     <xs:sequence>
@@ -83,42 +99,49 @@
       <xs:element minOccurs="0" name="tipoUsuario" type="tns:tipoUsuario" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarComprobanteResponse">
+  <xs:complexType name="buscarBoleta">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarBoletaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:boleta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBoleta">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBoletaResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="buscarComprobante">
+  <xs:complexType name="actualizarBoleta">
     <xs:sequence>
-      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="arg0" type="tns:boleta" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="buscarComprobanteResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:comprobantePago" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarComprobante">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarComprobanteResponse">
+  <xs:complexType name="actualizarBoletaResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarComprobantes">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarComprobantesResponse">
+  <xs:complexType name="registrarBoleta">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comprobantePago" />
+      <xs:element minOccurs="0" name="arg0" type="tns:boleta" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="registrarComprobante">
+  <xs:complexType name="registrarBoletaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="hello">
     <xs:sequence>
-      <xs:element minOccurs="0" name="comprobante" type="tns:comprobantePago" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="registrarComprobanteResponse">
-    <xs:sequence />
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="metodoPago">
     <xs:restriction base="xs:string">

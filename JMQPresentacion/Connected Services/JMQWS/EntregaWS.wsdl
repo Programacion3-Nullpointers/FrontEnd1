@@ -17,6 +17,12 @@
   <message name="BuscarEntregaResponse">
     <part name="parameters" element="tns:BuscarEntregaResponse" />
   </message>
+  <message name="ListarEntregas">
+    <part name="parameters" element="tns:ListarEntregas" />
+  </message>
+  <message name="ListarEntregasResponse">
+    <part name="parameters" element="tns:ListarEntregasResponse" />
+  </message>
   <message name="EliminarEntrega">
     <part name="parameters" element="tns:EliminarEntrega" />
   </message>
@@ -29,12 +35,6 @@
   <message name="ActualizarEntregaResponse">
     <part name="parameters" element="tns:ActualizarEntregaResponse" />
   </message>
-  <message name="ListarEntregas">
-    <part name="parameters" element="tns:ListarEntregas" />
-  </message>
-  <message name="ListarEntregasResponse">
-    <part name="parameters" element="tns:ListarEntregasResponse" />
-  </message>
   <portType name="EntregaWS">
     <operation name="RegistrarEntrega">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/RegistrarEntregaRequest" message="tns:RegistrarEntrega" />
@@ -44,6 +44,10 @@
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaRequest" message="tns:BuscarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/BuscarEntregaResponse" message="tns:BuscarEntregaResponse" />
     </operation>
+    <operation name="ListarEntregas">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest" message="tns:ListarEntregas" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse" message="tns:ListarEntregasResponse" />
+    </operation>
     <operation name="EliminarEntrega">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaRequest" message="tns:EliminarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/EliminarEntregaResponse" message="tns:EliminarEntregaResponse" />
@@ -51,10 +55,6 @@
     <operation name="ActualizarEntrega">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaRequest" message="tns:ActualizarEntrega" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ActualizarEntregaResponse" message="tns:ActualizarEntregaResponse" />
-    </operation>
-    <operation name="ListarEntregas">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasRequest" message="tns:ListarEntregas" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/EntregaWS/ListarEntregasResponse" message="tns:ListarEntregasResponse" />
     </operation>
   </portType>
   <binding name="EntregaWSPortBinding" type="tns:EntregaWS">
@@ -77,6 +77,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="ListarEntregas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="EliminarEntrega">
       <soap:operation soapAction="" />
       <input>
@@ -87,15 +96,6 @@
       </output>
     </operation>
     <operation name="ActualizarEntrega">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ListarEntregas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

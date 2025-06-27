@@ -63,12 +63,12 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:descuento" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="EliminarDescuento">
+  <xs:complexType name="desactivarDescuento">
     <xs:sequence>
       <xs:element name="arg0" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="EliminarDescuentoResponse">
+  <xs:complexType name="desactivarDescuentoResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="ActualizarDescuento">
@@ -79,12 +79,12 @@
   <xs:complexType name="ActualizarDescuentoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="desactivarDescuento">
+  <xs:complexType name="EliminarDescuento">
     <xs:sequence>
       <xs:element name="arg0" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="desactivarDescuentoResponse">
+  <xs:complexType name="EliminarDescuentoResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="hello">
