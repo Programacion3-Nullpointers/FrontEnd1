@@ -74,6 +74,7 @@
             <a class="menu-item" href="/Admin/ModificarUsuarios.aspx">Usuarios</a>
             <a class="menu-item" href="/Admin/ModificarProductos.aspx">Productos</a>
             <a class="menu-item" href="/Admin/CotizacionesAdmin.aspx">Cotizaciones</a>
+            <a class="menu-item" href="/Admin/ModificarCategorias.aspx">Categorias</a>
             <a class="menu-item" href="/Admin/Descuentos.aspx">Descuentos</a>
             <a class="menu-item" href="/Admin/Reportes.aspx">Reportes</a>
             <asp:LinkButton ID="btnLogout" runat="server" CssClass="menu-item logout" OnClick="btnLogout_Click">
