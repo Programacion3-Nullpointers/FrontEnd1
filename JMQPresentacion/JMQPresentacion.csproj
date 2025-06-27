@@ -72,12 +72,16 @@
     <Content Include="Acceso\NoAutorizado.aspx" />
     <Content Include="Admin\CotizacionesAdmin.aspx" />
     <Content Include="Admin\Descuentos.aspx" />
+    <Content Include="Admin\ModificarCategorias.aspx" />
     <Content Include="Admin\ModificarDescuentos.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
     <Content Include="AgregarCarrito.ashx" />
     <None Include="Connected Services\JMQWS\archivo.disco" />
     <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
     <None Include="Connected Services\JMQWS\configuration.svcinfo" />
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.activarDescuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarBoletaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -180,6 +184,9 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.cotizacion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.desactivarDescuentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.descontarStockResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -240,7 +247,13 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.factura.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarDescuentosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarUsuariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.helloResponse.datasource">
@@ -280,6 +293,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarPorOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarProductoCotizacionResponse.datasource">
@@ -520,6 +536,13 @@
     </Compile>
     <Compile Include="Admin\Descuentos.aspx.designer.cs">
       <DependentUpon>Descuentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ModificarCategorias.aspx.cs">
+      <DependentUpon>ModificarCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModificarCategorias.aspx.designer.cs">
+      <DependentUpon>ModificarCategorias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ModificarDescuentos.aspx.cs">
       <DependentUpon>ModificarDescuentos.aspx</DependentUpon>
