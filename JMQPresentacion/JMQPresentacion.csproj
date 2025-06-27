@@ -737,9 +737,6 @@
     <Compile Include="Admin\ModificarUsuarios.aspx.designer.cs">
       <DependentUpon>ModificarUsuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SetRedirect.ashx.cs">
-      <DependentUpon>SetRedirect.ashx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainLayout.Master" />
