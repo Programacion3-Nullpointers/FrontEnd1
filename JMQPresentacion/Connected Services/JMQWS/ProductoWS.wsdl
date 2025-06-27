@@ -5,46 +5,44 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/ProductoWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-  <message name="registrarProducto">
-    <part name="parameters" element="tns:registrarProducto" />
-  </message>
-  <message name="registrarProductoResponse">
-    <part name="parameters" element="tns:registrarProductoResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
   <message name="actualizarProducto">
     <part name="parameters" element="tns:actualizarProducto" />
   </message>
   <message name="actualizarProductoResponse">
     <part name="parameters" element="tns:actualizarProductoResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="buscarProducto">
-    <part name="parameters" element="tns:buscarProducto" />
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
   </message>
-  <message name="buscarProductoResponse">
-    <part name="parameters" element="tns:buscarProductoResponse" />
+  <message name="descontarStock">
+    <part name="parameters" element="tns:descontarStock" />
+  </message>
+  <message name="descontarStockResponse">
+    <part name="parameters" element="tns:descontarStockResponse" />
   </message>
   <message name="filtrarProductos">
     <part name="parameters" element="tns:filtrarProductos" />
   </message>
   <message name="filtrarProductosResponse">
     <part name="parameters" element="tns:filtrarProductosResponse" />
-=======
-  <message name="descontarStock">
-    <part name="parameters" element="tns:descontarStock" />
   </message>
-  <message name="descontarStockResponse">
-    <part name="parameters" element="tns:descontarStockResponse" />
->>>>>>> origin/main
+  <message name="registrarProducto">
+    <part name="parameters" element="tns:registrarProducto" />
   </message>
-  <message name="reporteMasVendidos">
-    <part name="parameters" element="tns:reporteMasVendidos" />
+  <message name="registrarProductoResponse">
+    <part name="parameters" element="tns:registrarProductoResponse" />
   </message>
-  <message name="reporteMasVendidosResponse">
-    <part name="parameters" element="tns:reporteMasVendidosResponse" />
+  <message name="eliminarProducto">
+    <part name="parameters" element="tns:eliminarProducto" />
+  </message>
+  <message name="eliminarProductoResponse">
+    <part name="parameters" element="tns:eliminarProductoResponse" />
+  </message>
+  <message name="buscarProducto">
+    <part name="parameters" element="tns:buscarProducto" />
+  </message>
+  <message name="buscarProductoResponse">
+    <part name="parameters" element="tns:buscarProductoResponse" />
   </message>
   <message name="reporteStock">
     <part name="parameters" element="tns:reporteStock" />
@@ -52,11 +50,11 @@
   <message name="reporteStockResponse">
     <part name="parameters" element="tns:reporteStockResponse" />
   </message>
-  <message name="eliminarProducto">
-    <part name="parameters" element="tns:eliminarProducto" />
+  <message name="reporteMasVendidos">
+    <part name="parameters" element="tns:reporteMasVendidos" />
   </message>
-  <message name="eliminarProductoResponse">
-    <part name="parameters" element="tns:eliminarProductoResponse" />
+  <message name="reporteMasVendidosResponse">
+    <part name="parameters" element="tns:reporteMasVendidosResponse" />
   </message>
   <message name="listaProducto">
     <part name="parameters" element="tns:listaProducto" />
@@ -64,120 +62,53 @@
   <message name="listaProductoResponse">
     <part name="parameters" element="tns:listaProductoResponse" />
   </message>
-  <message name="reporteMasVendidos">
-    <part name="parameters" element="tns:reporteMasVendidos" />
-  </message>
-  <message name="reporteMasVendidosResponse">
-    <part name="parameters" element="tns:reporteMasVendidosResponse" />
-  </message>
-  <message name="reporteStock">
-    <part name="parameters" element="tns:reporteStock" />
-  </message>
-  <message name="reporteStockResponse">
-    <part name="parameters" element="tns:reporteStockResponse" />
-  </message>
-  <message name="eliminarProducto">
-    <part name="parameters" element="tns:eliminarProducto" />
-  </message>
-  <message name="eliminarProductoResponse">
-    <part name="parameters" element="tns:eliminarProductoResponse" />
-  </message>
-  <message name="registrarProducto">
-    <part name="parameters" element="tns:registrarProducto" />
-  </message>
-  <message name="registrarProductoResponse">
-    <part name="parameters" element="tns:registrarProductoResponse" />
-  </message>
-  <message name="filtrarProductos">
-    <part name="parameters" element="tns:filtrarProductos" />
-  </message>
-  <message name="filtrarProductosResponse">
-    <part name="parameters" element="tns:filtrarProductosResponse" />
-  </message>
   <portType name="ProductoWS">
-    <operation name="registrarProducto">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoRequest" message="tns:registrarProducto" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoResponse" message="tns:registrarProductoResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="actualizarProducto">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/actualizarProductoRequest" message="tns:actualizarProducto" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/actualizarProductoResponse" message="tns:actualizarProductoResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/actualizarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
-    <operation name="buscarProducto">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProductoRequest" message="tns:buscarProducto" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProductoResponse" message="tns:buscarProductoResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="descontarStock">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest" message="tns:descontarStock" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse" message="tns:descontarStockResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStock/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="filtrarProductos">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosRequest" message="tns:filtrarProductos" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosResponse" message="tns:filtrarProductosResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductos/Fault/Exception" name="Exception" message="tns:Exception" />
-=======
-    <operation name="descontarStock">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockRequest" message="tns:descontarStock" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStockResponse" message="tns:descontarStockResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/descontarStock/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>> origin/main
     </operation>
-    <operation name="reporteMasVendidos">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosRequest" message="tns:reporteMasVendidos" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosResponse" message="tns:reporteMasVendidosResponse" />
-    </operation>
-    <operation name="reporteStock">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockRequest" message="tns:reporteStock" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockResponse" message="tns:reporteStockResponse" />
+    <operation name="registrarProducto">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoRequest" message="tns:registrarProducto" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoResponse" message="tns:registrarProductoResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="eliminarProducto">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoRequest" message="tns:eliminarProducto" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoResponse" message="tns:eliminarProductoResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="buscarProducto">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProductoRequest" message="tns:buscarProducto" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProductoResponse" message="tns:buscarProductoResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/buscarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="reporteStock">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockRequest" message="tns:reporteStock" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockResponse" message="tns:reporteStockResponse" />
+    </operation>
+    <operation name="reporteMasVendidos">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosRequest" message="tns:reporteMasVendidos" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosResponse" message="tns:reporteMasVendidosResponse" />
     </operation>
     <operation name="listaProducto">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/listaProductoRequest" message="tns:listaProducto" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/listaProductoResponse" message="tns:listaProductoResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/listaProducto/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="reporteMasVendidos">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosRequest" message="tns:reporteMasVendidos" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteMasVendidosResponse" message="tns:reporteMasVendidosResponse" />
-    </operation>
-    <operation name="reporteStock">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockRequest" message="tns:reporteStock" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/reporteStockResponse" message="tns:reporteStockResponse" />
-    </operation>
-    <operation name="eliminarProducto">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoRequest" message="tns:eliminarProducto" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProductoResponse" message="tns:eliminarProductoResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/eliminarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="registrarProducto">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoRequest" message="tns:registrarProducto" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProductoResponse" message="tns:registrarProductoResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/registrarProducto/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="filtrarProductos">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosRequest" message="tns:filtrarProductos" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductosResponse" message="tns:filtrarProductosResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/ProductoWS/filtrarProductos/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
   </portType>
   <binding name="ProductoWSPortBinding" type="tns:ProductoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="registrarProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
     <operation name="actualizarProducto">
       <soap:operation soapAction="" />
       <input>
@@ -190,8 +121,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< HEAD
-    <operation name="buscarProducto">
+    <operation name="descontarStock">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -204,81 +134,6 @@
       </fault>
     </operation>
     <operation name="filtrarProductos">
-=======
-    <operation name="descontarStock">
->>>>>>> origin/main
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="reporteMasVendidos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="reporteStock">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listaProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="reporteMasVendidos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="reporteStock">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -302,7 +157,49 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="filtrarProductos">
+    <operation name="eliminarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="reporteStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reporteMasVendidos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listaProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

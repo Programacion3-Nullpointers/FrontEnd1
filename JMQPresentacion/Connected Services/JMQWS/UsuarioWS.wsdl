@@ -5,93 +5,14 @@
       <xsd:import schemaLocation="http://localhost:8080/JMQWS/UsuarioWS?xsd=1" namespace="http://jmqws.inversiones.jmq.com/" />
     </xsd:schema>
   </types>
-<<<<<<< HEAD
-  <message name="eliminarUsuario">
-    <part name="parameters" element="tns:eliminarUsuario" />
-  </message>
-  <message name="eliminarUsuarioResponse">
-    <part name="parameters" element="tns:eliminarUsuarioResponse" />
-=======
-  <message name="registrarUsuario">
-    <part name="parameters" element="tns:registrarUsuario" />
-  </message>
-  <message name="registrarUsuarioResponse">
-    <part name="parameters" element="tns:registrarUsuarioResponse" />
->>>>>>> origin/main
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
-<<<<<<< HEAD
-=======
-  <message name="buscarUsuario">
-    <part name="parameters" element="tns:buscarUsuario" />
-  </message>
-  <message name="buscarUsuarioResponse">
-    <part name="parameters" element="tns:buscarUsuarioResponse" />
-  </message>
->>>>>>> origin/main
-  <message name="listarUsuarios">
-    <part name="parameters" element="tns:listarUsuarios" />
-  </message>
-  <message name="listarUsuariosResponse">
-    <part name="parameters" element="tns:listarUsuariosResponse" />
-  </message>
-  <message name="filtrarUsuarios">
-    <part name="parameters" element="tns:filtrarUsuarios" />
-  </message>
-  <message name="filtrarUsuariosResponse">
-    <part name="parameters" element="tns:filtrarUsuariosResponse" />
-  </message>
-  <message name="actualizarUsuario">
-    <part name="parameters" element="tns:actualizarUsuario" />
-  </message>
-  <message name="actualizarUsuarioResponse">
-    <part name="parameters" element="tns:actualizarUsuarioResponse" />
-  </message>
-  <message name="reporteClientes">
-    <part name="parameters" element="tns:reporteClientes" />
-<<<<<<< HEAD
-  </message>
-  <message name="reporteClientesResponse">
-    <part name="parameters" element="tns:reporteClientesResponse" />
-  </message>
-  <message name="registrarUsuario">
-    <part name="parameters" element="tns:registrarUsuario" />
-=======
->>>>>>> origin/main
-  </message>
-  <message name="reporteClientesResponse">
-    <part name="parameters" element="tns:reporteClientesResponse" />
-  </message>
-  <message name="buscarUsuario">
-    <part name="parameters" element="tns:buscarUsuario" />
-  </message>
-<<<<<<< HEAD
-  <message name="buscarUsuarioResponse">
-    <part name="parameters" element="tns:buscarUsuarioResponse" />
-=======
-  <message name="obtenerPorTokenResponse">
-    <part name="parameters" element="tns:obtenerPorTokenResponse" />
-  </message>
-  <message name="eliminarUsuario">
-    <part name="parameters" element="tns:eliminarUsuario" />
-  </message>
-  <message name="eliminarUsuarioResponse">
-    <part name="parameters" element="tns:eliminarUsuarioResponse" />
-  </message>
   <message name="iniciarRecuperacionPassword">
     <part name="parameters" element="tns:iniciarRecuperacionPassword" />
   </message>
   <message name="iniciarRecuperacionPasswordResponse">
     <part name="parameters" element="tns:iniciarRecuperacionPasswordResponse" />
->>>>>>> origin/main
   </message>
-  <message name="BuscarUsuarioPorCorreo">
-    <part name="parameters" element="tns:BuscarUsuarioPorCorreo" />
-  </message>
-  <message name="BuscarUsuarioPorCorreoResponse">
-    <part name="parameters" element="tns:BuscarUsuarioPorCorreoResponse" />
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
   </message>
   <message name="cambiarPasswordConToken">
     <part name="parameters" element="tns:cambiarPasswordConToken" />
@@ -99,113 +20,118 @@
   <message name="cambiarPasswordConTokenResponse">
     <part name="parameters" element="tns:cambiarPasswordConTokenResponse" />
   </message>
-<<<<<<< HEAD
+  <message name="BuscarUsuarioPorCorreo">
+    <part name="parameters" element="tns:BuscarUsuarioPorCorreo" />
+  </message>
+  <message name="BuscarUsuarioPorCorreoResponse">
+    <part name="parameters" element="tns:BuscarUsuarioPorCorreoResponse" />
+  </message>
   <message name="validarTokenPassword">
     <part name="parameters" element="tns:validarTokenPassword" />
   </message>
   <message name="validarTokenPasswordResponse">
     <part name="parameters" element="tns:validarTokenPasswordResponse" />
   </message>
-  <message name="iniciarRecuperacionPassword">
-    <part name="parameters" element="tns:iniciarRecuperacionPassword" />
+  <message name="reporteClientes">
+    <part name="parameters" element="tns:reporteClientes" />
   </message>
-  <message name="iniciarRecuperacionPasswordResponse">
-    <part name="parameters" element="tns:iniciarRecuperacionPasswordResponse" />
+  <message name="reporteClientesResponse">
+    <part name="parameters" element="tns:reporteClientesResponse" />
+  </message>
+  <message name="filtrarUsuarios">
+    <part name="parameters" element="tns:filtrarUsuarios" />
+  </message>
+  <message name="filtrarUsuariosResponse">
+    <part name="parameters" element="tns:filtrarUsuariosResponse" />
+  </message>
+  <message name="listarUsuarios">
+    <part name="parameters" element="tns:listarUsuarios" />
+  </message>
+  <message name="listarUsuariosResponse">
+    <part name="parameters" element="tns:listarUsuariosResponse" />
+  </message>
+  <message name="eliminarUsuario">
+    <part name="parameters" element="tns:eliminarUsuario" />
+  </message>
+  <message name="eliminarUsuarioResponse">
+    <part name="parameters" element="tns:eliminarUsuarioResponse" />
+  </message>
+  <message name="buscarUsuario">
+    <part name="parameters" element="tns:buscarUsuario" />
+  </message>
+  <message name="buscarUsuarioResponse">
+    <part name="parameters" element="tns:buscarUsuarioResponse" />
+  </message>
+  <message name="actualizarUsuario">
+    <part name="parameters" element="tns:actualizarUsuario" />
+  </message>
+  <message name="actualizarUsuarioResponse">
+    <part name="parameters" element="tns:actualizarUsuarioResponse" />
+  </message>
+  <message name="registrarUsuario">
+    <part name="parameters" element="tns:registrarUsuario" />
+  </message>
+  <message name="registrarUsuarioResponse">
+    <part name="parameters" element="tns:registrarUsuarioResponse" />
   </message>
   <portType name="UsuarioWS">
-    <operation name="eliminarUsuario">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-=======
-  <portType name="UsuarioWS">
-    <operation name="registrarUsuario">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioRequest" message="tns:registrarUsuario" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioResponse" message="tns:registrarUsuarioResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="buscarUsuario">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioRequest" message="tns:buscarUsuario" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioResponse" message="tns:buscarUsuarioResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>> origin/main
-    </operation>
-    <operation name="listarUsuarios">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/listarUsuariosRequest" message="tns:listarUsuarios" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/listarUsuarios/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="filtrarUsuarios">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/filtrarUsuariosRequest" message="tns:filtrarUsuarios" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/filtrarUsuariosResponse" message="tns:filtrarUsuariosResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/filtrarUsuarios/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="actualizarUsuario">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="reporteClientes">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/reporteClientesRequest" message="tns:reporteClientes" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/reporteClientesResponse" message="tns:reporteClientesResponse" />
-<<<<<<< HEAD
-    </operation>
-    <operation name="registrarUsuario">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioRequest" message="tns:registrarUsuario" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioResponse" message="tns:registrarUsuarioResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="buscarUsuario">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioRequest" message="tns:buscarUsuario" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioResponse" message="tns:buscarUsuarioResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-=======
-    </operation>
-    <operation name="obtenerPorToken">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/obtenerPorTokenRequest" message="tns:obtenerPorToken" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/obtenerPorTokenResponse" message="tns:obtenerPorTokenResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/obtenerPorToken/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="eliminarUsuario">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="iniciarRecuperacionPassword">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordRequest" message="tns:iniciarRecuperacionPassword" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordResponse" message="tns:iniciarRecuperacionPasswordResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPassword/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>> origin/main
-    </operation>
-    <operation name="BuscarUsuarioPorCorreo">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoRequest" message="tns:BuscarUsuarioPorCorreo" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoResponse" message="tns:BuscarUsuarioPorCorreoResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="cambiarPasswordConToken">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenRequest" message="tns:cambiarPasswordConToken" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConTokenResponse" message="tns:cambiarPasswordConTokenResponse" />
       <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/cambiarPasswordConToken/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
+    <operation name="BuscarUsuarioPorCorreo">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoRequest" message="tns:BuscarUsuarioPorCorreo" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreoResponse" message="tns:BuscarUsuarioPorCorreoResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/BuscarUsuarioPorCorreo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="validarTokenPassword">
       <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordRequest" message="tns:validarTokenPassword" />
       <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/validarTokenPasswordResponse" message="tns:validarTokenPasswordResponse" />
     </operation>
-    <operation name="iniciarRecuperacionPassword">
-      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordRequest" message="tns:iniciarRecuperacionPassword" />
-      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPasswordResponse" message="tns:iniciarRecuperacionPasswordResponse" />
-      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/iniciarRecuperacionPassword/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="reporteClientes">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/reporteClientesRequest" message="tns:reporteClientes" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/reporteClientesResponse" message="tns:reporteClientesResponse" />
+    </operation>
+    <operation name="filtrarUsuarios">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/filtrarUsuariosRequest" message="tns:filtrarUsuarios" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/filtrarUsuariosResponse" message="tns:filtrarUsuariosResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/filtrarUsuarios/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarUsuarios">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/listarUsuariosRequest" message="tns:listarUsuarios" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/listarUsuarios/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarUsuario">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/eliminarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="buscarUsuario">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioRequest" message="tns:buscarUsuario" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuarioResponse" message="tns:buscarUsuarioResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/buscarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarUsuario">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/actualizarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="registrarUsuario">
+      <input wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioRequest" message="tns:registrarUsuario" />
+      <output wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuarioResponse" message="tns:registrarUsuarioResponse" />
+      <fault wsam:Action="http://jmqws.inversiones.jmq.com/UsuarioWS/registrarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarUsuario">
-=======
-  </portType>
-  <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="registrarUsuario">
+    <operation name="iniciarRecuperacionPassword">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -217,8 +143,49 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="buscarUsuario">
->>>>>>> origin/main
+    <operation name="cambiarPasswordConToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="BuscarUsuarioPorCorreo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="validarTokenPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reporteClientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="filtrarUsuarios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -242,7 +209,19 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="filtrarUsuarios">
+    <operation name="eliminarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -266,85 +245,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="reporteClientes">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-<<<<<<< HEAD
     <operation name="registrarUsuario">
-=======
-    <operation name="obtenerPorToken">
->>>>>>> origin/main
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-<<<<<<< HEAD
-    <operation name="buscarUsuario">
-=======
-    <operation name="eliminarUsuario">
->>>>>>> origin/main
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="BuscarUsuarioPorCorreo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="BuscarUsuarioPorCorreo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-<<<<<<< HEAD
-    <operation name="validarTokenPassword">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="iniciarRecuperacionPassword">
-=======
-    <operation name="cambiarPasswordConToken">
->>>>>>> origin/main
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

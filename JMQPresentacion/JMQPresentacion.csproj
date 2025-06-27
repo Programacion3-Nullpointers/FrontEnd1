@@ -75,6 +75,7 @@
     <Content Include="Admin\ModificarCategorias.aspx" />
     <Content Include="Admin\ModificarDescuentos.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
+    <Content Include="AgregarCarrito.ashx" />
     <None Include="Connected Services\JMQWS\archivo.disco" />
     <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
     <None Include="Connected Services\JMQWS\configuration.svcinfo" />
@@ -387,7 +388,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.reporteStockResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-<<<<<<< HEAD
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -418,8 +418,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarDescuentosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-=======
->>>>>>> origin/main
     <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -591,6 +589,9 @@
     </Compile>
     <Compile Include="Admin\ModificarProductos.aspx.designer.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarCarrito.ashx.cs">
+      <DependentUpon>AgregarCarrito.ashx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\JMQWS\Reference.cs">
       <AutoGen>True</AutoGen>
