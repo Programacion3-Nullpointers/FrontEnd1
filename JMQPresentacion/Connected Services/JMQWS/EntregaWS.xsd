@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://jmqws.inversiones.jmq.com/" targetNamespace="http://jmqws.inversiones.jmq.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarEntrega" type="tns:ActualizarEntrega" />
+  <xs:element name="ActualizarEntregaResponse" type="tns:ActualizarEntregaResponse" />
+  <xs:element name="BuscarEntrega" type="tns:BuscarEntrega" />
+  <xs:element name="BuscarEntregaResponse" type="tns:BuscarEntregaResponse" />
+  <xs:element name="EliminarEntrega" type="tns:EliminarEntrega" />
+  <xs:element name="EliminarEntregaResponse" type="tns:EliminarEntregaResponse" />
+  <xs:element name="ListarEntregas" type="tns:ListarEntregas" />
+  <xs:element name="ListarEntregasResponse" type="tns:ListarEntregasResponse" />
+  <xs:element name="RegistrarEntrega" type="tns:RegistrarEntrega" />
+  <xs:element name="RegistrarEntregaResponse" type="tns:RegistrarEntregaResponse" />
+  <xs:complexType name="EliminarEntrega">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarEntregaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="RegistrarEntrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:entrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="entrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="dniRecibo" type="xs:string" />
+      <xs:element minOccurs="0" name="fecha_entrega" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="orden" type="tns:ordenVenta" />
+      <xs:element minOccurs="0" name="tipoEntrega" type="tns:tipoEntrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ordenVenta">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="detalle" nillable="true" type="tns:detalle" />
+      <xs:element minOccurs="0" name="estado_compra" type="tns:estadoCompra" />
+      <xs:element minOccurs="0" name="fecha_orden" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detalle">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="orden" type="tns:ordenVenta" />
+      <xs:element name="precio_unitario" type="xs:double" />
+      <xs:element minOccurs="0" name="producto" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="categoria" type="tns:categoria" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="precio" type="xs:double" />
+      <xs:element name="stock" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categoria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="descuento" type="tns:descuento" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="descuento">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="numDescuento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
+      <xs:element minOccurs="0" name="RUC" type="xs:string" />
+      <xs:element minOccurs="0" name="razonsocial" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoUsuario" type="tns:tipoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegistrarEntregaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarEntregas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListarEntregasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:entrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BuscarEntrega">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BuscarEntregaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:entrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarEntrega">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:entrega" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarEntregaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:simpleType name="estadoCompra">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pendiente" />
+      <xs:enumeration value="pagado" />
+      <xs:enumeration value="enviado" />
+      <xs:enumeration value="entregado" />
+      <xs:enumeration value="cancelado" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoUsuario">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EMPRESA" />
+      <xs:enumeration value="CLIENTE" />
+      <xs:enumeration value="ADMIN" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoEntrega">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DELIVERY" />
+      <xs:enumeration value="RECOJO" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

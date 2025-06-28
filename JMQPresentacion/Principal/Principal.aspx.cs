@@ -40,6 +40,20 @@ namespace JMQPresentacion.Principal
                 //    ScriptManager.RegisterStartupScript(this, this.GetType(), "logoutAlert", script, true);
                 //}
                 // ✅ Mostrar bienvenida si viene de Login
+                LinkButton boton = Master.FindControl("btnLogout") as LinkButton;
+                if (Request.QueryString["logout"] == "1")
+                {
+                    string script = @"
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Sesión cerrada',
+                        text: 'Has cerrado sesión correctamente.',
+                        confirmButtonColor: '#3085d6'
+                    });";
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "logoutAlert", script, true);
+                }
+
                 if (Session["MostrarBienvenida"] != null)
                 {
                     string nombre = Session["MostrarBienvenida"].ToString();
