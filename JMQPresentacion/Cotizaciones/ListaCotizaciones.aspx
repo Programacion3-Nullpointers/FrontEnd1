@@ -2,6 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
+    <div class="container mt-3">
+        <asp:Button ID="btnCotizar" runat="server" Text="Cotizar Ahora" 
+        CssClass="btn btn-success btn-lg px-4" 
+        OnClick="btnCotiza_Click" />
+    </div>
     <div class="container mt-4">
         
         <h2 class="text-center mb-4">Mis Cotizaciones</h2>
