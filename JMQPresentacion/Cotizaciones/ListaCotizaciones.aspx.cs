@@ -98,7 +98,16 @@ namespace JMQPresentacion.Cotizaciones
 
             // O cargar datos en un modal o panel en la misma página, según tu lógica
         }
-        
+
+        protected void btnCotiza_Click(object sender, EventArgs e)
+        {
+
+
+            // Aquí puedes hacer lo que necesites, por ejemplo:
+            // redirigir a otra página con el detalle, pasando el id como parámetro:
+            Response.Redirect("~/Cotizaciones/Cotiza.aspx");
+            // O cargar datos en un modal o panel en la misma página, según tu lógica
+        }
 
     }
 }
