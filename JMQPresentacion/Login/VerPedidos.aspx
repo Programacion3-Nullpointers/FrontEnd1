@@ -14,7 +14,15 @@
                 <asp:BoundField DataField="id" HeaderText="ID Orden" />
                 <asp:BoundField DataField="estado_compra" HeaderText="Estado de Compra" />
                 <asp:BoundField DataField="fecha_orden" HeaderText="Fecha de Orden" DataFormatString="{0:dd/MM/yyyy HH:mm}" />
+                <asp:TemplateField HeaderText="Detalle">
+                    <ItemTemplate>
+                        <asp:LinkButton runat="server" CssClass="btn btn-sm btn-outline-primary" CommandArgument='<%# Eval("id") %>' OnClick="VerDetalle_Click">
+                                         <i class="fas fa-eye"></i> Ver
+                        </asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
+            
         </asp:GridView>
         <asp:Label ID="lblNoPedidos" runat="server" Text="No hay pedidos realizados." Visible="false" CssClass="message-info"></asp:Label>
     </div>

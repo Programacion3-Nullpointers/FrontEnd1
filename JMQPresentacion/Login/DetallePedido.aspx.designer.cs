@@ -7,38 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace JMQPresentacion.Cotizaciones
+namespace JMQPresentacion.Login
 {
 
 
-    public partial class ListaCotizaciones
+    public partial class DetallePedido
     {
 
         /// <summary>
-        /// Control btnCotizar.
+        /// Control gvDetalles.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCotizar;
+        protected global::System.Web.UI.WebControls.GridView gvDetalles;
 
         /// <summary>
-        /// Control pnlSinCotizaciones.
+        /// Control lblError.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlSinCotizaciones;
-
-        /// <summary>
-        /// Control rptCotizaciones.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptCotizaciones;
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

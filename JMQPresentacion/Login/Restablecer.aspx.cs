@@ -10,33 +10,33 @@ namespace JMQPresentacion.Login
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                token = Request.QueryString["token"];
-                if (string.IsNullOrEmpty(token))
-                {
-                    MostrarMensaje("Token no válido o ausente.");
-                    btnRestablecer.Enabled = false;
-                    return;
-                }
+            //if (!IsPostBack)
+            //{
+            //    token = Request.QueryString["token"];
+            //    if (string.IsNullOrEmpty(token))
+            //    {
+            //        MostrarMensaje("Token no válido o ausente.");
+            //        btnRestablecer.Enabled = false;
+            //        return;
+            //    }
 
-                try
-                {
-                    UsuarioWSClient client = new UsuarioWSClient();
-                    bool esValido = client.validarTokenPassword(token);
+            //    try
+            //    {
+            //        UsuarioWSClient client = new UsuarioWSClient();
+            //        bool esValido = client.validarTokenPassword(token);
 
-                    if (!esValido)
-                    {
-                        MostrarMensaje("El enlace ha expirado o no es válido.");
-                        btnRestablecer.Enabled = false;
-                    }
-                }
-                catch (System.Exception ex)
-                {
-                    MostrarMensaje("Error al validar el token: " + ex.Message);
-                    btnRestablecer.Enabled = false;
-                }
-            }
+            //        if (!esValido)
+            //        {
+            //            MostrarMensaje("El enlace ha expirado o no es válido.");
+            //            btnRestablecer.Enabled = false;
+            //        }
+            //    }
+            //    catch (System.Exception ex)
+            //    {
+            //        MostrarMensaje("Error al validar el token: " + ex.Message);
+            //        btnRestablecer.Enabled = false;
+            //    }
+            //}
         }
 
         protected void btnRestablecer_Click(object sender, EventArgs e)
