@@ -4,7 +4,7 @@ using JMQPresentacion.JMQWS;
 
 namespace JMQPresentacion.Login
 {
-    public partial class OlvidarContraseña : System.Web.UI.Page
+    public partial class OlvidarContraseña : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace JMQPresentacion.Login
 
                 if (usuario == null)
                 {
-                    MostrarMensaje("El correo no está registrado. <a href='Registrarse.aspx'>Regístrate aquí</a>", false);
+                    MostrarMensaje("El correo no está registrado.", false);
                     btnRegistrarse.Visible = true;
                     return;
                 }
@@ -52,13 +52,17 @@ namespace JMQPresentacion.Login
             }
         }
 
-        private void MostrarMensaje(string mensaje, bool exito)
-        {
-            lblError.Text = mensaje;
-            divError.Style["display"] = "block";
-            divError.Attributes["class"] = exito ? "alert alert-success small" : "alert alert-danger small";
-            btnRegistrarse.Visible = !exito;
-        }
+            private void MostrarMensaje(string mensaje, bool exito)
+            {
+                lblError.Text = mensaje;
+                divError.Style["display"] = "block";
+
+                // ✅ Solo estilo textual si es error
+                divError.Attributes["class"] = exito
+                    ? "text-success small mt-2 text-center"
+                    : "text-danger small mt-2 text-center";
+            }
+
 
         private bool EsCorreoValido(string email)
         {
