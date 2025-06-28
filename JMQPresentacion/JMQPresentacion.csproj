@@ -72,12 +72,10 @@
     <Content Include="Acceso\NoAutorizado.aspx" />
     <Content Include="Admin\CotizacionesAdmin.aspx" />
     <Content Include="Admin\Descuentos.aspx" />
-
     <Content Include="Admin\ModificarDescuentos.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
     <Content Include="Admin\Reportes.aspx" />
     <Content Include="Admin\VerPedidosAdmin.aspx" />
-
     <Content Include="AgregarCarrito.ashx" />
     <None Include="Connected Services\JMQWS\archivo.disco" />
     <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
@@ -85,7 +83,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.activarDescuentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.actualizarBoletaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -188,11 +185,9 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.cotizacion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.desactivarDescuentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.descontarStockResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -253,7 +248,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.factura.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarDescuentosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -263,7 +257,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarUsuariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.helloResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -375,7 +368,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.reporteClientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -403,7 +395,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarDescuentosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarPorOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -737,9 +728,6 @@
     <Compile Include="Admin\ModificarUsuarios.aspx.designer.cs">
       <DependentUpon>ModificarUsuarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SetRedirect.ashx.cs">
-      <DependentUpon>SetRedirect.ashx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainLayout.Master" />
@@ -776,7 +764,6 @@
     <Content Include="Public\js\bootstrap.min.js.map" />
     <Content Include="Public\js\jquery-3.7.1.min.map" />
     <Content Include="Public\js\jquery-3.7.1.slim.min.map" />
-    <Content Include="SetRedirect.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
