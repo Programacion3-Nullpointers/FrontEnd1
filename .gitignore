@@ -467,3 +467,4 @@ FodyWeavers.xsd
 # End of https://www.toptal.com/developers/gitignore/api/netbeans,visualstudio
 /JMQPresentacion/target/
 /JMQDominio/target/
+JMQPresentacion/JMQPresentacion.csproj
