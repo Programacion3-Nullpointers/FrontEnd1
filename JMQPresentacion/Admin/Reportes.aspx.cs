@@ -47,8 +47,7 @@ namespace JMQPresentacion.Admin
             if (btn == null) return;
             try
             {
-                // Aún no está eso, recordar quitar *este* comentario cuando se implemente xd
-                // Manda todos los parámetros a WS.reporte(), y de ahí se crea una query para el reporte
+                // Manda todos los parámetros a productoWSClient.reporte(), y de ahí se llena la query para el reporte
                 switch (btn.ID)
                 {
                     case "btnGenerarProd":
