@@ -85,6 +85,13 @@
                                 <span>Saldo virtual</span>
                             </label>
                         </div>
+                        <div class="col-md-6">
+                            <asp:RadioButton ID="rbEfectivo" runat="server" GroupName="MetodoPago" CssClass="visually-hidden" AutoPostBack="true" OnCheckedChanged="MetodoPago_Changed" />
+                            <label onclick="document.getElementById('<%= rbEfectivo.ClientID %>').click();" class="form-control metodo-opcion">
+                                <i class="bi bi-wallet2"></i>
+                                <span>Efectivo</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
 
@@ -120,12 +127,21 @@
                     </div>
                     <div class="text-center">
                         <h4 class="text-primary">Tu saldo actual:</h4>
-                        <h2 class="text-success mb-3"><asp:Label ID="lblSaldoPago" runat="server" Text="S/ 0.00" /></h2>
+                        <h2 class="text-success mb-3"><asp:Label ID="lblSaldoPago" runat="server" /></h2>
                         <asp:Button ID="btnRecargarSaldo" runat="server" CssClass="btn btn-outline-primary fw-bold" Text="Recargar saldo" OnClick="btnRecargarSaldo_Click" />
                     </div>
                     <div class="text-center mt-4">
                         <p>Para continuar, haz click en "PAGAR".</p>
-                        <asp:Button ID="btnPagar2" runat="server" Text="PAGAR" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
+                        <asp:Button ID="btnPagarSaldo" runat="server" Text="PAGAR" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="pnlEfectivo" runat="server" Visible="false" CssClass="mt-4">
+                    <div class="text-center mb-4">
+                        <h5>Pago en efectivo</h5>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p>Para continuar, haz click en "FINALIZAR COMPRA".</p>
+                        <asp:Button ID="btnEfectivo" runat="server" Text="FINALIZAR COMPRA" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
                     </div>
                 </asp:Panel>
             </div>

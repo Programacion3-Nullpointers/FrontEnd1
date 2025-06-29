@@ -14,7 +14,7 @@ namespace JMQPresentacion.Pedidos
         private EntregaWSClient entregaService;
         private BoletaWSClient boletaService;
         private FacturaWSClient facturaService;
-        
+        private UsuarioWSClient usuarioWSClient;
         protected void Page_Init(object sender, EventArgs e)
         {
             if (Session["Usuario"] == null)
@@ -25,6 +25,7 @@ namespace JMQPresentacion.Pedidos
             entregaService = new EntregaWSClient();
             boletaService = new BoletaWSClient();
             facturaService = new FacturaWSClient();
+            usuarioWSClient = new UsuarioWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,7 +47,7 @@ namespace JMQPresentacion.Pedidos
 
         protected void btnPagar_Click(object sender, EventArgs e)
         {
-
+            Button btnPresionado = (Button)sender;
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("~/Login/Login.aspx");
@@ -77,11 +78,12 @@ namespace JMQPresentacion.Pedidos
                             direccion = ((usuario)Session["Usuario"]).direccion,
                             fecha_emision = DateTime.Now,
                             orden = orden1,
-                            metodoPago = metodoPago.tarjeta, //rbVisa.Checked ? metodoPago.tarjeta : metodoPago.efectivo,
+                            metodoPago = (btnPresionado.ID == "btnEfectivo") ? metodoPago.efectivo : metodoPago.tarjeta,
                             fecha_pago = DateTime.Now,
                             monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
                         };
                         facturaService.RegistrarFactura(factura1);
+                        if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(factura1.monto_total);
                         Session["Cart"] = null;
                         Session["Orden"] = null;
                     }
@@ -109,11 +111,12 @@ namespace JMQPresentacion.Pedidos
                             nombre = ((usuario)Session["Usuario"]).nombreUsuario,
                             fecha_emision = DateTime.Now,
                             orden = orden1,
-                            metodoPago = metodoPago.tarjeta,
+                            metodoPago = (btnPresionado.ID == "btnEfectivo") ? metodoPago.efectivo : metodoPago.tarjeta,
                             fecha_pago = DateTime.Now,
                             monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
                         };
                         boletaService.registrarBoleta(boleta1);
+                        if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(boleta1.monto_total);
                         Session["Cart"] = null;
                         Session["Orden"] = null;
                     }
@@ -140,30 +143,31 @@ namespace JMQPresentacion.Pedidos
             pnlFactura.Visible = rblComprobante.SelectedValue == "Factura";
         }
 
-        protected void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Session["Cart"] = null;
-            Session["Orden"] = null;
-            Response.Redirect("/Principal/Principal.aspx");
-        }
-
-        protected void btnVolver_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/Pedidos/Carrito.aspx");
-        }
-
         protected void MetodoPago_Changed(object sender, EventArgs e)
         {
             // Mostrar campos solo si se selecciona un método de pago con tarjeta
             pnlVisa.Visible = rbInterbank.Checked || rbVisa.Checked;
             pnlSaldo.Visible = rbSaldo.Checked;
+            if (rbSaldo.Checked)
+            {
+                usuario user = Session["Usuario"] as usuario;
+                lblSaldoPago.Text = "S/ " + user.saldo.ToString("F2");
+            }
+            pnlEfectivo.Visible = rbEfectivo.Checked;
         }
 
         protected void btnRecargarSaldo_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("/Pedidos/Carrito.aspx");
+            Response.Redirect("/Pedidos/RecargarSaldo.aspx?volverPago=true");
         }
 
+        private void reducirSaldo(double cantidad)
+        {
+            usuario user = Session["Usuario"] as usuario;
+            user.saldo -= cantidad;
+            usuarioWSClient.actualizarUsuario(user);
+            Session["Usuario"] = user; // Actualizar la sesión con el nuevo saldo
+        }
     }
 
 }
