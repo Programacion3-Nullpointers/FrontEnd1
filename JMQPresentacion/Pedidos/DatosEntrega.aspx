@@ -68,7 +68,7 @@
                             <h5>Total</h5>
                             <h5><asp:Label ID="lblTotal2" runat="server" /></h5>
                         </div>
-                        <asp:Button ID="btnPagar" runat="server" CssClass="btn btn-warning w-100 mt-3 fw-bold" Text="Pagar" OnClick="btnPagar_Click" />
+                        <asp:Button ID="btnPagar" runat="server" CssClass="btn btn-warning w-100 mt-3 fw-bold" Text="Ir a pagar" OnClick="btnPagar_Click" />
                         <a href="/Principal/Principal.aspx" class="d-block text-center mt-3 text-decoration-none">
                            <i class="bi bi-arrow-left"></i> Ver más productos
                         </a>

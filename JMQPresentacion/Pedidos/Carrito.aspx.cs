@@ -84,14 +84,7 @@ namespace JMQPresentacion.Pedidos
                 usuario = (usuario)Session["Usuario"],
                 detalle = ((List<detalle>)Session["Cart"]).ToArray()
             };
-
-            // Guardar en sesión y registrar
-            if (Session["Orden"] == null)
-            {
-                orden = ordenVentaService.registrarOrdenVentaService(orden);
                 Session["Orden"] = orden;
-            }
-
             Response.Redirect("~/Pedidos/DatosEntrega.aspx");
         }
 

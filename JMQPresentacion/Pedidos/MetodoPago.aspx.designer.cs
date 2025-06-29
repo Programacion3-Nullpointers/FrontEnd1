@@ -69,6 +69,15 @@ namespace JMQPresentacion.Pedidos
         protected global::System.Web.UI.WebControls.RadioButton rbVisa;
 
         /// <summary>
+        /// Control rbSaldo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbSaldo;
+
+        /// <summary>
         /// Control pnlVisa.
         /// </summary>
         /// <remarks>
@@ -105,15 +114,6 @@ namespace JMQPresentacion.Pedidos
         protected global::System.Web.UI.WebControls.TextBox txtFechaExp;
 
         /// <summary>
-        /// Control lblPagoTotal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPagoTotal;
-
-        /// <summary>
         /// Control btnPagar.
         /// </summary>
         /// <remarks>
@@ -121,6 +121,42 @@ namespace JMQPresentacion.Pedidos
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPagar;
+
+        /// <summary>
+        /// Control pnlSaldo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlSaldo;
+
+        /// <summary>
+        /// Control lblSaldoPago.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSaldoPago;
+
+        /// <summary>
+        /// Control btnRecargarSaldo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRecargarSaldo;
+
+        /// <summary>
+        /// Control btnPagar2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPagar2;
 
         /// <summary>
         /// Control divError.

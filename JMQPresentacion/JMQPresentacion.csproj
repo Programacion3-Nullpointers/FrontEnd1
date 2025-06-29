@@ -417,6 +417,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Cotizaciones\DetalleCotizacion.aspx" />
     <Content Include="Cotizaciones\ListaCotizaciones.aspx" />
     <Content Include="Login\DetallePedido.aspx" />
     <Content Include="Login\Login.aspx" />
@@ -429,7 +430,7 @@
     <Content Include="Cotizaciones\Cotiza.aspx" />
     <Content Include="Pedidos\DatosEntrega.aspx" />
     <Content Include="Pedidos\MetodoPago.aspx" />
-    <Content Include="Pedidos\VerProducto.aspx" />
+    <Content Include="Pedidos\RecargarSaldo.aspx" />
     <Content Include="Principal\Principal.aspx" />
     <Content Include="Admin\PrincipalAdmin.aspx" />
     <Content Include="Public\css\bootstrap-grid.css" />
@@ -623,6 +624,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Cotizaciones\DetalleCotizacion.aspx.cs">
+      <DependentUpon>DetalleCotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cotizaciones\DetalleCotizacion.aspx.designer.cs">
+      <DependentUpon>DetalleCotizacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cotizaciones\ListaCotizaciones.aspx.cs">
       <DependentUpon>ListaCotizaciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -728,12 +736,12 @@
     <Compile Include="Pedidos\MetodoPago.aspx.designer.cs">
       <DependentUpon>MetodoPago.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos\VerProducto.aspx.cs">
-      <DependentUpon>VerProducto.aspx</DependentUpon>
+    <Compile Include="Pedidos\RecargarSaldo.aspx.cs">
+      <DependentUpon>RecargarSaldo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pedidos\VerProducto.aspx.designer.cs">
-      <DependentUpon>VerProducto.aspx</DependentUpon>
+    <Compile Include="Pedidos\RecargarSaldo.aspx.designer.cs">
+      <DependentUpon>RecargarSaldo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>

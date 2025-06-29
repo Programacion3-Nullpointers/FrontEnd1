@@ -78,6 +78,13 @@
                                 <span>Otras tarjetas de Crédito y Débito</span>
                             </label>
                         </div>
+                        <div class="col-md-6">
+                            <asp:RadioButton ID="rbSaldo" runat="server" GroupName="MetodoPago" CssClass="visually-hidden" AutoPostBack="true" OnCheckedChanged="MetodoPago_Changed" />
+                            <label onclick="document.getElementById('<%= rbSaldo.ClientID %>').click();" class="form-control metodo-opcion">
+                                <i class="bi bi-wallet2"></i>
+                                <span>Saldo virtual</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
 
@@ -94,19 +101,31 @@
 
                         <div class="col-md-6">
                             <label class="form-label">CVV</label>
-                            <asp:TextBox ID="txtCVV" runat="server" CssClass="form-control" MaxLength="4" placeholder="123" TextMode="Password" />
+                            <asp:TextBox ID="txtCVV" runat="server" CssClass="form-control" MaxLength="3" placeholder="123" TextMode="Password" />
                         </div>
 
                         <div class="col-md-6">
                             <label class="form-label">Fecha de expiración</label>
-                            <asp:TextBox ID="txtFechaExp" runat="server" CssClass="form-control" placeholder="MM/AA" />
+                            <asp:TextBox ID="txtFechaExp" runat="server" CssClass="form-control" MaxLength="5" placeholder="MM/AA" />
                         </div>
                     </div>
-
                     <div class="text-center mt-4">
-                        <h4 class="text-success"><asp:Label ID="lblPagoTotal" runat="server" Text="S/ 0.00" /></h4>
-                        <p>Para continuar, haz click en "IR A PAGAR".</p>
-                        <asp:Button ID="btnPagar" runat="server" Text="IR A PAGAR" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
+                        <p>Para continuar, haz click en "PAGAR".</p>
+                        <asp:Button ID="btnPagar" runat="server" Text="PAGAR" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="pnlSaldo" runat="server" Visible="false" CssClass="mt-4">
+                    <div class="text-center mb-4">
+                        <h5>Pago con saldo virtual</h5>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-primary">Tu saldo actual:</h4>
+                        <h2 class="text-success mb-3"><asp:Label ID="lblSaldoPago" runat="server" Text="S/ 0.00" /></h2>
+                        <asp:Button ID="btnRecargarSaldo" runat="server" CssClass="btn btn-outline-primary fw-bold" Text="Recargar saldo" OnClick="btnRecargarSaldo_Click" />
+                    </div>
+                    <div class="text-center mt-4">
+                        <p>Para continuar, haz click en "PAGAR".</p>
+                        <asp:Button ID="btnPagar2" runat="server" Text="PAGAR" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
                     </div>
                 </asp:Panel>
             </div>

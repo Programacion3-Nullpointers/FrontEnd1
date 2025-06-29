@@ -10,14 +10,12 @@ namespace JMQPresentacion.Pedidos
 {
     public partial class DatosEntrega : System.Web.UI.Page
     {
-        private EntregaWSClient entregaService;
         protected void Page_Init(object sender, EventArgs e)
         {
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("/Principal/Principal.aspx");
             }
-            entregaService = new JMQWS.EntregaWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -70,7 +68,7 @@ namespace JMQPresentacion.Pedidos
                 }
                 entrega entrega1 = new entrega
                 {
-                    orden = (ordenVenta)Session["Orden"],
+                    //orden = (ordenVenta)Session["Orden"], se llena luego
                     fecha_entrega = DateTime.Now.AddDays(7),
                     tipoEntrega = pnlDespacho.Visible ? tipoEntrega.DELIVERY : tipoEntrega.RECOJO
                 };
@@ -82,8 +80,7 @@ namespace JMQPresentacion.Pedidos
                 }
                 else
                     entrega1.dniRecibo = txtDni.Text;
-                //insertar Entrega a la BD
-                entregaService.RegistrarEntrega(entrega1);
+                Session["Entrega"] = entrega1;
                 Response.Redirect("~/Pedidos/MetodoPago.aspx");
             }
         }
