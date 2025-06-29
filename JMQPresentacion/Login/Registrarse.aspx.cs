@@ -86,6 +86,7 @@ namespace JMQPresentacion.Login
                 contrasena = txtContr.Text.Trim(),
                 tipoUsuario = rbEmpresa.Checked ? tipoUsuario.EMPRESA : tipoUsuario.CLIENTE,
                 tipoUsuarioSpecified = true,
+                saldo = 0,
                 activo = true
             };
 
