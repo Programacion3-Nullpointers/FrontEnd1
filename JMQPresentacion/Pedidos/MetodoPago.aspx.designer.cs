@@ -78,6 +78,33 @@ namespace JMQPresentacion.Pedidos
         protected global::System.Web.UI.WebControls.Panel pnlVisa;
 
         /// <summary>
+        /// Control txtNumeroTarjeta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNumeroTarjeta;
+
+        /// <summary>
+        /// Control txtCVV.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCVV;
+
+        /// <summary>
+        /// Control txtFechaExp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFechaExp;
+
+        /// <summary>
         /// Control lblPagoTotal.
         /// </summary>
         /// <remarks>

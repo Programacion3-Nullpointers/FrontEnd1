@@ -72,11 +72,11 @@
     <Content Include="Acceso\NoAutorizado.aspx" />
     <Content Include="Admin\CotizacionesAdmin.aspx" />
     <Content Include="Admin\Descuentos.aspx" />
+    <Content Include="Admin\ModificarCategorias.aspx" />
     <Content Include="Admin\ModificarDescuentos.aspx" />
-    <Content Include="Admin\ModificarOrdenes.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
-    <Content Include="Admin\Reportes.aspx" />
     <Content Include="Admin\VerPedidosAdmin.aspx" />
+    <Content Include="Admin\DetallePedidoAdmin.aspx" />
     <Content Include="AgregarCarrito.ashx" />
     <None Include="Connected Services\JMQWS\archivo.disco" />
     <None Include="Connected Services\JMQWS\configuration91.svcinfo" />
@@ -279,9 +279,6 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarCotizacionesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarDescuentosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarDetallesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -295,6 +292,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarOrdenVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarPorOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.listarProductoCotizacionResponse.datasource">
@@ -316,6 +316,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerOrdenesVentasPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerPorTokenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.obtenerProdCotizaResponse.datasource">
@@ -369,6 +372,15 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.registrarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarDescuentosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.reporteClientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -399,18 +411,12 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarPorOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.verificarCrendencialesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarOrdenesVentaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Cotizaciones\DetalleCotizacion.aspx" />
     <Content Include="Cotizaciones\ListaCotizaciones.aspx" />
+    <Content Include="Login\DetallePedido.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\OlvidarContraseña.aspx" />
     <Content Include="Login\Registrarse.aspx" />
@@ -572,13 +578,6 @@
     <Compile Include="Admin\ModificarDescuentos.aspx.designer.cs">
       <DependentUpon>ModificarDescuentos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ModificarOrdenes.aspx.cs">
-      <DependentUpon>ModificarOrdenes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\ModificarOrdenes.aspx.designer.cs">
-      <DependentUpon>ModificarOrdenes.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\ModificarProductos.aspx.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -586,19 +585,19 @@
     <Compile Include="Admin\ModificarProductos.aspx.designer.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Reportes.aspx.cs">
-      <DependentUpon>Reportes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Reportes.aspx.designer.cs">
-      <DependentUpon>Reportes.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\VerPedidosAdmin.aspx.cs">
       <DependentUpon>VerPedidosAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\VerPedidosAdmin.aspx.designer.cs">
       <DependentUpon>VerPedidosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DetallePedidoAdmin.aspx.cs">
+      <DependentUpon>DetallePedidoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DetallePedidoAdmin.aspx.designer.cs">
+      <DependentUpon>DetallePedidoAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="AgregarCarrito.ashx.cs">
       <DependentUpon>AgregarCarrito.ashx</DependentUpon>
@@ -608,19 +607,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Cotizaciones\DetalleCotizacion.aspx.cs">
-      <DependentUpon>DetalleCotizacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cotizaciones\DetalleCotizacion.aspx.designer.cs">
-      <DependentUpon>DetalleCotizacion.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Cotizaciones\ListaCotizaciones.aspx.cs">
       <DependentUpon>ListaCotizaciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Cotizaciones\ListaCotizaciones.aspx.designer.cs">
       <DependentUpon>ListaCotizaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\DetallePedido.aspx.cs">
+      <DependentUpon>DetallePedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\DetallePedido.aspx.designer.cs">
+      <DependentUpon>DetallePedido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

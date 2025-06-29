@@ -38,18 +38,18 @@ namespace JMQPresentacion.Pedidos
             lblTotal.Text = "S/ " + detalles.Sum(item => item.cantidad * item.precio_unitario).ToString("F2");
             lblTotal2.Text = lblTotal.Text;
         }
-        protected void MetodoPago_Changed(object sender, EventArgs e)
-        {
-            pnlVisa.Visible = rbVisa.Checked;
-            // Agrega condiciones para mostrar u ocultar otros paneles
-        }
+        //protected void MetodoPago_Changed(object sender, EventArgs e)
+        //{
+        //    pnlVisa.Visible = rbVisa.Checked;
+        //    // Agrega condiciones para mostrar u ocultar otros paneles
+        //}
 
         protected void btnPagar_Click(object sender, EventArgs e)
         {
 
             if (Session["Usuario"] == null)
             {
-                Response.Redirect("~/Login/Login.aspx");
+                //Response.Redirect("~/Login/Login.aspx");
             }
             else
             {
@@ -129,5 +129,25 @@ namespace JMQPresentacion.Pedidos
         {
             pnlFactura.Visible = rblComprobante.SelectedValue == "Factura";
         }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Session["Cart"] = null;
+            Session["Orden"] = null;
+            Response.Redirect("/Principal/Principal.aspx");
+        }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Pedidos/Carrito.aspx");
+        }
+
+        protected void MetodoPago_Changed(object sender, EventArgs e)
+        {
+            // Mostrar campos solo si se selecciona un método de pago con tarjeta
+            pnlVisa.Visible = rbInterbank.Checked || rbVisa.Checked;
+        }
+
     }
+
 }
