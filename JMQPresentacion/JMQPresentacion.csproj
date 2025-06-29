@@ -73,6 +73,7 @@
     <Content Include="Admin\CotizacionesAdmin.aspx" />
     <Content Include="Admin\Descuentos.aspx" />
     <Content Include="Admin\ModificarDescuentos.aspx" />
+    <Content Include="Admin\ModificarOrdenes.aspx" />
     <Content Include="Admin\ModificarProductos.aspx" />
     <Content Include="Admin\Reportes.aspx" />
     <Content Include="Admin\VerPedidosAdmin.aspx" />
@@ -398,6 +399,12 @@
     <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.ListarPorOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.verificarCrendencialesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\JMQWS\JMQPresentacion.JMQWS.filtrarOrdenesVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\JMQWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -564,6 +571,13 @@
     </Compile>
     <Compile Include="Admin\ModificarDescuentos.aspx.designer.cs">
       <DependentUpon>ModificarDescuentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ModificarOrdenes.aspx.cs">
+      <DependentUpon>ModificarOrdenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ModificarOrdenes.aspx.designer.cs">
+      <DependentUpon>ModificarOrdenes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ModificarProductos.aspx.cs">
       <DependentUpon>ModificarProductos.aspx</DependentUpon>
