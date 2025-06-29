@@ -99,17 +99,11 @@ namespace JMQPresentacion.Login
                 user.dni = txtDNI.Text.Trim();
             }
 
-            try
-            {
-                usuario nuevoUsuario = usuarioWSCLClient.registrarUsuario(user);
-                Session["Usuario"] = nuevoUsuario;
-                Session["RedirectAfterLogin"] = "/Pedidos/Carrito.aspx";
-                Response.Redirect("/Login/Login.aspx");
-            }
-            catch (System.Exception ex)
-            {
-                MostrarError("Ocurrió un error al registrar el usuario: " + ex.Message);
-            }
+           
+            usuario nuevoUsuario = usuarioWSCLClient.registrarUsuario(user);
+            Session["Usuario"] = nuevoUsuario;
+            Session["RedirectAfterLogin"] = "/Pedidos/Carrito.aspx";
+            
         }
 
         private bool CamposObligatoriosVacios()
