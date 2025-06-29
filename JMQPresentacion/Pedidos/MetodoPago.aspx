@@ -20,6 +20,16 @@
             border-color: #ff5722;
             background-color: #fff3e0;
         }
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
     </style>
 </asp:Content>
 
@@ -55,15 +65,15 @@
                     <label class="form-label fw-bold">2. Elige un método de pago <span class="text-danger">*</span></label>
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <asp:RadioButton ID="rbInterbank" runat="server" GroupName="MetodoPago" CssClass="d-none" AutoPostBack="true" OnCheckedChanged="MetodoPago_Changed" />
-                            <label for="rbInterbank" class="form-control metodo-opcion">
+                            <asp:RadioButton ID="rbInterbank" runat="server" GroupName="MetodoPago"  CssClass="visually-hidden" AutoPostBack="true" OnCheckedChanged="MetodoPago_Changed" />
+                            <label onclick="document.getElementById('<%= rbInterbank.ClientID %>').click();" class="form-control metodo-opcion">
                                 <img src="interbank.png" height="24" />
                                 <span>Tarjetas Interbank</span>
                             </label>
                         </div>
                         <div class="col-md-6">
-                            <asp:RadioButton ID="rbVisa" runat="server" GroupName="MetodoPago" CssClass="d-none" AutoPostBack="true" OnCheckedChanged="MetodoPago_Changed" />
-                            <label for="rbVisa" class="form-control metodo-opcion">
+                            <asp:RadioButton ID="rbVisa" runat="server" GroupName="MetodoPago"  CssClass="visually-hidden" AutoPostBack="true" OnCheckedChanged="MetodoPago_Changed" />
+                            <label onclick="document.getElementById('<%= rbVisa.ClientID %>').click();" class="form-control metodo-opcion">
                                 <img src="visa.png" height="24" />
                                 <span>Otras tarjetas de Crédito y Débito</span>
                             </label>
@@ -72,8 +82,28 @@
                 </div>
 
                 <asp:Panel ID="pnlVisa" runat="server" Visible="false" CssClass="mt-4">
-                    <div class="text-center">
-                        <h5>Pago al contado</h5>
+                    <div class="text-center mb-4">
+                        <h5>Pago con tarjeta</h5>
+                    </div>
+    
+                    <div class="row g-3">
+                        <div class="col-md-12">
+                            <label class="form-label">Número de tarjeta</label>
+                            <asp:TextBox ID="txtNumeroTarjeta" runat="server" CssClass="form-control" MaxLength="16" placeholder="•••• •••• •••• ••••" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">CVV</label>
+                            <asp:TextBox ID="txtCVV" runat="server" CssClass="form-control" MaxLength="4" placeholder="123" TextMode="Password" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Fecha de expiración</label>
+                            <asp:TextBox ID="txtFechaExp" runat="server" CssClass="form-control" placeholder="MM/AA" />
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
                         <h4 class="text-success"><asp:Label ID="lblPagoTotal" runat="server" Text="S/ 0.00" /></h4>
                         <p>Para continuar, haz click en "IR A PAGAR".</p>
                         <asp:Button ID="btnPagar" runat="server" Text="IR A PAGAR" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />

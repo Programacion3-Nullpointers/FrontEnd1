@@ -50,42 +50,75 @@ namespace JMQPresentacion.Login
                 return;
             }
 
-            usuario user = usuarioWSCLClient.verificarCrendenciales(txtEmail.Text, txtContr.Text);
+            usuario user = null;
+
+            try
+            {
+                // Attempt to call the web service
+                user = usuarioWSCLClient.BuscarUsuarioPorCorreo(txtEmail.Text);
+            }
+            catch (System.ServiceModel.FaultException ex)
+            {
+                lblError.Text = ex.Message;
+                divError.Style["display"] = "block";
+                return;
+            }
+            catch (System.Exception ex)
+            {
+                lblError.Text = "Ocurrió un error inesperado al buscar el usuario. Por favor, intente de nuevo.";
+                divError.Style["display"] = "block";
+                return;
+            }
+
 
             if (user != null)
             {
-                Session["Usuario"] = user;
-
-                string nombreMostrar = user.nombreUsuario.Split(' ')[0];
-
-                if (user.tipoUsuario == tipoUsuario.ADMIN)
+                if (user.contrasena == txtContr.Text)
                 {
-                    Response.Redirect("/Admin/PrincipalAdmin.aspx");
+                    Session["Usuario"] = user;
+
+                    string nombreMostrar = user.nombreUsuario.Split(' ')[0];
+
+                    if (user.tipoUsuario == tipoUsuario.ADMIN)
+                    {
+                        Response.Redirect("/Admin/PrincipalAdmin.aspx");
+                        return;
+                    }
+
+                    // 🔁 Redirigir al carrito si viene de registro
+                    if (Session["RedirigirACarrito"] != null && (bool)Session["RedirigirACarrito"])
+                    {
+                        Session.Remove("RedirigirACarrito");
+                        Response.Redirect("/Pedidos/Carrito.aspx");
+                        return;
+                    }
+
+                    // 🔁 Redirigir a ruta previa si existía
+                    if (Session["RedirectAfterLogin"] != null)
+                    {
+                        string redirect = Session["RedirectAfterLogin"].ToString();
+                        Session.Remove("RedirectAfterLogin");
+                        Response.Redirect(redirect);
+                        return;
+                    }
+
+                    // 🟢 Mostrar mensaje en Principal
+                    Session["MostrarBienvenida"] = nombreMostrar;
+                    Response.Redirect("/Principal/Principal.aspx");
                     return;
                 }
-
-                if (Session["RedirigirACarrito"] != null && (bool)Session["RedirigirACarrito"])
+                else
                 {
-                    Session.Remove("RedirigirACarrito");
-                    Response.Redirect("/Pedidos/Carrito.aspx");
+                    lblError.Text = "Contraseña incorrecta.";
+                    divError.Style["display"] = "block";
                     return;
                 }
-
-                if (Session["RedirectAfterLogin"] != null)
-                {
-                    string redirect = Session["RedirectAfterLogin"].ToString();
-                    Session.Remove("RedirectAfterLogin");
-                    Response.Redirect(redirect);
-                    return;
-                }
-
-                Session["MostrarBienvenida"] = nombreMostrar;
-                Response.Redirect("/Principal/Principal.aspx");
             }
             else
             {
-                lblError.Text = "Usuario o contraseña incorrecta.";
+                lblError.Text = "Usuario no encontrado.";
                 divError.Style["display"] = "block";
+                return;
             }
         }
 
