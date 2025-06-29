@@ -104,16 +104,10 @@
             <a class="menu-title" href="#">Menú</a>
             <a class="menu-item" href="/Principal/Principal.aspx">Compras</a>
             <a class="menu-item" href="/Cotizaciones/ListaCotizaciones.aspx">Cotizaciones</a>
-            
 
             <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Style="display: none;">
                 Logout
             </asp:LinkButton>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> dacc50a308100b5216ad6ce25bee32ba6331077a
         </div>
 
         <!-- NAVBAR -->
