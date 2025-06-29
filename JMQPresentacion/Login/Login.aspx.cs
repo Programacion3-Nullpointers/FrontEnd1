@@ -50,7 +50,26 @@ namespace JMQPresentacion.Login
                 return;
             }
 
-            usuario user = usuarioWSCLClient.BuscarUsuarioPorCorreo(txtEmail.Text);
+            usuario user = null;
+
+            try
+            {
+                // Attempt to call the web service
+                user = usuarioWSCLClient.BuscarUsuarioPorCorreo(txtEmail.Text);
+            }
+            catch (System.ServiceModel.FaultException ex)
+            {
+                lblError.Text = ex.Message;
+                divError.Style["display"] = "block";
+                return;
+            }
+            catch (System.Exception ex)
+            {
+                lblError.Text = "Ocurrió un error inesperado al buscar el usuario. Por favor, intente de nuevo.";
+                divError.Style["display"] = "block";
+                return;
+            }
+
 
             if (user != null)
             {
