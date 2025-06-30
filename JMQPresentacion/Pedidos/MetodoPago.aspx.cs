@@ -1,10 +1,11 @@
-﻿using System;
+﻿using JMQPresentacion.JMQWS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using JMQPresentacion.JMQWS;
 
 namespace JMQPresentacion.Pedidos
 {
@@ -14,7 +15,7 @@ namespace JMQPresentacion.Pedidos
         private EntregaWSClient entregaService;
         private BoletaWSClient boletaService;
         private FacturaWSClient facturaService;
-        
+        private UsuarioWSClient usuarioWSClient;
         protected void Page_Init(object sender, EventArgs e)
         {
             if (Session["Usuario"] == null)
@@ -25,6 +26,7 @@ namespace JMQPresentacion.Pedidos
             entregaService = new EntregaWSClient();
             boletaService = new BoletaWSClient();
             facturaService = new FacturaWSClient();
+            usuarioWSClient = new UsuarioWSClient();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,84 +48,86 @@ namespace JMQPresentacion.Pedidos
 
         protected void btnPagar_Click(object sender, EventArgs e)
         {
+            Button btnPresionado = (Button)sender;
 
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("~/Login/Login.aspx");
+                return;
             }
-            else
+
+            if (!validarDatos())
             {
-                string textoSeleccionado = rblComprobante.SelectedItem.Text;
+                return;
+            }
+
+            // 🔒 Bloquear botón y cambiar texto
+            string bloquearBoton = $@"
+                document.getElementById('{btnPresionado.ClientID}').disabled = true;
+                document.getElementById('{btnPresionado.ClientID}').innerText = 'Procesando...';";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "bloqueoBoton", bloquearBoton, true);
+
+            // 🌀 Spinner de carga
+            string spinnerScript = @"
+                Swal.fire({
+                    title: 'Procesando pago...',
+                    text: 'Por favor espera un momento.',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "spinnerPago", spinnerScript, true);
+
+            string textoSeleccionado = rblComprobante.SelectedItem.Text;
+
+            try
+            {
+                ordenVenta orden1 = Session["Orden"] as ordenVenta;
+                orden1 = ordenVentaService.registrarOrdenVentaService(orden1);
+                entrega entrega1 = Session["Entrega"] as entrega;
+                entrega1.orden = orden1;
+                entregaService.RegistrarEntrega(entrega1);
+
                 if (textoSeleccionado == "Factura")
                 {
-                    // Validar campos obligatorios para factura
                     if (string.IsNullOrWhiteSpace(txtRazonSocial.Text) || string.IsNullOrWhiteSpace(txtRUC.Text))
                     {
                         divError.Style["display"] = "block";
                         lblError.Text = "Debe completar la Razón Social y el RUC para emitir una factura.";
                         return;
                     }
-                    try
-                    {
-                        ordenVenta orden1 = Session["Orden"] as ordenVenta;
-                        orden1 = ordenVentaService.registrarOrdenVentaService(orden1);
-                        entrega entrega1 = Session["Entrega"] as entrega;
-                        entrega1.orden = orden1;
-                        entregaService.RegistrarEntrega(entrega1);
-                        factura factura1 = new factura
-                        {
-                            RUC = txtRUC.Text.Trim(),
-                            razon_social = txtRazonSocial.Text.Trim(),
-                            direccion = ((usuario)Session["Usuario"]).direccion,
-                            fecha_emision = DateTime.Now,
-                            orden = orden1,
-                            metodoPago = metodoPago.tarjeta, //rbVisa.Checked ? metodoPago.tarjeta : metodoPago.efectivo,
-                            fecha_pago = DateTime.Now,
-                            monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
-                        };
-                        facturaService.RegistrarFactura(factura1);
-                        Session["Cart"] = null;
-                        Session["Orden"] = null;
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        divError.Style["display"] = "block";
-                        lblError.Text = "Error al realizar el pago.";
-                        Console.WriteLine($"Error: {ex.Message}");
-                        return;
-                    }
 
+                    factura factura1 = new factura
+                    {
+                        RUC = txtRUC.Text.Trim(),
+                        razon_social = txtRazonSocial.Text.Trim(),
+                        direccion = ((usuario)Session["Usuario"]).direccion,
+                        fecha_emision = DateTime.Now,
+                        orden = orden1,
+                        metodoPago = (btnPresionado.ID == "btnEfectivo") ? metodoPago.efectivo : metodoPago.tarjeta,
+                        fecha_pago = DateTime.Now,
+                        monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
+                    };
+
+                    facturaService.RegistrarFactura(factura1);
+                    if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(factura1.monto_total);
                 }
                 else if (textoSeleccionado == "Boleta")
                 {
-                    try
+                    boleta boleta1 = new boleta
                     {
-                        ordenVenta orden1 = Session["Orden"] as ordenVenta;
-                        orden1 = ordenVentaService.registrarOrdenVentaService(orden1);
-                        entrega entrega1 = Session["Entrega"] as entrega;
-                        entrega1.orden = orden1;
-                        entregaService.RegistrarEntrega(entrega1);
-                        boleta boleta1 = new boleta
-                        {
-                            dni = ((usuario)Session["Usuario"]).dni,
-                            nombre = ((usuario)Session["Usuario"]).nombreUsuario,
-                            fecha_emision = DateTime.Now,
-                            orden = orden1,
-                            metodoPago = metodoPago.tarjeta,
-                            fecha_pago = DateTime.Now,
-                            monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
-                        };
-                        boletaService.registrarBoleta(boleta1);
-                        Session["Cart"] = null;
-                        Session["Orden"] = null;
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        divError.Style["display"] = "block";
-                        lblError.Text = "Error al realizar el pago.";
-                        Console.WriteLine($"Error: {ex.Message}");
-                        return;
-                    }
+                        dni = ((usuario)Session["Usuario"]).dni,
+                        nombre = ((usuario)Session["Usuario"]).nombreUsuario,
+                        fecha_emision = DateTime.Now,
+                        orden = orden1,
+                        metodoPago = (btnPresionado.ID == "btnEfectivo") ? metodoPago.efectivo : metodoPago.tarjeta,
+                        fecha_pago = DateTime.Now,
+                        monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
+                    };
+
+                    boletaService.registrarBoleta(boleta1);
+                    if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(boleta1.monto_total);
                 }
                 else
                 {
@@ -131,25 +135,45 @@ namespace JMQPresentacion.Pedidos
                     lblError.Text = "Seleccione un tipo de comprobante válido.";
                     return;
                 }
-                Response.Redirect("/Principal/Principal.aspx");
+
+                // 🧹 Limpiar carrito y orden
+                Session["Cart"] = null;
+                Session["Orden"] = null;
+
+                // ✅ Confirmación y redirección
+                string successScript = @"
+                    setTimeout(() => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: '¡Pago realizado!',
+                            text: 'Gracias por tu compra.',
+                            showConfirmButton: false,
+                            timer: 2000
+                        }).then(() => {
+                            window.location.href = '/Principal/Principal.aspx';
+                        });
+                    }, 500);";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "pagoExitoso", successScript, true);
+            }
+            catch (ArgumentException ex)
+            {
+                // ❌ Mostrar error
+                divError.Style["display"] = "block";
+                lblError.Text = "Error al realizar el pago.";
+                Console.WriteLine($"Error: {ex.Message}");
+
+                // 🔓 Restaurar el botón si hay error
+                string desbloqueoScript = $@"
+                    document.getElementById('{btnPresionado.ClientID}').disabled = false;
+                    document.getElementById('{btnPresionado.ClientID}').innerText = 'PAGAR';";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "desbloqueoBoton", desbloqueoScript, true);
             }
         }
+
 
         protected void rblComprobante_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnlFactura.Visible = rblComprobante.SelectedValue == "Factura";
-        }
-
-        protected void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Session["Cart"] = null;
-            Session["Orden"] = null;
-            Response.Redirect("/Principal/Principal.aspx");
-        }
-
-        protected void btnVolver_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/Pedidos/Carrito.aspx");
         }
 
         protected void MetodoPago_Changed(object sender, EventArgs e)
@@ -157,13 +181,58 @@ namespace JMQPresentacion.Pedidos
             // Mostrar campos solo si se selecciona un método de pago con tarjeta
             pnlVisa.Visible = rbInterbank.Checked || rbVisa.Checked;
             pnlSaldo.Visible = rbSaldo.Checked;
+            if (rbSaldo.Checked)
+            {
+                usuario user = Session["Usuario"] as usuario;
+                lblSaldoPago.Text = "S/ " + user.saldo.ToString("F2");
+            }
+            pnlEfectivo.Visible = rbEfectivo.Checked;
         }
 
         protected void btnRecargarSaldo_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("/Pedidos/Carrito.aspx");
+            Response.Redirect("/Pedidos/RecargarSaldo.aspx?volverPago=true");
         }
 
+        private bool validarDatos()
+        {
+            string numeroTarjeta = txtNumeroTarjeta.Text.Trim().Replace(" ", "");
+            string cvv = txtCVV.Text.Trim();
+            string fecha = txtFechaExp.Text.Trim();
+
+            // Validación de número de tarjeta
+            if (!Regex.IsMatch(numeroTarjeta, @"^\d{16}$"))
+            {
+                divError.Style["display"] = "block";
+                lblError.Text = "El número de tarjeta debe tener exactamente 16 dígitos.";
+                return false;
+            }
+
+            // Validación de CVV
+            if (!Regex.IsMatch(cvv, @"^\d{3}$"))
+            {
+                divError.Style["display"] = "block";
+                lblError.Text = "El CVV debe tener 3 dígitos numéricos.";
+                return false;
+            }
+
+            // Validación de fecha de expiración
+            if (!Regex.IsMatch(fecha, @"^(0[1-9]|1[0-2])\/\d{2}$"))
+            {
+                divError.Style["display"] = "block";
+                lblError.Text = "La fecha de expiración debe tener el formato MM/AA.";
+                return false;
+            }
+            return true;
+        }
+
+        private void reducirSaldo(double cantidad)
+        {
+            usuario user = Session["Usuario"] as usuario;
+            user.saldo -= cantidad;
+            usuarioWSClient.actualizarUsuario(user);
+            Session["Usuario"] = user; // Actualizar la sesión con el nuevo saldo
+        }
     }
 
 }

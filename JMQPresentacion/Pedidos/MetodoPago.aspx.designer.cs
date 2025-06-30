@@ -15,6 +15,15 @@ namespace JMQPresentacion.Pedidos
     {
 
         /// <summary>
+        /// Control ScriptManager1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+
+        /// <summary>
         /// Control rblComprobante.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace JMQPresentacion.Pedidos
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rbSaldo;
+
+        /// <summary>
+        /// Control rbEfectivo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rbEfectivo;
 
         /// <summary>
         /// Control pnlVisa.
@@ -150,13 +168,31 @@ namespace JMQPresentacion.Pedidos
         protected global::System.Web.UI.WebControls.Button btnRecargarSaldo;
 
         /// <summary>
-        /// Control btnPagar2.
+        /// Control btnPagarSaldo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPagar2;
+        protected global::System.Web.UI.WebControls.Button btnPagarSaldo;
+
+        /// <summary>
+        /// Control pnlEfectivo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlEfectivo;
+
+        /// <summary>
+        /// Control btnEfectivo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEfectivo;
 
         /// <summary>
         /// Control divError.
