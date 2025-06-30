@@ -56,7 +56,7 @@ namespace JMQPresentacion.Pedidos
                 return;
             }
 
-            if (!validarDatos())
+            if (btnPresionado.ID == "btnPagar" && !validarDatos())
             {
                 return;
             }
