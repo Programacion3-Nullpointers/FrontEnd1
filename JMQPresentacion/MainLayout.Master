@@ -140,6 +140,7 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <li><asp:HyperLink ID="hpVerPedidos" runat="server" CssClass="dropdown-item" NavigateUrl="~/Login/VerPedidos.aspx">Ver pedidos</asp:HyperLink></li>
                                 <%--<li><asp:HyperLink ID="hpCambiarContrasena" runat="server" CssClass="dropdown-item" NavigateUrl="~/Login/Reestablecer.aspx">Cambiar Contraseña</asp:HyperLink></li>--%>
+                                <li><asp:HyperLink ID="hpRecargar" runat="server" CssClass="dropdown-item" NavigateUrl="/Pedidos/RecargarSaldo.aspx">Recargar Saldo</asp:HyperLink></li>
                                 <li><a class="dropdown-item" href="#" onclick="document.getElementById('<%= btnLogout.ClientID %>').click(); return false;">
                                     Cerrar Sesión
                                 </a></li>
