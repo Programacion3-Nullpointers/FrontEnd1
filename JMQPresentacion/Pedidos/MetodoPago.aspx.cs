@@ -111,7 +111,7 @@ namespace JMQPresentacion.Pedidos
             ScriptManager.RegisterStartupScript(this, this.GetType(), "spinnerPago", spinnerScript, true);
 
             string textoSeleccionado = rblComprobante.SelectedItem.Text;
-
+            string mensaje= "";
             try
             {
                 ordenVenta orden1 = Session["Orden"] as ordenVenta;
@@ -119,7 +119,7 @@ namespace JMQPresentacion.Pedidos
                 entrega entrega1 = Session["Entrega"] as entrega;
                 entrega1.orden = orden1;
                 entregaService.RegistrarEntrega(entrega1);
-
+                
                 if (textoSeleccionado == "Factura")
                 {
                     if (string.IsNullOrWhiteSpace(txtRazonSocial.Text) || string.IsNullOrWhiteSpace(txtRUC.Text))
@@ -128,6 +128,19 @@ namespace JMQPresentacion.Pedidos
                         lblError.Text = "Debe completar la Razón Social y el RUC para emitir una factura.";
                         return;
                     }
+                    List<detalle> de = (List<detalle>)Session["Cart"];
+
+                    System.Diagnostics.Debug.WriteLine("orden.id: " + orden1.id);
+                    usuario usu = Session["Usuario"] as usuario;
+                    System.Diagnostics.Debug.WriteLine("usu.id: " + usu.id);
+                    if (de == null) System.Diagnostics.Debug.WriteLine(" detalle vacio ");
+
+                    usu.RUC = txtRUC.Text.ToString();
+                    usu.razonsocial = txtRazonSocial.Text.ToString();
+                    usu.direccion = "Calle los alamos";
+                    orden1.detalle = de.ToArray();
+                    orden1.usuario = usu;
+                    mensaje = ordenVentaService.generarFactura(orden1);
 
                     factura factura1 = new factura
                     {
@@ -143,6 +156,7 @@ namespace JMQPresentacion.Pedidos
 
                     facturaService.RegistrarFactura(factura1);
                     if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(factura1.monto_total);
+
                 }
                 else if (textoSeleccionado == "Boleta")
                 {
@@ -173,19 +187,24 @@ namespace JMQPresentacion.Pedidos
                 Session["Entrega"] = null;
 
                 // ✅ Confirmación y redirección
-                string successScript = @"
-                    setTimeout(() => {
-                        Swal.fire({
-                            icon: 'success',
-                            title: '¡Pago realizado!',
-                            text: 'Gracias por tu compra.',
-                            showConfirmButton: false,
-                            timer: 2000
-                        }).then(() => {
-                            window.location.href = '/Principal/Principal.aspx';
-                        });
-                    }, 500);";
+
+                string linkFactura = mensaje.Replace("Link Factura electronica: ", "").Trim();
+
+                string successScript = $@"
+                setTimeout(() => {{
+                    Swal.fire({{
+                        icon: 'success',
+                        title: '¡Pago realizado!',
+                        html: Gracias por tu compra.<br><a href='{linkFactura}' target='_blank' style='color:#3085d6;'>Ver Factura Electrónica</a>,
+                        showConfirmButton: false,
+                        timer: 5000
+                    }}).then(() => {{
+                        window.location.href = '/Principal/Principal.aspx';
+                    }});
+                }}, 500);";
+
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "pagoExitoso", successScript, true);
+
             }
             catch (System.Exception ex)
             {
