@@ -36,6 +36,27 @@ namespace JMQPresentacion.Pedidos
                 {
                     CargarResumen();
                 }
+
+                if (Session["Usuario"] != null)
+                {
+                    var user = (usuario)Session["Usuario"]; 
+
+                    if (user.tipoUsuario.ToString() == "EMPRESA")
+                    {
+                        var itemBoleta = rblComprobante.Items.FindByValue("Boleta");
+                        if (itemBoleta != null)
+                        {
+                            rblComprobante.Items.Remove(itemBoleta);
+                        }
+
+                        var itemFactura = rblComprobante.Items.FindByValue("Factura");
+                        if (itemFactura != null)
+                        {
+                            itemFactura.Selected = true;
+                            pnlFactura.Visible = true;
+                        }
+                    }
+                }
             }
         }
 
@@ -155,7 +176,7 @@ namespace JMQPresentacion.Pedidos
                     }, 500);";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "pagoExitoso", successScript, true);
             }
-            catch (ArgumentException ex)
+            catch (System.Exception ex)
             {
                 // ❌ Mostrar error
                 divError.Style["display"] = "block";
