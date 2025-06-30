@@ -168,13 +168,13 @@ namespace JMQPresentacion.Admin
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// Control txtCategoriaNombre.
+        /// Control ddlCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCategoriaNombre;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
 
         /// <summary>
         /// Control txtDescripcion.
@@ -249,13 +249,13 @@ namespace JMQPresentacion.Admin
         protected global::System.Web.UI.WebControls.TextBox txtNombreMod;
 
         /// <summary>
-        /// Control txtCategoriaMod.
+        /// Control ddlCategoriaMod.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCategoriaMod;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategoriaMod;
 
         /// <summary>
         /// Control txtDescripcionMod.

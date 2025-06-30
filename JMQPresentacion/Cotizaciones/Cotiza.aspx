@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
+    <!-- 🔹 ScriptManager necesario para SweetAlert -->
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
     <div class="container mt-4" style="max-width: 600px;">
         <h2 class="h4 text-center mb-3">Cotización de Productos</h2>
         <div class="card">
@@ -40,7 +43,14 @@
     <div class="mt-3 text-center">
         <asp:Button ID="btnEnviarCotizacion" runat="server" Text="Enviar Cotización" CssClass="btn btn-success" OnClick="btnEnviarCotizacion_Click" />
     </div>
+    <div class="mt-3 text-center">
+        <asp:Button ID="Button1" runat="server" Text="Volver atras" CssClass="btn btn-primary" OnClick="btnEnviarAtras_Click" />
+    </div>
+
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
+    <!-- ✅ SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </asp:Content>

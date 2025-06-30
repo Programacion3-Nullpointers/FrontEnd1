@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
-    <div class="container mt-3">
+    <div class="mt-3 text-center">
         <asp:Button ID="btnCotizar" runat="server" Text="Cotizar Ahora" 
         CssClass="btn btn-success btn-lg px-4" 
         OnClick="btnCotiza_Click" />

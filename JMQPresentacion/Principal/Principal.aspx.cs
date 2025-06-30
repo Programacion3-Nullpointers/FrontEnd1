@@ -71,6 +71,9 @@ namespace JMQPresentacion.Principal
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "bienvenidaLogin", script, true);
                 }
             }
+            
+
+
         }
 
         protected void btnBuscarNombre_Click(object sender, EventArgs e)
@@ -177,5 +180,12 @@ namespace JMQPresentacion.Principal
         {
             Response.Redirect("~/Cotizaciones/ListaCotizaciones.aspx");
         }
+
+        //protected void btnAdmin_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("~/Admin/ListaCotizaciones.aspx");
+        //}
+
+
     }
 }

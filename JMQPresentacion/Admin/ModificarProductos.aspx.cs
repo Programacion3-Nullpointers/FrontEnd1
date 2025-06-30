@@ -56,6 +56,17 @@ namespace JMQPresentacion.Admin
                 {
                     listaProductos.InnerHtml += $"<option value='{Server.HtmlEncode(p.nombre)}' />";
                 }
+
+                ddlCategoria.DataSource = categorias;
+                ddlCategoria.DataTextField = "nombre";
+                ddlCategoria.DataValueField = "id";
+                ddlCategoria.DataBind();
+
+                ddlCategoriaMod.DataSource = categorias;
+                ddlCategoriaMod.DataTextField = "nombre";
+                ddlCategoriaMod.DataValueField = "id";
+                ddlCategoriaMod.DataBind();
+
             }
         }
 
@@ -151,10 +162,14 @@ namespace JMQPresentacion.Admin
                 {
                     prod.nombre = txtNombre.Text;
                     //cambiar a búsqueda de categoría...
-                    prod.categoria = new categoria
-                    {
-                        nombre = txtCategoriaNombre.Text
-                    };
+                    //prod.categoria = new categoria
+                    //{
+                    //    nombre = txtCategoriaNombre.Text
+                    //};
+                    int idDescuento = Convert.ToInt32(ddlCategoria.SelectedValue);
+
+                    prod.categoria = categoriaService.ObtenerCategoria(idDescuento);
+
                     prod.descripcion = txtDescripcion.Text;
                     prod.imagen = new byte[0];
                     prod.precio = Convert.ToDouble(txtPrecio.Text);
@@ -174,11 +189,15 @@ namespace JMQPresentacion.Admin
                 nuevo.id = nuevoId;
                 nuevo.nombre = txtNombre.Text;
                 //cambiar a búsqueda de categoría...
-                nuevo.categoria = new categoria
-                {
-                    id = 1,
-                    nombre = txtCategoriaNombre.Text
-                };
+                //nuevo.categoria = new categoria
+                //{
+                //    id = 1,
+                //    nombre = txtCategoriaNombre.Text
+                //};
+
+                int idDescuento = Convert.ToInt32(ddlCategoria.SelectedValue);
+                nuevo.categoria = categoriaService.ObtenerCategoria(idDescuento);
+
                 nuevo.descripcion = txtDescripcion.Text;
                 if (fileUploadFotoProducto.HasFile)
                 {
@@ -202,7 +221,7 @@ namespace JMQPresentacion.Admin
 
             // Limpiar
             txtNombre.Text = "";
-            txtCategoriaNombre.Text = "";
+            ddlCategoria.Text = "";
             txtDescripcion.Text = "";
             txtImagen.Text = "";
             txtPrecio.Text = "";
@@ -272,9 +291,12 @@ namespace JMQPresentacion.Admin
                     if (prod != null)
                     {
                         hfIdProd.Value = prod.id.ToString();
-                        txtNombreMod.Text = prod.nombre;
-                        txtCategoriaMod.Text = prod.categoria.nombre;
-                        txtDescripcionMod.Text = prod.descripcion;
+                        txtNombreMod.Text = prod.nombre.ToString();
+
+                        ddlCategoriaMod.SelectedValue = prod.categoria.id.ToString();
+
+
+                        txtDescripcionMod.Text = prod.descripcion.ToString();
                         txtPrecioMod.Text = prod.precio.ToString();
                         txtStockMod.Text = prod.stock.ToString();
 
@@ -312,11 +334,16 @@ namespace JMQPresentacion.Admin
             {
                 prod.nombre = txtNombreMod.Text;
 
-                prod.categoria = new categoria
-                {
-                    id = 1,
-                    nombre = txtCategoriaMod.Text
-                };
+                //prod.categoria = new categoria
+                //{
+                //    id = 1,
+                //    nombre = txtCategoriaMod.Text
+                //};
+                int idDescuento = Convert.ToInt32(ddlCategoriaMod.SelectedValue);
+                prod.categoria = categoriaService.ObtenerCategoria(idDescuento);
+
+
+
                 prod.descripcion = txtDescripcionMod.Text;
 
                 // ✅ Asignar nueva imagen si se subió
