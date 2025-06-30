@@ -77,7 +77,26 @@ namespace JMQPresentacion.Pedidos
                 Response.Redirect("~/Login/Login.aspx");
                 return;
             }
+            string textoSeleccionado = rblComprobante.SelectedItem.Text;
+            if (textoSeleccionado == "Factura")
+            {
+                string razonSocial = txtRazonSocial.Text.Trim();
+                string ruc = txtRUC.Text.Trim();
 
+                if (string.IsNullOrWhiteSpace(razonSocial) || string.IsNullOrWhiteSpace(ruc))
+                {
+                    divError.Style["display"] = "block";
+                    lblError.Text = "Debe completar la Razón Social y el RUC para emitir una factura.";
+                    return;
+                }
+
+                if (!Regex.IsMatch(ruc, @"^\d{11}$"))
+                {
+                    divError.Style["display"] = "block";
+                    lblError.Text = "El RUC debe contener exactamente 11 dígitos numéricos.";
+                    return;
+                }
+            }
             if (btnPresionado.ID == "btnPagar" && !validarDatos())
             {
                 return;
@@ -187,23 +206,25 @@ namespace JMQPresentacion.Pedidos
                 Session["Entrega"] = null;
 
                 // ✅ Confirmación y redirección
+                System.Diagnostics.Debug.WriteLine("MENSAJE FACTURA: " + mensaje);
 
                 string linkFactura = mensaje.Replace("Link Factura electronica: ", "").Trim();
 
                 string successScript = $@"
-                setTimeout(() => {{
-                    Swal.fire({{
-                        icon: 'success',
-                        title: '¡Pago realizado!',
-                        html: Gracias por tu compra.<br><a href='{linkFactura}' target='_blank' style='color:#3085d6;'>Ver Factura Electrónica</a>,
-                        showConfirmButton: false,
-                        timer: 5000
-                    }}).then(() => {{
-                        window.location.href = '/Principal/Principal.aspx';
-                    }});
-                }}, 500);";
+                        setTimeout(() => {{
+                            Swal.fire({{
+                                icon: 'success',
+                                title: '¡Pago realizado!',
+                                html: 'Gracias por tu compra.<br><a href=""{linkFactura}"" target=""_blank"" style=""color:#3085d6; text-decoration:underline;"">Ver Factura Electrónica</a>',
+                                showConfirmButton: false,
+                                timer: 5000
+                            }}).then(() => {{
+                                window.location.href = ""/Principal/Principal.aspx"";
+                            }});
+                        }}, 500);";
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "pagoExitoso", successScript, true);
+
 
             }
             catch (System.Exception ex)
