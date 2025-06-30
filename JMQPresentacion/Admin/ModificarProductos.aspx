@@ -132,6 +132,13 @@
                 <asp:BoundField DataField="id" HeaderText="ID" />
                 <asp:BoundField DataField="nombre" HeaderText="Nombre" />
                 <asp:BoundField DataField="categoria.nombre" HeaderText="Categoría" />
+                 <asp:TemplateField HeaderText="Descuento">
+                     <ItemTemplate>
+                        <%# ((JMQPresentacion.JMQWS.producto)Container.DataItem).categoria != null ? ((JMQPresentacion.JMQWS.producto)Container.DataItem).categoria.nombre.ToString() : "" %>
+                    </ItemTemplate>
+
+                </asp:TemplateField>
+
                 <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
                 <asp:BoundField DataField="imagen" HeaderText="Imagen (URL)" Visible="false" />
                 <asp:BoundField DataField="precio" HeaderText="Precio" />
@@ -160,7 +167,9 @@
             <h3>Agregar Producto</h3>
 
             <asp:TextBox ID="txtNombre" runat="server" CssClass="input-modal" placeholder="Nombre del producto" />
-            <asp:TextBox ID="txtCategoriaNombre" runat="server" CssClass="input-modal" placeholder="Categoría" />
+            <%--<asp:TextBox ID="txtCategoriaNombre" runat="server" CssClass="input-modal" placeholder="Categoría" />--%>
+            <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="input-modal" />
+
             <asp:TextBox ID="txtDescripcion" runat="server" CssClass="input-modal" placeholder="Descripción" />
             <asp:TextBox ID="txtImagen" runat="server" CssClass="input-modal" placeholder="Imagen (URL)" />
             <asp:TextBox ID="txtPrecio" runat="server" CssClass="input-modal" placeholder="Precio" />
@@ -186,7 +195,9 @@
             <!-- Categoría -->
             <div class="mb-2">
                 <label for="txtCategoriaMod">Categoría:</label>
-                <asp:TextBox ID="txtCategoriaMod" runat="server" CssClass="form-control" />
+                <%--<asp:TextBox ID="txtCategoriaMod" runat="server" CssClass="form-control" />--%>
+                <asp:DropDownList ID="ddlCategoriaMod" runat="server" CssClass="input-modal" />
+
             </div>
 
             <!-- Descripción -->

@@ -21,6 +21,10 @@
         <asp:Label ID="lblError" runat="server" CssClass="text-danger" />
     </div>
 
+    <div class="mt-3 text-center">
+    <asp:Button ID="Button1" runat="server" Text="Volver atras" CssClass="btn btn-primary" OnClick="btnEnviarAtras_Click" />
+</div>
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
 </asp:Content>

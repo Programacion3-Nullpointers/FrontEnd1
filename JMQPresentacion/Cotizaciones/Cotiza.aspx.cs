@@ -62,9 +62,9 @@ namespace JMQPresentacion.Pedidos
             else
             {
                 dt = (DataTable)Session["Cotizacion"];
-                
+
             }
-            
+
             // Agregar producto a la tabla
             DataRow row = dt.NewRow();
             row["Producto"] = txtProducto.Text;
@@ -88,10 +88,10 @@ namespace JMQPresentacion.Pedidos
             prod.cantidad = int.Parse(txtCantidad.Text);
 
             productoCotizacionWSClient.ActualizarPrecioProdCoti(prod, prod.cantidad);
-            
+
         }
 
-        
+
 
         protected void btnEnviarCotizacion_Click(object sender, EventArgs e)
         {
@@ -112,9 +112,34 @@ namespace JMQPresentacion.Pedidos
             }
             cot.productos = prods.ToArray();
 
-            cotizacionWSClient.registrarCotizacion(cot);
+            int id = cotizacionWSClient.registrarCotizacion(cot);
 
+            System.Diagnostics.Debug.WriteLine("cot.id: " + id);
+            if (id > 0)
+            {
+                //string nombre = Session["CotizacionID"].ToString();
+                Session.Remove("CotizacionID");
+
+                string script = $@"
+            Swal.fire({{
+                icon: 'success',
+                title: '¡Cotizacion realizada!',
+                text: 'Cotizacion creada de manera exitosa.',
+                timer: 1800,
+                showConfirmButton: false
+            }});";
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "bienvenidaLogin", script, true);
+            }
+
+            txtProducto.Text = "";
+            txtCantidad.Text = "";
+            txtPrecio.Text = "";
         }
 
+        protected void btnEnviarAtras_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Cotizaciones/ListaCotizaciones.aspx");
+        }
     }
 }
