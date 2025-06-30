@@ -16,6 +16,7 @@ namespace JMQPresentacion.Pedidos
         private BoletaWSClient boletaService;
         private FacturaWSClient facturaService;
         private UsuarioWSClient usuarioWSClient;
+        private double precioCompra;
         protected void Page_Init(object sender, EventArgs e)
         {
             if (Session["Usuario"] == null)
@@ -36,6 +37,27 @@ namespace JMQPresentacion.Pedidos
                 {
                     CargarResumen();
                 }
+
+                if (Session["Usuario"] != null)
+                {
+                    var user = (usuario)Session["Usuario"]; 
+
+                    if (user.tipoUsuario.ToString() == "EMPRESA")
+                    {
+                        var itemBoleta = rblComprobante.Items.FindByValue("Boleta");
+                        if (itemBoleta != null)
+                        {
+                            rblComprobante.Items.Remove(itemBoleta);
+                        }
+
+                        var itemFactura = rblComprobante.Items.FindByValue("Factura");
+                        if (itemFactura != null)
+                        {
+                            itemFactura.Selected = true;
+                            pnlFactura.Visible = true;
+                        }
+                    }
+                }
             }
         }
 
@@ -49,8 +71,8 @@ namespace JMQPresentacion.Pedidos
         protected void btnPagar_Click(object sender, EventArgs e)
         {
             Button btnPresionado = (Button)sender;
-
-            if (Session["Usuario"] == null)
+            usuario user = Session["Usuario"] as usuario;
+            if (user == null)
             {
                 Response.Redirect("~/Login/Login.aspx");
                 return;
@@ -60,7 +82,16 @@ namespace JMQPresentacion.Pedidos
             {
                 return;
             }
-
+            if (btnPresionado.ID == "btnPagarSaldo")
+            {
+                double precio = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario);
+                if (user.saldo < precio)
+                {
+                    divError.Style["display"] = "block";
+                    lblError.Text = "Saldo insuficiente para realizar el pago.";
+                    return;
+                }
+            }
             // 🔒 Bloquear botón y cambiar texto
             string bloquearBoton = $@"
                 document.getElementById('{btnPresionado.ClientID}').disabled = true;
@@ -139,6 +170,7 @@ namespace JMQPresentacion.Pedidos
                 // 🧹 Limpiar carrito y orden
                 Session["Cart"] = null;
                 Session["Orden"] = null;
+                Session["Entrega"] = null;
 
                 // ✅ Confirmación y redirección
                 string successScript = @"
@@ -155,7 +187,7 @@ namespace JMQPresentacion.Pedidos
                     }, 500);";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "pagoExitoso", successScript, true);
             }
-            catch (ArgumentException ex)
+            catch (System.Exception ex)
             {
                 // ❌ Mostrar error
                 divError.Style["display"] = "block";

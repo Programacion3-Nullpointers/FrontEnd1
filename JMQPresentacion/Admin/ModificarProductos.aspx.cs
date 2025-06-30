@@ -150,6 +150,19 @@ namespace JMQPresentacion.Admin
 
         protected void btnGuardarProducto_Click(object sender, EventArgs e)
         {
+            // ✅ Validar campos requeridos
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtDescripcion.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecio.Text) ||
+                string.IsNullOrWhiteSpace(txtStock.Text) ||
+                string.IsNullOrEmpty(ddlCategoria.SelectedValue))
+            {
+                // Mostrar alerta o mantener el modal abierto
+                lblErrorGuardarProducto.Visible = true;
+                ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalAgregar", "mostrarModal();", true);
+                return;
+            }
+            lblErrorGuardarProducto.Visible = false;
             List<producto> lista = Session["Productos"] as List<producto>;
             if (lista == null) lista = new List<producto>();
 
@@ -161,17 +174,15 @@ namespace JMQPresentacion.Admin
                 if (prod != null)
                 {
                     prod.nombre = txtNombre.Text;
-                    //cambiar a búsqueda de categoría...
-                    //prod.categoria = new categoria
-                    //{
-                    //    nombre = txtCategoriaNombre.Text
-                    //};
-                    int idDescuento = Convert.ToInt32(ddlCategoria.SelectedValue);
-
-                    prod.categoria = categoriaService.ObtenerCategoria(idDescuento);
-
+                    int idCategoria = Convert.ToInt32(ddlCategoria.SelectedValue);
+                    prod.categoria = categoriaService.ObtenerCategoria(idCategoria);
                     prod.descripcion = txtDescripcion.Text;
-                    prod.imagen = new byte[0];
+
+                    if (fileUploadFotoProducto.HasFile)
+                    {
+                        prod.imagen = fileUploadFotoProducto.FileBytes;
+                    }
+
                     prod.precio = Convert.ToDouble(txtPrecio.Text);
                     prod.stock = Convert.ToInt32(txtStock.Text);
                 }
@@ -182,23 +193,18 @@ namespace JMQPresentacion.Admin
             {
                 // ➕ Buscar el menor ID disponible
                 int nuevoId = Enumerable.Range(1, lista.Count + 1)
-                        .Except(lista.Select(u => u.id))
-                        .First();
+                    .Except(lista.Select(u => u.id))
+                    .First();
 
                 producto nuevo = new producto();
                 nuevo.id = nuevoId;
                 nuevo.nombre = txtNombre.Text;
-                //cambiar a búsqueda de categoría...
-                //nuevo.categoria = new categoria
-                //{
-                //    id = 1,
-                //    nombre = txtCategoriaNombre.Text
-                //};
 
-                int idDescuento = Convert.ToInt32(ddlCategoria.SelectedValue);
-                nuevo.categoria = categoriaService.ObtenerCategoria(idDescuento);
+                int idCategoria = Convert.ToInt32(ddlCategoria.SelectedValue);
+                nuevo.categoria = categoriaService.ObtenerCategoria(idCategoria);
 
                 nuevo.descripcion = txtDescripcion.Text;
+
                 if (fileUploadFotoProducto.HasFile)
                 {
                     nuevo.imagen = fileUploadFotoProducto.FileBytes;
@@ -206,29 +212,36 @@ namespace JMQPresentacion.Admin
                 else
                 {
                     string rutaImagen = Server.MapPath("~/Public/images/imagen_default.jpg");
-                    nuevo.imagen = System.IO.File.ReadAllBytes(rutaImagen);
+                    nuevo.imagen = File.ReadAllBytes(rutaImagen);
                 }
+
                 nuevo.precio = Convert.ToDouble(txtPrecio.Text);
                 nuevo.stock = Convert.ToInt32(txtStock.Text);
+                nuevo.activo = true;
+
                 productoService.registrarProducto(nuevo);
                 lista.Add(nuevo);
             }
 
-            // Guardar y actualizar
-            Session["Productos"] = lista;
-            gvProductos.DataSource = lista.OrderBy(u => u.id).ToList();
+            // 🔄 Recargar desde servicio para asegurar integridad
+            var productosActualizados = productoService.listaProducto().ToList();
+            Session["Productos"] = productosActualizados;
+            Session["TodosLosProductos"] = productosActualizados;
+            gvProductos.DataSource = productosActualizados.OrderBy(u => u.id).ToList();
             gvProductos.DataBind();
 
-            // Limpiar
+            // Limpiar campos
             txtNombre.Text = "";
-            ddlCategoria.Text = "";
             txtDescripcion.Text = "";
-            txtImagen.Text = "";
+            //txtImagen.Text = "";
             txtPrecio.Text = "";
             txtStock.Text = "";
-            // Cerrar modal
+            ddlCategoria.SelectedIndex = 0;
+            imgPreviewMod.ImageUrl = "~/Public/images/imagen_default.jpg"; // Reset preview
+
             ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModal", "cerrarModal();", true);
         }
+
 
         protected void btnCargarFoto_Click(object sender, EventArgs e)
         {
@@ -255,8 +268,39 @@ namespace JMQPresentacion.Admin
                 {
                     // Puede usarse un mensaje de alerta si lo deseas
                 }
+
             }
         }
+        protected void btnCargarFotoAgregar_Click(object sender, EventArgs e)
+        {
+            if (fileUpload1.HasFile)
+            {
+                string extension = Path.GetExtension(fileUpload1.FileName).ToLower();
+                if (extension == ".jpg" || extension == ".jpeg" || extension == ".png" || extension == ".gif")
+                {
+                    string filename = Guid.NewGuid().ToString() + extension;
+                    string ruta = Server.MapPath("~/Public/images/") + filename;
+
+                    fileUpload1.SaveAs(ruta);
+
+                    Image1.ImageUrl = "~/Public/images/" + filename;
+
+                    using (FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
+                    {
+                        BinaryReader br = new BinaryReader(fs);
+                        Session["foto"] = br.ReadBytes((int)fs.Length);
+                    }
+
+                    // ✅ Volver a mostrar el modal
+                    ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalAgregar", "mostrarModal();", true);
+                }
+                else
+                {
+                    // Si el formato es inválido, opcionalmente mostrar mensaje
+                }
+            }
+        }
+
 
         protected void gvProductos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
