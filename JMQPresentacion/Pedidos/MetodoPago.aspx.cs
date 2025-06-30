@@ -155,7 +155,7 @@ namespace JMQPresentacion.Pedidos
                     }, 500);";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "pagoExitoso", successScript, true);
             }
-            catch (ArgumentException ex)
+            catch (System.Exception ex)
             {
                 // ❌ Mostrar error
                 divError.Style["display"] = "block";
