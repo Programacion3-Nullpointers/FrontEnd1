@@ -160,18 +160,25 @@
             Text="⚠️ Producto no encontrado."></asp:Label>
     </div>
 
-    <!-- Modal -->
+     <!-- Modal Agregar Producto actualizado con nombres de campos proporcionados -->
     <asp:Panel ID="pnlModalAgregar" runat="server" CssClass="modal" Style="display: none;">
         <div class="modal-content">
             <span class="cerrar" onclick="cerrarModal()">&times;</span>
             <h3>Agregar Producto</h3>
 
             <asp:TextBox ID="txtNombre" runat="server" CssClass="input-modal" placeholder="Nombre del producto" />
-            <%--<asp:TextBox ID="txtCategoriaNombre" runat="server" CssClass="input-modal" placeholder="Categoría" />--%>
             <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="input-modal" />
-
             <asp:TextBox ID="txtDescripcion" runat="server" CssClass="input-modal" placeholder="Descripción" />
-            <asp:TextBox ID="txtImagen" runat="server" CssClass="input-modal" placeholder="Imagen (URL)" />
+
+            <div class="mb-2">
+                <label>Imagen:</label><br />
+                <asp:Image ID="Image1" runat="server" CssClass="img-preview" />
+                <br />
+                <asp:FileUpload ID="fileUpload1" runat="server" CssClass="form-control mt-2" />
+                <asp:Button ID="Button1" runat="server" Text="Cargar Imagen"
+                            OnClick="btnCargarFotoAgregar_Click" CssClass="btn btn-secondary mt-2" />
+            </div>
+
             <asp:TextBox ID="txtPrecio" runat="server" CssClass="input-modal" placeholder="Precio" />
             <asp:TextBox ID="txtStock" runat="server" CssClass="input-modal" placeholder="Stock" />
             <asp:Button ID="btnGuardarProducto" runat="server" Text="Guardar" CssClass="btn-add" OnClick="btnGuardarProducto_Click" />
