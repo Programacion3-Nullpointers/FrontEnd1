@@ -165,6 +165,8 @@
         <div class="modal-content">
             <span class="cerrar" onclick="cerrarModal()">&times;</span>
             <h3>Agregar Producto</h3>
+            <asp:Label ID="lblErrorGuardarProducto" runat="server" ForeColor="Red"
+                CssClass="alerta-producto" Visible="false" Text="⚠️ Debe completar todos los campos." />
 
             <asp:TextBox ID="txtNombre" runat="server" CssClass="input-modal" placeholder="Nombre del producto" />
             <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="input-modal" />

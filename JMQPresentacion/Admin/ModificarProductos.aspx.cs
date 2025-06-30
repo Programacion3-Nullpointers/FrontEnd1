@@ -150,6 +150,19 @@ namespace JMQPresentacion.Admin
 
         protected void btnGuardarProducto_Click(object sender, EventArgs e)
         {
+            // ✅ Validar campos requeridos
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtDescripcion.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecio.Text) ||
+                string.IsNullOrWhiteSpace(txtStock.Text) ||
+                string.IsNullOrEmpty(ddlCategoria.SelectedValue))
+            {
+                // Mostrar alerta o mantener el modal abierto
+                lblErrorGuardarProducto.Visible = true;
+                ScriptManager.RegisterStartupScript(this, GetType(), "mostrarModalAgregar", "mostrarModal();", true);
+                return;
+            }
+            lblErrorGuardarProducto.Visible = false;
             List<producto> lista = Session["Productos"] as List<producto>;
             if (lista == null) lista = new List<producto>();
 
