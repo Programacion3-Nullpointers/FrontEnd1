@@ -1,10 +1,11 @@
-﻿using System;
+﻿using JMQPresentacion.JMQWS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using JMQPresentacion.JMQWS;
 
 namespace JMQPresentacion.Pedidos
 {
@@ -41,6 +42,10 @@ namespace JMQPresentacion.Pedidos
             lblExito.Text = "";
             usuario user = Session["Usuario"] as usuario;
             double monto;
+            if (!validarDatos())
+            {
+                return;
+            }
             if (double.TryParse(txtMonto.Text.Trim(), out monto) && monto > 0)
             {
                 try
@@ -66,6 +71,38 @@ namespace JMQPresentacion.Pedidos
                 return;
             }
 
+        }
+
+        private bool validarDatos()
+        {
+            string numeroTarjeta = txtNumero.Text.Trim().Replace(" ", "");
+            string cvv = txtCVV.Text.Trim();
+            string fecha = txtExp.Text.Trim();
+
+            // Validación de número de tarjeta
+            if (!Regex.IsMatch(numeroTarjeta, @"^\d{16}$"))
+            {
+                divError.Style["display"] = "block";
+                lblError.Text = "El número de tarjeta debe tener exactamente 16 dígitos.";
+                return false;
+            }
+
+            // Validación de CVV
+            if (!Regex.IsMatch(cvv, @"^\d{3}$"))
+            {
+                divError.Style["display"] = "block";
+                lblError.Text = "El CVV debe tener 3 dígitos numéricos.";
+                return false;
+            }
+
+            // Validación de fecha de expiración
+            if (!Regex.IsMatch(fecha, @"^(0[1-9]|1[0-2])\/\d{2}$"))
+            {
+                divError.Style["display"] = "block";
+                lblError.Text = "La fecha de expiración debe tener el formato MM/AA.";
+                return false;
+            }
+            return true;
         }
     }
 }
