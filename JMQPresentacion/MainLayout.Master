@@ -8,6 +8,7 @@
     <title>Inversiones JMQ</title>
     
     <link rel="icon" type="image/x-icon" href="/Public/images/icon.png" />
+        <link href="/Public/css/site.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link href="/Public/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/Public/fonts/css/all.min.css" rel="stylesheet" />
@@ -53,8 +54,7 @@
             color: white;
         }
 
-        .logout {
-            margin-top: auto;
+        .view {
             background-color: #e74c3c;
         }
 
@@ -101,7 +101,12 @@
     <form id="form1" runat="server">
         <!-- SIDEBAR -->
         <div class="sidebar">
+            
             <a class="menu-title" href="#">Menú</a>
+            <asp:LinkButton ID="btnAdminView" runat="server" CssClass="menu-item view"  OnClick="btnAdminView_Click" Visible ="false">
+                Vista Admin
+            </asp:LinkButton>
+
             <a class="menu-item" href="/Principal/Principal.aspx">Compras</a>
             <a class="menu-item" href="/Cotizaciones/ListaCotizaciones.aspx">Cotizaciones</a>
 
@@ -161,6 +166,7 @@
     </form>
 
     <!-- Scripts generales -->
+    <script src="/Public/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/Public/js/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

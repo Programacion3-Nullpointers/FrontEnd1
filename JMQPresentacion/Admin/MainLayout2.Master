@@ -55,6 +55,9 @@
             margin-top: auto;
             background-color: #e74c3c;
         }
+        .view {
+            background-color: #e74c3c;
+        }
 
         .logout:hover {
             background-color: #c0392b;
@@ -70,6 +73,9 @@
     <form id="form1" runat="server">
         <!-- Sidebar -->
         <div class="sidebar">
+            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="menu-item view" OnClick="btnClientView_Click">
+                Vista Cliente
+            </asp:LinkButton>
             <a class="menu-title" href="/Admin/PrincipalAdmin.aspx">Menú</a>
             <a class="menu-item" href="/Admin/ModificarUsuarios.aspx">Usuarios</a>
             <a class="menu-item" href="/Admin/ModificarProductos.aspx">Productos</a>

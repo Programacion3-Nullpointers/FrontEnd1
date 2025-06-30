@@ -23,5 +23,12 @@ namespace JMQPresentacion
             Session["Usuario"] = null;
             Response.Redirect("/Principal/Principal.aspx");
         }
+
+        protected void btnClientView_Click(object sender, EventArgs e)
+        {
+            
+            Response.Redirect("/Principal/Principal.aspx");
+        }
+
     }
 }
