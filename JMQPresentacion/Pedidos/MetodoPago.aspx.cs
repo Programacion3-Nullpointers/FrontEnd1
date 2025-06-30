@@ -77,8 +77,9 @@ namespace JMQPresentacion.Pedidos
                 Response.Redirect("~/Login/Login.aspx");
                 return;
             }
-            string textoSeleccionado = rblComprobante.SelectedItem.Text;
-            if (textoSeleccionado == "Factura")
+
+            string textoSeleccionado2 = rblComprobante.SelectedItem.Text;
+            if (textoSeleccionado2 == "Factura")
             {
                 string razonSocial = txtRazonSocial.Text.Trim();
                 string ruc = txtRUC.Text.Trim();
@@ -97,6 +98,7 @@ namespace JMQPresentacion.Pedidos
                     return;
                 }
             }
+
             if (btnPresionado.ID == "btnPagar" && !validarDatos())
             {
                 return;
@@ -175,7 +177,7 @@ namespace JMQPresentacion.Pedidos
 
                     facturaService.RegistrarFactura(factura1);
                     if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(factura1.monto_total);
-
+                    
                 }
                 else if (textoSeleccionado == "Boleta")
                 {
@@ -206,7 +208,6 @@ namespace JMQPresentacion.Pedidos
                 Session["Entrega"] = null;
 
                 // ✅ Confirmación y redirección
-                System.Diagnostics.Debug.WriteLine("MENSAJE FACTURA: " + mensaje);
 
                 string linkFactura = mensaje.Replace("Link Factura electronica: ", "").Trim();
 
@@ -224,7 +225,6 @@ namespace JMQPresentacion.Pedidos
                         }}, 500);";
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "pagoExitoso", successScript, true);
-
 
             }
             catch (System.Exception ex)
