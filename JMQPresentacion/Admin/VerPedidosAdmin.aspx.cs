@@ -132,7 +132,7 @@ namespace JMQPresentacion.Admin
         {
             LinkButton btn = (LinkButton)sender;
             int idOrden = Convert.ToInt32(btn.CommandArgument);
-            Response.Redirect($"DetallePedidoAAdmin.aspx?id={idOrden}");
+            Response.Redirect($"DetallePedidoAdmin.aspx?id={idOrden}");
 
         }
     }
