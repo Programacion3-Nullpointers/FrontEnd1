@@ -67,14 +67,12 @@
                         <div class="col-md-6">
                             <asp:RadioButton ID="rbInterbank" runat="server" GroupName="MetodoPago"  CssClass="visually-hidden" AutoPostBack="true" OnCheckedChanged="MetodoPago_Changed" />
                             <label onclick="document.getElementById('<%= rbInterbank.ClientID %>').click();" class="form-control metodo-opcion">
-                                <img src="interbank.png" height="24" />
                                 <span>Tarjetas Interbank</span>
                             </label>
                         </div>
                         <div class="col-md-6">
                             <asp:RadioButton ID="rbVisa" runat="server" GroupName="MetodoPago"  CssClass="visually-hidden" AutoPostBack="true" OnCheckedChanged="MetodoPago_Changed" />
                             <label onclick="document.getElementById('<%= rbVisa.ClientID %>').click();" class="form-control metodo-opcion">
-                                <img src="visa.png" height="24" />
                                 <span>Otras tarjetas de Crédito y Débito</span>
                             </label>
                         </div>
