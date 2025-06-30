@@ -21,7 +21,15 @@ namespace JMQPresentacion
             {
                 if (Session["Usuario"] != null)
                 {
+
+
+
                     usuario user = (usuario)Session["Usuario"];
+
+                    if (user.tipoUsuario == tipoUsuario.ADMIN)
+                    {
+                        btnAdminView.Visible = true;
+                    }
                     lblNombreUsuario.Text = $"{user.nombreUsuario}"; // Asume propiedades 'nombre' y 'apellido'
 
                     phLogin.Visible = false;           // Oculta el PlaceHolder de "Iniciar Sesión"
@@ -69,5 +77,12 @@ namespace JMQPresentacion
                 litCantidadCarrito.Text = "";
             }
         }
+
+        protected void btnAdminView_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("/Admin/PrincipalAdmin.aspx");
+        }
+
     }
 }
