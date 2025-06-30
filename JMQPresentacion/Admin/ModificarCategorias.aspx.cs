@@ -111,6 +111,7 @@ namespace JMQPresentacion.Admin
             // Limpiar
             txtdescripcion.Text = "";
             txtnombre.Text = "";
+            ddlDescuento.Text = "";
             //DescuentoWSClient descuentoWSClient = new DescuentoWSClient();
             
             // Cerrar modal

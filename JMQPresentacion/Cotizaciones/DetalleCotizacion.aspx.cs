@@ -70,5 +70,10 @@ namespace JMQPresentacion.Cotizaciones
                     lblError.Text = "Error al cargar la cotización: " + ex.Message;
                 }
             }
+        protected void btnEnviarAtras_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Cotizaciones/ListaCotizaciones.aspx");
+        }
+
     }
 }
