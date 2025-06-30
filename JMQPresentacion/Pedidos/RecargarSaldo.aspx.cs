@@ -40,38 +40,72 @@ namespace JMQPresentacion.Pedidos
             lblError.Text = "";
             divExito.Style["display"] = "none";
             lblExito.Text = "";
+
             usuario user = Session["Usuario"] as usuario;
             double monto;
+
             if (!validarDatos())
-            {
                 return;
-            }
+
             if (double.TryParse(txtMonto.Text.Trim(), out monto) && monto > 0)
             {
                 try
                 {
+                    // Mostrar spinner mientras se procesa
+                    string spinnerScript = @"
+                Swal.fire({
+                    title: 'Procesando...',
+                    text: 'Estamos recargando tu saldo.',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "spinner", spinnerScript, true);
+
+                    // Simulación de recarga
                     user.saldo += monto;
                     usuarioWSClient.actualizarUsuario(user);
-                    Session["Usuario"] = user; // Actualizar la sesión con el nuevo saldo
-                    divExito.Style["display"] = "block";
-                    lblExito.Text = "Saldo recargado exitosamente. Monto agregado: S/ " + monto;
+                    Session["Usuario"] = user;
+
                     lblSaldo.Text = "S/ " + user.saldo.ToString("F2");
+
+                    // Mostrar mensaje de éxito después del proceso
+                    string successScript = $@"
+                    setTimeout(() => {{
+                        Swal.fire({{
+                            icon: 'success',
+                            title: '¡Saldo recargado!',
+                            text: 'Se agregó S/ {monto:F2} a tu cuenta.',
+                            timer: 2000,
+                            showConfirmButton: false
+                        }});
+                    }}, 500);";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "exitoRecarga", successScript, true);
                 }
                 catch (System.Exception ex)
                 {
-                    divError.Style["display"] = "block";
-                    lblError.Text = "Error al recargar el saldo: " + ex.Message;
-                    return;
+                    string errorScript = $@"
+                    Swal.fire({{
+                        icon: 'error',
+                        title: 'Error al recargar',
+                        text: '{ex.Message.Replace("'", "\\'")}'
+                    }});";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "errorRecarga", errorScript, true);
                 }
             }
             else
             {
-                divError.Style["display"] = "block";
-                lblError.Text = "Monto inválido.";
-                return;
+                string invalidScript = @"
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Monto inválido',
+                    text: 'Por favor, ingresa un monto mayor a cero.'
+                });";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "montoInvalido", invalidScript, true);
             }
-
         }
+
 
         private bool validarDatos()
         {

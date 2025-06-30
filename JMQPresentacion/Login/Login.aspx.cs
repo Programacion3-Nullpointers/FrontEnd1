@@ -50,75 +50,42 @@ namespace JMQPresentacion.Login
                 return;
             }
 
-            usuario user = null;
-
-            try
-            {
-                // Attempt to call the web service
-                user = usuarioWSCLClient.BuscarUsuarioPorCorreo(txtEmail.Text);
-            }
-            catch (System.ServiceModel.FaultException ex)
-            {
-                lblError.Text = ex.Message;
-                divError.Style["display"] = "block";
-                return;
-            }
-            catch (System.Exception ex)
-            {
-                lblError.Text = "Ocurrió un error inesperado al buscar el usuario. Por favor, intente de nuevo.";
-                divError.Style["display"] = "block";
-                return;
-            }
-
+            usuario user = usuarioWSCLClient.verificarCrendenciales(txtEmail.Text, txtContr.Text);
 
             if (user != null)
             {
-                if (user.contrasena == txtContr.Text)
+                Session["Usuario"] = user;
+
+                string nombreMostrar = user.nombreUsuario.Split(' ')[0];
+
+                if (user.tipoUsuario == tipoUsuario.ADMIN)
                 {
-                    Session["Usuario"] = user;
-
-                    string nombreMostrar = user.nombreUsuario.Split(' ')[0];
-
-                    if (user.tipoUsuario == tipoUsuario.ADMIN)
-                    {
-                        Response.Redirect("/Admin/PrincipalAdmin.aspx");
-                        return;
-                    }
-
-                    // 🔁 Redirigir al carrito si viene de registro
-                    if (Session["RedirigirACarrito"] != null && (bool)Session["RedirigirACarrito"])
-                    {
-                        Session.Remove("RedirigirACarrito");
-                        Response.Redirect("/Pedidos/Carrito.aspx");
-                        return;
-                    }
-
-                    // 🔁 Redirigir a ruta previa si existía
-                    if (Session["RedirectAfterLogin"] != null)
-                    {
-                        string redirect = Session["RedirectAfterLogin"].ToString();
-                        Session.Remove("RedirectAfterLogin");
-                        Response.Redirect(redirect);
-                        return;
-                    }
-
-                    // 🟢 Mostrar mensaje en Principal
-                    Session["MostrarBienvenida"] = nombreMostrar;
-                    Response.Redirect("/Principal/Principal.aspx");
+                    Response.Redirect("/Admin/PrincipalAdmin.aspx");
                     return;
                 }
-                else
+
+                if (Session["RedirigirACarrito"] != null && (bool)Session["RedirigirACarrito"])
                 {
-                    lblError.Text = "Contraseña incorrecta.";
-                    divError.Style["display"] = "block";
+                    Session.Remove("RedirigirACarrito");
+                    Response.Redirect("/Pedidos/Carrito.aspx");
                     return;
                 }
+
+                if (Session["RedirectAfterLogin"] != null)
+                {
+                    string redirect = Session["RedirectAfterLogin"].ToString();
+                    Session.Remove("RedirectAfterLogin");
+                    Response.Redirect(redirect);
+                    return;
+                }
+
+                Session["MostrarBienvenida"] = nombreMostrar;
+                Response.Redirect("/Principal/Principal.aspx");
             }
             else
             {
-                lblError.Text = "Usuario no encontrado.";
+                lblError.Text = "Usuario o contraseña incorrecta.";
                 divError.Style["display"] = "block";
-                return;
             }
         }
 
