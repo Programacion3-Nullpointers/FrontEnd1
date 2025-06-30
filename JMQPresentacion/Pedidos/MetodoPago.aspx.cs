@@ -49,89 +49,85 @@ namespace JMQPresentacion.Pedidos
         protected void btnPagar_Click(object sender, EventArgs e)
         {
             Button btnPresionado = (Button)sender;
+
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("~/Login/Login.aspx");
+                return;
             }
-            else
+
+            if (!validarDatos())
             {
-                if (!validarDatos())
-                {
-                    return;
-                }
-                string textoSeleccionado = rblComprobante.SelectedItem.Text;
+                return;
+            }
+
+            // 🔒 Bloquear botón y cambiar texto
+            string bloquearBoton = $@"
+                document.getElementById('{btnPresionado.ClientID}').disabled = true;
+                document.getElementById('{btnPresionado.ClientID}').innerText = 'Procesando...';";
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "bloqueoBoton", bloquearBoton, true);
+
+            // 🌀 Spinner de carga
+            string spinnerScript = @"
+                Swal.fire({
+                    title: 'Procesando pago...',
+                    text: 'Por favor espera un momento.',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "spinnerPago", spinnerScript, true);
+
+            string textoSeleccionado = rblComprobante.SelectedItem.Text;
+
+            try
+            {
+                ordenVenta orden1 = Session["Orden"] as ordenVenta;
+                orden1 = ordenVentaService.registrarOrdenVentaService(orden1);
+                entrega entrega1 = Session["Entrega"] as entrega;
+                entrega1.orden = orden1;
+                entregaService.RegistrarEntrega(entrega1);
+
                 if (textoSeleccionado == "Factura")
                 {
-                    // Validar campos obligatorios para factura
                     if (string.IsNullOrWhiteSpace(txtRazonSocial.Text) || string.IsNullOrWhiteSpace(txtRUC.Text))
                     {
                         divError.Style["display"] = "block";
                         lblError.Text = "Debe completar la Razón Social y el RUC para emitir una factura.";
                         return;
                     }
-                    try
-                    {
-                        ordenVenta orden1 = Session["Orden"] as ordenVenta;
-                        orden1 = ordenVentaService.registrarOrdenVentaService(orden1);
-                        entrega entrega1 = Session["Entrega"] as entrega;
-                        entrega1.orden = orden1;
-                        entregaService.RegistrarEntrega(entrega1);
-                        factura factura1 = new factura
-                        {
-                            RUC = txtRUC.Text.Trim(),
-                            razon_social = txtRazonSocial.Text.Trim(),
-                            direccion = ((usuario)Session["Usuario"]).direccion,
-                            fecha_emision = DateTime.Now,
-                            orden = orden1,
-                            metodoPago = (btnPresionado.ID == "btnEfectivo") ? metodoPago.efectivo : metodoPago.tarjeta,
-                            fecha_pago = DateTime.Now,
-                            monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
-                        };
-                        facturaService.RegistrarFactura(factura1);
-                        if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(factura1.monto_total);
-                        Session["Cart"] = null;
-                        Session["Orden"] = null;
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        divError.Style["display"] = "block";
-                        lblError.Text = "Error al realizar el pago.";
-                        Console.WriteLine($"Error: {ex.Message}");
-                        return;
-                    }
 
+                    factura factura1 = new factura
+                    {
+                        RUC = txtRUC.Text.Trim(),
+                        razon_social = txtRazonSocial.Text.Trim(),
+                        direccion = ((usuario)Session["Usuario"]).direccion,
+                        fecha_emision = DateTime.Now,
+                        orden = orden1,
+                        metodoPago = (btnPresionado.ID == "btnEfectivo") ? metodoPago.efectivo : metodoPago.tarjeta,
+                        fecha_pago = DateTime.Now,
+                        monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
+                    };
+
+                    facturaService.RegistrarFactura(factura1);
+                    if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(factura1.monto_total);
                 }
                 else if (textoSeleccionado == "Boleta")
                 {
-                    try
+                    boleta boleta1 = new boleta
                     {
-                        ordenVenta orden1 = Session["Orden"] as ordenVenta;
-                        orden1 = ordenVentaService.registrarOrdenVentaService(orden1);
-                        entrega entrega1 = Session["Entrega"] as entrega;
-                        entrega1.orden = orden1;
-                        entregaService.RegistrarEntrega(entrega1);
-                        boleta boleta1 = new boleta
-                        {
-                            dni = ((usuario)Session["Usuario"]).dni,
-                            nombre = ((usuario)Session["Usuario"]).nombreUsuario,
-                            fecha_emision = DateTime.Now,
-                            orden = orden1,
-                            metodoPago = (btnPresionado.ID == "btnEfectivo") ? metodoPago.efectivo : metodoPago.tarjeta,
-                            fecha_pago = DateTime.Now,
-                            monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
-                        };
-                        boletaService.registrarBoleta(boleta1);
-                        if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(boleta1.monto_total);
-                        Session["Cart"] = null;
-                        Session["Orden"] = null;
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        divError.Style["display"] = "block";
-                        lblError.Text = "Error al realizar el pago.";
-                        Console.WriteLine($"Error: {ex.Message}");
-                        return;
-                    }
+                        dni = ((usuario)Session["Usuario"]).dni,
+                        nombre = ((usuario)Session["Usuario"]).nombreUsuario,
+                        fecha_emision = DateTime.Now,
+                        orden = orden1,
+                        metodoPago = (btnPresionado.ID == "btnEfectivo") ? metodoPago.efectivo : metodoPago.tarjeta,
+                        fecha_pago = DateTime.Now,
+                        monto_total = ((List<detalle>)Session["Cart"]).Sum(item => item.cantidad * item.precio_unitario),
+                    };
+
+                    boletaService.registrarBoleta(boleta1);
+                    if (btnPresionado.ID == "btnPagarSaldo") reducirSaldo(boleta1.monto_total);
                 }
                 else
                 {
@@ -139,9 +135,41 @@ namespace JMQPresentacion.Pedidos
                     lblError.Text = "Seleccione un tipo de comprobante válido.";
                     return;
                 }
-                Response.Redirect("/Principal/Principal.aspx");
+
+                // 🧹 Limpiar carrito y orden
+                Session["Cart"] = null;
+                Session["Orden"] = null;
+
+                // ✅ Confirmación y redirección
+                string successScript = @"
+                    setTimeout(() => {
+                        Swal.fire({
+                            icon: 'success',
+                            title: '¡Pago realizado!',
+                            text: 'Gracias por tu compra.',
+                            showConfirmButton: false,
+                            timer: 2000
+                        }).then(() => {
+                            window.location.href = '/Principal/Principal.aspx';
+                        });
+                    }, 500);";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "pagoExitoso", successScript, true);
+            }
+            catch (ArgumentException ex)
+            {
+                // ❌ Mostrar error
+                divError.Style["display"] = "block";
+                lblError.Text = "Error al realizar el pago.";
+                Console.WriteLine($"Error: {ex.Message}");
+
+                // 🔓 Restaurar el botón si hay error
+                string desbloqueoScript = $@"
+                    document.getElementById('{btnPresionado.ClientID}').disabled = false;
+                    document.getElementById('{btnPresionado.ClientID}').innerText = 'PAGAR';";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "desbloqueoBoton", desbloqueoScript, true);
             }
         }
+
 
         protected void rblComprobante_SelectedIndexChanged(object sender, EventArgs e)
         {

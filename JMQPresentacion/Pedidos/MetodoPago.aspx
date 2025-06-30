@@ -34,6 +34,9 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Contenido" runat="server">
+    <!-- ✅ Requerido para scripts desde el backend -->
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
     <div class="row">
 
         <div class="col-md-8 mb-4">
@@ -115,7 +118,7 @@
                         </div>
                     </div>
                     <div class="text-center mt-4">
-                        <p>Para continuar, haz click en "PAGAR".</p>
+                        <p>Para continuar, haz click en ""PAGAR"".</p>
                         <asp:Button ID="btnPagar" runat="server" Text="PAGAR" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
                     </div>
                 </asp:Panel>
@@ -129,7 +132,7 @@
                         <asp:Button ID="btnRecargarSaldo" runat="server" CssClass="btn btn-outline-primary fw-bold" Text="Recargar saldo" OnClick="btnRecargarSaldo_Click" />
                     </div>
                     <div class="text-center mt-4">
-                        <p>Para continuar, haz click en "PAGAR".</p>
+                        <p>Para continuar, haz click en ""PAGAR"".</p>
                         <asp:Button ID="btnPagarSaldo" runat="server" Text="PAGAR" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
                     </div>
                 </asp:Panel>
@@ -138,7 +141,7 @@
                         <h5>Pago en efectivo</h5>
                     </div>
                     <div class="text-center mt-4">
-                        <p>Para continuar, haz click en "FINALIZAR COMPRA".</p>
+                        <p>Para continuar, haz click en ""FINALIZAR COMPRA"".</p>
                         <asp:Button ID="btnEfectivo" runat="server" Text="FINALIZAR COMPRA" CssClass="btn btn-primary w-100 fw-bold" OnClick="btnPagar_Click" />
                     </div>
                 </asp:Panel>
@@ -177,4 +180,6 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
+    <!-- ✅ SweetAlert2 necesario para spinner y confirmación -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </asp:Content>
